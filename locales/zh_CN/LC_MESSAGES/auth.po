@@ -1,0 +1,530 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Joe Nelson, Steve Chavez
+# This file is distributed under the same license as the PostgREST package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PostgREST 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-10 20:06+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../auth.rst:4
+msgid "Overview of Role System"
+msgstr ""
+
+#: ../../auth.rst:6
+msgid ""
+"PostgREST is designed to keep the database at the center of API security."
+" All authorization happens through database roles and permissions. It is "
+"PostgREST's job to **authenticate** requests -- i.e. verify that a client"
+" is who they say they are -- and then let the database **authorize** "
+"client actions."
+msgstr ""
+
+#: ../../auth.rst:9
+msgid "Authentication Sequence"
+msgstr ""
+
+#: ../../auth.rst:11
+msgid ""
+"There are three types of roles used by PostgREST, the **authenticator**, "
+"**anonymous** and **user** roles. The database administrator creates "
+"these roles and configures PostgREST to use them."
+msgstr ""
+
+#: ../../auth.rst:15
+msgid ""
+"The authenticator should be created :code:`NOINHERIT` and configured in "
+"the database to have very limited access. It is a chameleon whose job is "
+"to \"become\" other users to service authenticated HTTP requests. The "
+"picture below shows how the server handles authentication. If auth "
+"succeeds, it switches into the user role specified by the request, "
+"otherwise it switches into the anonymous role."
+msgstr ""
+
+#: ../../auth.rst:19
+msgid ""
+"Here are the technical details. We use `JSON Web Tokens "
+"<https://jwt.io/>`_ to authenticate API requests. As you'll recall a JWT "
+"contains a list of cryptographically signed claims. All claims are "
+"allowed but PostgREST cares specifically about a claim called role."
+msgstr ""
+
+#: ../../auth.rst:27
+msgid ""
+"When a request contains a valid JWT with a role claim PostgREST will "
+"switch to the database role with that name for the duration of the HTTP "
+"request."
+msgstr ""
+
+#: ../../auth.rst:33
+msgid ""
+"Note that the database administrator must allow the authenticator role to"
+" switch into this user by previously executing"
+msgstr ""
+
+#: ../../auth.rst:39
+msgid ""
+"If the client included no JWT (or one without a role claim) then "
+"PostgREST switches into the anonymous role whose actual database-specific"
+" name, like that of with the authenticator role, is specified in the "
+"PostgREST server configuration file. The database administrator must set "
+"anonymous role permissions correctly to prevent anonymous users from "
+"seeing or changing things they shouldn't."
+msgstr ""
+
+#: ../../auth.rst:42
+msgid "Users and Groups"
+msgstr ""
+
+#: ../../auth.rst:44
+msgid ""
+"PostgreSQL manages database access permissions using the concept of "
+"roles. A role can be thought of as either a database user, or a group of "
+"database users, depending on how the role is set up."
+msgstr ""
+
+#: ../../auth.rst:47
+msgid "Roles for Each Web User"
+msgstr ""
+
+#: ../../auth.rst:49
+msgid ""
+"PostgREST can accommodate either viewpoint. If you treat a role as a "
+"single user then the JWT-based role switching described above does most "
+"of what you need. When an authenticated user makes a request PostgREST "
+"will switch into the role for that user, which in addition to restricting"
+" queries, is available to SQL through the :code:`current_user` variable."
+msgstr ""
+
+#: ../../auth.rst:51
+msgid ""
+"You can use row-level security to flexibly restrict visibility and access"
+" for the current user. Here is an `example "
+"<https://www.2ndquadrant.com/en/blog/application-users-vs-row-level-"
+"security/>`_ from Tomas Vondra, a chat table storing messages sent "
+"between users. Users can insert rows into it to send messages to other "
+"users, and query it to see messages sent to them by other users."
+msgstr ""
+
+#: ../../auth.rst:66
+msgid ""
+"We want to enforce a policy that ensures a user can see only those "
+"messages sent by him or intended for him. Also we want to prevent a user "
+"from forging the message_from column with another person's name."
+msgstr ""
+
+#: ../../auth.rst:68
+msgid "PostgreSQL allows us to set this policy with row-level security:"
+msgstr ""
+
+#: ../../auth.rst:76
+msgid ""
+"Anyone accessing the generated API endpoint for the chat table will see "
+"exactly the rows they should, without our needing custom imperative "
+"server-side coding."
+msgstr ""
+
+#: ../../auth.rst:80
+msgid ""
+"Roles are namespaced per-cluster rather than per-database so they may be "
+"prone to collision."
+msgstr ""
+
+#: ../../auth.rst:83
+msgid "Web Users Sharing Role"
+msgstr ""
+
+#: ../../auth.rst:85
+msgid ""
+"Alternately database roles can represent groups instead of (or in "
+"addition to) individual users. You may choose that all signed-in users "
+"for a web app share the role webuser. You can distinguish individual "
+"users by including extra claims in the JWT such as email."
+msgstr ""
+
+#: ../../auth.rst:94
+msgid ""
+"SQL code can access claims through GUC variables set by PostgREST per "
+"request. For instance to get the email claim, call this function:"
+msgstr ""
+
+#: ../../auth.rst:100
+msgid ""
+"This allows JWT generation services to include extra information and your"
+" database code to react to it. For instance the RLS example could be "
+"modified to use this current_setting rather than current_user. The second"
+" 'true' argument tells current_setting to return NULL if the setting is "
+"missing from the current configuration."
+msgstr ""
+
+#: ../../auth.rst:103
+msgid "Hybrid User-Group Roles"
+msgstr ""
+
+#: ../../auth.rst:105
+msgid ""
+"You can mix the group and individual role policies. For instance we could"
+" still have a webuser role and individual users which inherit from it:"
+msgstr ""
+
+#: ../../auth.rst:123
+msgid "Custom Validation"
+msgstr ""
+
+#: ../../auth.rst:125
+msgid ""
+"PostgREST honors the :code:`exp` claim for token expiration, rejecting "
+"expired tokens. However it does not enforce any extra constraints. An "
+"example of an extra constraint would be to immediately revoke access for "
+"a certain user. The configuration file parameter :code:`db-pre-request` "
+"specifies a stored procedure to call immediately after the authenticator "
+"switches into a new role and before the main query itself runs."
+msgstr ""
+
+#: ../../auth.rst:127
+msgid "Here's an example. In the config file specify a stored procedure:"
+msgstr ""
+
+#: ../../auth.rst:133
+msgid ""
+"In the function you can run arbitrary code to check the request and raise"
+" an exception to block it if desired."
+msgstr ""
+
+#: ../../auth.rst:149
+msgid "Client Auth"
+msgstr ""
+
+#: ../../auth.rst:151
+msgid ""
+"To make an authenticated request the client must include an "
+":code:`Authorization` HTTP header with the value :code:`Bearer <jwt>`. "
+"For instance:"
+msgstr ""
+
+#: ../../auth.rst:165
+msgid ""
+"The ``Bearer`` header value can be used with or without "
+"capitalization(``bearer``)."
+msgstr ""
+
+#: ../../auth.rst:168
+msgid "JWT Generation"
+msgstr ""
+
+#: ../../auth.rst:170
+msgid ""
+"You can create a valid JWT either from inside your database or via an "
+"external service. Each token is cryptographically signed with a secret "
+"key. In the case of symmetric cryptography the signer and verifier share "
+"the same secret passphrase. In asymmetric cryptography the signer uses "
+"the private key and the verifier the public key. PostgREST supports both "
+"symmetric and asymmetric cryptography."
+msgstr ""
+
+#: ../../auth.rst:173
+msgid "JWT from SQL"
+msgstr ""
+
+#: ../../auth.rst:175
+msgid ""
+"You can create JWT tokens in SQL using the `pgjwt extension "
+"<https://github.com/michelp/pgjwt>`_. It's simple and requires only "
+"pgcrypto. If you're on an environment like Amazon RDS which doesn't "
+"support installing new extensions, you can still manually run the `SQL "
+"inside pgjwt <https://github.com/michelp/pgjwt/blob/master/pgjwt--"
+"0.1.1.sql>`_ (you'll need to replace ``@extschema@`` with another schema "
+"or just delete it) which creates the functions you will need."
+msgstr ""
+
+#: ../../auth.rst:177
+msgid ""
+"Next write a stored procedure that returns the token. The one below "
+"returns a token with a hard-coded role, which expires five minutes after "
+"it was issued. Note this function has a hard-coded secret as well."
+msgstr ""
+
+#: ../../auth.rst:196
+msgid ""
+"PostgREST exposes this function to clients via a POST request to "
+"``/rpc/jwt_test``."
+msgstr ""
+
+#: ../../auth.rst:200
+msgid ""
+"To avoid hard-coding the secret in stored procedures, save it as a "
+"property of the database."
+msgstr ""
+
+#: ../../auth.rst:214
+msgid "JWT from Auth0"
+msgstr ""
+
+#: ../../auth.rst:216
+msgid ""
+"An external service like `Auth0 <https://auth0.com/>`_ can do the hard "
+"work transforming OAuth from Github, Twitter, Google etc into a JWT "
+"suitable for PostgREST. Auth0 can also handle email signup and password "
+"reset flows."
+msgstr ""
+
+#: ../../auth.rst:218
+msgid ""
+"To use Auth0, create `an application <https://auth0.com/docs/get-"
+"started/applications>`_ for your app and `an API <https://auth0.com/docs"
+"/get-started/apis>`_ for your PostgREST server. Auth0 supports both HS256"
+" and RS256 scheme for the issued tokens for APIs. For simplicity, you may"
+" first try HS256 scheme while creating your API on Auth0. Your "
+"application should use your PostgREST API's `API identifier "
+"<https://auth0.com/docs/get-started/apis/api-settings>`_ by setting it "
+"with the `audience parameter <https://auth0.com/docs/secure/tokens"
+"/access-tokens/get-access-tokens#control-access-token-audience>`_  during"
+" the authorization request. This will ensure that Auth0 will issue an "
+"access token for your PostgREST API. For PostgREST to verify the access "
+"token, you will need to set ``jwt-secret`` on PostgREST config file with "
+"your API's signing secret."
+msgstr ""
+
+#: ../../auth.rst:222
+msgid ""
+"Our code requires a database role in the JWT. To add it you need to save "
+"the database role in Auth0 `app metadata <https://auth0.com/docs/manage-"
+"users/user-accounts/metadata/manage-metadata-rules>`_. Then, you will "
+"need to write `a rule <https://auth0.com/docs/customize/rules>`_ that "
+"will extract the role from the user's app_metadata and set it as a "
+"`custom claim <https://auth0.com/docs/get-started/apis/scopes/sample-use-"
+"cases-scopes-and-claims#add-custom-claims-to-a-token>`_ in the access "
+"token. Note that, you may use Auth0's `core authorization feature "
+"<https://auth0.com/docs/manage-users/access-control/rbac>`_ for more "
+"complex use cases. Metadata solution is mentioned here for simplicity."
+msgstr ""
+
+#: ../../auth.rst:242
+msgid "Asymmetric Keys"
+msgstr ""
+
+#: ../../auth.rst:244
+msgid ""
+"As described in the :ref:`configuration` section, PostgREST accepts a "
+"``jwt-secret`` config file parameter. If it is set to a simple string "
+"value like \"reallyreallyreallyreallyverysafe\" then PostgREST interprets"
+" it as an HMAC-SHA256 passphrase. However you can also specify a literal "
+"JSON Web Key (JWK) or set. For example, you can use an RSA-256 public key"
+" encoded as a JWK:"
+msgstr ""
+
+#: ../../auth.rst:258
+msgid ""
+"This could also be a JSON Web Key Set (JWKS) if it was contained within "
+"an array assigned to a `keys` member, e.g. ``{ keys: [jwk1, jwk2] }``."
+msgstr ""
+
+#: ../../auth.rst:260
+msgid "Just pass it in as a single line string, escaping the quotes:"
+msgstr ""
+
+#: ../../auth.rst:266
+msgid ""
+"To generate such a public/private key pair use a utility like "
+"`latchset/jose <https://github.com/latchset/jose>`_."
+msgstr ""
+
+#: ../../auth.rst:275
+msgid ""
+"You can specify the literal value as we saw earlier, or reference a "
+"filename to load the JWK from a file:"
+msgstr ""
+
+#: ../../auth.rst:282
+msgid "JWT security"
+msgstr ""
+
+#: ../../auth.rst:284
+msgid ""
+"There are at least three types of common critiques against using JWT: 1) "
+"against the standard itself, 2) against using libraries with known "
+"security vulnerabilities, and 3) against using JWT for web sessions. "
+"We'll briefly explain each critique, how PostgREST deals with it, and "
+"give recommendations for appropriate user action."
+msgstr ""
+
+#: ../../auth.rst:286
+msgid ""
+"The critique against the `JWT standard "
+"<https://datatracker.ietf.org/doc/html/rfc7519>`_ is voiced in detail "
+"`elsewhere on the web <https://paragonie.com/blog/2017/03/jwt-json-web-"
+"tokens-is-bad-standard-that-everyone-should-avoid>`_. The most relevant "
+"part for PostgREST is the so-called :code:`alg=none` issue. Some servers "
+"implementing JWT allow clients to choose the algorithm used to sign the "
+"JWT. In this case, an attacker could set the algorithm to :code:`none`, "
+"remove the need for any signature at all and gain unauthorized access. "
+"The current implementation of PostgREST, however, does not allow clients "
+"to set the signature algorithm in the HTTP request, making this attack "
+"irrelevant. The critique against the standard is that it requires the "
+"implementation of the :code:`alg=none` at all."
+msgstr ""
+
+#: ../../auth.rst:288
+msgid ""
+"Critiques against JWT libraries are only relevant to PostgREST via the "
+"library it uses. As mentioned above, not allowing clients to choose the "
+"signature algorithm in HTTP requests removes the greatest risk. Another "
+"more subtle attack is possible where servers use asymmetric algorithms "
+"like RSA for signatures. Once again this is not relevant to PostgREST "
+"since it is not supported. Curious readers can find more information in "
+"`this article <https://auth0.com/blog/critical-vulnerabilities-in-json-"
+"web-token-libraries/>`_. Recommendations about high quality libraries for"
+" usage in API clients can be found on `jwt.io <https://jwt.io/>`_."
+msgstr ""
+
+#: ../../auth.rst:290
+msgid ""
+"The last type of critique focuses on the misuse of JWT for maintaining "
+"web sessions. The basic recommendation is to `stop using JWT for sessions"
+" <http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-"
+"sessions/>`_ because most, if not all, solutions to the problems that "
+"arise when you do, `do not work "
+"<http://cryto.net/~joepie91/blog/2016/06/19/stop-using-jwt-for-sessions-"
+"part-2-why-your-solution-doesnt-work/>`_. The linked articles discuss the"
+" problems in depth but the essence of the problem is that JWT is not "
+"designed to be secure and stateful units for client-side storage and "
+"therefore not suited to session management."
+msgstr ""
+
+#: ../../auth.rst:292
+msgid ""
+"PostgREST uses JWT mainly for authentication and authorization purposes "
+"and encourages users to do the same. For web sessions, using cookies over"
+" HTTPS is good enough and well catered for by standard web frameworks."
+msgstr ""
+
+#: ../../auth.rst:295
+msgid "Schema Isolation"
+msgstr ""
+
+#: ../../auth.rst:297
+msgid ""
+"You can isolate your api schema from internal implementation details, as "
+"explained in :ref:`schema_isolation`. For an example of wrapping a "
+"private table with a public view see the :ref:`public_ui` section below."
+msgstr ""
+
+#: ../../auth.rst:300
+msgid "SQL User Management"
+msgstr ""
+
+#: ../../auth.rst:303
+msgid "Storing Users and Passwords"
+msgstr ""
+
+#: ../../auth.rst:305
+msgid ""
+"As mentioned, an external service can provide user management and "
+"coordinate with the PostgREST server using JWT. It's also possible to "
+"support logins entirely through SQL. It's a fair bit of work, so get "
+"ready."
+msgstr ""
+
+#: ../../auth.rst:307
+msgid ""
+"The following table, functions, and triggers will live in a "
+":code:`basic_auth` schema that you shouldn't expose publicly in the API. "
+"The public views and functions will live in a different schema which "
+"internally references this internal information."
+msgstr ""
+
+#: ../../auth.rst:309
+msgid "First we'll need a table to keep track of our users:"
+msgstr ""
+
+#: ../../auth.rst:325
+msgid ""
+"We would like the role to be a foreign key to actual database roles, "
+"however PostgreSQL does not support these constraints against the "
+":code:`pg_roles` table. We'll use a trigger to manually enforce it."
+msgstr ""
+
+#: ../../auth.rst:347
+msgid ""
+"Next we'll use the pgcrypto extension and a trigger to keep passwords "
+"safe in the :code:`users` table."
+msgstr ""
+
+#: ../../auth.rst:369
+msgid ""
+"With the table in place we can make a helper to check a password against "
+"the encrypted column. It returns the database role for a user if the "
+"email and password are correct."
+msgstr ""
+
+#: ../../auth.rst:389
+msgid "Public User Interface"
+msgstr ""
+
+#: ../../auth.rst:391
+msgid ""
+"In the previous section we created an internal table to store user "
+"information. Here we create a login function which takes an email address"
+" and password and returns JWT if the credentials match a user in the "
+"internal table."
+msgstr ""
+
+#: ../../auth.rst:394
+msgid "Logins"
+msgstr ""
+
+#: ../../auth.rst:396
+msgid ""
+"As described in `JWT from SQL`_, we'll create a JWT inside our login "
+"function. Note that you'll need to adjust the secret key which is hard-"
+"coded in this example to a secure (at least thirty-two character) secret "
+"of your choosing."
+msgstr ""
+
+#: ../../auth.rst:430
+msgid "An API request to call this function would look like:"
+msgstr ""
+
+#: ../../auth.rst:446
+msgid ""
+"The response would look like the snippet below. Try decoding the token at"
+" `jwt.io <https://jwt.io/>`_. (It was encoded with a secret of "
+":code:`reallyreallyreallyreallyverysafe` as specified in the SQL code "
+"above. You'll want to change this secret in your app!)"
+msgstr ""
+
+#: ../../auth.rst:455
+msgid "Permissions"
+msgstr ""
+
+#: ../../auth.rst:457
+msgid ""
+"Your database roles need access to the schema, tables, views and "
+"functions in order to service HTTP requests. Recall from the `Overview of"
+" Role System`_ that PostgREST uses special roles to process requests, "
+"namely the authenticator and anonymous roles. Below is an example of "
+"permissions that allow anonymous users to create accounts and attempt to "
+"log in."
+msgstr ""
+
+#: ../../auth.rst:471
+msgid ""
+"Since the above :code:`login` function is defined as `security definer "
+"<https://www.postgresql.org/docs/current/sql-"
+"createfunction.html#id-1.9.3.67.10.2>`_, the anonymous user :code:`anon` "
+"doesn't need permission to read the :code:`basic_auth.users` table. It "
+"doesn't even need permission to access the :code:`basic_auth` schema. "
+":code:`grant execute on function` is included for clarity but it might "
+"not be needed, see :ref:`func_privs` for more details."
+msgstr ""
+

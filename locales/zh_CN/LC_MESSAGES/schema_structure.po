@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Joe Nelson, Steve Chavez
+# This file is distributed under the same license as the PostgREST package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PostgREST 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-10 19:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../schema_structure.rst:4
+msgid "This page is a work in progress."
+msgstr ""
+
+#: ../../schema_structure.rst:9
+msgid "Schema Isolation"
+msgstr ""
+
+#: ../../schema_structure.rst:11
+msgid ""
+"A PostgREST instance exposes all the tables, views, and stored procedures"
+" of a single `PostgreSQL schema <https://www.postgresql.org/docs/current"
+"/ddl-schemas.html>`_ (a namespace of database objects). This means "
+"private data or implementation details can go inside different private "
+"schemas and be invisible to HTTP clients."
+msgstr ""
+
+#: ../../schema_structure.rst:13
+msgid ""
+"It is recommended that you don't expose tables on your API schema. "
+"Instead expose views and stored procedures which insulate the internal "
+"details from the outside world. This allows you to change the internals "
+"of your schema and maintain backwards compatibility. It also keeps your "
+"code easier to refactor, and provides a natural way to do API versioning."
+msgstr ""
+
+#: ../../schema_structure.rst:21
+msgid "Functions"
+msgstr ""
+
+#: ../../schema_structure.rst:23
+msgid ""
+"By default, when a function is created, the privilege to execute it is "
+"not restricted by role. The function access is ``PUBLIC`` — executable by"
+" all roles (more details at `PostgreSQL Privileges page "
+"<https://www.postgresql.org/docs/current/ddl-priv.html>`_). This is not "
+"ideal for an API schema. To disable this behavior, you can run the "
+"following SQL statement:"
+msgstr ""
+
+#: ../../schema_structure.rst:29
+msgid ""
+"This will change the privileges for all functions created in the future "
+"in all schemas. Currently there is no way to limit it to a single schema."
+" In our opinion it's a good practice anyway."
+msgstr ""
+
+#: ../../schema_structure.rst:33
+msgid ""
+"It is however possible to limit the effect of this clause only to "
+"functions you define. You can put the above statement at the beginning of"
+" the API schema definition, and then at the end reverse it with:"
+msgstr ""
+
+#: ../../schema_structure.rst:39
+msgid ""
+"This will work because the :code:`alter default privileges` statement has"
+" effect on function created *after* it is executed. See `PostgreSQL alter"
+" default privileges <https://www.postgresql.org/docs/current/sql-"
+"alterdefaultprivileges.html>`_ for more details."
+msgstr ""
+
+#: ../../schema_structure.rst:41
+msgid ""
+"After that, you'll need to grant EXECUTE privileges on functions "
+"explicitly:"
+msgstr ""
+
+#: ../../schema_structure.rst:48
+msgid ""
+"You can also grant execute on all functions in a schema to a higher "
+"privileged role:"
+msgstr ""
+
+#: ../../schema_structure.rst:55
+msgid "Security definer"
+msgstr ""
+
+#: ../../schema_structure.rst:57
+msgid ""
+"A function is executed with the privileges of the user who calls it. This"
+" means that the user has to have all permissions to do the operations the"
+" procedure performs. If the function accesses private database objects, "
+"your :ref:`API roles <roles>` won't be able to successfully execute the "
+"function."
+msgstr ""
+
+#: ../../schema_structure.rst:60
+msgid ""
+"Another option is to define the function with the :code:`SECURITY "
+"DEFINER` option. Then only one permission check will take place, the "
+"permission to call the function, and the operations in the function will "
+"have the authority of the user who owns the function itself."
+msgstr ""
+
+#: ../../schema_structure.rst:76
+msgid ""
+"Note the ``SECURITY DEFINER`` keywords at the end of the function. See "
+"`PostgreSQL documentation <https://www.postgresql.org/docs/current/sql-"
+"createfunction.html#SQL-CREATEFUNCTION-SECURITY>`_ for more details."
+msgstr ""
+
+#: ../../schema_structure.rst:79
+msgid "Views"
+msgstr ""
+
+#: ../../schema_structure.rst:81
+msgid ""
+"Views are invoked with the privileges of the view owner, much like stored"
+" procedures with the ``SECURITY DEFINER`` option. When created by a "
+"SUPERUSER role, all `row-level security "
+"<https://www.postgresql.org/docs/current/ddl-rowsecurity.html>`_ will be "
+"bypassed unless a different, non-SUPERUSER owner is specified."
+msgstr ""
+
+#: ../../schema_structure.rst:83
+msgid ""
+"For changing this, we can create a non-SUPERUSER role and make this role "
+"the view's owner."
+msgstr ""
+
+#: ../../schema_structure.rst:91
+msgid "Rules"
+msgstr ""
+
+#: ../../schema_structure.rst:93
+msgid ""
+"Insertion on views with complex `rules "
+"<https://www.postgresql.org/docs/current/sql-createrule.html>`_ might not"
+" work out of the box with PostgREST. It's recommended that you `use "
+"triggers instead of rules "
+"<https://wiki.postgresql.org/wiki/Don%27t_Do_This#Don.27t_use_rules>`_. "
+"If you want to keep using rules, a workaround is to wrap the view "
+"insertion in a stored procedure and call it through the :ref:`s_procs` "
+"interface. For more details, see this `github issue "
+"<https://github.com/PostgREST/postgrest/issues/1283>`_."
+msgstr ""
+

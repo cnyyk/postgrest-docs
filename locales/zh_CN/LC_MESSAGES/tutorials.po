@@ -1,0 +1,499 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Joe Nelson, Steve Chavez
+# This file is distributed under the same license as the PostgREST package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PostgREST 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-10 19:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../tutorials/tut0.rst:4
+msgid "Tutorial 0 - Get it Running"
+msgstr ""
+
+#: ../../tutorials/tut0.rst ../../tutorials/tut1.rst
+msgid "author"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:6 ../../tutorials/tut1.rst:6
+msgid "`begriffs <https://github.com/begriffs>`_"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:8
+msgid ""
+"Welcome to PostgREST! In this pre-tutorial we're going to get things "
+"running so you can create your first simple API."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:10
+msgid ""
+"PostgREST is a standalone web server which turns a PostgreSQL database "
+"into a RESTful API. It serves an API that is customized based on the "
+"structure of the underlying database."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:14
+msgid ""
+"To make an API we'll simply be building a database. All the endpoints and"
+" permissions come from database objects like tables, views, roles, and "
+"stored procedures. These tutorials will cover a number of common "
+"scenarios and how to model them in the database."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:16
+msgid ""
+"By the end of this tutorial you'll have a working database, PostgREST "
+"server, and a simple single-user todo list API."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:19
+msgid "Step 1. Relax, we'll help"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:21
+msgid ""
+"As you begin the tutorial, pop open the project `chat room "
+"<https://gitter.im/begriffs/postgrest>`_ in another tab.  There are a "
+"nice group of people active in the project and we'll help you out if you "
+"get stuck."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:24
+msgid "Step 2. Install PostgreSQL"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:26
+msgid ""
+"If you're already familiar with using PostgreSQL and have it installed on"
+" your system you can use the existing installation (see :ref:`pg-"
+"dependency` for minimum requirements). For this tutorial we'll describe "
+"how to use the database in Docker because database configuration is "
+"otherwise too complicated for a simple tutorial."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:28
+msgid ""
+"If Docker is not installed, you can get it `here <https://www.docker.com"
+"/get-started>`_. Next, let's pull and start the database image:"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:36
+msgid ""
+"This will run the Docker instance as a daemon and expose port 5433 to the"
+" host system so that it looks like an ordinary PostgreSQL server to the "
+"rest of the system."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:39
+msgid "Step 3. Install PostgREST"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:41
+msgid ""
+"PostgREST is distributed as a single binary, with versions compiled for "
+"major distributions of Linux/BSD/Windows. Visit the `latest release "
+"<https://github.com/PostgREST/postgrest/releases/latest>`_ for a list of "
+"downloads. In the event that your platform is not among those already "
+"pre-built, see :ref:`build_source` for instructions how to build it "
+"yourself. Also let us know to add your platform in the next release."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:43
+msgid ""
+"The pre-built binaries for download are :code:`.tar.xz` compressed files "
+"(except Windows which is a zip file). To extract the binary, go into the "
+"terminal and run"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:51
+msgid ""
+"The result will be a file named simply :code:`postgrest` (or "
+":code:`postgrest.exe` on Windows). At this point try running it with"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:57
+msgid ""
+"If everything is working correctly it will print out its version and "
+"information about configuration. You can continue to run this binary from"
+" where you downloaded it, or copy it to a system directory like "
+":code:`/usr/local/bin` on Linux so that you will be able to run it from "
+"any directory."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:61
+msgid ""
+"PostgREST requires libpq, the PostgreSQL C library, to be installed on "
+"your system. Without the library you'll get an error like \"error while "
+"loading shared libraries: libpq.so.5.\" Here's how to fix it:"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:95
+msgid "Step 4. Create Database for API"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:97
+msgid ""
+"Connect to the SQL console (psql) inside the container. To do so, run "
+"this from your command line:"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:103
+msgid "You should see the psql command prompt:"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:112
+msgid ""
+"The first thing we'll do is create a `named schema "
+"<https://www.postgresql.org/docs/current/ddl-schemas.html>`_ for the "
+"database objects which will be exposed in the API. We can choose any name"
+" we like, so how about \"api.\" Execute this and the other SQL statements"
+" inside the psql prompt you started."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:118
+msgid ""
+"Our API will have one endpoint, :code:`/todos`, which will come from a "
+"table."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:132
+msgid ""
+"Next make a role to use for anonymous web requests. When a request comes "
+"in, PostgREST will switch into this role in the database to run queries."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:141
+msgid ""
+"The :code:`web_anon` role has permission to access things in the "
+":code:`api` schema, and to read rows in the :code:`todos` table."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:143
+msgid ""
+"It's a good practice to create a dedicated role for connecting to the "
+"database, instead of using the highly privileged ``postgres`` role. So "
+"we'll do that, name the role ``authenticator`` and also grant him the "
+"ability to switch to the ``web_anon`` role :"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:151
+msgid "Now quit out of psql; it's time to start the API!"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:158
+msgid "Step 5. Run PostgREST"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:160
+msgid ""
+"PostgREST uses a configuration file to tell it how to connect to the "
+"database. Create a file :code:`tutorial.conf` with this inside:"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:168
+msgid ""
+"The configuration file has other :ref:`options <configuration>`, but this"
+" is all we need. If you are not using Docker, make sure that your port "
+"number is correct and replace `postgres` with the name of the database "
+"where you added the todos table."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:171
+msgid "Now run the server:"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:177
+msgid "You should see"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:185
+msgid ""
+"It's now ready to serve web requests. There are many nice graphical API "
+"exploration tools you can use, but for this tutorial we'll use "
+":code:`curl` because it's likely to be installed on your system already. "
+"Open a new terminal (leaving the one open that PostgREST is running "
+"inside). Try doing an HTTP request for the todos."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:191
+msgid "The API replies:"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:210
+msgid ""
+"With the current role permissions, anonymous requests have read-only "
+"access to the :code:`todos` table. If we try to add a new todo we are not"
+" able."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:218
+msgid "Response is 401 Unauthorized:"
+msgstr ""
+
+#: ../../tutorials/tut0.rst:229
+msgid ""
+"There we have it, a basic API on top of the database! In the next "
+"tutorials we will see how to extend the example with more sophisticated "
+"user access controls, and more tables and queries."
+msgstr ""
+
+#: ../../tutorials/tut0.rst:231
+msgid "Now that you have PostgREST running, try the next tutorial, :ref:`tut1`"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:4
+msgid "Tutorial 1 - The Golden Key"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:8
+msgid ""
+"In :ref:`tut0` we created a read-only API with a single endpoint to list "
+"todos. There are many directions we can go to make this API more "
+"interesting, but one good place to start would be allowing some users to "
+"change data in addition to reading it."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:11
+msgid "Step 1. Add a Trusted User"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:13
+msgid ""
+"The previous tutorial created a :code:`web_anon` role in the database "
+"with which to execute anonymous web requests. Let's make a role called "
+":code:`todo_user` for users who authenticate with the API. This role will"
+" have the authority to do anything to the todo list."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:28
+msgid "Step 2. Make a Secret"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:30
+msgid ""
+"Clients authenticate with the API using JSON Web Tokens. These are JSON "
+"objects which are cryptographically signed using a password known to only"
+" us and the server. Because clients do not know the password, they cannot"
+" tamper with the contents of their tokens. PostgREST will detect "
+"counterfeit tokens and will reject them."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:32
+msgid ""
+"Let's create a password and provide it to PostgREST. Think of a nice long"
+" one, or use a tool to generate it. **Your password must be at least 32 "
+"characters long.**"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:36
+msgid "Unix tools can generate a nice password for you:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:46
+msgid ""
+"Open the :code:`tutorial.conf` (created in the previous tutorial) and add"
+" a line with the password:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:55
+msgid ""
+"If the PostgREST server is still running from the previous tutorial, "
+"restart it to load the updated configuration file."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:58
+msgid "Step 3. Sign a Token"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:60
+msgid ""
+"Ordinarily your own code in the database or in another server will create"
+" and sign authentication tokens, but for this tutorial we will make one "
+"\"by hand.\" Go to `jwt.io <https://jwt.io/#debugger-io>`_ and fill in "
+"the fields like this:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:65
+msgid "jwt.io interface"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:65
+msgid "How to create a token at https://jwt.io"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:67
+msgid ""
+"**Remember to fill in the password you generated rather than the word "
+"\"secret\".** After you have filled in the password and payload, the "
+"encoded data on the left will update. Copy the encoded token."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:71
+msgid ""
+"While the token may look well obscured, it's easy to reverse engineer the"
+" payload. The token is merely signed, not encrypted, so don't put things "
+"inside that you don't want a determined client to see."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:74
+msgid "Step 4. Make a Request"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:76
+msgid ""
+"Back in the terminal, let's use :code:`curl` to add a todo. The request "
+"will include an HTTP header containing the authentication token."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:87
+msgid ""
+"And now we have completed all three items in our todo list, so let's set "
+":code:`done` to true for them all with a :code:`PATCH` request."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:96
+msgid "A request for the todos shows three of them, and all completed."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:126
+msgid "Step 5. Add Expiration"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:128
+msgid ""
+"Currently our authentication token is valid for all eternity. The server,"
+" as long as it continues using the same JWT password, will honor the "
+"token."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:130
+msgid ""
+"It's better policy to include an expiration timestamp for tokens using "
+"the :code:`exp` claim. This is one of two JWT claims that PostgREST "
+"treats specially."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:133
+msgid "Claim"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:133
+msgid "Interpretation"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:135
+msgid ":code:`role`"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:135
+msgid "The database role under which to execute SQL for API request"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:137
+msgid ":code:`exp`"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:137
+msgid "Expiration timestamp for token, expressed in \"Unix epoch time\""
+msgstr ""
+
+#: ../../tutorials/tut1.rst:142
+msgid ""
+"Epoch time is defined as the number of seconds that have elapsed since "
+"00:00:00 Coordinated Universal Time (UTC), January 1st 1970, minus the "
+"number of leap seconds that have taken place since then."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:144
+msgid ""
+"To observe expiration in action, we'll add an :code:`exp` claim of five "
+"minutes in the future to our previous token. First find the epoch value "
+"of five minutes from now. In psql run this:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:150
+msgid "Go back to jwt.io and change the payload to"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:159
+msgid ""
+"**NOTE**: Don't forget to change the dummy epoch value :code:`123456789` "
+"in the snippet above to the epoch value returned by the psql command."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:161
+msgid ""
+"Copy the updated token as before, and save it as a new environment "
+"variable."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:167
+msgid "Try issuing this request in curl before and after the expiration time:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:174
+msgid "After expiration, the API returns HTTP 401 Unauthorized:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:181
+msgid "Bonus Topic: Immediate Revocation"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:183
+msgid ""
+"Even with token expiration there are times when you may want to "
+"immediately revoke access for a specific token. For instance, suppose you"
+" learn that a disgruntled employee is up to no good and his token is "
+"still valid."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:185
+msgid ""
+"To revoke a specific token we need a way to tell it apart from others. "
+"Let's add a custom :code:`email` claim that matches the email of the "
+"client issued the token."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:187
+msgid "Go ahead and make a new token with the payload"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:196
+msgid "Save it to an environment variable:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:202
+msgid ""
+"PostgREST allows us to specify a stored procedure to run during attempted"
+" authentication. The function can do whatever it likes, including raising"
+" an exception to terminate the request."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:204
+msgid "First make a new schema and add the function:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:223
+msgid "Next update :code:`tutorial.conf` and specify the new function:"
+msgstr ""
+
+#: ../../tutorials/tut1.rst:231
+msgid ""
+"Restart PostgREST for the change to take effect. Next try making a "
+"request with our original token and then with the revoked one."
+msgstr ""
+
+#: ../../tutorials/tut1.rst:249
+msgid "The server responds with 403 Forbidden:"
+msgstr ""
+

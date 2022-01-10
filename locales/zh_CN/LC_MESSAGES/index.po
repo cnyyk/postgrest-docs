@@ -1,0 +1,420 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Joe Nelson, Steve Chavez
+# This file is distributed under the same license as the PostgREST package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PostgREST 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-10 20:06+0800\n"
+"PO-Revision-Date: 2022-01-10 20:13+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: ../../index.rst:95
+msgid "v9.0.0"
+msgstr "v9.0.0"
+
+#: ../../index.rst:95 ../../index.rst:226
+msgid "Release Notes"
+msgstr "发布日志"
+
+#: ../../index.rst:109 ../../index.rst:113
+msgid "Tutorials"
+msgstr "教程"
+
+#: ../../index.rst:130
+msgid "API"
+msgstr "API"
+
+#: ../../index.rst:136
+msgid "Configuration"
+msgstr "配置"
+
+#: ../../index.rst:142
+msgid "Schema Cache"
+msgstr "Schema 缓存"
+
+#: ../../index.rst:157
+msgid "Authentication"
+msgstr "认证"
+
+#: ../../index.rst:163
+msgid "Schema Structure"
+msgstr "Schema 结构"
+
+#: ../../index.rst:169
+msgid "Administration"
+msgstr "管理"
+
+#: ../../index.rst:175
+msgid "Installation"
+msgstr "安装"
+
+#: ../../index.rst:189 ../../index.rst:193
+msgid "How-to guides"
+msgstr ""
+
+#: ../../index.rst:206 ../../index.rst:210
+msgid "Ecosystem"
+msgstr "生态"
+
+#: ../../index.rst:4
+msgid "PostgREST Documentation"
+msgstr "PostgREST 文档"
+
+#: ../../index.rst:30
+msgid ""
+"PostgREST is a standalone web server that turns your PostgreSQL database "
+"directly into a RESTful API. The structural constraints and permissions "
+"in the database determine the API endpoints and operations."
+msgstr ""
+"PostgREST 是一个独立的 Web 服务器，它将你的 PostgreSQL 数据库直接变成一"
+"个 RESTful API，各种端点和操作由数据库中的约束和权限决定。"
+
+#: ../../index.rst:33
+msgid "Sponsors"
+msgstr "赞助者"
+
+#: ../../index.rst:71
+msgid "Motivation"
+msgstr "动机"
+
+#: ../../index.rst:73
+msgid ""
+"Using PostgREST is an alternative to manual CRUD programming. Custom API "
+"servers suffer problems. Writing business logic often duplicates, "
+"ignores or hobbles database structure. Object-relational mapping is a "
+"leaky abstraction leading to slow imperative code. The PostgREST "
+"philosophy establishes a single declarative source of truth: the data "
+"itself."
+msgstr ""
+
+#: ../../index.rst:76
+msgid "Declarative Programming"
+msgstr ""
+
+#: ../../index.rst:78
+msgid ""
+"It's easier to ask PostgreSQL to join data for you and let its query "
+"planner figure out the details than to loop through rows yourself. It's "
+"easier to assign permissions to db objects than to add guards in "
+"controllers. (This is especially true for cascading permissions in data "
+"dependencies.) It's easier to set constraints than to litter code with "
+"sanity checks."
+msgstr ""
+
+#: ../../index.rst:81
+msgid "Leak-proof Abstraction"
+msgstr ""
+
+#: ../../index.rst:83
+msgid ""
+"There is no ORM involved. Creating new views happens in SQL with known "
+"performance implications. A database administrator can now create an API "
+"from scratch with no custom programming."
+msgstr ""
+
+#: ../../index.rst:86
+msgid "One Thing Well"
+msgstr ""
+
+#: ../../index.rst:88
+msgid ""
+"PostgREST has a focused scope. It works well with other tools like "
+"Nginx. This forces you to cleanly separate the data-centric CRUD "
+"operations from other concerns. Use a collection of sharp tools rather "
+"than building a big ball of mud."
+msgstr ""
+
+#: ../../index.rst:91
+msgid "Getting Support"
+msgstr ""
+
+#: ../../index.rst:93
+msgid ""
+"The project has a friendly and growing community. Join our `chat room "
+"<https://gitter.im/begriffs/postgrest>`_ for discussion and help. You "
+"can also report or search for bugs/features on the Github `issues "
+"<https://github.com/PostgREST/postgrest/issues>`_ page."
+msgstr ""
+
+#: ../../index.rst:111
+msgid "Are you new to PostgREST? This is the place to start!"
+msgstr ""
+
+#: ../../index.rst:120
+msgid ":doc:`tutorials/tut0`"
+msgstr ":doc:`tutorials/tut0`"
+
+#: ../../index.rst:121
+msgid ":doc:`tutorials/tut1`"
+msgstr ":doc:`tutorials/tut1`"
+
+#: ../../index.rst:123
+msgid ""
+"Also have a look at :doc:`Installation <install>` and :ref:"
+"`community_tutorials`."
+msgstr ""
+
+#: ../../index.rst:126
+msgid "Reference guides"
+msgstr ""
+
+#: ../../index.rst:128
+msgid "Technical references for PostgREST's functionality."
+msgstr ""
+
+#: ../../index.rst:148
+msgid ":doc:`API <api>`"
+msgstr ""
+
+#: ../../index.rst:149
+msgid ":doc:`configuration`"
+msgstr ""
+
+#: ../../index.rst:150
+msgid ":doc:`Schema Cache <schema_cache>`"
+msgstr ""
+
+#: ../../index.rst:153
+msgid "Topic guides"
+msgstr ""
+
+#: ../../index.rst:155
+msgid "Explanations of some key concepts in PostgREST."
+msgstr ""
+
+#: ../../index.rst:181
+msgid ":doc:`Authentication <auth>`"
+msgstr ""
+
+#: ../../index.rst:182
+msgid ":doc:`Schema Structure <schema_structure>`"
+msgstr ""
+
+#: ../../index.rst:183
+msgid ":doc:`Administration <admin>`"
+msgstr ""
+
+#: ../../index.rst:184
+msgid ":doc:`Installation <install>`"
+msgstr ""
+
+#: ../../index.rst:191
+msgid "These are recipes that'll help you address specific use-cases."
+msgstr ""
+
+#: ../../index.rst:200
+msgid ":doc:`how-tos/casting-type-to-custom-json`"
+msgstr ""
+
+#: ../../index.rst:201
+msgid ":doc:`how-tos/embedding-table-from-another-schema`"
+msgstr ""
+
+#: ../../index.rst:202
+msgid ":doc:`how-tos/providing-images-for-img`"
+msgstr ""
+
+#: ../../index.rst:203
+msgid ""
+"`How PostgreSQL triggers work when called with a PostgREST PATCH HTTP "
+"request <https://blog.fgribreau.com/2020/11/how-postgresql-triggers-"
+"works-when.html>`_"
+msgstr ""
+
+#: ../../index.rst:208
+msgid ""
+"PostgREST has a growing ecosystem of examples, libraries, and "
+"experiments. Here is a selection."
+msgstr ""
+
+#: ../../index.rst:216
+msgid ":ref:`community_tutorials`"
+msgstr ""
+
+#: ../../index.rst:217
+msgid ":ref:`templates`"
+msgstr ""
+
+#: ../../index.rst:218
+msgid ":ref:`eco_example_apps`"
+msgstr ""
+
+#: ../../index.rst:219
+msgid ":ref:`devops`"
+msgstr ""
+
+#: ../../index.rst:220
+msgid ":ref:`eco_external_notification`"
+msgstr ""
+
+#: ../../index.rst:221
+msgid ":ref:`eco_extensions`"
+msgstr ""
+
+#: ../../index.rst:222
+msgid ":ref:`clientside_libraries`"
+msgstr ""
+
+#: ../../index.rst:228
+msgid ""
+"Here we'll include the most relevant changes so you can migrate to newer "
+"versions easily. You can see the full changelog of each release in the "
+"`PostgREST repository <https://github.com/PostgREST/postgrest/"
+"releases>`_."
+msgstr ""
+
+#: ../../index.rst:231
+msgid ":doc:`releases/v9.0.0`"
+msgstr ""
+
+#: ../../index.rst:232
+msgid ":doc:`releases/v8.0.0`"
+msgstr ""
+
+#: ../../index.rst:233
+msgid ":doc:`releases/v7.0.0`"
+msgstr ""
+
+#: ../../index.rst:234
+msgid ":doc:`releases/v6.0.2`"
+msgstr ""
+
+#: ../../index.rst:235
+msgid ":doc:`releases/v5.2.0`"
+msgstr ""
+
+#: ../../index.rst:238
+msgid "In Production"
+msgstr ""
+
+#: ../../index.rst:240
+msgid "Here are some companies that use PostgREST in production."
+msgstr ""
+
+#: ../../index.rst:242
+msgid "`Catarse <https://www.catarse.me>`_"
+msgstr ""
+
+#: ../../index.rst:243
+msgid "`Datrium <https://www.datrium.com>`_"
+msgstr ""
+
+#: ../../index.rst:244
+msgid "`Drip Depot <https://www.dripdepot.com>`_"
+msgstr ""
+
+#: ../../index.rst:245
+msgid "`Image-charts <https://www.image-charts.com>`_"
+msgstr ""
+
+#: ../../index.rst:246
+msgid "`Moat <https://www.moat.com>`_"
+msgstr ""
+
+#: ../../index.rst:247
+msgid ""
+"`MotionDynamic - Fast highly dynamic video generation at scale <https://"
+"motiondynamic.tech>`_"
+msgstr ""
+
+#: ../../index.rst:248
+msgid "`Netwo <https://www.netwo.io>`_"
+msgstr ""
+
+#: ../../index.rst:249
+msgid ""
+"`Nimbus <https://www.nimbusforwork.com>`_ - See how Nimbus uses "
+"PostgREST in `Paul Copplestone's blog post <https://paul.copplest.one/"
+"blog/nimbus-tech-2019-04.html>`_."
+msgstr ""
+
+#: ../../index.rst:251
+msgid "`OpenBooking <https://www.openbooking.ch>`_"
+msgstr ""
+
+#: ../../index.rst:252
+msgid "`Redsmin <https://www.redsmin.com>`_"
+msgstr ""
+
+#: ../../index.rst:253
+msgid "`Sompani <https://www.sompani.com>`_"
+msgstr ""
+
+#: ../../index.rst:254
+msgid "`Supabase <https://supabase.com>`_"
+msgstr ""
+
+#: ../../index.rst:260
+msgid "Testimonials"
+msgstr ""
+
+#: ../../index.rst:262
+msgid "\"It's so fast to develop, it feels like cheating!\""
+msgstr ""
+
+#: ../../index.rst:300
+msgid "François-Guillaume Ribreau"
+msgstr ""
+
+#: ../../index.rst:266
+msgid ""
+"\"I just have to say that, the CPU/Memory usage compared to our Node.js/"
+"Waterline ORM based API is ridiculous.  It's hard to even push it over "
+"60/70 MB while our current API constantly hits 1GB running on 6 "
+"instances (dynos).\""
+msgstr ""
+
+#: ../../index.rst:303
+msgid "Louis Brauer"
+msgstr ""
+
+#: ../../index.rst:273
+msgid ""
+"\"I really enjoyed the fact that all of a sudden I was writing "
+"microservices in SQL DDL (and v8 JavaScript functions). I dodged so much "
+"boilerplate. The next thing I knew, we pulled out a full rewrite of a "
+"Spring+MySQL legacy app in 6 months. Literally 10x faster, and code was "
+"super concise. The old one took 3 years and a team of 4 people to "
+"develop.\""
+msgstr ""
+
+#: ../../index.rst:282
+msgid ""
+"\"I like the fact that PostgREST does one thing, and one thing well. "
+"While PostgREST takes care of bridging the gap between our HTTP server "
+"and PostgreSQL database, we can focus on the development of our API in a "
+"single language: SQL. This puts the database in the center of our "
+"architecture, and pushed us to improve our skills in SQL programming and "
+"database design.\""
+msgstr ""
+
+#: ../../index.rst:291
+msgid ""
+"\"PostgREST is performant, stable, and transparent. It allows us to "
+"bootstrap projects really fast, and to focus on our data and application "
+"instead of building out the ORM layer. In our k8s cluster, we run a few "
+"pods per schema we want exposed, and we scale up/down depending on "
+"demand. Couldn't be happier.\""
+msgstr ""
+
+#: ../../index.rst:300
+msgid "Contributing"
+msgstr ""
+
+#: ../../index.rst:302
+msgid ""
+"Please see the `Contributing guidelines <https://github.com/PostgREST/"
+"postgrest/blob/main/.github/CONTRIBUTING.md>`_ in the main PostgREST "
+"repository."
+msgstr ""

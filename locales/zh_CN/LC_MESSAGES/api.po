@@ -1,0 +1,2396 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Joe Nelson, Steve Chavez
+# This file is distributed under the same license as the PostgREST package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PostgREST 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-10 20:06+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../api.rst:5
+msgid "Tables and Views"
+msgstr ""
+
+#: ../../api.rst:7
+msgid ""
+"All views and tables in the exposed schema and accessible by the active "
+"database role for a request are available for querying. They are exposed "
+"in one-level deep routes. For instance the full contents of a table "
+"`people` is returned at"
+msgstr ""
+
+#: ../../api.rst:19
+msgid ""
+"There are no deeply/nested/routes. Each route provides OPTIONS, GET, "
+"HEAD, POST, PATCH, and DELETE verbs depending entirely on database "
+"permissions."
+msgstr ""
+
+#: ../../api.rst:23
+msgid ""
+"Why not provide nested routes? Many APIs allow nesting to retrieve "
+"related information, such as :code:`/films/1/director`. We offer a more "
+"flexible mechanism (inspired by GraphQL) to embed related information. It"
+" can handle one-to-many and many-to-many relationships. This is covered "
+"in the section about :ref:`resource_embedding`."
+msgstr ""
+
+#: ../../api.rst:28
+msgid "Horizontal Filtering (Rows)"
+msgstr ""
+
+#: ../../api.rst:30
+msgid ""
+"You can filter result rows by adding conditions on columns. For instance,"
+" to return people aged under 13 years old:"
+msgstr ""
+
+#: ../../api.rst:42
+msgid ""
+"You can evaluate multiple conditions on columns by adding more query "
+"string parameters. For instance, to return people who are 18 or older "
+"**and** are students:"
+msgstr ""
+
+#: ../../api.rst:57
+msgid "Operators"
+msgstr ""
+
+#: ../../api.rst:59
+msgid "These operators are available:"
+msgstr ""
+
+#: ../../api.rst:62
+msgid "Abbreviation"
+msgstr ""
+
+#: ../../api.rst:62
+msgid "In PostgreSQL"
+msgstr ""
+
+#: ../../api.rst:62
+msgid "Meaning"
+msgstr ""
+
+#: ../../api.rst:64
+msgid "eq"
+msgstr ""
+
+#: ../../api.rst:64
+msgid ":code:`=`"
+msgstr ""
+
+#: ../../api.rst:64
+msgid "equals"
+msgstr ""
+
+#: ../../api.rst:65
+msgid "gt"
+msgstr ""
+
+#: ../../api.rst:65
+msgid ":code:`>`"
+msgstr ""
+
+#: ../../api.rst:65
+msgid "greater than"
+msgstr ""
+
+#: ../../api.rst:66
+msgid "gte"
+msgstr ""
+
+#: ../../api.rst:66
+msgid ":code:`>=`"
+msgstr ""
+
+#: ../../api.rst:66
+msgid "greater than or equal"
+msgstr ""
+
+#: ../../api.rst:67
+msgid "lt"
+msgstr ""
+
+#: ../../api.rst:67
+msgid ":code:`<`"
+msgstr ""
+
+#: ../../api.rst:67
+msgid "less than"
+msgstr ""
+
+#: ../../api.rst:68
+msgid "lte"
+msgstr ""
+
+#: ../../api.rst:68
+msgid ":code:`<=`"
+msgstr ""
+
+#: ../../api.rst:68
+msgid "less than or equal"
+msgstr ""
+
+#: ../../api.rst:69
+msgid "neq"
+msgstr ""
+
+#: ../../api.rst:69
+msgid ":code:`<>` or :code:`!=`"
+msgstr ""
+
+#: ../../api.rst:69
+msgid "not equal"
+msgstr ""
+
+#: ../../api.rst:70
+msgid "like"
+msgstr ""
+
+#: ../../api.rst:70
+msgid ":code:`LIKE`"
+msgstr ""
+
+#: ../../api.rst:70
+msgid "LIKE operator (use * in place of %)"
+msgstr ""
+
+#: ../../api.rst:71
+msgid "ilike"
+msgstr ""
+
+#: ../../api.rst:71
+msgid ":code:`ILIKE`"
+msgstr ""
+
+#: ../../api.rst:71
+msgid "ILIKE operator (use * in place of %)"
+msgstr ""
+
+#: ../../api.rst:72
+msgid "in"
+msgstr ""
+
+#: ../../api.rst:72
+msgid ":code:`IN`"
+msgstr ""
+
+#: ../../api.rst:72
+msgid ""
+"one of a list of values, e.g. :code:`?a=in.(1,2,3)` – also supports "
+"commas in quoted strings like :code:`?a=in.(\"hi,there\",\"yes,you\")`"
+msgstr ""
+
+#: ../../api.rst:75
+msgid "is"
+msgstr ""
+
+#: ../../api.rst:75
+msgid ":code:`IS`"
+msgstr ""
+
+#: ../../api.rst:75
+msgid "checking for exact equality (null,true,false,unknown)"
+msgstr ""
+
+#: ../../api.rst:76
+msgid "fts"
+msgstr ""
+
+#: ../../api.rst:76 ../../api.rst:77 ../../api.rst:78 ../../api.rst:79
+msgid ":code:`@@`"
+msgstr ""
+
+#: ../../api.rst:76
+msgid ":ref:`fts` using to_tsquery"
+msgstr ""
+
+#: ../../api.rst:77
+msgid "plfts"
+msgstr ""
+
+#: ../../api.rst:77
+msgid ":ref:`fts` using plainto_tsquery"
+msgstr ""
+
+#: ../../api.rst:78
+msgid "phfts"
+msgstr ""
+
+#: ../../api.rst:78
+msgid ":ref:`fts` using phraseto_tsquery"
+msgstr ""
+
+#: ../../api.rst:79
+msgid "wfts"
+msgstr ""
+
+#: ../../api.rst:79
+msgid ":ref:`fts` using websearch_to_tsquery"
+msgstr ""
+
+#: ../../api.rst:80
+msgid "cs"
+msgstr ""
+
+#: ../../api.rst:80
+msgid ":code:`@>`"
+msgstr ""
+
+#: ../../api.rst:80
+msgid "contains e.g. :code:`?tags=cs.{example, new}`"
+msgstr ""
+
+#: ../../api.rst:81
+msgid "cd"
+msgstr ""
+
+#: ../../api.rst:81
+msgid ":code:`<@`"
+msgstr ""
+
+#: ../../api.rst:81
+msgid "contained in e.g. :code:`?values=cd.{1,2,3}`"
+msgstr ""
+
+#: ../../api.rst:82
+msgid "ov"
+msgstr ""
+
+#: ../../api.rst:82
+msgid ":code:`&&`"
+msgstr ""
+
+#: ../../api.rst:82
+msgid ""
+"overlap (have points in common), e.g. "
+":code:`?period=ov.[2017-01-01,2017-06-30]` – also supports array types, "
+"use curly braces instead of square brackets e.g. :code: `?arr=ov.{1,3}`"
+msgstr ""
+
+#: ../../api.rst:85
+msgid "sl"
+msgstr ""
+
+#: ../../api.rst:85
+msgid ":code:`<<`"
+msgstr ""
+
+#: ../../api.rst:85
+msgid "strictly left of, e.g. :code:`?range=sl.(1,10)`"
+msgstr ""
+
+#: ../../api.rst:86
+msgid "sr"
+msgstr ""
+
+#: ../../api.rst:86
+msgid ":code:`>>`"
+msgstr ""
+
+#: ../../api.rst:86
+msgid "strictly right of"
+msgstr ""
+
+#: ../../api.rst:87
+msgid "nxr"
+msgstr ""
+
+#: ../../api.rst:87
+msgid ":code:`&<`"
+msgstr ""
+
+#: ../../api.rst:87
+msgid "does not extend to the right of, e.g. :code:`?range=nxr.(1,10)`"
+msgstr ""
+
+#: ../../api.rst:88
+msgid "nxl"
+msgstr ""
+
+#: ../../api.rst:88
+msgid ":code:`&>`"
+msgstr ""
+
+#: ../../api.rst:88
+msgid "does not extend to the left of"
+msgstr ""
+
+#: ../../api.rst:89
+msgid "adj"
+msgstr ""
+
+#: ../../api.rst:89
+msgid ":code:`-|-`"
+msgstr ""
+
+#: ../../api.rst:89
+msgid "is adjacent to, e.g. :code:`?range=adj.(1,10)`"
+msgstr ""
+
+#: ../../api.rst:90
+msgid "not"
+msgstr ""
+
+#: ../../api.rst:90
+msgid ":code:`NOT`"
+msgstr ""
+
+#: ../../api.rst:90
+msgid "negates another operator, see :ref:`logical_operators`"
+msgstr ""
+
+#: ../../api.rst:91
+msgid "or"
+msgstr ""
+
+#: ../../api.rst:91
+msgid ":code:`OR`"
+msgstr ""
+
+#: ../../api.rst:91
+msgid "logical :code:`OR`, see :ref:`logical_operators`"
+msgstr ""
+
+#: ../../api.rst:92
+msgid "and"
+msgstr ""
+
+#: ../../api.rst:92
+msgid ":code:`AND`"
+msgstr ""
+
+#: ../../api.rst:92
+msgid "logical :code:`AND`, see :ref:`logical_operators`"
+msgstr ""
+
+#: ../../api.rst:95
+msgid ""
+"For more complicated filters you will have to create a new view in the "
+"database, or use a stored procedure. For instance, here's a view to show "
+"\"today's stories\" including possibly older pinned stories:"
+msgstr ""
+
+#: ../../api.rst:106
+msgid "The view will provide a new endpoint:"
+msgstr ""
+
+#: ../../api.rst:121
+msgid "Logical operators"
+msgstr ""
+
+#: ../../api.rst:123
+msgid ""
+"Multiple conditions on columns are evaluated using ``AND`` by default, "
+"but you can combine them using ``OR`` with the ``or`` operator. For "
+"example, to return people under 18 **or** over 21:"
+msgstr ""
+
+#: ../../api.rst:135
+msgid ""
+"To **negate** any operator, you can prefix it with :code:`not` like "
+":code:`?a=not.eq.2` or :code:`?not.and=(a.gte.0,a.lte.100)` ."
+msgstr ""
+
+#: ../../api.rst:137
+msgid "You can also apply complex logic to the conditions:"
+msgstr ""
+
+#: ../../api.rst:152
+msgid "Full-Text Search"
+msgstr ""
+
+#: ../../api.rst:154
+msgid ""
+"The :code:`fts` filter mentioned above has a number of options to support"
+" flexible textual queries, namely the choice of plain vs phrase search "
+"and the language used for stemming. Suppose that :code:`tsearch` is a "
+"table with column :code:`my_tsv`, of type `tsvector "
+"<https://www.postgresql.org/docs/current/datatype-textsearch.html>`_. The"
+" following examples illustrate the possibilities."
+msgstr ""
+
+#: ../../api.rst:196
+msgid ""
+"Using `websearch_to_tsquery` requires PostgreSQL of version at least 11.0"
+" and will raise an error in earlier versions of the database."
+msgstr ""
+
+#: ../../api.rst:201
+msgid "Vertical Filtering (Columns)"
+msgstr ""
+
+#: ../../api.rst:203
+msgid ""
+"When certain columns are wide (such as those holding binary data), it is "
+"more efficient for the server to withhold them in a response. The client "
+"can specify which columns are required using the :sql:`select` parameter."
+msgstr ""
+
+#: ../../api.rst:222
+msgid ""
+"The default is :sql:`*`, meaning all columns. This value will become more"
+" important below in :ref:`resource_embedding`."
+msgstr ""
+
+#: ../../api.rst:225
+msgid "Renaming Columns"
+msgstr ""
+
+#: ../../api.rst:227
+msgid ""
+"You can rename the columns by prefixing them with an alias followed by "
+"the colon ``:`` operator."
+msgstr ""
+
+#: ../../api.rst:249
+msgid "Casting Columns"
+msgstr ""
+
+#: ../../api.rst:251
+msgid ""
+"Casting the columns is possible by suffixing them with the double colon "
+"``::`` plus the desired type."
+msgstr ""
+
+#: ../../api.rst:273
+msgid "JSON Columns"
+msgstr ""
+
+#: ../../api.rst:275
+msgid ""
+"You can specify a path for a ``json`` or ``jsonb`` column using the arrow"
+" operators(``->`` or ``->>``) as per the `PostgreSQL docs "
+"<https://www.postgresql.org/docs/current/functions-json.html>`_."
+msgstr ""
+
+#: ../../api.rst:311
+msgid "This also works with filters:"
+msgstr ""
+
+#: ../../api.rst:331
+msgid ""
+"Note that ``->>`` is used to compare ``blood_type`` as ``text``. To "
+"compare with an integer value use ``->``:"
+msgstr ""
+
+#: ../../api.rst:354
+msgid "Computed Columns"
+msgstr ""
+
+#: ../../api.rst:356
+msgid ""
+"Filters may be applied to computed columns(**a.k.a. virtual columns**) as"
+" well as actual table/view columns, even though the computed columns will"
+" not appear in the output. For example, to search first and last names at"
+" once we can create a computed column that will not appear in the output "
+"but can be used in a filter:"
+msgstr ""
+
+#: ../../api.rst:373
+msgid "A full-text search on the computed column:"
+msgstr ""
+
+#: ../../api.rst:385
+msgid ""
+"As mentioned, computed columns do not appear in the output by default. "
+"However you can include them by listing them in the vertical filtering "
+":code:`select` parameter:"
+msgstr ""
+
+#: ../../api.rst:399
+msgid ""
+"Computed columns must be created under the :ref:`exposed schema <db-"
+"schemas>` to be used in this way."
+msgstr ""
+
+#: ../../api.rst:402
+msgid "Unicode support"
+msgstr ""
+
+#: ../../api.rst:404
+msgid ""
+"PostgREST supports unicode in schemas, tables, columns and values. To "
+"access a table with unicode name, use percent encoding."
+msgstr ""
+
+#: ../../api.rst:406
+msgid "To request this:"
+msgstr ""
+
+#: ../../api.rst:412
+msgid "Do this:"
+msgstr ""
+
+#: ../../api.rst:427
+msgid "Table / Columns with spaces"
+msgstr ""
+
+#: ../../api.rst:429
+msgid ""
+"You can request table/columns with spaces in them by percent encoding the"
+" spaces with ``%20``:"
+msgstr ""
+
+#: ../../api.rst:444
+msgid "Reserved characters"
+msgstr ""
+
+#: ../../api.rst:446
+msgid ""
+"If filters include PostgREST reserved characters(``,``, ``.``, ``:``, "
+"``()``) you'll have to surround them in percent encoded double quotes "
+"``%22`` for correct processing."
+msgstr ""
+
+#: ../../api.rst:448
+msgid "Here ``Hebdon,John`` and ``Williams,Mary`` are values."
+msgstr ""
+
+#: ../../api.rst:460
+msgid "Here ``information.cpe`` is a column name."
+msgstr ""
+
+#: ../../api.rst:472
+msgid ""
+"If the value filtered by the ``in`` operator has a double quote (``\"``),"
+" you can escape it using a backslash ``\"\\\"\"``. A backslash itself can"
+" be used with a double backslash ``\"\\\\\"``."
+msgstr ""
+
+#: ../../api.rst:474
+msgid ""
+"Here ``Quote:\"`` and ``Backslash:\\`` are percent-encoded values. Note "
+"that ``%5C`` is the percent-encoded backslash."
+msgstr ""
+
+#: ../../api.rst:488
+msgid ""
+"Some HTTP libraries might encode URLs automatically(e.g. :code:`axios`). "
+"In these cases you should use double quotes :code:`\"\"` directly instead"
+" of :code:`%22`."
+msgstr ""
+
+#: ../../api.rst:492
+msgid "Ordering"
+msgstr ""
+
+#: ../../api.rst:494
+msgid ""
+"The reserved word :sql:`order` reorders the response rows. It uses a "
+"comma-separated list of columns and directions:"
+msgstr ""
+
+#: ../../api.rst:506
+msgid "If no direction is specified it defaults to ascending order:"
+msgstr ""
+
+#: ../../api.rst:518
+msgid "If you care where nulls are sorted, add ``nullsfirst`` or ``nullslast``:"
+msgstr ""
+
+#: ../../api.rst:540
+msgid ""
+"You can also use :ref:`computed_cols` to order the results, even though "
+"the computed columns will not appear in the output."
+msgstr ""
+
+#: ../../api.rst:545
+msgid "Limits and Pagination"
+msgstr ""
+
+#: ../../api.rst:547
+msgid ""
+"PostgREST uses HTTP range headers to describe the size of results. Every "
+"response contains the current range and, if requested, the total number "
+"of results:"
+msgstr ""
+
+#: ../../api.rst:555
+msgid ""
+"Here items zero through fourteen are returned. This information is "
+"available in every response and can help you render pagination controls "
+"on the client. This is an RFC7233-compliant solution that keeps the "
+"response JSON cleaner."
+msgstr ""
+
+#: ../../api.rst:557
+msgid ""
+"There are two ways to apply a limit and offset rows: through request "
+"headers or query parameters. When using headers you specify the range of "
+"rows desired. This request gets the first twenty people."
+msgstr ""
+
+#: ../../api.rst:573
+msgid ""
+"Note that the server may respond with fewer if unable to meet your "
+"request:"
+msgstr ""
+
+#: ../../api.rst:581
+msgid ""
+"You may also request open-ended ranges for an offset with no limit, e.g. "
+":code:`Range: 10-`."
+msgstr ""
+
+#: ../../api.rst:583
+msgid ""
+"The other way to request a limit or offset is with query parameters. For "
+"example"
+msgstr ""
+
+#: ../../api.rst:595
+msgid ""
+"This method is also useful for embedded resources, which we will cover in"
+" another section. The server always responds with range headers even if "
+"you use query parameters to limit the query."
+msgstr ""
+
+#: ../../api.rst:600
+msgid "Exact Count"
+msgstr ""
+
+#: ../../api.rst:602
+msgid ""
+"In order to obtain the total size of the table or view (such as when "
+"rendering the last page link in a pagination control), specify ``Prefer: "
+"count=exact`` as a request header:"
+msgstr ""
+
+#: ../../api.rst:620
+msgid ""
+"Note that the larger the table the slower this query runs in the "
+"database. The server will respond with the selected range and total"
+msgstr ""
+
+#: ../../api.rst:631
+msgid "Planned Count"
+msgstr ""
+
+#: ../../api.rst:633
+msgid ""
+"To avoid the shortcomings of :ref:`exact count <exact_count>`, PostgREST "
+"can leverage PostgreSQL statistics and get a fairly accurate and fast "
+"count. To do this, specify the ``Prefer: count=planned`` header."
+msgstr ""
+
+#: ../../api.rst:653
+msgid ""
+"Note that the accuracy of this count depends on how up-to-date are the "
+"PostgreSQL statistics tables. For example in this case, to increase the "
+"accuracy of the count you can do ``ANALYZE bigtable``. See `ANALYZE "
+"<https://www.postgresql.org/docs/current/sql-analyze.html>`_ for more "
+"details."
+msgstr ""
+
+#: ../../api.rst:660
+msgid "Estimated Count"
+msgstr ""
+
+#: ../../api.rst:662
+msgid ""
+"When you are interested in the count, the relative error is important. If"
+" you have a :ref:`planned count <planned_count>` of 1000000 and the exact"
+" count is 1001000, the error is small enough to be ignored. But with a "
+"planned count of 7, an exact count of 28 would be a huge misprediction."
+msgstr ""
+
+#: ../../api.rst:665
+msgid ""
+"In general, when having smaller row-counts, the estimated count should be"
+" as close to the exact count as possible."
+msgstr ""
+
+#: ../../api.rst:667
+msgid ""
+"To help with these cases, PostgREST can get the exact count up until a "
+"threshold and get the planned count when that threshold is surpassed. To "
+"use this behavior, you can specify the ``Prefer: count=estimated`` "
+"header. The **threshold** is defined by :ref:`db-max-rows`."
+msgstr ""
+
+#: ../../api.rst:671
+msgid ""
+"Here's an example. Suppose we set ``db-max-rows=1000`` and ``smalltable``"
+" has 321 rows, then we'll get the exact count:"
+msgstr ""
+
+#: ../../api.rst:690
+msgid ""
+"If we make a similar request on ``bigtable``, which has 3573458 rows, we "
+"would get the planned count:"
+msgstr ""
+
+#: ../../api.rst:712
+msgid "Response Format"
+msgstr ""
+
+#: ../../api.rst:714
+msgid ""
+"PostgREST uses proper HTTP content negotiation (`RFC7231 "
+"<https://datatracker.ietf.org/doc/html/rfc7231#section-5.3>`_) to deliver"
+" the desired representation of a resource. That is to say the same API "
+"endpoint can respond in different formats like JSON or CSV depending on "
+"the client request."
+msgstr ""
+
+#: ../../api.rst:716
+msgid ""
+"Use the Accept request header to specify the acceptable format (or "
+"formats) for the response:"
+msgstr ""
+
+#: ../../api.rst:730
+msgid "The current possibilities are:"
+msgstr ""
+
+#: ../../api.rst:732
+msgid "``*/*``"
+msgstr ""
+
+#: ../../api.rst:733
+msgid "``text/csv``"
+msgstr ""
+
+#: ../../api.rst:734
+msgid "``application/json``"
+msgstr ""
+
+#: ../../api.rst:735
+msgid "``application/openapi+json``"
+msgstr ""
+
+#: ../../api.rst:736
+msgid "``application/octet-stream``"
+msgstr ""
+
+#: ../../api.rst:738
+msgid "The server will default to JSON for API endpoints and OpenAPI on the root."
+msgstr ""
+
+#: ../../api.rst:743
+msgid "Singular or Plural"
+msgstr ""
+
+#: ../../api.rst:745
+msgid ""
+"By default PostgREST returns all JSON results in an array, even when "
+"there is only one item. For example, requesting :code:`/items?id=eq.1` "
+"returns"
+msgstr ""
+
+#: ../../api.rst:753
+msgid ""
+"This can be inconvenient for client code. To return the first result as "
+"an object unenclosed by an array, specify :code:`vnd.pgrst.object` as "
+"part of the :code:`Accept` header"
+msgstr ""
+
+#: ../../api.rst:767
+msgid "This returns"
+msgstr ""
+
+#: ../../api.rst:773
+msgid ""
+"When a singular response is requested but no entries are found, the "
+"server responds with an error message and 406 Not Acceptable status code "
+"rather than the usual empty array and 200 status:"
+msgstr ""
+
+#: ../../api.rst:784
+msgid ""
+"Many APIs distinguish plural and singular resources using a special "
+"nested URL convention e.g. `/stories` vs `/stories/1`. Why do we use "
+"`/stories?id=eq.1`? The answer is because a singular resource is (for us)"
+" a row determined by a primary key, and primary keys can be compound "
+"(meaning defined across more than one column). The more familiar nested "
+"urls consider only a degenerate case of simple and overwhelmingly numeric"
+" primary keys. These so-called artificial keys are often introduced "
+"automatically by Object Relational Mapping libraries."
+msgstr ""
+
+#: ../../api.rst:786
+msgid ""
+"Admittedly PostgREST could detect when there is an equality condition "
+"holding on all columns constituting the primary key and automatically "
+"convert to singular. However this could lead to a surprising change of "
+"format that breaks unwary client code just by filtering on an extra "
+"column. Instead we allow manually specifying singular vs plural to "
+"decouple that choice from the URL format."
+msgstr ""
+
+#: ../../api.rst:791
+msgid "Resource Embedding"
+msgstr ""
+
+#: ../../api.rst:793
+msgid ""
+"In addition to providing RESTful routes for each table and view, "
+"PostgREST allows related resources to be included together in a single "
+"API call. This reduces the need for multiple API requests. The server "
+"uses **foreign keys** to determine which tables and views can be returned"
+" together. For example, consider a database of films and their awards:"
+msgstr ""
+
+#: ../../api.rst:799
+msgid ""
+"PostgREST needs `FOREIGN KEY constraints "
+"<https://www.postgresql.org/docs/current/tutorial-fk.html>`_ to be able "
+"to do Resource Embedding."
+msgstr ""
+
+#: ../../api.rst:803
+msgid ""
+"As seen above in :ref:`v_filter` we can request the titles of all films "
+"like this:"
+msgstr ""
+
+#: ../../api.rst:815
+msgid "This might return something like"
+msgstr ""
+
+#: ../../api.rst:825
+msgid ""
+"However because a foreign key constraint exists between Films and "
+"Directors, we can request this information be included:"
+msgstr ""
+
+#: ../../api.rst:837
+msgid "Which would return"
+msgstr ""
+
+#: ../../api.rst:862
+msgid ""
+"In this example, since the relationship is a forward relationship, there "
+"is only one director associated with a film. As the table name is plural "
+"it might be preferable for it to be singular instead. An table name alias"
+" can accomplish this:"
+msgstr ""
+
+#: ../../api.rst:879
+msgid ""
+"Whenever FOREIGN KEY constraints change in the database schema you must "
+"refresh PostgREST's schema cache for Resource Embedding to work properly."
+" See the section :ref:`schema_reloading`."
+msgstr ""
+
+#: ../../api.rst:882
+msgid "Embedding through join tables"
+msgstr ""
+
+#: ../../api.rst:884
+msgid ""
+"PostgREST can also detect relationships going through join tables. Thus "
+"you can request the Actors for Films (which in this case finds the "
+"information through Roles)."
+msgstr ""
+
+#: ../../api.rst:899
+msgid "Nested Embedding"
+msgstr ""
+
+#: ../../api.rst:901
+msgid ""
+"If you want to embed through join tables but need more control on the "
+"intermediate resources, you can do nested embedding. For instance, you "
+"can request the Actors, their Roles and the Films for those Roles:"
+msgstr ""
+
+#: ../../api.rst:916
+msgid "Embedded Filters"
+msgstr ""
+
+#: ../../api.rst:918
+msgid ""
+"Embedded resources can be shaped similarly to their top-level "
+"counterparts. To do so, prefix the query parameters with the name of the "
+"embedded resource. For instance, to order the actors in each film:"
+msgstr ""
+
+#: ../../api.rst:930
+msgid ""
+"This sorts the list of actors in each film but does *not* change the "
+"order of the films themselves. To filter the roles returned with each "
+"film:"
+msgstr ""
+
+#: ../../api.rst:942
+msgid ""
+"Once again, this restricts the roles included to certain characters but "
+"does not filter the films in any way. Films without any of those "
+"characters would be included along with empty character lists."
+msgstr ""
+
+#: ../../api.rst:944
+msgid "An ``or`` filter  can be used for a similar operation:"
+msgstr ""
+
+#: ../../api.rst:956
+msgid "Limit and offset operations are possible:"
+msgstr ""
+
+#: ../../api.rst:968
+msgid ""
+"Embedded resources can be aliased and filters can be applied on these "
+"aliases:"
+msgstr ""
+
+#: ../../api.rst:980
+msgid "Filters can also be applied on nested embedded resources:"
+msgstr ""
+
+#: ../../api.rst:992
+msgid ""
+"The result will show the nested actors named Tom and order them by last "
+"name. Aliases can also be used instead of the resource names to filter "
+"the nested tables."
+msgstr ""
+
+#: ../../api.rst:997
+msgid "Embedding with Top-level Filtering"
+msgstr ""
+
+#: ../../api.rst:999
+msgid ""
+"By default, :ref:`embed_filters` don't change the top-level "
+"resource(``films``) rows at all:"
+msgstr ""
+
+#: ../../api.rst:1033
+msgid ""
+"In order to filter the top level rows you need to add ``!inner`` to the "
+"embedded resource. For instance, to get **only** the films that have an "
+"actor named ``Jehanne``:"
+msgstr ""
+
+#: ../../api.rst:1062
+msgid "Embedding Partitioned Tables"
+msgstr ""
+
+#: ../../api.rst:1064
+msgid ""
+"Embedding can also be done between `partitioned tables "
+"<https://www.postgresql.org/docs/current/ddl-partitioning.html>`_ and "
+"other tables."
+msgstr ""
+
+#: ../../api.rst:1066
+msgid ""
+"For example, let's create the ``box_office`` partitioned table that has "
+"the gross daily revenue of a film:"
+msgstr ""
+
+#: ../../api.rst:1087
+msgid ""
+"Since it contains the ``films_id`` foreign key, it is possible to embed "
+"``box_office`` and ``films``:"
+msgstr ""
+
+#: ../../api.rst:1100
+msgid ""
+"Embedding on partitions is not allowed because it leads to ambiguity "
+"errors (see :ref:`embed_disamb`) between them and their parent "
+"partitioned table(more details at `#1783(comment) "
+"<https://github.com/PostgREST/postgrest/issues/1783#issuecomment-959823827>`_)."
+" :ref:`custom_queries` can be used if this is needed."
+msgstr ""
+
+#: ../../api.rst:1102
+msgid ""
+"Partitioned tables can reference other tables since PostgreSQL 11 but can"
+" only be referenced from any other table since PostgreSQL 12."
+msgstr ""
+
+#: ../../api.rst:1107
+msgid "Embedding Views"
+msgstr ""
+
+#: ../../api.rst:1109
+msgid ""
+"Embedding a view is possible if the view contains columns that have "
+"**foreign keys** defined in their source tables."
+msgstr ""
+
+#: ../../api.rst:1111
+msgid ""
+"As an example, let's create a view called ``nominations_view`` based on "
+"the *nominations* table."
+msgstr ""
+
+#: ../../api.rst:1123
+msgid ""
+"Since it contains ``competition_id`` and ``film_id`` — and each one has a"
+" **foreign key** defined in its source table — we can embed "
+"*competitions* and *films*:"
+msgstr ""
+
+#: ../../api.rst:1135
+msgid ""
+"It's also possible to embed `Materialized Views "
+"<https://www.postgresql.org/docs/current/rules-materializedviews.html>`_."
+msgstr ""
+
+#: ../../api.rst:1139
+msgid ""
+"It's not guaranteed that all kinds of views will be embeddable. In "
+"particular, views that contain UNIONs will not be made embeddable."
+msgstr ""
+
+#: ../../api.rst:1142
+msgid ""
+"Why? PostgREST detects source table foreign keys in the view by querying "
+"and parsing `pg_rewrite <https://www.postgresql.org/docs/current/catalog-"
+"pg-rewrite.html>`_. This may fail depending on the complexity of the "
+"view."
+msgstr ""
+
+#: ../../api.rst:1145
+msgid ""
+"`Report an issue <https://github.com/PostgREST/postgrest/issues>`_ if "
+"your view is not made embeddable so we can keep continue improving "
+"foreign key detection."
+msgstr ""
+
+#: ../../api.rst:1148
+msgid ""
+"In the future we'll include a way to manually specify views source "
+"foreign keys to address this limitation."
+msgstr ""
+
+#: ../../api.rst:1152
+msgid ""
+"If view definitions change you must refresh PostgREST's schema cache for "
+"this to work properly. See the section :ref:`schema_reloading`."
+msgstr ""
+
+#: ../../api.rst:1157
+msgid "Embedding Chains of Views"
+msgstr ""
+
+#: ../../api.rst:1159
+msgid ""
+"Views can also depend on other views, which in turn depend on the actual "
+"source table. For PostgREST to pick up those chains recursively to any "
+"depth, all the views must be in the search path, so either in the exposed"
+" schema (:ref:`db-schemas`) or in one of the schemas set in :ref:`db-"
+"extra-search-path`. This does not apply to the source table, which could "
+"be in a private schema as well. See :ref:`schema_isolation` for more "
+"details."
+msgstr ""
+
+#: ../../api.rst:1164
+msgid "Embedding on Stored Procedures"
+msgstr ""
+
+#: ../../api.rst:1166
+msgid ""
+"If you have a :ref:`Stored Procedure <s_procs>` that returns a table "
+"type, you can embed its related resources."
+msgstr ""
+
+#: ../../api.rst:1168
+msgid "Here's a sample function (notice the ``RETURNS SETOF films``)."
+msgstr ""
+
+#: ../../api.rst:1176
+msgid "A request with ``directors`` embedded:"
+msgstr ""
+
+#: ../../api.rst:1202
+msgid "Embedding after Insertions/Updates/Deletions"
+msgstr ""
+
+#: ../../api.rst:1204
+msgid ""
+"You can embed related resources after doing :ref:`insert_update` or "
+":ref:`delete`."
+msgstr ""
+
+#: ../../api.rst:1206
+msgid ""
+"Say you want to insert a **film** and then get some of its attributes "
+"plus embed its **director**."
+msgstr ""
+
+#: ../../api.rst:1239
+msgid "Response:"
+msgstr ""
+
+#: ../../api.rst:1255
+msgid "Embedding Disambiguation"
+msgstr ""
+
+#: ../../api.rst:1257
+msgid ""
+"For doing resource embedding, PostgREST infers the relationship between "
+"two tables based on a foreign key between them. However, in cases where "
+"there's more than one foreign key between two tables, it's not possible "
+"to infer the relationship unambiguously by just specifying the tables "
+"names."
+msgstr ""
+
+#: ../../api.rst:1264
+msgid "Target Disambiguation"
+msgstr ""
+
+#: ../../api.rst:1266
+msgid ""
+"For example, suppose you have the following ``orders`` and ``addresses`` "
+"tables:"
+msgstr ""
+
+#: ../../api.rst:1270
+msgid ""
+"And you try to embed ``orders`` with ``addresses`` (this is the "
+"**target**):"
+msgstr ""
+
+#: ../../api.rst:1282
+msgid ""
+"Since the ``orders`` table has two foreign keys to the ``addresses`` "
+"table — an order has a billing address and a shipping address — the "
+"request is ambiguous and PostgREST will respond with an error:"
+msgstr ""
+
+#: ../../api.rst:1291
+msgid ""
+"If this happens, you need to disambiguate the request by adding precision"
+" to the **target**. Instead of the **table name**, you can specify the "
+"**foreign key constraint name** or the **column name** that is part of "
+"the foreign key."
+msgstr ""
+
+#: ../../api.rst:1294
+msgid ""
+"Let's try first with the **foreign key constraint name**. To make it "
+"clearer we can name it:"
+msgstr ""
+
+#: ../../api.rst:1307
+msgid ""
+"Now we can unambiguously embed the billing address by specifying the "
+"``billing_address`` foreign key constraint as the **target**."
+msgstr ""
+
+#: ../../api.rst:1330
+msgid ""
+"Alternatively, you can specify the **column name** of the foreign key "
+"constraint as the **target**. This can be aliased to make the result more"
+" clear."
+msgstr ""
+
+#: ../../api.rst:1357
+msgid "Hint Disambiguation"
+msgstr ""
+
+#: ../../api.rst:1359
+msgid ""
+"If specifying the **target** is not enough for unambiguous embedding, you"
+" can add a **hint**. For example, let's assume we create two views of "
+"``addresses``: ``central_addresses`` and ``eastern_addresses``."
+msgstr ""
+
+#: ../../api.rst:1362
+msgid ""
+"Since PostgREST supports :ref:`embedding_views` by detecting **source "
+"foreign keys** in the views, embedding with the foreign key as the "
+"**target** will not be enough for an unambiguous embed:"
+msgstr ""
+
+#: ../../api.rst:1379
+msgid ""
+"For solving this case, in addition to the **target**, we can add a "
+"**hint**. Here we specify ``central_addresses`` as the **target** and the"
+" ``billing_address`` foreign key as the **hint**:"
+msgstr ""
+
+#: ../../api.rst:1398
+msgid ""
+"Similarly to the **target**, the **hint** can be a **table name**, "
+"**foreign key constraint name** or **column name**."
+msgstr ""
+
+#: ../../api.rst:1400
+msgid ""
+"Hints also work alongside ``!inner`` if a top level filtering is needed. "
+"From the above example:"
+msgstr ""
+
+#: ../../api.rst:1415
+msgid "Insertions / Updates"
+msgstr ""
+
+#: ../../api.rst:1417
+msgid ""
+"All tables and `auto-updatable views "
+"<https://www.postgresql.org/docs/current/sql-createview.html#SQL-"
+"CREATEVIEW-UPDATABLE-VIEWS>`_ can be modified through the API, subject to"
+" permissions of the requester's database role."
+msgstr ""
+
+#: ../../api.rst:1419
+msgid ""
+"To create a row in a database table post a JSON object whose keys are the"
+" names of the columns you would like to create. Missing properties will "
+"be set to default values when applicable."
+msgstr ""
+
+#: ../../api.rst:1435
+msgid ""
+"If the table has a primary key, the response can contain a "
+":code:`Location` header describing where to find the new object by "
+"including the header :code:`Prefer: return=headers-only` in the request. "
+"Make sure that the table is not write-only, otherwise constructing the "
+":code:`Location` header will cause a permissions error."
+msgstr ""
+
+#: ../../api.rst:1437
+msgid ""
+"On the other end of the spectrum you can get the full created object back"
+" in the response to your request by including the header :code:`Prefer: "
+"return=representation`. That way you won't have to make another HTTP call"
+" to discover properties that may have been filled in on the server side. "
+"You can also apply the standard :ref:`v_filter` to these results."
+msgstr ""
+
+#: ../../api.rst:1439
+msgid ""
+"URL encoded payloads can be posted with ``Content-Type: application/x"
+"-www-form-urlencoded``."
+msgstr ""
+
+#: ../../api.rst:1458
+msgid "When inserting a row you must post a JSON object, not quoted JSON."
+msgstr ""
+
+#: ../../api.rst:1468
+msgid ""
+"Some JavaScript libraries will post the data incorrectly if you're not "
+"careful. For best results try one of the :ref:`clientside_libraries` "
+"built for PostgREST."
+msgstr ""
+
+#: ../../api.rst:1470
+msgid ""
+"To update a row or rows in a table, use the PATCH verb. Use "
+":ref:`h_filter` to specify which record(s) to update. Here is an example "
+"query setting the :code:`category` column to child for all people below a"
+" certain age."
+msgstr ""
+
+#: ../../api.rst:1486
+msgid ""
+"Updates also support :code:`Prefer: return=representation` plus "
+":ref:`v_filter`."
+msgstr ""
+
+#: ../../api.rst:1490
+msgid ""
+"Beware of accidentally updating every row in a table. To learn to prevent"
+" that see :ref:`block_fulltable`."
+msgstr ""
+
+#: ../../api.rst:1495
+msgid "Bulk Insert"
+msgstr ""
+
+#: ../../api.rst:1497
+msgid ""
+"Bulk insert works exactly like single row insert except that you provide "
+"either a JSON array of objects having uniform keys, or lines in CSV "
+"format. This not only minimizes the HTTP requests required but uses a "
+"single INSERT statement on the back-end for efficiency. Note that using "
+"CSV requires less parsing on the server and is much faster."
+msgstr ""
+
+#: ../../api.rst:1499
+msgid ""
+"To bulk insert CSV simply post to a table route with :code:`Content-Type:"
+" text/csv` and include the names of the columns as the first row. For "
+"instance"
+msgstr ""
+
+#: ../../api.rst:1522
+msgid ""
+"An empty field (:code:`,,`) is coerced to an empty string and the "
+"reserved word :code:`NULL` is mapped to the SQL null value. Note that "
+"there should be no spaces between the column names and commas."
+msgstr ""
+
+#: ../../api.rst:1524
+msgid "To bulk insert JSON post an array of objects having all-matching keys"
+msgstr ""
+
+#: ../../api.rst:1552
+msgid "Specifying Columns"
+msgstr ""
+
+#: ../../api.rst:1554
+msgid ""
+"By using the :code:`columns` query parameter it's possible to specify the"
+" payload keys that will be inserted/updated and ignore the rest of the "
+"payload."
+msgstr ""
+
+#: ../../api.rst:1590
+msgid ""
+"In this case, only **source**, **publication_date** and **figure** will "
+"be inserted. The rest of the JSON keys will be ignored."
+msgstr ""
+
+#: ../../api.rst:1592
+msgid ""
+"Using this also has the side-effect of being more efficient for "
+":ref:`bulk_insert` since PostgREST will not process the JSON and it'll "
+"send it directly to PostgreSQL."
+msgstr ""
+
+#: ../../api.rst:1598
+msgid "UPSERT"
+msgstr ""
+
+#: ../../api.rst:1600
+msgid ""
+"You can make an UPSERT with :code:`POST` and the :code:`Prefer: "
+"resolution=merge-duplicates` header:"
+msgstr ""
+
+#: ../../api.rst:1628
+msgid ""
+"By default, UPSERT operates based on the primary key columns, you must "
+"specify all of them. You can also choose to ignore the duplicates with "
+":code:`Prefer: resolution=ignore-duplicates`. This works best when the "
+"primary key is natural, but it's also possible to use it if the primary "
+"key is surrogate (example: \"id serial primary key\"). For more details "
+"read `this issue <https://github.com/PostgREST/postgrest/issues/1118>`_."
+msgstr ""
+
+#: ../../api.rst:1631
+msgid ""
+"After creating a table or changing its primary key, you must refresh "
+"PostgREST schema cache for UPSERT to work properly. To learn how to "
+"refresh the cache see :ref:`schema_reloading`."
+msgstr ""
+
+#: ../../api.rst:1636
+msgid "On Conflict"
+msgstr ""
+
+#: ../../api.rst:1638
+msgid ""
+"By specifying the ``on_conflict`` query parameter, you can make UPSERT "
+"work on a column(s) that has a UNIQUE constraint."
+msgstr ""
+
+#: ../../api.rst:1667 ../../api.rst:2375
+msgid "PUT"
+msgstr ""
+
+#: ../../api.rst:1669
+msgid ""
+"A single row UPSERT can be done by using :code:`PUT` and filtering the "
+"primary key columns with :code:`eq`:"
+msgstr ""
+
+#: ../../api.rst:1685
+msgid ""
+"All the columns must be specified in the request body, including the "
+"primary key columns."
+msgstr ""
+
+#: ../../api.rst:1690
+msgid "Deletions"
+msgstr ""
+
+#: ../../api.rst:1692
+msgid ""
+"To delete rows in a table, use the DELETE verb plus :ref:`h_filter`. For "
+"instance deleting inactive users:"
+msgstr ""
+
+#: ../../api.rst:1704
+msgid ""
+"Deletions also support :code:`Prefer: return=representation` plus "
+":ref:`v_filter`."
+msgstr ""
+
+#: ../../api.rst:1724
+msgid ""
+"Beware of accidentally deleting all rows in a table. To learn to prevent "
+"that see :ref:`block_fulltable`."
+msgstr ""
+
+#: ../../api.rst:1729
+msgid "Custom Queries"
+msgstr ""
+
+#: ../../api.rst:1731
+msgid ""
+"The PostgREST URL grammar limits the kinds of queries clients can "
+"perform. It prevents arbitrary, potentially poorly constructed and slow "
+"client queries. It's good for quality of service, but means database "
+"administrators must create custom views and stored procedures to provide "
+"richer endpoints. The most common causes for custom endpoints are"
+msgstr ""
+
+#: ../../api.rst:1733
+msgid "Table unions"
+msgstr ""
+
+#: ../../api.rst:1734
+msgid "More complicated joins than those provided by `Resource Embedding`_"
+msgstr ""
+
+#: ../../api.rst:1735
+msgid ""
+"Geo-spatial queries that require an argument, like \"points near "
+"(lat,lon)\""
+msgstr ""
+
+#: ../../api.rst:1740
+msgid "Stored Procedures"
+msgstr ""
+
+#: ../../api.rst:1742
+msgid ""
+"Every stored procedure in the API-exposed database schema is accessible "
+"under the :code:`/rpc` prefix. The API endpoint supports POST (and in "
+"some cases GET) to execute the function."
+msgstr ""
+
+#: ../../api.rst:1754
+msgid ""
+"Such functions can perform any operations allowed by PostgreSQL (read "
+"data, modify data, and even DDL operations)."
+msgstr ""
+
+#: ../../api.rst:1756
+msgid ""
+"To supply arguments in an API call, include a JSON object in the request "
+"payload and each key/value of the object will become an argument."
+msgstr ""
+
+#: ../../api.rst:1758
+msgid "For instance, assume we have created this function in the database."
+msgstr ""
+
+#: ../../api.rst:1769
+msgid ""
+"Whenever you create or change a function you must refresh PostgREST's "
+"schema cache. See the section :ref:`schema_reloading`."
+msgstr ""
+
+#: ../../api.rst:1771
+msgid "The client can call it by posting an object like"
+msgstr ""
+
+#: ../../api.rst:1792
+msgid ""
+"Procedures must be declared with named parameters. Procedures declared "
+"like"
+msgstr ""
+
+#: ../../api.rst:1798
+msgid ""
+"cannot be called with PostgREST, since we use `named notation "
+"<https://www.postgresql.org/docs/current/sql-syntax-calling-funcs.html"
+"#SQL-SYNTAX-CALLING-FUNCS-NAMED>`_ internally."
+msgstr ""
+
+#: ../../api.rst:1800
+msgid ""
+"Note that PostgreSQL converts identifier names to lowercase unless you "
+"quote them like:"
+msgstr ""
+
+#: ../../api.rst:1806
+msgid ""
+"PostgreSQL has four procedural languages that are part of the core "
+"distribution: PL/pgSQL, PL/Tcl, PL/Perl, and PL/Python. There are many "
+"other procedural languages distributed as additional extensions. Also, "
+"plain SQL can be used to write functions (as shown in the example above)."
+msgstr ""
+
+#: ../../api.rst:1810
+msgid ""
+"Why the ``/rpc`` prefix? One reason is to avoid name collisions between "
+"views and procedures. It also helps emphasize to API consumers that these"
+" functions are not normal restful things. The functions can have "
+"arbitrary and surprising behavior, not the standard \"post creates a "
+"resource\" thing that users expect from the other routes."
+msgstr ""
+
+#: ../../api.rst:1813
+msgid "Immutable and stable functions"
+msgstr ""
+
+#: ../../api.rst:1815
+msgid ""
+"PostgREST executes POST requests in a read/write transaction except for "
+"functions marked as ``IMMUTABLE`` or ``STABLE``. Those must not modify "
+"the database and are executed in a read-only transaction compatible for "
+"read-replicas."
+msgstr ""
+
+#: ../../api.rst:1817
+msgid ""
+"Procedures that do not modify the database can be called with the HTTP "
+"GET verb as well, if desired. PostgREST executes all GET requests in a "
+"read-only transaction. Modifying the database inside read-only "
+"transactions is not possible and calling volatile functions with GET will"
+" fail."
+msgstr ""
+
+#: ../../api.rst:1821
+msgid ""
+"The `volatility marker <https://www.postgresql.org/docs/current/xfunc-"
+"volatility.html>`_ is a promise about the behavior of the function.  "
+"PostgreSQL will let you mark a function that modifies the database as "
+"``IMMUTABLE`` or ``STABLE`` without failure.  However, because of the "
+"read-only transaction this would still fail with PostgREST."
+msgstr ""
+
+#: ../../api.rst:1823
+msgid ""
+"Because ``add_them`` is ``IMMUTABLE``, we can alternately call the "
+"function with a GET request:"
+msgstr ""
+
+#: ../../api.rst:1835
+msgid ""
+"The function parameter names match the JSON object keys in the POST case,"
+" for the GET case they match the query parameters ``?a=1&b=2``."
+msgstr ""
+
+#: ../../api.rst:1840
+msgid "Calling functions with a single JSON parameter"
+msgstr ""
+
+#: ../../api.rst:1842
+msgid ""
+"You can also call a function that takes a single parameter of type JSON "
+"by sending the header :code:`Prefer: params=single-object` with your "
+"request. That way the JSON request body will be used as the single "
+"argument."
+msgstr ""
+
+#: ../../api.rst:1873
+msgid "Calling functions with a single unnamed parameter"
+msgstr ""
+
+#: ../../api.rst:1875
+msgid ""
+"You can make a POST request to a function with a single unnamed parameter"
+" to send raw ``json/jsonb``, ``bytea`` or ``text`` data."
+msgstr ""
+
+#: ../../api.rst:1877
+msgid ""
+"To send raw JSON, the function must have a single unnamed ``json`` or "
+"``jsonb`` parameter and the header ``Content-Type: application/json`` "
+"must be included in the request."
+msgstr ""
+
+#: ../../api.rst:1906
+msgid ""
+"If an overloaded function has a single ``json`` or ``jsonb`` unnamed "
+"parameter, PostgREST will call this function as a fallback provided that "
+"no other overloaded function is found with the parameters sent in the "
+"POST request."
+msgstr ""
+
+#: ../../api.rst:1908
+msgid ""
+"To send raw binary, the parameter type must be ``bytea`` and the header "
+"``Content-Type: application/octet-stream`` must be included in the "
+"request."
+msgstr ""
+
+#: ../../api.rst:1939
+msgid ""
+"To send raw text, the parameter type must be ``text`` and the header "
+"``Content-Type: text/plain`` must be included in the request."
+msgstr ""
+
+#: ../../api.rst:1944
+msgid "Calling functions with array parameters"
+msgstr ""
+
+#: ../../api.rst:1946
+msgid "You can call a function that takes an array parameter:"
+msgstr ""
+
+#: ../../api.rst:1973
+msgid ""
+"For calling the function with GET, you can pass the array as an `array "
+"literal <https://www.postgresql.org/docs/current/arrays.html#ARRAYS-"
+"INPUT>`_, as in ``{1,2,3,4}``. Note that the curly brackets have to be "
+"urlencoded(``{`` is ``%7B`` and ``}`` is ``%7D``)."
+msgstr ""
+
+#: ../../api.rst:1988
+msgid ""
+"For versions prior to PostgreSQL 10, to pass a PostgreSQL native array on"
+" a POST payload, you need to quote it and use an array literal:"
+msgstr ""
+
+#: ../../api.rst:2004
+msgid ""
+"In these versions we recommend using function parameters of type JSON to "
+"accept arrays from the client."
+msgstr ""
+
+#: ../../api.rst:2009
+msgid "Calling variadic functions"
+msgstr ""
+
+#: ../../api.rst:2011
+msgid ""
+"You can call a variadic function by passing a JSON array in a POST "
+"request:"
+msgstr ""
+
+#: ../../api.rst:2038
+msgid "In a GET request, you can repeat the same parameter name:"
+msgstr ""
+
+#: ../../api.rst:2050
+msgid ""
+"Repeating also works in POST requests with ``Content-Type: application/x"
+"-www-form-urlencoded``:"
+msgstr ""
+
+#: ../../api.rst:2068
+msgid "Scalar functions"
+msgstr ""
+
+#: ../../api.rst:2070
+msgid ""
+"PostgREST will detect if the function is scalar or table-valued and will "
+"shape the response format accordingly:"
+msgstr ""
+
+#: ../../api.rst:2107
+msgid "Bulk Call"
+msgstr ""
+
+#: ../../api.rst:2109
+msgid ""
+"It's possible to call a function in a bulk way, analogously to "
+":ref:`bulk_insert`. To do this, you need to add the ``Prefer: params"
+"=multiple-objects`` header to your request."
+msgstr ""
+
+#: ../../api.rst:2139
+msgid ""
+"If you have large payloads to process, it's preferable you instead use a "
+"function with an :ref:`array parameter <s_procs_array>` or JSON "
+"parameter, as this will be more efficient."
+msgstr ""
+
+#: ../../api.rst:2141
+msgid ""
+"It's also possible to :ref:`Specify Columns <specify_columns>` on "
+"functions calls."
+msgstr ""
+
+#: ../../api.rst:2144
+msgid "Function filters"
+msgstr ""
+
+#: ../../api.rst:2146
+msgid ""
+"A function that returns a table type response can be shaped using the "
+"same filters as the ones used for tables and views:"
+msgstr ""
+
+#: ../../api.rst:2173
+msgid "Overloaded functions"
+msgstr ""
+
+#: ../../api.rst:2175
+msgid "You can call overloaded functions with different number of arguments."
+msgstr ""
+
+#: ../../api.rst:2205
+msgid ""
+"Overloaded functions with the same argument names but different types are"
+" not supported."
+msgstr ""
+
+#: ../../api.rst:2210
+msgid "Binary Output"
+msgstr ""
+
+#: ../../api.rst:2212
+msgid ""
+"If you want to return raw binary data from a :code:`bytea` column, you "
+"must specify :code:`application/octet-stream` as part of the "
+":code:`Accept` header and select a single column "
+":code:`?select=bin_data`."
+msgstr ""
+
+#: ../../api.rst:2227
+msgid ""
+"You can also request binary output when calling `Stored Procedures`_ and "
+"since they can return a scalar value you are not forced to use "
+":code:`select` for this case."
+msgstr ""
+
+#: ../../api.rst:2246
+msgid ""
+"If the stored procedure returns non-scalar values, you need to do a "
+":code:`select` in the same way as for GET binary output."
+msgstr ""
+
+#: ../../api.rst:2266
+msgid ""
+"If more than one row would be returned the binary results will be "
+"concatenated with no delimiter."
+msgstr ""
+
+#: ../../api.rst:2271
+msgid "Plain Text Output"
+msgstr ""
+
+#: ../../api.rst:2273
+msgid ""
+"You can get raw output from a ``text`` column by using ``Accept: "
+"text/plain``."
+msgstr ""
+
+#: ../../api.rst:2294
+msgid "This follows the same rules as :ref:`binary_output`."
+msgstr ""
+
+#: ../../api.rst:2299
+msgid "OpenAPI Support"
+msgstr ""
+
+#: ../../api.rst:2301
+msgid ""
+"Every API hosted by PostgREST automatically serves a full `OpenAPI "
+"<https://www.openapis.org/>`_ description on the root path. This provides"
+" a list of all endpoints (tables, foreign tables, views, functions), "
+"along with supported HTTP verbs and example payloads."
+msgstr ""
+
+#: ../../api.rst:2305
+msgid ""
+"By default, this output depends on the permissions of the role that is "
+"contained in the JWT role claim (or the :ref:`db-anon-role` if no JWT is "
+"sent). If you need to show all the endpoints disregarding the role's "
+"permissions, set the :ref:`openapi-mode` config to :code:`ignore-"
+"privileges`."
+msgstr ""
+
+#: ../../api.rst:2307
+msgid ""
+"For extra customization, the OpenAPI output contains a \"description\" "
+"field for every `SQL comment <https://www.postgresql.org/docs/current"
+"/sql-comment.html>`_ on any database object. For instance,"
+msgstr ""
+
+#: ../../api.rst:2320
+msgid ""
+"These unsavory comments will appear in the generated JSON as the fields, "
+"``info.description``, ``definitions.monotremes.description`` and "
+"``definitions.monotremes.properties.has_venomous_claw.description``."
+msgstr ""
+
+#: ../../api.rst:2322
+msgid ""
+"Also if you wish to generate a ``summary`` field you can do it by having "
+"a multiple line comment, the ``summary`` will be the first line and the "
+"``description`` the lines that follow it:"
+msgstr ""
+
+#: ../../api.rst:2333
+msgid ""
+"You can use a tool like `Swagger UI <https://swagger.io/tools/swagger-"
+"ui/>`_ to create beautiful documentation from the description and to host"
+" an interactive web-based dashboard. The dashboard allows developers to "
+"make requests against a live PostgREST server, and provides guidance with"
+" request headers and example request bodies."
+msgstr ""
+
+#: ../../api.rst:2337
+msgid ""
+"The OpenAPI information can go out of date as the schema changes under a "
+"running server. To learn how to refresh the cache see "
+":ref:`schema_reloading`."
+msgstr ""
+
+#: ../../api.rst:2342
+msgid "OPTIONS"
+msgstr ""
+
+#: ../../api.rst:2344
+msgid ""
+"You can verify which HTTP methods are allowed on endpoints for tables and"
+" views by using an OPTIONS request. These methods are allowed depending "
+"on what operations *can* be done on the table or view, not on the "
+"database permissions assigned to them."
+msgstr ""
+
+#: ../../api.rst:2346
+msgid "For a table named ``people``, OPTIONS would show:"
+msgstr ""
+
+#: ../../api.rst:2363
+msgid ""
+"For a view, the methods are determined by the presence of INSTEAD OF "
+"TRIGGERS."
+msgstr ""
+
+#: ../../api.rst:2369
+msgid "Method allowed"
+msgstr ""
+
+#: ../../api.rst:2369
+msgid "View's requirements"
+msgstr ""
+
+#: ../../api.rst:2371
+msgid "OPTIONS, GET, HEAD"
+msgstr ""
+
+#: ../../api.rst:2371
+msgid "None (Always allowed)"
+msgstr ""
+
+#: ../../api.rst:2373
+msgid "POST"
+msgstr ""
+
+#: ../../api.rst:2373
+msgid "INSTEAD OF INSERT TRIGGER"
+msgstr ""
+
+#: ../../api.rst:2375
+msgid ""
+"INSTEAD OF INSERT TRIGGER, INSTEAD OF UPDATE TRIGGER, also requires the "
+"presence of a primary key"
+msgstr ""
+
+#: ../../api.rst:2378
+msgid "PATCH"
+msgstr ""
+
+#: ../../api.rst:2378
+msgid "INSTEAD OF UPDATE TRIGGER"
+msgstr ""
+
+#: ../../api.rst:2380
+msgid "DELETE"
+msgstr ""
+
+#: ../../api.rst:2380
+msgid "INSTEAD OF DELETE TRIGGER"
+msgstr ""
+
+#: ../../api.rst:2382
+msgid ""
+"All the above methods are allowed for `auto-updatable views "
+"<https://www.postgresql.org/docs/current/sql-createview.html#SQL-"
+"CREATEVIEW-UPDATABLE-VIEWS>`_"
+msgstr ""
+
+#: ../../api.rst:2386
+msgid "For functions, OPTIONS requests are not supported."
+msgstr ""
+
+#: ../../api.rst:2390
+msgid ""
+"Whenever you add or remove tables or views, or modify a view's INSTEAD OF"
+" TRIGGERS on the database, you must refresh PostgREST's schema cache for "
+"OPTIONS requests to work properly. See the section "
+":ref:`schema_reloading`."
+msgstr ""
+
+#: ../../api.rst:2393
+msgid "CORS"
+msgstr ""
+
+#: ../../api.rst:2395
+msgid ""
+"PostgREST sets highly permissive cross origin resource sharing, that is "
+"why it accepts Ajax requests from any domain."
+msgstr ""
+
+#: ../../api.rst:2400
+msgid "Switching Schemas"
+msgstr ""
+
+#: ../../api.rst:2402
+msgid ""
+"You can switch schemas at runtime with the ``Accept-Profile`` and "
+"``Content-Profile`` headers. You can only switch to a schema that is "
+"included in :ref:`db-schemas`."
+msgstr ""
+
+#: ../../api.rst:2404
+msgid ""
+"For GET or HEAD, the schema to be used can be selected through the "
+"``Accept-Profile`` header:"
+msgstr ""
+
+#: ../../api.rst:2418
+msgid ""
+"For POST, PATCH, PUT and DELETE, you can use the ``Content-Profile`` "
+"header for selecting the schema:"
+msgstr ""
+
+#: ../../api.rst:2436
+msgid "You can also select the schema for :ref:`s_procs` and :ref:`open-api`."
+msgstr ""
+
+#: ../../api.rst:2440
+msgid ""
+"These headers are based on the nascent \"Content Negotiation by Profile\""
+" spec: https://www.w3.org/TR/dx-prof-conneg"
+msgstr ""
+
+#: ../../api.rst:2445
+msgid "HTTP Context"
+msgstr ""
+
+#: ../../api.rst:2450
+msgid "Accessing Request Headers, Cookies and JWT claims"
+msgstr ""
+
+#: ../../api.rst:2452
+msgid ""
+"You can access request headers, cookies and JWT claims by reading GUC "
+"variables set by PostgREST per request. They are named "
+":code:`request.headers`, :code:`request.cookies` and "
+":code:`request.jwt.claims`."
+msgstr ""
+
+#: ../../api.rst:2470
+msgid ""
+"The ``role`` in ``request.jwt.claims`` defaults to the value of :ref:`db-"
+"anon-role`."
+msgstr ""
+
+#: ../../api.rst:2475
+msgid "Legacy GUC variable names"
+msgstr ""
+
+#: ../../api.rst:2477
+msgid ""
+"For PostgreSQL versions below 14, PostgREST will take into consideration "
+"the :ref:`db-use-legacy-gucs` config, which is set to true by default. "
+"This means that the interface for accessing these GUCs is `the same as in"
+" older versions <https://postgrest.org/en/v8.0/api.html#accessing-"
+"request-headers-cookies-and-jwt-claims>`_. You can opt in to use the JSON"
+" GUCs mentioned above by setting the ``db-use-legacy-gucs`` to false."
+msgstr ""
+
+#: ../../api.rst:2482
+msgid "Accessing Request Path and Method"
+msgstr ""
+
+#: ../../api.rst:2484
+msgid ""
+"You can also access the request path and method with :code:`request.path`"
+" and :code:`request.method`."
+msgstr ""
+
+#: ../../api.rst:2497
+msgid "Setting Response Headers"
+msgstr ""
+
+#: ../../api.rst:2499
+msgid ""
+"PostgREST reads the ``response.headers`` SQL variable to add extra "
+"headers to the HTTP response. Stored procedures can modify this variable."
+" For instance, this statement would add caching headers to the response:"
+msgstr ""
+
+#: ../../api.rst:2508
+msgid ""
+"Notice that the variable should be set to an *array* of single-key "
+"objects rather than a single multiple-key object. This is because headers"
+" such as ``Cache-Control`` or ``Set-Cookie`` need to be repeated when "
+"setting multiple values and an object would not allow the repeated key."
+msgstr ""
+
+#: ../../api.rst:2512
+msgid ""
+"PostgREST provided headers such as ``Content-Type``, ``Location``, etc. "
+"can be overriden this way."
+msgstr ""
+
+#: ../../api.rst:2517
+msgid "Setting headers via pre-request"
+msgstr ""
+
+#: ../../api.rst:2519
+msgid ""
+"By using a :ref:`db-pre-request` function, you can add headers to "
+"GET/POST/PATCH/PUT/DELETE responses. As an example, let's add some cache "
+"headers for all requests that come from an Internet Explorer(6 or 7) "
+"browser."
+msgstr ""
+
+#: ../../api.rst:2537
+msgid ""
+"Now when you make a GET request to a table or view, you'll get the cache "
+"headers."
+msgstr ""
+
+#: ../../api.rst:2560
+msgid "Setting Response Status Code"
+msgstr ""
+
+#: ../../api.rst:2562
+msgid ""
+"You can set the ``response.status`` GUC to override the default status "
+"code PostgREST provides. For instance, the following function would "
+"replace the default ``200`` status code."
+msgstr ""
+
+#: ../../api.rst:2591
+msgid ""
+"If the status code is standard, PostgREST will complete the status "
+"message(**I'm a teapot** in this example)."
+msgstr ""
+
+#: ../../api.rst:2596
+msgid "Raise errors with HTTP Status Codes"
+msgstr ""
+
+#: ../../api.rst:2598
+msgid ""
+"Stored procedures can return non-200 HTTP status codes by raising SQL "
+"exceptions. For instance, here's a saucy function that always responds "
+"with an error:"
+msgstr ""
+
+#: ../../api.rst:2612
+msgid "Calling the function returns HTTP 400 with the body"
+msgstr ""
+
+#: ../../api.rst:2625
+msgid ""
+"Keep in mind that ``RAISE EXCEPTION`` will abort the transaction and "
+"rollback all changes. If you don't want this, you can instead use the "
+":ref:`response.status GUC <guc_resp_status>`."
+msgstr ""
+
+#: ../../api.rst:2627
+msgid ""
+"One way to customize the HTTP status code is by raising particular "
+"exceptions according to the PostgREST :ref:`error to status code mapping "
+"<status_codes>`. For example, :code:`RAISE insufficient_privilege` will "
+"respond with HTTP 401/403 as appropriate."
+msgstr ""
+
+#: ../../api.rst:2629
+msgid ""
+"For even greater control of the HTTP status code, raise an exception of "
+"the ``PTxyz`` type. For instance to respond with HTTP 402, raise 'PT402':"
+msgstr ""
+
+#: ../../api.rst:2638
+msgid "Returns:"
+msgstr ""
+
+#: ../../api.rst:2650
+msgid "HTTP Status Codes"
+msgstr ""
+
+#: ../../api.rst:2652
+msgid ""
+"PostgREST translates `PostgreSQL error codes "
+"<https://www.postgresql.org/docs/current/errcodes-appendix.html>`_ into "
+"HTTP status as follows:"
+msgstr ""
+
+#: ../../api.rst:2655
+msgid "PostgreSQL error code(s)"
+msgstr ""
+
+#: ../../api.rst:2655
+msgid "HTTP status"
+msgstr ""
+
+#: ../../api.rst:2655
+msgid "Error description"
+msgstr ""
+
+#: ../../api.rst:2657
+msgid "08*"
+msgstr ""
+
+#: ../../api.rst:2657 ../../api.rst:2685
+msgid "503"
+msgstr ""
+
+#: ../../api.rst:2657
+msgid "pg connection err"
+msgstr ""
+
+#: ../../api.rst:2659
+msgid "09*"
+msgstr ""
+
+#: ../../api.rst:2659 ../../api.rst:2671 ../../api.rst:2675 ../../api.rst:2677
+#: ../../api.rst:2679 ../../api.rst:2681 ../../api.rst:2683 ../../api.rst:2689
+#: ../../api.rst:2691 ../../api.rst:2693 ../../api.rst:2695 ../../api.rst:2697
+#: ../../api.rst:2701 ../../api.rst:2703
+msgid "500"
+msgstr ""
+
+#: ../../api.rst:2659
+msgid "triggered action exception"
+msgstr ""
+
+#: ../../api.rst:2661
+msgid "0L*"
+msgstr ""
+
+#: ../../api.rst:2661 ../../api.rst:2663 ../../api.rst:2673
+msgid "403"
+msgstr ""
+
+#: ../../api.rst:2661
+msgid "invalid grantor"
+msgstr ""
+
+#: ../../api.rst:2663
+msgid "0P*"
+msgstr ""
+
+#: ../../api.rst:2663
+msgid "invalid role specification"
+msgstr ""
+
+#: ../../api.rst:2665
+msgid "23503"
+msgstr ""
+
+#: ../../api.rst:2665 ../../api.rst:2667
+msgid "409"
+msgstr ""
+
+#: ../../api.rst:2665
+msgid "foreign key violation"
+msgstr ""
+
+#: ../../api.rst:2667
+msgid "23505"
+msgstr ""
+
+#: ../../api.rst:2667
+msgid "uniqueness violation"
+msgstr ""
+
+#: ../../api.rst:2669
+msgid "25006"
+msgstr ""
+
+#: ../../api.rst:2669
+msgid "405"
+msgstr ""
+
+#: ../../api.rst:2669
+msgid "read only sql transaction"
+msgstr ""
+
+#: ../../api.rst:2671
+msgid "25*"
+msgstr ""
+
+#: ../../api.rst:2671
+msgid "invalid transaction state"
+msgstr ""
+
+#: ../../api.rst:2673
+msgid "28*"
+msgstr ""
+
+#: ../../api.rst:2673
+msgid "invalid auth specification"
+msgstr ""
+
+#: ../../api.rst:2675
+msgid "2D*"
+msgstr ""
+
+#: ../../api.rst:2675
+msgid "invalid transaction termination"
+msgstr ""
+
+#: ../../api.rst:2677
+msgid "38*"
+msgstr ""
+
+#: ../../api.rst:2677
+msgid "external routine exception"
+msgstr ""
+
+#: ../../api.rst:2679
+msgid "39*"
+msgstr ""
+
+#: ../../api.rst:2679
+msgid "external routine invocation"
+msgstr ""
+
+#: ../../api.rst:2681
+msgid "3B*"
+msgstr ""
+
+#: ../../api.rst:2681
+msgid "savepoint exception"
+msgstr ""
+
+#: ../../api.rst:2683
+msgid "40*"
+msgstr ""
+
+#: ../../api.rst:2683
+msgid "transaction rollback"
+msgstr ""
+
+#: ../../api.rst:2685
+msgid "53*"
+msgstr ""
+
+#: ../../api.rst:2685
+msgid "insufficient resources"
+msgstr ""
+
+#: ../../api.rst:2687
+msgid "54*"
+msgstr ""
+
+#: ../../api.rst:2687
+msgid "413"
+msgstr ""
+
+#: ../../api.rst:2687
+msgid "too complex"
+msgstr ""
+
+#: ../../api.rst:2689
+msgid "55*"
+msgstr ""
+
+#: ../../api.rst:2689
+msgid "obj not in prerequisite state"
+msgstr ""
+
+#: ../../api.rst:2691
+msgid "57*"
+msgstr ""
+
+#: ../../api.rst:2691
+msgid "operator intervention"
+msgstr ""
+
+#: ../../api.rst:2693
+msgid "58*"
+msgstr ""
+
+#: ../../api.rst:2693
+msgid "system error"
+msgstr ""
+
+#: ../../api.rst:2695
+msgid "F0*"
+msgstr ""
+
+#: ../../api.rst:2695
+msgid "config file error"
+msgstr ""
+
+#: ../../api.rst:2697
+msgid "HV*"
+msgstr ""
+
+#: ../../api.rst:2697
+msgid "foreign data wrapper error"
+msgstr ""
+
+#: ../../api.rst:2699
+msgid "P0001"
+msgstr ""
+
+#: ../../api.rst:2699 ../../api.rst:2712
+msgid "400"
+msgstr ""
+
+#: ../../api.rst:2699
+msgid "default code for \"raise\""
+msgstr ""
+
+#: ../../api.rst:2701
+msgid "P0*"
+msgstr ""
+
+#: ../../api.rst:2701
+msgid "PL/pgSQL error"
+msgstr ""
+
+#: ../../api.rst:2703
+msgid "XX*"
+msgstr ""
+
+#: ../../api.rst:2703
+msgid "internal error"
+msgstr ""
+
+#: ../../api.rst:2705
+msgid "42883"
+msgstr ""
+
+#: ../../api.rst:2705 ../../api.rst:2707
+msgid "404"
+msgstr ""
+
+#: ../../api.rst:2705
+msgid "undefined function"
+msgstr ""
+
+#: ../../api.rst:2707
+msgid "42P01"
+msgstr ""
+
+#: ../../api.rst:2707
+msgid "undefined table"
+msgstr ""
+
+#: ../../api.rst:2709
+msgid "42501"
+msgstr ""
+
+#: ../../api.rst
+msgid "if authenticated 403,"
+msgstr ""
+
+#: ../../api.rst
+msgid "else 401"
+msgstr ""
+
+#: ../../api.rst:2709
+msgid "insufficient privileges"
+msgstr ""
+
+#: ../../api.rst:2712
+msgid "other"
+msgstr ""
+

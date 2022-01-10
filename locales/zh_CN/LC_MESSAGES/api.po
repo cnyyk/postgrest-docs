@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-10 22:08+0800\n"
+"PO-Revision-Date: 2022-01-10 22:39+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -1893,7 +1893,7 @@ msgstr ""
 
 #: ../../api.rst:2400
 msgid "Switching Schemas"
-msgstr "切换模式"
+msgstr "切换 Schema"
 
 #: ../../api.rst:2402
 msgid ""

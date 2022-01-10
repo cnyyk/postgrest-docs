@@ -3,23 +3,24 @@
 # This file is distributed under the same license as the PostgREST package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 19:43+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-01-10 22:39+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../../schema_cache.rst:4
 msgid "Schema Cache"
-msgstr ""
+msgstr "Schema 缓存"
 
 #: ../../schema_cache.rst:6
 msgid ""
@@ -131,8 +132,8 @@ msgstr ""
 #: ../../schema_cache.rst:63
 msgid ""
 "As you can see, PostgREST couldn't find the newly created foreign key in "
-"the schema cache. See :ref:`schema_reloading` and "
-":ref:`auto_schema_reloading` to solve this issue."
+"the schema cache. See :ref:`schema_reloading` and :ref:"
+"`auto_schema_reloading` to solve this issue."
 msgstr ""
 
 #: ../../schema_cache.rst:68
@@ -178,10 +179,10 @@ msgstr ""
 
 #: ../../schema_cache.rst:126
 msgid ""
-"There are environments where you can't send the SIGUSR1 Unix Signal (like"
-" on managed containers in cloud services or on Windows systems). For this"
-" reason, PostgREST also allows you to reload its schema cache through "
-"PostgreSQL `NOTIFY <https://www.postgresql.org/docs/current/sql-"
+"There are environments where you can't send the SIGUSR1 Unix Signal "
+"(like on managed containers in cloud services or on Windows systems). "
+"For this reason, PostgREST also allows you to reload its schema cache "
+"through PostgreSQL `NOTIFY <https://www.postgresql.org/docs/current/sql-"
 "notify.html>`_ as follows:"
 msgstr ""
 
@@ -199,9 +200,9 @@ msgstr ""
 #: ../../schema_cache.rst:139
 msgid ""
 "You can do automatic schema cache reloading in a pure SQL way and forget "
-"about stale schema cache errors with an `event trigger "
-"<https://www.postgresql.org/docs/current/event-trigger-definition.html>`_"
-" and ``NOTIFY``."
+"about stale schema cache errors with an `event trigger <https://www."
+"postgresql.org/docs/current/event-trigger-definition.html>`_ and "
+"``NOTIFY``."
 msgstr ""
 
 #: ../../schema_cache.rst:157
@@ -213,4 +214,3 @@ msgstr ""
 #: ../../schema_cache.rst:159
 msgid "To disable auto reloading, drop the trigger:"
 msgstr ""
-

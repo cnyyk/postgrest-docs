@@ -3,23 +3,24 @@
 # This file is distributed under the same license as the PostgREST package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-01-10 22:49+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../../install.rst:4
 msgid "Installation"
-msgstr ""
+msgstr "安装"
 
 #: ../../install.rst:6
 msgid ""
@@ -39,8 +40,8 @@ msgstr ""
 
 #: ../../install.rst:15
 msgid ""
-"You can install PostgREST from the `Homebrew official repo "
-"<https://formulae.brew.sh/formula/postgrest>`_."
+"You can install PostgREST from the `Homebrew official repo <https://"
+"formulae.brew.sh/formula/postgrest>`_."
 msgstr ""
 
 #: ../../install.rst:21
@@ -49,8 +50,8 @@ msgstr ""
 
 #: ../../install.rst:23
 msgid ""
-"You can install PostgREST from the `official ports "
-"<https://www.freshports.org/www/hs-postgrest>`_."
+"You can install PostgREST from the `official ports <https://www.freshports."
+"org/www/hs-postgrest>`_."
 msgstr ""
 
 #: ../../install.rst:29
@@ -63,8 +64,8 @@ msgstr ""
 
 #: ../../install.rst:35
 msgid ""
-"You can install PostgREST from the `community repo "
-"<https://archlinux.org/packages/community/x86_64/postgrest>`_."
+"You can install PostgREST from the `community repo <https://archlinux.org/"
+"packages/community/x86_64/postgrest>`_."
 msgstr ""
 
 #: ../../install.rst:41
@@ -81,14 +82,13 @@ msgstr ""
 
 #: ../../install.rst:51
 msgid ""
-"You can install PostgREST using `Chocolatey "
-"<https://community.chocolatey.org/packages/postgrest>`_ or `Scoop "
-"<https://scoop.sh>`_."
+"You can install PostgREST using `Chocolatey <https://community.chocolatey."
+"org/packages/postgrest>`_ or `Scoop <https://scoop.sh>`_."
 msgstr ""
 
 #: ../../install.rst:59
 msgid "Running PostgREST"
-msgstr ""
+msgstr "运行 PostgREST"
 
 #: ../../install.rst:61
 msgid ""
@@ -108,28 +108,28 @@ msgstr ""
 
 #: ../../install.rst:92
 msgid ""
-"For a complete reference of the configuration file, see "
-":ref:`configuration`."
+"For a complete reference of the configuration file, see :ref:"
+"`configuration`."
 msgstr ""
 
 #: ../../install.rst:96
 msgid ""
-"If you see a dialog box like this on Windows, it may be that the "
-":code:`pg_config` program is not in your system path."
+"If you see a dialog box like this on Windows, it may be that the :code:"
+"`pg_config` program is not in your system path."
 msgstr ""
 
 #: ../../install.rst:100
 msgid ""
-"It usually lives in :code:`C:\\Program "
-"Files\\PostgreSQL\\<version>\\bin`. See this `article "
-"<https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-"
-"command-line-access/>`_ about how to modify the system path."
+"It usually lives in :code:`C:\\Program Files\\PostgreSQL\\<version>\\bin`. "
+"See this `article <https://www.howtogeek.com/118594/how-to-edit-your-"
+"system-path-for-easy-command-line-access/>`_ about how to modify the "
+"system path."
 msgstr ""
 
 #: ../../install.rst:102
 msgid ""
-"To test that the system path is set correctly, run ``pg_config`` from the"
-" command line. You should see it output a list of paths."
+"To test that the system path is set correctly, run ``pg_config`` from the "
+"command line. You should see it output a list of paths."
 msgstr ""
 
 #: ../../install.rst:107
@@ -139,10 +139,10 @@ msgstr ""
 #: ../../install.rst:109
 msgid ""
 "To use PostgREST you will need an underlying database. We require "
-"PostgreSQL 9.6 or greater. You can use something like `Amazon RDS "
-"<https://aws.amazon.com/rds/>`_ but installing your own locally is "
-"cheaper and more convenient for development. You can also run PostgreSQL "
-"in a :ref:`docker container<pg-in-docker>`."
+"PostgreSQL 9.6 or greater. You can use something like `Amazon RDS <https://"
+"aws.amazon.com/rds/>`_ but installing your own locally is cheaper and more "
+"convenient for development. You can also run PostgreSQL in a :ref:`docker "
+"container<pg-in-docker>`."
 msgstr ""
 
 #: ../../install.rst:112
@@ -151,8 +151,8 @@ msgstr ""
 
 #: ../../install.rst:114
 msgid ""
-"You can get the `official PostgREST Docker image "
-"<https://hub.docker.com/r/postgrest/postgrest>`_ with:"
+"You can get the `official PostgREST Docker image <https://hub.docker.com/r/"
+"postgrest/postgrest>`_ with:"
 msgstr ""
 
 #: ../../install.rst:120
@@ -178,29 +178,29 @@ msgstr ""
 #: ../../install.rst:138
 msgid ""
 "The database connection string above is just an example. Adjust the role "
-"and password as necessary. You may need to edit PostgreSQL's "
-":code:`pg_hba.conf` to grant the user local login access."
+"and password as necessary. You may need to edit PostgreSQL's :code:`pg_hba."
+"conf` to grant the user local login access."
 msgstr ""
 
 #: ../../install.rst:142
 msgid ""
-"Docker on Mac does not support the :code:`--net=host` flag. Instead "
-"you'll need to create an IP address alias to the host. Requests for the "
-"IP address from inside the container are unable to resolve and fall back "
-"to resolution by the host."
+"Docker on Mac does not support the :code:`--net=host` flag. Instead you'll "
+"need to create an IP address alias to the host. Requests for the IP "
+"address from inside the container are unable to resolve and fall back to "
+"resolution by the host."
 msgstr ""
 
 #: ../../install.rst:148
 msgid ""
 "You should then use 10.0.0.10 as the host in your database connection "
-"string. Also remember to include the IP address in the "
-":code:`listen_address` within postgresql.conf. For instance:"
+"string. Also remember to include the IP address in the :code:"
+"`listen_address` within postgresql.conf. For instance:"
 msgstr ""
 
 #: ../../install.rst:154
 msgid ""
-"You might also need to add a new IPv4 local connection within "
-"pg_hba.conf. For instance:"
+"You might also need to add a new IPv4 local connection within pg_hba.conf. "
+"For instance:"
 msgstr ""
 
 #: ../../install.rst:163
@@ -217,14 +217,14 @@ msgstr ""
 #: ../../install.rst:196
 msgid ""
 "Go into the directory where you saved this file and run :code:`docker-"
-"compose up`. You will see the logs of both the database and PostgREST, "
-"and be able to access the latter on port 3000."
+"compose up`. You will see the logs of both the database and PostgREST, and "
+"be able to access the latter on port 3000."
 msgstr ""
 
 #: ../../install.rst:198
 msgid ""
-"If you want to have a visual overview of your API in your browser you can"
-" add swagger-ui to your :code:`docker-compose.yml`:"
+"If you want to have a visual overview of your API in your browser you can "
+"add swagger-ui to your :code:`docker-compose.yml`:"
 msgstr ""
 
 #: ../../install.rst:211
@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../../install.rst:216
 msgid "Building from Source"
-msgstr ""
+msgstr "从源码构建"
 
 #: ../../install.rst:218
 msgid ""
@@ -243,15 +243,15 @@ msgstr ""
 
 #: ../../install.rst:222
 msgid ""
-"We discourage building and using PostgREST on **Alpine Linux** because of"
-" a reported GHC memory leak on that platform."
+"We discourage building and using PostgREST on **Alpine Linux** because of "
+"a reported GHC memory leak on that platform."
 msgstr ""
 
 #: ../../install.rst:224
 msgid ""
-"You can build PostgREST from source with `Stack "
-"<https://github.com/commercialhaskell/stack>`_. It will install any "
-"necessary Haskell dependencies on your system."
+"You can build PostgREST from source with `Stack <https://github.com/"
+"commercialhaskell/stack>`_. It will install any necessary Haskell "
+"dependencies on your system."
 msgstr ""
 
 #: ../../install.rst:226
@@ -310,14 +310,14 @@ msgstr ""
 
 #: ../../install.rst:250
 msgid ""
-"If building fails and your system has less than 1GB of memory, try adding"
-" a swap file."
+"If building fails and your system has less than 1GB of memory, try adding "
+"a swap file."
 msgstr ""
 
 #: ../../install.rst:251
 msgid ""
-"`--install-ghc` flag is only needed for the first build and can be "
-"omitted in the subsequent builds."
+"`--install-ghc` flag is only needed for the first build and can be omitted "
+"in the subsequent builds."
 msgstr ""
 
 #: ../../install.rst:253
@@ -326,7 +326,7 @@ msgstr ""
 
 #: ../../install.rst:256
 msgid "Deploying to Heroku"
-msgstr ""
+msgstr "部署到 Heroku"
 
 #: ../../install.rst:258
 msgid ""
@@ -340,8 +340,8 @@ msgstr ""
 
 #: ../../install.rst:261
 msgid ""
-"In Settings add the following buildpack "
-":code:`https://github.com/PostgREST/postgrest-heroku`"
+"In Settings add the following buildpack :code:`https://github.com/"
+"PostgREST/postgrest-heroku`"
 msgstr ""
 
 #: ../../install.rst:262
@@ -350,8 +350,8 @@ msgstr ""
 
 #: ../../install.rst:263
 msgid ""
-"Modify your ``postgrest.conf`` file as required to match your Config Vars"
-" in Heroku"
+"Modify your ``postgrest.conf`` file as required to match your Config Vars "
+"in Heroku"
 msgstr ""
 
 #: ../../install.rst:264
@@ -366,7 +366,6 @@ msgstr ""
 
 #: ../../install.rst:266
 msgid ""
-"Set Heroku to automatically deploy from Main and then manually deploy the"
-" branch for the first build"
+"Set Heroku to automatically deploy from Main and then manually deploy the "
+"branch for the first build"
 msgstr ""
-

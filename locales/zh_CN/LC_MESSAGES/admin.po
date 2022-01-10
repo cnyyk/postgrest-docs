@@ -3,31 +3,32 @@
 # This file is distributed under the same license as the PostgREST package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-01-10 22:48+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../../admin.rst:4
 msgid "Hardening PostgREST"
-msgstr ""
+msgstr "强化 PostgREST"
 
 #: ../../admin.rst:6
 msgid ""
-"PostgREST is a fast way to construct a RESTful API. Its default behavior "
-"is great for scaffolding in development. When it's time to go to "
-"production it works great too, as long as you take precautions. PostgREST"
-" is a small sharp tool that focuses on performing the API-to-database "
-"mapping. We rely on a reverse proxy like Nginx for additional safeguards."
+"PostgREST is a fast way to construct a RESTful API. Its default behavior is "
+"great for scaffolding in development. When it's time to go to production it "
+"works great too, as long as you take precautions. PostgREST is a small "
+"sharp tool that focuses on performing the API-to-database mapping. We rely "
+"on a reverse proxy like Nginx for additional safeguards."
 msgstr ""
 
 #: ../../admin.rst:8
@@ -38,8 +39,8 @@ msgstr ""
 
 #: ../../admin.rst:36
 msgid ""
-"For ubuntu, if you already installed nginx through :code:`apt` you can "
-"add this to the config file in :code:`/etc/nginx/sites-enabled/default`."
+"For ubuntu, if you already installed nginx through :code:`apt` you can add "
+"this to the config file in :code:`/etc/nginx/sites-enabled/default`."
 msgstr ""
 
 #: ../../admin.rst:42
@@ -48,38 +49,37 @@ msgstr ""
 
 #: ../../admin.rst:44
 msgid ""
-"Each table in the admin-selected schema gets exposed as a top level "
-"route. Client requests are executed by certain database roles depending "
-"on their authentication. All HTTP verbs are supported that correspond to "
-"actions permitted to the role. For instance if the active role can drop "
-"rows of the table then the DELETE verb is allowed for clients. Here's an "
-"API request to delete old rows from a hypothetical logs table:"
+"Each table in the admin-selected schema gets exposed as a top level route. "
+"Client requests are executed by certain database roles depending on their "
+"authentication. All HTTP verbs are supported that correspond to actions "
+"permitted to the role. For instance if the active role can drop rows of the "
+"table then the DELETE verb is allowed for clients. Here's an API request to "
+"delete old rows from a hypothetical logs table:"
 msgstr ""
 
 #: ../../admin.rst:56
 msgid ""
-"However it's very easy to delete the **entire table** by omitting the "
-"query parameter!"
+"However it's very easy to delete the **entire table** by omitting the query "
+"parameter!"
 msgstr ""
 
 #: ../../admin.rst:68
 msgid ""
-"This can happen accidentally such as by switching a request from a GET to"
-" a DELETE. To protect against accidental operations use the `pg-"
-"safeupdate <https://github.com/eradman/pg-safeupdate>`_ PostgreSQL "
-"extension. It raises an error if UPDATE or DELETE are executed without "
-"specifying conditions. To install it you can use the `PGXN "
-"<https://pgxn.org/>`_ network:"
+"This can happen accidentally such as by switching a request from a GET to a "
+"DELETE. To protect against accidental operations use the `pg-safeupdate "
+"<https://github.com/eradman/pg-safeupdate>`_ PostgreSQL extension. It "
+"raises an error if UPDATE or DELETE are executed without specifying "
+"conditions. To install it you can use the `PGXN <https://pgxn.org/>`_ "
+"network:"
 msgstr ""
 
 #: ../../admin.rst:77
 msgid ""
 "This does not protect against malicious actions, since someone can add a "
-"url parameter that does not affect the result set. To prevent this you "
-"must turn to database permissions, forbidding the wrong people from "
-"deleting rows, and using `row-level security "
-"<https://www.postgresql.org/docs/current/ddl-rowsecurity.html>`_ if finer"
-" access control is required."
+"url parameter that does not affect the result set. To prevent this you must "
+"turn to database permissions, forbidding the wrong people from deleting "
+"rows, and using `row-level security <https://www.postgresql.org/docs/"
+"current/ddl-rowsecurity.html>`_ if finer access control is required."
 msgstr ""
 
 #: ../../admin.rst:80
@@ -89,24 +89,23 @@ msgstr ""
 #: ../../admin.rst:82
 msgid ""
 "For convenience to client-side pagination controls PostgREST supports "
-"counting and reporting total table size in its response. As described in "
-":ref:`limits`, responses ordinarily include a range but leave the total "
+"counting and reporting total table size in its response. As described in :"
+"ref:`limits`, responses ordinarily include a range but leave the total "
 "unspecified like"
 msgstr ""
 
 #: ../../admin.rst:90
 msgid ""
-"However including the request header :code:`Prefer: count=exact` "
-"calculates and includes the full count:"
+"However including the request header :code:`Prefer: count=exact` calculates "
+"and includes the full count:"
 msgstr ""
 
 #: ../../admin.rst:98
 msgid ""
-"This is fine in small tables, but count performance degrades in big "
-"tables due to the MVCC architecture of PostgreSQL. For very large tables "
-"it can take a very long time to retrieve the results which allows a "
-"denial of service attack. The solution is to strip this header from all "
-"requests:"
+"This is fine in small tables, but count performance degrades in big tables "
+"due to the MVCC architecture of PostgreSQL. For very large tables it can "
+"take a very long time to retrieve the results which allows a denial of "
+"service attack. The solution is to strip this header from all requests:"
 msgstr ""
 
 #: ../../admin.rst:107
@@ -115,12 +114,11 @@ msgstr ""
 
 #: ../../admin.rst:109
 msgid ""
-"PostgREST aims to do one thing well: add an HTTP interface to a "
-"PostgreSQL database. To keep the code small and focused we do not "
-"implement HTTPS. Use a reverse proxy such as NGINX to add this, `here's "
-"how <https://nginx.org/en/docs/http/configuring_https_servers.html>`_. "
-"Note that some Platforms as a Service like Heroku also add SSL "
-"automatically in their load balancer."
+"PostgREST aims to do one thing well: add an HTTP interface to a PostgreSQL "
+"database. To keep the code small and focused we do not implement HTTPS. Use "
+"a reverse proxy such as NGINX to add this, `here's how <https://nginx.org/"
+"en/docs/http/configuring_https_servers.html>`_. Note that some Platforms as "
+"a Service like Heroku also add SSL automatically in their load balancer."
 msgstr ""
 
 #: ../../admin.rst:112
@@ -129,19 +127,18 @@ msgstr ""
 
 #: ../../admin.rst:114
 msgid ""
-"Nginx supports \"leaky bucket\" rate limiting (see `official docs "
-"<https://nginx.org/en/docs/http/ngx_http_limit_req_module.html>`_). Using"
-" standard Nginx configuration, routes can be grouped into *request zones*"
-" for rate limiting. For instance we can define a zone for login attempts:"
+"Nginx supports \"leaky bucket\" rate limiting (see `official docs <https://"
+"nginx.org/en/docs/http/ngx_http_limit_req_module.html>`_). Using standard "
+"Nginx configuration, routes can be grouped into *request zones* for rate "
+"limiting. For instance we can define a zone for login attempts:"
 msgstr ""
 
 #: ../../admin.rst:120
 msgid ""
 "This creates a shared memory zone called \"login\" to store a log of IP "
-"addresses that access the rate limited urls. The space reserved, 10 MB "
-"(:code:`10m`) will give us enough space to store a history of 160k "
-"requests. We have chosen to allow only allow one request per second "
-"(:code:`1r/s`)."
+"addresses that access the rate limited urls. The space reserved, 10 MB (:"
+"code:`10m`) will give us enough space to store a history of 160k requests. "
+"We have chosen to allow only allow one request per second (:code:`1r/s`)."
 msgstr ""
 
 #: ../../admin.rst:122
@@ -152,15 +149,15 @@ msgstr ""
 
 #: ../../admin.rst:131
 msgid ""
-"The burst argument tells Nginx to start dropping requests if more than "
-"five queue up from a specific IP."
+"The burst argument tells Nginx to start dropping requests if more than five "
+"queue up from a specific IP."
 msgstr ""
 
 #: ../../admin.rst:133
 msgid ""
 "Nginx rate limiting is general and indiscriminate. To rate limit each "
-"authenticated request individually you will need to add logic in a "
-":ref:`Custom Validation <custom_validation>` function."
+"authenticated request individually you will need to add logic in a :ref:"
+"`Custom Validation <custom_validation>` function."
 msgstr ""
 
 #: ../../admin.rst:138
@@ -170,8 +167,8 @@ msgstr ""
 #: ../../admin.rst:140
 msgid ""
 "PostgREST manages its :ref:`own pool of connections <db-pool>` and uses "
-"prepared statements by default in order to increase performance. However,"
-" this setting is incompatible with external connection poolers such as "
+"prepared statements by default in order to increase performance. However, "
+"this setting is incompatible with external connection poolers such as "
 "PgBouncer working in transaction pooling mode. In this case, you need to "
 "set the :ref:`db-prepared-statements` config option to ``false``. On the "
 "other hand, session pooling is fully compatible with PostgREST, while "
@@ -194,7 +191,7 @@ msgstr ""
 
 #: ../../admin.rst:149
 msgid "Debugging"
-msgstr ""
+msgstr "调试"
 
 #: ../../admin.rst:152
 msgid "Server Version"
@@ -202,10 +199,10 @@ msgstr ""
 
 #: ../../admin.rst:154
 msgid ""
-"When debugging a problem it's important to verify the PostgREST version. "
-"At any time you can make a request to the running server and determine "
-"exactly which version is deployed. Look for the :code:`Server` HTTP "
-"response header, which contains the version number."
+"When debugging a problem it's important to verify the PostgREST version. At "
+"any time you can make a request to the running server and determine exactly "
+"which version is deployed. Look for the :code:`Server` HTTP response "
+"header, which contains the version number."
 msgstr ""
 
 #: ../../admin.rst:159
@@ -215,8 +212,8 @@ msgstr ""
 #: ../../admin.rst:161
 msgid ""
 "PostgREST logs basic request information to ``stdout``, including the "
-"authenticated user if available, the requesting IP address and user "
-"agent, the URL requested, and HTTP response status."
+"authenticated user if available, the requesting IP address and user agent, "
+"the URL requested, and HTTP response status."
 msgstr ""
 
 #: ../../admin.rst:168
@@ -227,17 +224,16 @@ msgstr ""
 
 #: ../../admin.rst:180
 msgid ""
-"When running it in an SSH session you must detach it from stdout or it "
-"will be terminated when the session closes. The easiest technique is "
-"redirecting the output to a log file or to the syslog:"
+"When running it in an SSH session you must detach it from stdout or it will "
+"be terminated when the session closes. The easiest technique is redirecting "
+"the output to a log file or to the syslog:"
 msgstr ""
 
 #: ../../admin.rst:189
 msgid ""
-"PostgREST logging provides limited information for debugging server "
-"errors. It's helpful to get full information about both client requests "
-"and the corresponding SQL commands executed against the underlying "
-"database."
+"PostgREST logging provides limited information for debugging server errors. "
+"It's helpful to get full information about both client requests and the "
+"corresponding SQL commands executed against the underlying database."
 msgstr ""
 
 #: ../../admin.rst:192
@@ -246,18 +242,17 @@ msgstr ""
 
 #: ../../admin.rst:194
 msgid ""
-"A great way to inspect incoming HTTP requests including headers and query"
-" parameters is to sniff the network traffic on the port where PostgREST "
-"is running. For instance on a development server bound to port 3000 on "
+"A great way to inspect incoming HTTP requests including headers and query "
+"parameters is to sniff the network traffic on the port where PostgREST is "
+"running. For instance on a development server bound to port 3000 on "
 "localhost, run this:"
 msgstr ""
 
 #: ../../admin.rst:201
 msgid ""
-"The options to ngrep vary depending on the address and host on which "
-"you've bound the server. The binding is described in the "
-":ref:`configuration` section. The ngrep output isn't particularly pretty,"
-" but it's legible."
+"The options to ngrep vary depending on the address and host on which you've "
+"bound the server. The binding is described in the :ref:`configuration` "
+"section. The ngrep output isn't particularly pretty, but it's legible."
 msgstr ""
 
 #: ../../admin.rst:206
@@ -273,17 +268,16 @@ msgstr ""
 
 #: ../../admin.rst:210
 msgid ""
-"This retry behavior is triggered immediately after the connection is lost"
-" if :ref:`db-channel-enabled` is set to true(the default), otherwise it "
-"will be activated once a request is made."
+"This retry behavior is triggered immediately after the connection is lost "
+"if :ref:`db-channel-enabled` is set to true(the default), otherwise it will "
+"be activated once a request is made."
 msgstr ""
 
 #: ../../admin.rst:212
 msgid ""
-"To notify the client when the next reconnection attempt will be, "
-"PostgREST responds with ``503 Service Unavailable`` and the ``Retry-"
-"After: x`` header, where ``x`` is the number of seconds programmed for "
-"the next retry."
+"To notify the client when the next reconnection attempt will be, PostgREST "
+"responds with ``503 Service Unavailable`` and the ``Retry-After: x`` "
+"header, where ``x`` is the number of seconds programmed for the next retry."
 msgstr ""
 
 #: ../../admin.rst:215
@@ -293,19 +287,19 @@ msgstr ""
 #: ../../admin.rst:217
 msgid ""
 "Once you've verified that requests are as you expect, you can get more "
-"information about the server operations by watching the database logs. By"
-" default PostgreSQL does not keep these logs, so you'll need to make the "
+"information about the server operations by watching the database logs. By "
+"default PostgreSQL does not keep these logs, so you'll need to make the "
 "configuration changes below. Find :code:`postgresql.conf` inside your "
 "PostgreSQL data directory (to find that, issue the command :code:`show "
-"data_directory;`). Either find the settings scattered throughout the file"
-" and change them to the following values, or append this block of code to"
-" the end of the configuration file."
+"data_directory;`). Either find the settings scattered throughout the file "
+"and change them to the following values, or append this block of code to "
+"the end of the configuration file."
 msgstr ""
 
 #: ../../admin.rst:236
 msgid ""
-"Restart the database and watch the log file in real-time to understand "
-"how HTTP requests are being translated into SQL commands."
+"Restart the database and watch the log file in real-time to understand how "
+"HTTP requests are being translated into SQL commands."
 msgstr ""
 
 #: ../../admin.rst:240
@@ -324,14 +318,14 @@ msgstr ""
 
 #: ../../admin.rst:257
 msgid ""
-"Changing the schema while the server is running can lead to errors due to"
-" a stale schema cache. To learn how to refresh the cache see "
-":ref:`schema_reloading`."
+"Changing the schema while the server is running can lead to errors due to a "
+"stale schema cache. To learn how to refresh the cache see :ref:"
+"`schema_reloading`."
 msgstr ""
 
 #: ../../admin.rst:260
 msgid "Daemonizing"
-msgstr ""
+msgstr "后台运行"
 
 #: ../../admin.rst:262
 msgid ""
@@ -345,8 +339,8 @@ msgstr ""
 
 #: ../../admin.rst:278
 msgid ""
-"Then create the systemd service file in "
-"``/etc/systemd/system/postgrest.service``"
+"Then create the systemd service file in ``/etc/systemd/system/postgrest."
+"service``"
 msgstr ""
 
 #: ../../admin.rst:293
@@ -355,14 +349,13 @@ msgstr ""
 
 #: ../../admin.rst:304
 msgid "Alternate URL Structure"
-msgstr ""
+msgstr "另一种 URL 结构"
 
 #: ../../admin.rst:306
 msgid ""
-"As discussed in :ref:`singular_plural`, there are no special URL forms "
-"for singular resources in PostgREST, only operators for filtering. Thus "
-"there are no URLs like :code:`/people/1`. It would be specified instead "
-"as"
+"As discussed in :ref:`singular_plural`, there are no special URL forms for "
+"singular resources in PostgREST, only operators for filtering. Thus there "
+"are no URLs like :code:`/people/1`. It would be specified instead as"
 msgstr ""
 
 #: ../../admin.rst:320
@@ -373,9 +366,8 @@ msgstr ""
 
 #: ../../admin.rst:322
 msgid ""
-"Nginx rewrite rules allow you to simulate the familiar URL convention. "
-"The following example adds a rewrite rule for all table endpoints, but "
-"you'll want to restrict it to those tables that have a numeric simple "
-"primary key named \"id.\""
+"Nginx rewrite rules allow you to simulate the familiar URL convention. The "
+"following example adds a rewrite rule for all table endpoints, but you'll "
+"want to restrict it to those tables that have a numeric simple primary key "
+"named \"id.\""
 msgstr ""
-

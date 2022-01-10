@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-10 20:32+0800\n"
+"PO-Revision-Date: 2022-01-10 22:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: YCH <chnyyk@gmail.com>\n"
 "Language: zh_CN\n"
@@ -99,12 +99,12 @@ msgid ""
 msgstr ""
 "PostgREST 是手动 CRUD 编程的一个替代方案。自定义 API 服务器会遇到各种问"
 "题。业务逻辑经常重复编写，数据库结构被忽略或破坏。对象关系映射（ORM）是抽"
-"象泄漏（Leaky Abstraction）的，会产生效率低下的代码。PostgREST 的哲学是建"
-"立一个单一的声明性真理来源：数据本身。"
+"象泄漏的（Leaky Abstraction），会产生效率低下的代码。PostgREST 哲学建立了"
+"一个单一的声明式数据源：数据本身。"
 
 #: ../../index.rst:76
 msgid "Declarative Programming"
-msgstr ""
+msgstr "声明式编程"
 
 #: ../../index.rst:78
 msgid ""
@@ -115,10 +115,14 @@ msgid ""
 "dependencies.) It's easier to set constraints than to litter code with "
 "sanity checks."
 msgstr ""
+"让 PostgreSQL 为你连接数据并充分利用其查询规划器找出各种细节，比你自己循"
+"环数据行要更容易。给数据库对象分配权限比在控制器（其他语言框架的 "
+"Controller）中添加保护措施更容易（尤其是数据依赖中的级联权限）。设置约束"
+"也比用拼凑的代码进行安全检查更容易。"
 
 #: ../../index.rst:81
 msgid "Leak-proof Abstraction"
-msgstr ""
+msgstr "防漏抽象"
 
 #: ../../index.rst:83
 msgid ""
@@ -126,10 +130,12 @@ msgid ""
 "performance implications. A database administrator can now create an API "
 "from scratch with no custom programming."
 msgstr ""
+"无需 ORM 参与，在 SQL 层面创建新的性能影响明确的视图。无需开发人员参与，"
+"数据库管理员（DBA）现在也可以从头开始创建 API 了。"
 
 #: ../../index.rst:86
 msgid "One Thing Well"
-msgstr ""
+msgstr "一件事做好"
 
 #: ../../index.rst:88
 msgid ""
@@ -138,10 +144,13 @@ msgid ""
 "operations from other concerns. Use a collection of sharp tools rather "
 "than building a big ball of mud."
 msgstr ""
+"PostgREST 自有其重点的范围。它与 Nginx 等其他工具配合得很好。这可以迫使你"
+"将以数据为中心的 CRUD 操作与其他问题彻底分离。整合使用利器，而非构建一个"
+"大泥球。"
 
 #: ../../index.rst:91
 msgid "Getting Support"
-msgstr ""
+msgstr "获取支持"
 
 #: ../../index.rst:93
 msgid ""
@@ -150,10 +159,14 @@ msgid ""
 "can also report or search for bugs/features on the Github `issues "
 "<https://github.com/PostgREST/postgrest/issues>`_ page."
 msgstr ""
+"该项目有一个友好且不断成长的社区。加入我们的 `聊天室 <https://gitter.im/"
+"begriffs/postgrest>`_ 进行讨论和互相帮助，也可以在 Github 的 `Issues "
+"<https://github.com/PostgREST/postgrest/issues>`_ 页面报告或搜寻 Bug 与功"
+"能特性。"
 
 #: ../../index.rst:111
 msgid "Are you new to PostgREST? This is the place to start!"
-msgstr ""
+msgstr "你是 PostgREST 新手吗？这正是开始的地方！"
 
 #: ../../index.rst:120
 msgid ":doc:`tutorials/tut0`"
@@ -168,34 +181,35 @@ msgid ""
 "Also have a look at :doc:`Installation <install>` and :ref:"
 "`community_tutorials`."
 msgstr ""
+"另外也可以看看 :doc:`安装 <install>` 和 :ref:`community_tutorials`."
 
 #: ../../index.rst:126
 msgid "Reference guides"
-msgstr ""
+msgstr "参考指南"
 
 #: ../../index.rst:128
 msgid "Technical references for PostgREST's functionality."
-msgstr ""
+msgstr "PostgREST 功能的技术参考。"
 
 #: ../../index.rst:148
 msgid ":doc:`API <api>`"
-msgstr ""
+msgstr ":doc:`API <api>`"
 
 #: ../../index.rst:149
 msgid ":doc:`configuration`"
-msgstr ""
+msgstr ":doc:`configuration`"
 
 #: ../../index.rst:150
 msgid ":doc:`Schema Cache <schema_cache>`"
-msgstr ""
+msgstr ":doc:`模式缓存 <schema_cache>`"
 
 #: ../../index.rst:153
 msgid "Topic guides"
-msgstr ""
+msgstr "主题指南"
 
 #: ../../index.rst:155
 msgid "Explanations of some key concepts in PostgREST."
-msgstr ""
+msgstr "PostgREST 中一些关键概念的解释。"
 
 #: ../../index.rst:181
 msgid ":doc:`Authentication <auth>`"

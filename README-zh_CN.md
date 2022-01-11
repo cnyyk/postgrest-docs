@@ -24,16 +24,28 @@ pip3 install sphinx-intl;
 pip3 install livereload;
 pip3 install sphinx-autobuild;
 ln -s /usr/local/Cellar/python@3.10/3.10.1/Frameworks/Python.framework/Versions/3.10/bin/sphinx-autobuild /usr/local/bin/sphinx-autobuild;
-# To avoid command not found error
+# TO AVOID COMMAND NOT FOUND ERROR
 ```
 ## Setup Sphinx-intl / 设置 Sphinx-intl
 https://www.sphinx-doc.org/en/master/usage/advanced/intl.html
 ```bash
 sphinx-build -b gettext . _build/gettext;
-# Generate the pot files
+# GENERATE POT FILES
 
 sphinx-intl update -p _build/gettext -l zh_CN;
-# Generate zh_CN po files from pot
+# GENERATE ZH_CN PO FILES FROM POT
+# Not Changed: locales/zh_CN/LC_MESSAGES/tutorials.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/api.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/admin.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/how-tos.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/ecosystem.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/schema_structure.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/releases.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/configuration.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/index.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/install.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/auth.po
+# Not Changed: locales/zh_CN/LC_MESSAGES/schema_cache.po
 ```
 ## Live Preview / 实时预览
 ```bash

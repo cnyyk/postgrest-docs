@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-11 10:36+0800\n"
+"PO-Revision-Date: 2022-01-11 13:18+0800\n"
 "Last-Translator: \n"
 "Language-Team: YCH <chnyyk@gmail.com>\n"
 "Language: zh_CN\n"
@@ -135,7 +135,7 @@ msgstr ""
 
 #: ../../index.rst:86
 msgid "One Thing Well"
-msgstr "一件事做好"
+msgstr "做好一件事"
 
 #: ../../index.rst:88
 msgid ""
@@ -144,9 +144,9 @@ msgid ""
 "operations from other concerns. Use a collection of sharp tools rather "
 "than building a big ball of mud."
 msgstr ""
-"PostgREST 自有其重点的范围。它与 Nginx 等其他工具配合得很好。这可以迫使你"
-"将以数据为中心的 CRUD 操作与其他问题彻底分离。整合使用利器，而非构建一个"
-"大泥球。"
+"PostgREST 有其专注的范围。它与 Nginx 等其他工具配合得很好。这可以迫使你将"
+"以数据为中心的 CRUD 操作与其他问题彻底分离。整合使用利器，而非构建一个大"
+"泥球。"
 
 #: ../../index.rst:91
 msgid "Getting Support"
@@ -363,6 +363,9 @@ msgid ""
 "PostgREST in `Paul Copplestone's blog post <https://paul.copplest.one/"
 "blog/nimbus-tech-2019-04.html>`_."
 msgstr ""
+"`Nimbus <https://www.nimbusforwork.com>`_ - 请查看 `Paul Copplestone’s 的"
+"博客文章 <https://paul.copplest.one/blog/nimbus-tech-2019-04.html>`_，以"
+"便了解 Nimbus 如何使用 PostgREST。"
 
 #: ../../index.rst:251
 msgid "`OpenBooking <https://www.openbooking.ch>`_"
@@ -430,6 +433,10 @@ msgid ""
 "architecture, and pushed us to improve our skills in SQL programming and "
 "database design.\""
 msgstr ""
+"“我欣赏 PostgREST 只做一件事、做好一件事。当 PostgREST 无缝衔接了 HTTP 服"
+"务器和 PostgreSQL 数据库，我们便可以专注于用 SQL 一种语言去开发我们的"
+"API。这使得数据库成为了我们的架构中心点，并促使我们不断提升 SQL 编程和数"
+"据库设计的能力。”"
 
 #: ../../index.rst:291
 msgid ""
@@ -439,6 +446,10 @@ msgid ""
 "pods per schema we want exposed, and we scale up/down depending on "
 "demand. Couldn't be happier.\""
 msgstr ""
+"“PostgREST 高性能、稳定和透明，它使我们能够快速启动项目，并专注于我们的数"
+"据和应用，而不是去构建 ORM 层。在我们的 k8s 集群中，我们为每一个我们想要"
+"暴露的 Schema 运行几个 pod，并且根据需求扩大/缩小规模。这真是太令人高兴"
+"了。”"
 
 #: ../../index.rst:300
 msgid "Contributing"

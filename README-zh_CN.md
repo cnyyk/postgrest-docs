@@ -41,8 +41,8 @@ sphinx-intl update -p _build/gettext -l zh_CN;
 # Serving on http://127.0.0.1:5500
 # NOT RELOAD WHEN MO FILES UPDATED
 
-/usr/local/opt/python@3.10/bin/sphinx-autobuild -b html . _build;
-/usr/local/opt/python@3.10/bin/sphinx-autobuild . _build;
+sphinx-autobuild -b html . _build;
+sphinx-autobuild . _build;
 # Serving on http://127.0.0.1:8000
 # WORKS PERFECTLY, AUTO REFRESH BROWSER WHEN MO FILES UPDATED.
 ```

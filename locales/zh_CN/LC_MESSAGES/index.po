@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-10 22:30+0800\n"
+"PO-Revision-Date: 2022-01-11 10:36+0800\n"
 "Last-Translator: \n"
 "Language-Team: YCH <chnyyk@gmail.com>\n"
 "Language: zh_CN\n"
@@ -61,7 +61,7 @@ msgstr "安装"
 
 #: ../../index.rst:189 ../../index.rst:193
 msgid "How-to guides"
-msgstr ""
+msgstr "操作指南"
 
 #: ../../index.rst:206 ../../index.rst:210
 msgid "Ecosystem"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../index.rst:33
 msgid "Sponsors"
-msgstr "赞助者"
+msgstr "赞助名单"
 
 #: ../../index.rst:71
 msgid "Motivation"
@@ -166,7 +166,7 @@ msgstr ""
 
 #: ../../index.rst:111
 msgid "Are you new to PostgREST? This is the place to start!"
-msgstr "你是 PostgREST 新手吗？这正是开始的地方！"
+msgstr "你是才开始了解 PostgREST 吗？那就从这里开始吧！"
 
 #: ../../index.rst:120
 msgid ":doc:`tutorials/tut0`"
@@ -213,23 +213,23 @@ msgstr "PostgREST 中一些关键概念的解释。"
 
 #: ../../index.rst:181
 msgid ":doc:`Authentication <auth>`"
-msgstr ""
+msgstr ":doc:`认证 <auth>`"
 
 #: ../../index.rst:182
 msgid ":doc:`Schema Structure <schema_structure>`"
-msgstr ""
+msgstr ":doc:`Schema 结构 <schema_structure>`"
 
 #: ../../index.rst:183
 msgid ":doc:`Administration <admin>`"
-msgstr ""
+msgstr ":doc:`管理 <admin>`"
 
 #: ../../index.rst:184
 msgid ":doc:`Installation <install>`"
-msgstr ""
+msgstr ":doc:`安装 <install>`"
 
 #: ../../index.rst:191
 msgid "These are recipes that'll help you address specific use-cases."
-msgstr ""
+msgstr "下面是一些能帮你搞定特定用例的套路。"
 
 #: ../../index.rst:200
 msgid ":doc:`how-tos/casting-type-to-custom-json`"
@@ -249,12 +249,16 @@ msgid ""
 "request <https://blog.fgribreau.com/2020/11/how-postgresql-triggers-"
 "works-when.html>`_"
 msgstr ""
+"`PostgreSQL 触发器如何处理 PostgREST PATCH 请求 <https://blog.fgribreau."
+"com/2020/11/how-postgresql-triggers-works-when.html>`_"
 
 #: ../../index.rst:208
 msgid ""
 "PostgREST has a growing ecosystem of examples, libraries, and "
 "experiments. Here is a selection."
 msgstr ""
+"PostgREST 有一个不断增长的例子、库和实验的生态系统。这是开发应用的一个候"
+"选方案。"
 
 #: ../../index.rst:216
 msgid ":ref:`community_tutorials`"
@@ -291,6 +295,9 @@ msgid ""
 "`PostgREST repository <https://github.com/PostgREST/postgrest/"
 "releases>`_."
 msgstr ""
+"下面列出了一些重要变更，以便你可以轻松的迁移到新版本。你还可以在 "
+"`PostgREST 仓库 <https://github.com/PostgREST/postgrest/releases>`_ 中看"
+"到每个版本的完整变更记录。"
 
 #: ../../index.rst:231
 msgid ":doc:`releases/v9.0.0`"
@@ -314,11 +321,11 @@ msgstr ""
 
 #: ../../index.rst:238
 msgid "In Production"
-msgstr ""
+msgstr "生产应用"
 
 #: ../../index.rst:240
 msgid "Here are some companies that use PostgREST in production."
-msgstr ""
+msgstr "下面是一些在生产环境中使用 PostgREST 的公司。"
 
 #: ../../index.rst:242
 msgid "`Catarse <https://www.catarse.me>`_"
@@ -375,15 +382,15 @@ msgstr ""
 
 #: ../../index.rst:260
 msgid "Testimonials"
-msgstr ""
+msgstr "用户评价"
 
 #: ../../index.rst:262
 msgid "\"It's so fast to develop, it feels like cheating!\""
-msgstr ""
+msgstr "“开发起来太快了, 感觉就像在作弊！”"
 
 #: ../../index.rst:300
 msgid "François-Guillaume Ribreau"
-msgstr ""
+msgstr "François-Guillaume Ribreau"
 
 #: ../../index.rst:266
 msgid ""
@@ -392,10 +399,13 @@ msgid ""
 "60/70 MB while our current API constantly hits 1GB running on 6 "
 "instances (dynos).\""
 msgstr ""
+"“我不得不说，与我们基于 Node.js / Waterline ORM 的 API 相比，CPU / 内存的"
+"使用量实在是太不可思议了。在我们的 6 个实例（dynos）上，前者动辄 1G 内存"
+"占用，而后者甚至很少超过 60/70M 内存。”"
 
 #: ../../index.rst:303
 msgid "Louis Brauer"
-msgstr ""
+msgstr "Louis Brauer"
 
 #: ../../index.rst:273
 msgid ""
@@ -406,6 +416,10 @@ msgid ""
 "super concise. The old one took 3 years and a team of 4 people to "
 "develop.\""
 msgstr ""
+"“我确实很享受这个现实：突然之间我可以用 SQL DDL（和 V8 JavaScript 函数）"
+"来写微服务了。我避开了许多的样板，然后我们花了 6 个月时间完全重写了 "
+"Spring + MySQL 的传统应用，速度快了 10 倍，而代码却超级简洁。这套应用之前"
+"可是一个 4 人团队花了 3 年时间才开发完成的。”"
 
 #: ../../index.rst:282
 msgid ""
@@ -428,7 +442,7 @@ msgstr ""
 
 #: ../../index.rst:300
 msgid "Contributing"
-msgstr ""
+msgstr "参与贡献"
 
 #: ../../index.rst:302
 msgid ""
@@ -436,3 +450,5 @@ msgid ""
 "postgrest/blob/main/.github/CONTRIBUTING.md>`_ in the main PostgREST "
 "repository."
 msgstr ""
+"请参阅 PostgREST 仓库中的 `贡献指南 <https://github.com/PostgREST/"
+"postgrest/blob/main/.github/CONTRIBUTING.md>`_。"

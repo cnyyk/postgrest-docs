@@ -3,23 +3,24 @@
 # This file is distributed under the same license as the PostgREST package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-01-11 09:38+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:2
 msgid "Casting a type to a custom JSON object"
-msgstr ""
+msgstr "将类型转换为自定义 JSON 对象"
 
 #: ../../how-tos/casting-type-to-custom-json.rst
 #: ../../how-tos/embedding-table-from-another-schema.rst
@@ -34,16 +35,16 @@ msgstr ""
 
 #: ../../how-tos/casting-type-to-custom-json.rst:6
 msgid ""
-"While using PostgREST you might have noticed that certain PostgreSQL "
-"types translate to JSON strings when you would have expected a JSON "
-"object or array. For example, let's see the case of `range types "
-"<https://www.postgresql.org/docs/current/rangetypes.html>`_."
+"While using PostgREST you might have noticed that certain PostgreSQL types "
+"translate to JSON strings when you would have expected a JSON object or "
+"array. For example, let's see the case of `range types <https://www."
+"postgresql.org/docs/current/rangetypes.html>`_."
 msgstr ""
 
 #: ../../how-tos/casting-type-to-custom-json.rst:22
 msgid ""
-"Here we have a column named **during** as a ``tsrange`` type, we would "
-"like to get it as JSON through PostgREST."
+"Here we have a column named **during** as a ``tsrange`` type, we would like "
+"to get it as JSON through PostgREST."
 msgstr ""
 
 #: ../../how-tos/casting-type-to-custom-json.rst:28
@@ -52,17 +53,17 @@ msgstr ""
 
 #: ../../how-tos/casting-type-to-custom-json.rst:39
 msgid ""
-"The **during** value is probably not the in the format you want. We get a"
-" JSON string because by default PostgreSQL casts the type to JSON by "
-"using its ``text`` representation. We can change this representation to a"
-" custom JSON object by `creating a CAST "
-"<https://www.postgresql.org/docs/current/sql-createcast.html>`_ ."
+"The **during** value is probably not the in the format you want. We get a "
+"JSON string because by default PostgreSQL casts the type to JSON by using its "
+"``text`` representation. We can change this representation to a custom JSON "
+"object by `creating a CAST <https://www.postgresql.org/docs/current/sql-"
+"createcast.html>`_ ."
 msgstr ""
 
 #: ../../how-tos/casting-type-to-custom-json.rst:42
 msgid ""
-"To do this, first we'll define the function that will do the conversion "
-"from ``tsrange`` to ``json``."
+"To do this, first we'll define the function that will do the conversion from "
+"``tsrange`` to ``json``."
 msgstr ""
 
 #: ../../how-tos/casting-type-to-custom-json.rst:55
@@ -83,37 +84,37 @@ msgstr ""
 
 #: ../../how-tos/casting-type-to-custom-json.rst:87
 msgid ""
-"If you don't want to modify casts for built-in types, an option would be "
-"to `create a custom type <https://www.postgresql.org/docs/current/sql-"
-"createtype.html>`_ for your own ``tsrange`` and add its own cast."
+"If you don't want to modify casts for built-in types, an option would be to "
+"`create a custom type <https://www.postgresql.org/docs/current/sql-createtype."
+"html>`_ for your own ``tsrange`` and add its own cast."
 msgstr ""
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:2
 msgid "Embedding a table from another schema"
-msgstr ""
+msgstr "嵌套其他 Schema 的表"
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:6
 msgid ""
-"Suppose you have a **people** table in the ``public`` schema and this "
-"schema is exposed through PostgREST's :ref:`db-schemas`."
+"Suppose you have a **people** table in the ``public`` schema and this schema "
+"is exposed through PostgREST's :ref:`db-schemas`."
 msgstr ""
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:15
 msgid ""
-"And you want to :ref:`embed <resource_embedding>` the **people** table "
-"with a **details** table that's in another schema named ``private``."
+"And you want to :ref:`embed <resource_embedding>` the **people** table with a "
+"**details** table that's in another schema named ``private``."
 msgstr ""
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:35
 msgid ""
-"To solve this, you can create a view of **details** in the ``public`` "
-"schema. We'll call it **public_details**."
+"To solve this, you can create a view of **details** in the ``public`` schema. "
+"We'll call it **public_details**."
 msgstr ""
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:47
 msgid ""
-"Since PostgREST supports :ref:`embedding_views`, you can embed **people**"
-" with **public_details**."
+"Since PostgREST supports :ref:`embedding_views`, you can embed **people** "
+"with **public_details**."
 msgstr ""
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:49
@@ -122,8 +123,7 @@ msgstr ""
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:66
 msgid ""
-"Make sure PostgREST's schema cache is up-to-date. See "
-":ref:`schema_reloading`."
+"Make sure PostgREST's schema cache is up-to-date. See :ref:`schema_reloading`."
 msgstr ""
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:68
@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:4
 msgid "Providing images for ``<img>``"
-msgstr ""
+msgstr "图像转 ``<img>``"
 
 #: ../../how-tos/providing-images-for-img.rst:6
 msgid "`pkel <https://github.com/pkel>`_"
@@ -144,21 +144,21 @@ msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:8
 msgid ""
-"In this how-to, you will learn how to create an endpoint for providing "
-"images to HTML :code:`<img>` tags without client side JavaScript. The "
-"resulting HTML might look like this:"
+"In this how-to, you will learn how to create an endpoint for providing images "
+"to HTML :code:`<img>` tags without client side JavaScript. The resulting HTML "
+"might look like this:"
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:15
 msgid ""
-"In fact, the presented technique is suitable for providing not only "
-"images, but arbitrary files."
+"In fact, the presented technique is suitable for providing not only images, "
+"but arbitrary files."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:17
 msgid ""
-"We will start with a minimal example that highlights the general concept."
-" Afterwards we present are more detailed solution that fixes a few "
+"We will start with a minimal example that highlights the general concept. "
+"Afterwards we present are more detailed solution that fixes a few "
 "shortcomings of the first approach."
 msgstr ""
 
@@ -170,8 +170,8 @@ msgstr ""
 msgid ""
 "PostgREST returns binary data on requests that set the :code:`Accept: "
 "application/octet-stream` header. The general idea is to configure the "
-"reverse proxy in front of the API to set this header for all requests to "
-":code:`/files/`. We will show how to achieve this using Nginx."
+"reverse proxy in front of the API to set this header for all requests to :"
+"code:`/files/`. We will show how to achieve this using Nginx."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:27
@@ -180,30 +180,28 @@ msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:36
 msgid ""
-"Let's assume this table contains an image of two cute kittens with id 42."
-" We can retrieve this image in binary format from our PostgREST API by "
+"Let's assume this table contains an image of two cute kittens with id 42. We "
+"can retrieve this image in binary format from our PostgREST API by "
 "requesting :code:`/files?select=blob&id=eq.42` with the :code:`Accept: "
-"application/octet-stream` header. Unfortunately, putting the URL into the"
-" :code:`src` of an :code:`<img>` tag will not work. That's because "
-"browsers do not send the required header."
+"application/octet-stream` header. Unfortunately, putting the URL into the :"
+"code:`src` of an :code:`<img>` tag will not work. That's because browsers do "
+"not send the required header."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:41
 msgid ""
-"Luckily, we can configure our :ref:`Nginx reverse proxy <admin>` to fix "
-"this problem for us. We assume that PostgREST is running on port 3000. We"
-" provide a new location :code:`/files/` that redirects requests to our "
-"endpoint with the :code:`Accept` header set to :code:`application/octet-"
-"stream`."
+"Luckily, we can configure our :ref:`Nginx reverse proxy <admin>` to fix this "
+"problem for us. We assume that PostgREST is running on port 3000. We provide "
+"a new location :code:`/files/` that redirects requests to our endpoint with "
+"the :code:`Accept` header set to :code:`application/octet-stream`."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:66
 msgid ""
-"With this setup, we can request the cat image at "
-":code:`localhost/files/42/cats.jpeg` without setting any headers. In "
-"fact, you can replace :code:`cats.jpeg` with any other filename or simply"
-" omit it. Putting the URL into the :code:`src` of an :code:`<img>` tag "
-"should now work as expected."
+"With this setup, we can request the cat image at :code:`localhost/files/42/"
+"cats.jpeg` without setting any headers. In fact, you can replace :code:`cats."
+"jpeg` with any other filename or simply omit it. Putting the URL into the :"
+"code:`src` of an :code:`<img>` tag should now work as expected."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:71
@@ -216,34 +214,34 @@ msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:75
 msgid ""
-"The response :code:`Content-Type` header is set to :code:`application"
-"/octet-stream`. This might confuse clients and users."
+"The response :code:`Content-Type` header is set to :code:`application/octet-"
+"stream`. This might confuse clients and users."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:77
 msgid ""
-"Download requests (e.g. Right Click -> Save Image As) to :code:`files/42`"
-" will propose :code:`42` as filename. This might confuse users."
+"Download requests (e.g. Right Click -> Save Image As) to :code:`files/42` "
+"will propose :code:`42` as filename. This might confuse users."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:79
 msgid ""
-"Requests to the binary endpoint are not cached. This will cause "
-"unnecessary load on the database."
+"Requests to the binary endpoint are not cached. This will cause unnecessary "
+"load on the database."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:82
 msgid ""
-"The following improved version addresses these problems. First, we store "
-"the media types and names of our files in the database."
+"The following improved version addresses these problems. First, we store the "
+"media types and names of our files in the database."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:94
 msgid ""
-"Next, we set up an RPC endpoint that sets the content type and filename. "
-"We use this opportunity to configure some basic, client-side caching. For"
-" production, you probably want to configure additional caches, e.g. on "
-"the reverse proxy."
+"Next, we set up an RPC endpoint that sets the content type and filename. We "
+"use this opportunity to configure some basic, client-side caching. For "
+"production, you probably want to configure additional caches, e.g. on the "
+"reverse proxy."
 msgstr ""
 
 #: ../../how-tos/providing-images-for-img.rst:123
@@ -252,4 +250,3 @@ msgid ""
 "Consequently, we have to replace our previous rewrite rule in the Nginx "
 "recipe with the following."
 msgstr ""
-

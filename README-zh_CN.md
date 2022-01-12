@@ -5,7 +5,6 @@ PostgREST docs use the reStructuredText format, check this [cheatsheet](https://
 <br />
 PostgREST 文档使用 reStructuredText 格式，可查看 [速查表](https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst) 来熟悉它。
 
-
 ## Install Dependencies / 安装依赖
 ```bash
 brew unlink python@3.9 && brew link python@3.10;
@@ -15,17 +14,30 @@ python3 --version
 pip3 --version;
 # pip 21.3.1 from /usr/local/lib/python3.10/site-packages/pip (python 3.10)
 
-pip3 install docutils;
-pip3 install sphinx-rtd-theme;
+brew install sphinx-doc;
+# FOR ZSH USER
+echo 'export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"' >> ~/.zshrc;
+# FOR BASH USER
+echo 'export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"' >> ~/.bash_profile;
+sphinx-build --version;
+# sphinx-build 4.3.2
+
+# Could not import extension sphinx_tabs.tabs (exception: No module named 'sphinx_tabs')
 pip3 install sphinx-tabs;
 pip3 install sphinx_copybutton;
+pip3 install sphinx-rtd-theme;
+
+sphinx-build -b html . _build;
+# Running Sphinx v4.3.2
+# build succeeded.
+# The HTML pages are in _build.
 
 pip3 install sphinx-intl;
-pip3 install livereload;
 pip3 install sphinx-autobuild;
 ln -s /usr/local/Cellar/python@3.10/3.10.1/Frameworks/Python.framework/Versions/3.10/bin/sphinx-autobuild /usr/local/bin/sphinx-autobuild;
 # TO AVOID COMMAND NOT FOUND ERROR
 ```
+
 ## Setup Sphinx-intl / 设置 Sphinx-intl
 https://www.sphinx-doc.org/en/master/usage/advanced/intl.html
 ```bash

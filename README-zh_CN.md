@@ -8,7 +8,7 @@ PostgREST 文档使用 reStructuredText 格式，可查看 [速查表](https://g
 
 ## Install Dependencies / 安装依赖
 ```bash
-brew unlink python && brew link python@3.10;
+brew unlink python@3.9 && brew link python@3.10;
 
 python3 --version
 # Python 3.10.1

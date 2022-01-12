@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 19:43+0800\n"
-"PO-Revision-Date: 2022-01-10 21:52+0800\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2022-01-12 21:43+0800\n"
+"Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -24,17 +24,19 @@ msgstr "教程 0 - 开始运行"
 
 #: ../../tutorials/tut0.rst ../../tutorials/tut1.rst
 msgid "author"
-msgstr ""
+msgstr "作者"
 
 #: ../../tutorials/tut0.rst:6 ../../tutorials/tut1.rst:6
 msgid "`begriffs <https://github.com/begriffs>`_"
-msgstr ""
+msgstr "`begriffs <https://github.com/begriffs>`_"
 
 #: ../../tutorials/tut0.rst:8
 msgid ""
 "Welcome to PostgREST! In this pre-tutorial we're going to get things running "
 "so you can create your first simple API."
 msgstr ""
+"欢迎来到 PostgREST！在这个预习教程中，我们将让这一切运行起来，以便创建你的第"
+"一个简单 API。"
 
 #: ../../tutorials/tut0.rst:10
 msgid ""
@@ -42,6 +44,8 @@ msgid ""
 "a RESTful API. It serves an API that is customized based on the structure of "
 "the underlying database."
 msgstr ""
+"PostgREST 是一个独立的 Web 服务器，它将你的 PostgreSQL 数据库变成一个 "
+"RESTful API。它提供了基于底层数据库结构自定义的 API。"
 
 #: ../../tutorials/tut0.rst:14
 msgid ""
@@ -50,16 +54,21 @@ msgid ""
 "procedures. These tutorials will cover a number of common scenarios and how "
 "to model them in the database."
 msgstr ""
+"为了构造 API，我们仅需简单地构造数据库即可，所有的端点和权限都来自数据库对"
+"象，如表、视图、角色和存储过程等。这些教程将涵盖一些常见场景，以及如何在数据"
+"库中建模。"
 
 #: ../../tutorials/tut0.rst:16
 msgid ""
 "By the end of this tutorial you'll have a working database, PostgREST "
 "server, and a simple single-user todo list API."
 msgstr ""
+"在本教程结束时，你将拥有一个可用的数据库、PostgREST 服务器和一个简单的单用户 "
+"todo 列表 API。"
 
 #: ../../tutorials/tut0.rst:19
 msgid "Step 1. Relax, we'll help"
-msgstr ""
+msgstr "第一步、放松，我们会帮助你"
 
 #: ../../tutorials/tut0.rst:21
 msgid ""
@@ -67,10 +76,13 @@ msgid ""
 "im/begriffs/postgrest>`_ in another tab.  There are a nice group of people "
 "active in the project and we'll help you out if you get stuck."
 msgstr ""
+"当你开始学习教程时，可在另一个标签中打开 `项目聊天室 <https://gitter.im/"
+"begriffs/postgrest>`_。有一群很友善的人活跃在项目中，如果你遇到困难，我们会帮"
+"助你的。"
 
 #: ../../tutorials/tut0.rst:24
 msgid "Step 2. Install PostgreSQL"
-msgstr ""
+msgstr "第二步、安装 PostgreSQL"
 
 #: ../../tutorials/tut0.rst:26
 msgid ""
@@ -80,12 +92,17 @@ msgid ""
 "database in Docker because database configuration is otherwise too "
 "complicated for a simple tutorial."
 msgstr ""
+"如果你已经熟练使用 PostgreSQL 并且你的系统已经安装了，你可以直接使用即可（最"
+"低要求详见 :ref:`pg-dependency`）。在本教程中，我们将直接使用 Docker 中的数据"
+"库，因为数据库配置对于一个简单教程而言实在是太过于复杂。"
 
 #: ../../tutorials/tut0.rst:28
 msgid ""
 "If Docker is not installed, you can get it `here <https://www.docker.com/get-"
 "started>`_. Next, let's pull and start the database image:"
 msgstr ""
+"如果没有安装 Docker，你可以从 `这里 <https://www.docker.com/get-started>`_ 开"
+"始。接下来，让我们拖回数据库镜像并启动它："
 
 #: ../../tutorials/tut0.rst:36
 msgid ""
@@ -93,10 +110,12 @@ msgid ""
 "host system so that it looks like an ordinary PostgreSQL server to the rest "
 "of the system."
 msgstr ""
+"上面的命令将会把 Docker 实例作为一个后台服务运行在宿主系统的 5433 端口上，对"
+"于其他系统而言，它看起来就像一个普通的 PostgreSQL 服务器一样。"
 
 #: ../../tutorials/tut0.rst:39
 msgid "Step 3. Install PostgREST"
-msgstr ""
+msgstr "第三步、安装 PostgREST"
 
 #: ../../tutorials/tut0.rst:41
 msgid ""
@@ -107,6 +126,11 @@ msgid ""
 "ref:`build_source` for instructions how to build it yourself. Also let us "
 "know to add your platform in the next release."
 msgstr ""
+"PostgREST 发布为一个单独的二进制文件，并分别针对 Linux / BSD / Windows 各主要"
+"发行版编译，请访问 `最新版本 <https://github.com/PostgREST/postgrest/"
+"releases/latest>`_ 查看下载列表。如果碰巧你的平台不在受支持的平台之列，请参"
+"见 :ref:`build_source` 以便了解如何自行构建，当然也请让我们知道以便在下一个版"
+"本中加入你的平台。"
 
 #: ../../tutorials/tut0.rst:43
 msgid ""
@@ -114,12 +138,16 @@ msgid ""
 "(except Windows which is a zip file). To extract the binary, go into the "
 "terminal and run"
 msgstr ""
+"供下载的预编译二进制文件是 :code:`.tar.xz` 格式的压缩文件（Windows 是一个 "
+"ZIP 压缩文件）。要提取二进制文件，请打开终端（命令行）并运行"
 
 #: ../../tutorials/tut0.rst:51
 msgid ""
 "The result will be a file named simply :code:`postgrest` (or :code:"
 "`postgrest.exe` on Windows). At this point try running it with"
 msgstr ""
+"将会得到一个极为简单的文件 :code:`postgrest` （Windows 是 :code:`postgrest."
+"exe`）。此时运行如下命令"
 
 #: ../../tutorials/tut0.rst:57
 msgid ""
@@ -128,6 +156,9 @@ msgid ""
 "where you downloaded it, or copy it to a system directory like :code:`/usr/"
 "local/bin` on Linux so that you will be able to run it from any directory."
 msgstr ""
+"如果一切正常，它将打印出版本号和相关配置信息。你可以一直在你解压的地方运行这"
+"个二进制文件，或将其拷贝到系统目录（如 Linux 上的 :code:`/usr/local/bin`），"
+"这样你就可以从任何目录启动它。"
 
 #: ../../tutorials/tut0.rst:61
 msgid ""
@@ -135,20 +166,23 @@ msgid ""
 "system. Without the library you'll get an error like \"error while loading "
 "shared libraries: libpq.so.5.\" Here's how to fix it:"
 msgstr ""
+"PostgREST 需要 libpq（即 PostgreSQL 的 C 语言库文件）安装在你的系统上。如果没"
+"有这个库，你会得到一个类似 “加载共享库时出错：libpq.so.5 ”的错误提示。下面是"
+"解决办法："
 
 #: ../../tutorials/tut0.rst:95
 msgid "Step 4. Create Database for API"
-msgstr ""
+msgstr "第四步、为 API 创建数据库"
 
 #: ../../tutorials/tut0.rst:97
 msgid ""
 "Connect to the SQL console (psql) inside the container. To do so, run this "
 "from your command line:"
-msgstr ""
+msgstr "在命令行使用如下命令连接到容器内的 SQL 终端（psql）"
 
 #: ../../tutorials/tut0.rst:103
 msgid "You should see the psql command prompt:"
-msgstr ""
+msgstr "你将会看到 psql 命令行回显提示："
 
 #: ../../tutorials/tut0.rst:112
 msgid ""
@@ -157,23 +191,30 @@ msgid ""
 "exposed in the API. We can choose any name we like, so how about \"api.\" "
 "Execute this and the other SQL statements inside the psql prompt you started."
 msgstr ""
+"我们要做的第一件事，是为将在 API 中暴露的数据库对象创建一个 `命名 Schema "
+"<https://www.postgresql.org/docs/current/ddl-schemas.html>`_。我们可以选择任"
+"意中意的名字，比如 “api”。在你启动的 psql 命令行中执行以下 SQL 语句。"
 
 #: ../../tutorials/tut0.rst:118
 msgid ""
 "Our API will have one endpoint, :code:`/todos`, which will come from a table."
-msgstr ""
+msgstr "我们的 API 需要一个端点 :code:`/todos`，它（的数据）将来自一个表。"
 
 #: ../../tutorials/tut0.rst:132
 msgid ""
 "Next make a role to use for anonymous web requests. When a request comes in, "
 "PostgREST will switch into this role in the database to run queries."
 msgstr ""
+"接下来将设置一个用于匿名网络请求的角色。当有请求进来时，PostgREST 将切换这个"
+"角色来运行查询。"
 
 #: ../../tutorials/tut0.rst:141
 msgid ""
 "The :code:`web_anon` role has permission to access things in the :code:`api` "
 "schema, and to read rows in the :code:`todos` table."
 msgstr ""
+":code:`web_anon` 角色具备访问 :code:`api` Schema 和读取 :code:`todos` 表中数"
+"据行的权限。"
 
 #: ../../tutorials/tut0.rst:143
 msgid ""
@@ -182,20 +223,25 @@ msgid ""
 "do that, name the role ``authenticator`` and also grant him the ability to "
 "switch to the ``web_anon`` role :"
 msgstr ""
+"创建一个专门的角色来连接数据库是一个很好的做法，而不是使用高权限的 "
+"``postgres`` 角色。所以我们将角色命名为 “authenticator”，并授予它切换到 "
+"“web_anon” 角色的能力："
 
 #: ../../tutorials/tut0.rst:151
 msgid "Now quit out of psql; it's time to start the API!"
-msgstr ""
+msgstr "是时候启动 API 了，先退出 psql！"
 
 #: ../../tutorials/tut0.rst:158
 msgid "Step 5. Run PostgREST"
-msgstr ""
+msgstr "第五步、运行 PostgREST"
 
 #: ../../tutorials/tut0.rst:160
 msgid ""
 "PostgREST uses a configuration file to tell it how to connect to the "
 "database. Create a file :code:`tutorial.conf` with this inside:"
 msgstr ""
+"PostgREST 使用一个配置文件来告诉它如何连接到数据库。用以下代码创建文件 :code:"
+"`tutorial.conf`："
 
 #: ../../tutorials/tut0.rst:168
 msgid ""
@@ -204,14 +250,17 @@ msgid ""
 "correct and replace `postgres` with the name of the database where you added "
 "the todos table."
 msgstr ""
+"配置文件还有其他各种 :ref:`选项 <configuration>`，但此刻我们就需要这些就够"
+"了。如果你使用 Docker，请确保端口号正确，并将 `db-uri` 最后一行的 `postgres` "
+"替换为你添加了 `todos` 表的数据库名。"
 
 #: ../../tutorials/tut0.rst:171
 msgid "Now run the server:"
-msgstr ""
+msgstr "现在，运行服务器："
 
 #: ../../tutorials/tut0.rst:177
 msgid "You should see"
-msgstr ""
+msgstr "你将会看见"
 
 #: ../../tutorials/tut0.rst:185
 msgid ""
@@ -221,20 +270,25 @@ msgid ""
 "terminal (leaving the one open that PostgREST is running inside). Try doing "
 "an HTTP request for the todos."
 msgstr ""
+"现在它已经准备好处理网络请求了。市面上有许多美观的图形化 API 工具可以使用，但"
+"在本教程中我们将使用 :code:`curl`，因为它大概率已经安装在你的系统上了。打开一"
+"个新的命令行终端（别碰 PostgREST 运行的那个），尝试请求 `todos`。"
 
 #: ../../tutorials/tut0.rst:191
 msgid "The API replies:"
-msgstr ""
+msgstr "API 应答："
 
 #: ../../tutorials/tut0.rst:210
 msgid ""
 "With the current role permissions, anonymous requests have read-only access "
 "to the :code:`todos` table. If we try to add a new todo we are not able."
 msgstr ""
+"在当前的角色权限下，匿名请求可以只读访问 :code:`todos` 表。如果我们尝试添加新"
+"的 `todo`，将会失败。"
 
 #: ../../tutorials/tut0.rst:218
 msgid "Response is 401 Unauthorized:"
-msgstr ""
+msgstr "响应是 401 未授权："
 
 #: ../../tutorials/tut0.rst:229
 msgid ""
@@ -242,10 +296,12 @@ msgid ""
 "we will see how to extend the example with more sophisticated user access "
 "controls, and more tables and queries."
 msgstr ""
+"搞定，我们有了一个基于数据库的简单的 API。在接下来的教程中，我们将了解如何使"
+"用更复杂的用户访问控制以及更多的表和查询来扩展这个示例。"
 
 #: ../../tutorials/tut0.rst:231
 msgid "Now that you have PostgREST running, try the next tutorial, :ref:`tut1`"
-msgstr ""
+msgstr "现在你已经让 PostgREST 跑起来啦，请接着尝试下一个：:ref:`tut1`。"
 
 #: ../../tutorials/tut1.rst:4
 msgid "Tutorial 1 - The Golden Key"
@@ -388,7 +444,7 @@ msgstr ""
 
 #: ../../tutorials/tut1.rst:135
 msgid ":code:`role`"
-msgstr ""
+msgstr ":code:`role`"
 
 #: ../../tutorials/tut1.rst:135
 msgid "The database role under which to execute SQL for API request"
@@ -396,7 +452,7 @@ msgstr ""
 
 #: ../../tutorials/tut1.rst:137
 msgid ":code:`exp`"
-msgstr ""
+msgstr ":code:`exp`"
 
 #: ../../tutorials/tut1.rst:137
 msgid "Expiration timestamp for token, expressed in \"Unix epoch time\""

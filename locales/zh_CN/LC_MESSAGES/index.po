@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-11 13:18+0800\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2022-01-12 20:00+0800\n"
+"Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: YCH <chnyyk@gmail.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -233,15 +233,15 @@ msgstr "下面是一些能帮你搞定特定用例的套路。"
 
 #: ../../index.rst:200
 msgid ":doc:`how-tos/casting-type-to-custom-json`"
-msgstr ""
+msgstr ":doc:`how-tos/casting-type-to-custom-json`"
 
 #: ../../index.rst:201
 msgid ":doc:`how-tos/embedding-table-from-another-schema`"
-msgstr ""
+msgstr ":doc:`how-tos/embedding-table-from-another-schema`"
 
 #: ../../index.rst:202
 msgid ":doc:`how-tos/providing-images-for-img`"
-msgstr ""
+msgstr ":doc:`how-tos/providing-images-for-img`"
 
 #: ../../index.rst:203
 msgid ""
@@ -262,31 +262,31 @@ msgstr ""
 
 #: ../../index.rst:216
 msgid ":ref:`community_tutorials`"
-msgstr ""
+msgstr ":ref:`community_tutorials`"
 
 #: ../../index.rst:217
 msgid ":ref:`templates`"
-msgstr ""
+msgstr ":ref:`templates`"
 
 #: ../../index.rst:218
 msgid ":ref:`eco_example_apps`"
-msgstr ""
+msgstr ":ref:`eco_example_apps`"
 
 #: ../../index.rst:219
 msgid ":ref:`devops`"
-msgstr ""
+msgstr ":ref:`devops`"
 
 #: ../../index.rst:220
 msgid ":ref:`eco_external_notification`"
-msgstr ""
+msgstr ":ref:`eco_external_notification`"
 
 #: ../../index.rst:221
 msgid ":ref:`eco_extensions`"
-msgstr ""
+msgstr ":ref:`eco_extensions`"
 
 #: ../../index.rst:222
 msgid ":ref:`clientside_libraries`"
-msgstr ""
+msgstr ":ref:`clientside_libraries`"
 
 #: ../../index.rst:228
 msgid ""
@@ -301,23 +301,23 @@ msgstr ""
 
 #: ../../index.rst:231
 msgid ":doc:`releases/v9.0.0`"
-msgstr ""
+msgstr ":doc:`releases/v9.0.0`"
 
 #: ../../index.rst:232
 msgid ":doc:`releases/v8.0.0`"
-msgstr ""
+msgstr ":doc:`releases/v8.0.0`"
 
 #: ../../index.rst:233
 msgid ":doc:`releases/v7.0.0`"
-msgstr ""
+msgstr ":doc:`releases/v7.0.0`"
 
 #: ../../index.rst:234
 msgid ":doc:`releases/v6.0.2`"
-msgstr ""
+msgstr ":doc:`releases/v6.0.2`"
 
 #: ../../index.rst:235
 msgid ":doc:`releases/v5.2.0`"
-msgstr ""
+msgstr ":doc:`releases/v5.2.0`"
 
 #: ../../index.rst:238
 msgid "In Production"
@@ -329,33 +329,35 @@ msgstr "下面是一些在生产环境中使用 PostgREST 的公司。"
 
 #: ../../index.rst:242
 msgid "`Catarse <https://www.catarse.me>`_"
-msgstr ""
+msgstr "`Catarse <https://www.catarse.me>`_"
 
 #: ../../index.rst:243
 msgid "`Datrium <https://www.datrium.com>`_"
-msgstr ""
+msgstr "`Datrium <https://www.datrium.com>`_"
 
 #: ../../index.rst:244
 msgid "`Drip Depot <https://www.dripdepot.com>`_"
-msgstr ""
+msgstr "`Drip Depot <https://www.dripdepot.com>`_"
 
 #: ../../index.rst:245
 msgid "`Image-charts <https://www.image-charts.com>`_"
-msgstr ""
+msgstr "`Image-charts <https://www.image-charts.com>`_"
 
 #: ../../index.rst:246
 msgid "`Moat <https://www.moat.com>`_"
-msgstr ""
+msgstr "`Moat <https://www.moat.com>`_"
 
 #: ../../index.rst:247
 msgid ""
 "`MotionDynamic - Fast highly dynamic video generation at scale <https://"
 "motiondynamic.tech>`_"
 msgstr ""
+"`MotionDynamic - Fast highly dynamic video generation at scale <https://"
+"motiondynamic.tech>`_"
 
 #: ../../index.rst:248
 msgid "`Netwo <https://www.netwo.io>`_"
-msgstr ""
+msgstr "`Netwo <https://www.netwo.io>`_"
 
 #: ../../index.rst:249
 msgid ""
@@ -369,19 +371,19 @@ msgstr ""
 
 #: ../../index.rst:251
 msgid "`OpenBooking <https://www.openbooking.ch>`_"
-msgstr ""
+msgstr "`OpenBooking <https://www.openbooking.ch>`_"
 
 #: ../../index.rst:252
 msgid "`Redsmin <https://www.redsmin.com>`_"
-msgstr ""
+msgstr "`Redsmin <https://www.redsmin.com>`_"
 
 #: ../../index.rst:253
 msgid "`Sompani <https://www.sompani.com>`_"
-msgstr ""
+msgstr "`Sompani <https://www.sompani.com>`_"
 
 #: ../../index.rst:254
 msgid "`Supabase <https://supabase.com>`_"
-msgstr ""
+msgstr "`Supabase <https://supabase.com>`_"
 
 #: ../../index.rst:260
 msgid "Testimonials"

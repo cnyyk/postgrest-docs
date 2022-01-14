@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-13 01:01+0800\n"
+"PO-Revision-Date: 2022-01-14 21:49+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -1947,7 +1947,7 @@ msgstr ""
 
 #: ../../api.rst:2475
 msgid "Legacy GUC variable names"
-msgstr ""
+msgstr "老的 GUC 变量名称"
 
 #: ../../api.rst:2477
 msgid ""

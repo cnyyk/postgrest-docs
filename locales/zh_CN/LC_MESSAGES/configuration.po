@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-13 00:02+0800\n"
+"PO-Revision-Date: 2022-01-14 22:28+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -351,7 +351,7 @@ msgstr ""
 
 #: ../../configuration.rst:138 ../../configuration.rst:453
 msgid "log-level"
-msgstr ""
+msgstr "日志级别"
 
 #: ../../configuration.rst:138
 msgid "error"

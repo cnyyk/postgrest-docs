@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 19:43+0800\n"
-"PO-Revision-Date: 2022-01-15 18:08+0800\n"
+"PO-Revision-Date: 2022-01-15 19:53+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -355,12 +355,12 @@ msgid ""
 "one, or use a tool to generate it. **Your password must be at least 32 "
 "characters long.**"
 msgstr ""
-"让我们创建一个密码并提供给 PostgREST。思考一个长又好记的密码，或者用工具生成"
-"一个。**你的密码必须至少有 32个 字符**。"
+"让我们创建一个密码并提供给 PostgREST。想一个又长又好的密码，或者用工具生成一"
+"个。**你的密码必须至少有 32个 字符**。"
 
 #: ../../tutorials/tut1.rst:36
 msgid "Unix tools can generate a nice password for you:"
-msgstr ""
+msgstr "UNIX 工具可以为你生成很好的密码："
 
 #: ../../tutorials/tut1.rst:46
 msgid ""
@@ -392,7 +392,7 @@ msgstr ""
 
 #: ../../tutorials/tut1.rst:65
 msgid "jwt.io interface"
-msgstr ""
+msgstr "jwt.io 界面"
 
 #: ../../tutorials/tut1.rst:65
 msgid "How to create a token at https://jwt.io"
@@ -413,6 +413,8 @@ msgid ""
 "payload. The token is merely signed, not encrypted, so don't put things "
 "inside that you don't want a determined client to see."
 msgstr ""
+"令牌虽然看起来很隐蔽，但其实很容易对其进行逆向解码。令牌只是被签名，而不是被"
+"加密，所以切记不要把您不希望客户端看到的内容放入其中。"
 
 #: ../../tutorials/tut1.rst:74
 msgid "Step 4. Make a Request"
@@ -431,10 +433,12 @@ msgid ""
 "And now we have completed all three items in our todo list, so let's set :"
 "code:`done` to true for them all with a :code:`PATCH` request."
 msgstr ""
+"现在我们已经完成了 todo 列表中的全部三件事，那么让我们用 :code:`PATCH` 请求把"
+"它们的 :code:`done` 设为 true 吧。"
 
 #: ../../tutorials/tut1.rst:96
 msgid "A request for the todos shows three of them, and all completed."
-msgstr ""
+msgstr "请求 todo 列表的结果显示总共有三条，且全部都已完成。"
 
 #: ../../tutorials/tut1.rst:126
 msgid "Step 5. Add Expiration"
@@ -445,6 +449,8 @@ msgid ""
 "Currently our authentication token is valid for all eternity. The server, as "
 "long as it continues using the same JWT password, will honor the token."
 msgstr ""
+"目前，我们的身份认证令牌是永久有效的。只要服务器继续使用相同的 JWT 密码，就会"
+"承认该令牌。"
 
 #: ../../tutorials/tut1.rst:130
 msgid ""
@@ -452,14 +458,16 @@ msgid ""
 "code:`exp` claim. This is one of two JWT claims that PostgREST treats "
 "specially."
 msgstr ""
+"更好的策略是使用 :code:`exp` 声明为令牌包含一个过期时间戳。这是 PostgREST 特"
+"别对待的两个 JWT 声明之一。"
 
 #: ../../tutorials/tut1.rst:133
 msgid "Claim"
-msgstr ""
+msgstr "声明"
 
 #: ../../tutorials/tut1.rst:133
 msgid "Interpretation"
-msgstr ""
+msgstr "解释"
 
 #: ../../tutorials/tut1.rst:135
 msgid ":code:`role`"
@@ -467,7 +475,7 @@ msgstr ":code:`role`"
 
 #: ../../tutorials/tut1.rst:135
 msgid "The database role under which to execute SQL for API request"
-msgstr ""
+msgstr "为 API 请求执行 SQL 的数据库角色"
 
 #: ../../tutorials/tut1.rst:137
 msgid ":code:`exp`"
@@ -475,7 +483,7 @@ msgstr ":code:`exp`"
 
 #: ../../tutorials/tut1.rst:137
 msgid "Expiration timestamp for token, expressed in \"Unix epoch time\""
-msgstr ""
+msgstr "令牌的过期时间戳，用“UNIX 时间戳”表示"
 
 #: ../../tutorials/tut1.rst:142
 msgid ""
@@ -483,6 +491,8 @@ msgid ""
 "00:00:00 Coordinated Universal Time (UTC), January 1st 1970, minus the "
 "number of leap seconds that have taken place since then."
 msgstr ""
+"UNIX 时间戳定义为自 UTC（协调世界时）的 1970 年 1 月 1 日 00:00:00 以来所经过"
+"的秒数减去此后发生的闰秒数。"
 
 #: ../../tutorials/tut1.rst:144
 msgid ""
@@ -490,29 +500,33 @@ msgid ""
 "minutes in the future to our previous token. First find the epoch value of "
 "five minutes from now. In psql run this:"
 msgstr ""
+"为了观察实际的过期情况，我们将在之前的令牌上添加一个 :code:`exp` 声明，时间为"
+"未来五分钟。首先得找到自现在开始 5 分钟后的 UNIX 时间戳，在 psql 中运行："
 
 #: ../../tutorials/tut1.rst:150
 msgid "Go back to jwt.io and change the payload to"
-msgstr ""
+msgstr "回到 jwt.io 将负载更改为"
 
 #: ../../tutorials/tut1.rst:159
 msgid ""
 "**NOTE**: Don't forget to change the dummy epoch value :code:`123456789` in "
 "the snippet above to the epoch value returned by the psql command."
 msgstr ""
+"**注意**：不要忘了将上面代码片段中的占位 UNIX 时间戳 :code:`123456789` 替换"
+"为 psql 命令返回值。"
 
 #: ../../tutorials/tut1.rst:161
 msgid ""
 "Copy the updated token as before, and save it as a new environment variable."
-msgstr ""
+msgstr "像之前一样复制更新过的令牌，并将其保存为一个新的环境变量。"
 
 #: ../../tutorials/tut1.rst:167
 msgid "Try issuing this request in curl before and after the expiration time:"
-msgstr ""
+msgstr "试着在过期时间之前和之后分别用 curl 发送如下请求："
 
 #: ../../tutorials/tut1.rst:174
 msgid "After expiration, the API returns HTTP 401 Unauthorized:"
-msgstr ""
+msgstr "过期后，API 将返回 HTTP 401 Unauthorized："
 
 #: ../../tutorials/tut1.rst:181
 msgid "Bonus Topic: Immediate Revocation"
@@ -524,6 +538,8 @@ msgid ""
 "revoke access for a specific token. For instance, suppose you learn that a "
 "disgruntled employee is up to no good and his token is still valid."
 msgstr ""
+"即使在令牌尚未过期的情况下，有时你也可能想立即撤销某个特定令牌。例如，你得知"
+"一个心怀不满的员工正在搞破坏，而他的令牌仍然有效。"
 
 #: ../../tutorials/tut1.rst:185
 msgid ""
@@ -531,14 +547,16 @@ msgid ""
 "add a custom :code:`email` claim that matches the email of the client issued "
 "the token."
 msgstr ""
+"为了撤销某个特定令牌，我们需要一种方法来将它与其他令牌区分开。让我们添加一个"
+"自定义的 :code:`email` 声明，以匹配签发令牌的客户端的电子邮件。"
 
 #: ../../tutorials/tut1.rst:187
 msgid "Go ahead and make a new token with the payload"
-msgstr ""
+msgstr "让我们用下面的负载去创建一个新的令牌"
 
 #: ../../tutorials/tut1.rst:196
 msgid "Save it to an environment variable:"
-msgstr ""
+msgstr "并将其保存到环境变量中："
 
 #: ../../tutorials/tut1.rst:202
 msgid ""
@@ -546,21 +564,25 @@ msgid ""
 "authentication. The function can do whatever it likes, including raising an "
 "exception to terminate the request."
 msgstr ""
+"PostgREST 允许我们在尝试身份认证期间指定一个要运行的存储过程。该存储过程（函"
+"数）可以做任何它想做的事情，包括引发异常以终止请求。"
 
 #: ../../tutorials/tut1.rst:204
 msgid "First make a new schema and add the function:"
-msgstr ""
+msgstr "首先新建一个 Schema 并添加如下函数："
 
 #: ../../tutorials/tut1.rst:223
 msgid "Next update :code:`tutorial.conf` and specify the new function:"
-msgstr ""
+msgstr "接着更新 :code:`tutorial.conf` 并指定这个新的函数："
 
 #: ../../tutorials/tut1.rst:231
 msgid ""
 "Restart PostgREST for the change to take effect. Next try making a request "
 "with our original token and then with the revoked one."
 msgstr ""
+"重新启动 PostgREST 以使改变生效。接下来，尝试用我们的原始令牌和被撤销的令牌进"
+"行请求。"
 
 #: ../../tutorials/tut1.rst:249
 msgid "The server responds with 403 Forbidden:"
-msgstr ""
+msgstr "服务器将会响应 403 Forbidden。"

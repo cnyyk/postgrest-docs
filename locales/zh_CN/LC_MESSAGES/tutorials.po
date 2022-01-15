@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 19:43+0800\n"
-"PO-Revision-Date: 2022-01-15 19:54+0800\n"
+"PO-Revision-Date: 2022-01-15 19:55+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -530,7 +530,7 @@ msgstr "过期后，API 将返回 HTTP 401 Unauthorized："
 
 #: ../../tutorials/tut1.rst:181
 msgid "Bonus Topic: Immediate Revocation"
-msgstr "附加话题：立即撤销（令牌）"
+msgstr "附加话题：立即撤销"
 
 #: ../../tutorials/tut1.rst:183
 msgid ""

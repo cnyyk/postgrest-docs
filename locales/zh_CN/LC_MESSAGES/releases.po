@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-15 10:10+0800\n"
+"PO-Revision-Date: 2022-01-15 11:23+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -154,7 +154,7 @@ msgid ""
 "`embedding_views`. |br| -- `@vitorbaptista <https://github.com/"
 "vitorbaptista>`_"
 msgstr ""
-"资源嵌套支持物化视图。参见 :ref:`embedding_views`。 |br| — `@vitorbaptista "
+"资源嵌入支持物化视图。参见 :ref:`embedding_views`。 |br| — `@vitorbaptista "
 "<https://github.com/vitorbaptista>`_"
 
 #: ../../releases/v6.0.2.rst:23
@@ -297,6 +297,9 @@ msgid ""
 "`db-schemas`. |br| -- `@steve-chavez <https://github.com/steve-chavez>`_, "
 "`@mahmoudkassem <https://github.com/mahmoudkassem>`_"
 msgstr ""
+"支持在 :ref:`db-schemas` 的范围内 :ref:`切换 Schema <multiple-schemas>`。 |"
+"br| — `@steve-chavez <https://github.com/steve-chavez>`_, `@mahmoudkassem "
+"<https://github.com/mahmoudkassem>`_"
 
 #: ../../releases/v7.0.0.rst:16
 msgid ""
@@ -304,42 +307,51 @@ msgid ""
 "`@steve-chavez <https://github.com/steve-chavez>`_, `@LorenzHenk <https://"
 "github.com/LorenzHenk>`_"
 msgstr ""
+"支持 :ref:`planned_count` 和 :ref:`estimated_count`。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_, `@LorenzHenk <https://github.com/"
+"LorenzHenk>`_"
 
 #: ../../releases/v7.0.0.rst:19
 msgid ""
 "Support for the :ref:`on_conflict <on_conflict>` query parameter to UPSERT "
 "based on a unique constraint. |br| -- `@ykst <https://github.com/ykst>`_"
 msgstr ""
+"支持 :ref:`on_conflict <on_conflict>` 查询参数，用于基于唯一约束的 UPSERT 操"
+"作。 |br| — `@ykst <https://github.com/ykst>`_"
 
 #: ../../releases/v7.0.0.rst:22
 msgid ""
 "Support for :ref:`Resource Embedding Disambiguation <embed_disamb>`. |br| "
 "-- `@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
+"支持 :ref:`资源嵌入消除歧义 <embed_disamb>`。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_"
 
 #: ../../releases/v7.0.0.rst:25
 msgid ""
 "Support for user defined socket permission via :ref:`server-unix-socket-"
 "mode` config option |br| -- `@Dansvidania <https://github.com/Dansvidania>`_"
 msgstr ""
+"支持用户通过 :ref:`server-unix-socket-mode` 配置选项自定义套接字权限。 |br| "
+"— `@Dansvidania <https://github.com/Dansvidania>`_"
 
 #: ../../releases/v7.0.0.rst:28
 msgid ""
 "HTTP logic improvements -- `@steve-chavez <https://github.com/steve-"
 "chavez>`_"
-msgstr ""
+msgstr "改进 HTTP 逻辑 — `@steve-chavez <https://github.com/steve-chavez>`_"
 
 #: ../../releases/v7.0.0.rst:30
 msgid "Support for HTTP HEAD requests."
-msgstr ""
+msgstr "支持 HTTP HEAD 请求。"
 
 #: ../../releases/v7.0.0.rst:31
 msgid "GUCs for :ref:`guc_req_path_method`."
-msgstr ""
+msgstr ":ref:`guc_req_path_method` 的 GUC。"
 
 #: ../../releases/v7.0.0.rst:32
 msgid "Support for :ref:`pre_req_headers`."
-msgstr "支持 :ref:`pre_req_headers`."
+msgstr "支持 :ref:`pre_req_headers`。"
 
 #: ../../releases/v7.0.0.rst:33
 msgid ""
@@ -352,7 +364,7 @@ msgstr ""
 msgid ""
 "Access to the ``Authorization`` header value through ``request.header."
 "authorization``"
-msgstr ""
+msgstr "使用 ``request.header.authorization`` 读取 ``Authorization`` 标头值。"
 
 #: ../../releases/v7.0.0.rst:36 ../../releases/v7.0.1.rst:28
 #: ../../releases/v8.0.0.rst:61 ../../releases/v9.0.0.rst:51
@@ -394,7 +406,7 @@ msgid ""
 "Allow embedding a view when its source table foreign key is UNIQUE |br| -- "
 "`@bwbroersma <https://github.com/bwbroersma>`_"
 msgstr ""
-"允许源表外键是唯一索引（UNIQUE）的视图被嵌套。 |br| — `@bwbroersma <https://"
+"允许源表外键是唯一索引（UNIQUE）的视图被嵌入。 |br| — `@bwbroersma <https://"
 "github.com/bwbroersma>`_"
 
 #: ../../releases/v7.0.0.rst:51
@@ -412,7 +424,7 @@ msgid ""
 "Fix self join resource embedding on PATCH |br| -- `@herulume <https://"
 "github.com/herulume>`_, `@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"修复 PATCH 操作时 SELF JOIN 的资源嵌套问题。 |br| — `@herulume <https://"
+"修复 PATCH 操作时 SELF JOIN 的资源嵌入问题。 |br| — `@herulume <https://"
 "github.com/herulume>`_, `@steve-chavez <https://github.com/steve-chavez>`_"
 
 #: ../../releases/v7.0.0.rst:57
@@ -429,7 +441,7 @@ msgid ""
 "Fix many to many resource embedding for RPC/PATCH |br| -- `@steve-chavez "
 "<https://github.com/steve-chavez>`_"
 msgstr ""
-"修复 RPC/PATCH 的多对多（M:N）资源嵌套问题。|br| — `@steve-chavez <https://"
+"修复 RPC/PATCH 的多对多（M:N）资源嵌入问题。|br| — `@steve-chavez <https://"
 "github.com/steve-chavez>`_"
 
 #: ../../releases/v7.0.0.rst:66
@@ -446,7 +458,7 @@ msgid ""
 "Resource Embedding now outputs an error when multiple relationships between "
 "two tables are found, see :ref:`embed_disamb`."
 msgstr ""
-"当两个表之间有多个关系时，资源嵌套将会提示错误。参见 :ref:`embed_disamb`。"
+"当两个表之间有多个关系时，资源嵌入将会提示错误。参见 :ref:`embed_disamb`。"
 
 #: ../../releases/v7.0.0.rst:70
 msgid ""
@@ -491,6 +503,8 @@ msgid ""
 "Fix overloaded computed columns on RPC |br| -- `@wolfgangwalther <https://"
 "github.com/wolfgangwalther>`_"
 msgstr ""
+"修复 RPC 上的重载计算列。 |br| — `@wolfgangwalther <https://github.com/"
+"wolfgangwalther>`_"
 
 #: ../../releases/v7.0.1.rst:16
 msgid ""
@@ -498,24 +512,33 @@ msgid ""
 "and PATCH with empty body |br| -- `@wolfgangwalther <https://github.com/"
 "wolfgangwalther>`_"
 msgstr ""
+"修复带有 ``?select=`` 和 ``Prefer: return=minimal`` 标头的 POST、PATCH 和 "
+"DELETE，及请求数据为空的 PATCH 操作。 |br| — `@wolfgangwalther <https://"
+"github.com/wolfgangwalther>`_"
 
 #: ../../releases/v7.0.1.rst:19
 msgid ""
 "Fix missing ``openapi-server-proxy-uri`` config option |br| -- `@steve-"
 "chavez <https://github.com/steve-chavez>`_"
 msgstr ""
+"修复缺失的 ``openapi-server-proxy-uri`` 配置项。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_"
 
 #: ../../releases/v7.0.1.rst:22
 msgid ""
 "Fix ``Content-Profile`` not working for POST RPC |br| -- `@steve-chavez "
 "<https://github.com/steve-chavez>`_"
 msgstr ""
+"修复 POST RPC 时 ``Content-Profile`` 不生效。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_"
 
 #: ../../releases/v7.0.1.rst:25
 msgid ""
 "Fix PUT restriction for including all columns in payload |br| -- `@steve-"
 "chavez <https://github.com/steve-chavez>`_"
 msgstr ""
+"修复请求数据包含所有列时的 PUT 限制。 |br| — `@steve-chavez <https://github."
+"com/steve-chavez>`_"
 
 #: ../../releases/v7.0.1.rst:30
 msgid "Added package managers to :ref:`install`."
@@ -745,12 +768,18 @@ msgid ""
 "when having a write-only table. See :ref:`insert_update`. |br| -- "
 "`@laurenceisla <https://github.com/laurenceisla>`_"
 msgstr ""
+"POST 请求进行插入操作时不再默认返回 ``Location`` 标头，如果仍然需要，需在请"
+"求时包含 ``Prefer: return=minimal`` 标头。这可以避免只写表（Write Onyly）的"
+"权限错误。参见 :ref:`insert_update`。 |br| — `@laurenceisla <https://github."
+"com/laurenceisla>`_"
 
 #: ../../releases/v8.0.0.rst:84
 msgid ""
 "Modified the default logging level from ``info`` to ``error``. See :ref:"
 "`log-level`. |br| -- `@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
+"默认日志级别由 ``error`` 改为 ``info``。参见 :ref:`log-level`。 |br| — "
+"`@steve-chavez <https://github.com/steve-chavez>`_"
 
 #: ../../releases/v8.0.0.rst:87
 msgid ""
@@ -759,6 +788,9 @@ msgid ""
 "functions with the same argument names but different types. |br| -- "
 "`@laurenceisla <https://github.com/laurenceisla>`_"
 msgstr ""
+"更改了未在失效 Schema 上找到 RPC 时的错误信息（参见 :ref:"
+"`stale_function_signature`），及不支持参数名称相同但类型不同的函数重载时的错"
+"误信息。 |br| — `@laurenceisla <https://github.com/laurenceisla>`_"
 
 #: ../../releases/v8.0.0.rst:91
 msgid ""
@@ -766,66 +798,88 @@ msgid ""
 "`stale_fk_relationships`. |br| -- `@laurenceisla <https://github.com/"
 "laurenceisla>`_"
 msgstr ""
+"更改了未找到关系时的错误信息。参见 :ref:`stale_fk_relationships`。 |br| — "
+"`@laurenceisla <https://github.com/laurenceisla>`_"
 
 #: ../../releases/v8.0.0.rst:97
 msgid ""
 "Fix showing UNKNOWN on ``postgrest --help`` invocation. |br| -- "
 "`@monacoremo <https://github.com/monacoremo>`_"
 msgstr ""
+"修复调用 ``postgrest —help`` 时显示 UNKNOWN。 |br| — `@monacoremo <https://"
+"github.com/monacoremo>`_"
 
 #: ../../releases/v8.0.0.rst:100
 msgid ""
 "Removed single column restriction to allow composite foreign keys in join "
 "tables. |br| -- `@goteguru <https://github.com/goteguru>`_"
 msgstr ""
+"移除单列的限制，以便允许连接表时使用复合外键。 |br| — `@goteguru <https://"
+"github.com/goteguru>`_"
 
 #: ../../releases/v8.0.0.rst:103
 msgid ""
 "Fix expired JWTs starting an empty transaction on the db. |br| -- `@steve-"
 "chavez <https://github.com/steve-chavez>`_"
 msgstr ""
+"修复失效 JWT 开启数据库空事务。 |br| — `@steve-chavez <https://github.com/"
+"steve-chavez>`_"
 
 #: ../../releases/v8.0.0.rst:106
 msgid ""
 "Fix location header for POST request with ``select=`` without PK. |br| -- "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
+"修复带有 ``select=`` 但没有主键的 POST 请求的位置标头。 |br| — "
+"`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 
 #: ../../releases/v8.0.0.rst:109
 msgid ""
 "Fix error messages on connection failure for localized PostgreSQL on "
 "Windows. |br| -- `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
+"修复 Windows 上本地 PostgreSQL 连接失败时的错误信息。 |br| — "
+"`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 
 #: ../../releases/v8.0.0.rst:112
 msgid ""
 "Fix ``application/octet-stream`` appending ``charset=utf-8``. |br| -- "
 "`@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
+"修复 ``application/octet-stream`` 附加 ``charset=utf-8``。 |br| — `@steve-"
+"chavez <https://github.com/steve-chavez>`_"
 
 #: ../../releases/v8.0.0.rst:115
 msgid ""
 "Fix overloading of functions with unnamed arguments. |br| -- "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
+"修复带有未命名参数的函数的重载。 |br| — `@wolfgangwalther <https://github."
+"com/wolfgangwalther>`_"
 
 #: ../../releases/v8.0.0.rst:118
 msgid ""
 "Return ``405 Method not Allowed`` for GET of volatile RPC instead of 500. |"
 "br| -- `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
+"GET 调用不稳定的 RPC 时返回 ``405 Method not Allowed`` 而不是 500。 |br| — "
+"`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 
 #: ../../releases/v8.0.0.rst:121
 msgid ""
 "Fix RPC return type handling and embedding for domains with composite base "
 "type. |br| -- `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
+"修复 RPC 返回类型的处理和复合基类型域的嵌入。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
 #: ../../releases/v8.0.0.rst:124
 msgid ""
 "Fix embedding through views that have COALESCE with subselect. |br| -- "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
+"修复通过有 COALESCE 与子选择的视图的嵌入。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
 #: ../../releases/v8.0.0.rst:127
 msgid ""
@@ -834,6 +888,9 @@ msgid ""
 "``(\"1\", \"0\")``. |br| -- `@wolfgangwalther <https://github.com/"
 "wolfgangwalther>`_"
 msgstr ""
+"修复 Docker 环境变量的逻辑值的解析，支持带双引号的真假值 ``(“true”, "
+"“false”)`` 及数字 ``(“1”, “0”)``。 |br| — `@wolfgangwalther <https://github."
+"com/wolfgangwalther>`_"
 
 #: ../../releases/v8.0.0.rst:130
 msgid ""
@@ -841,6 +898,9 @@ msgid ""
 "used as ``PGRST_APP_SETTINGS_xxx``. |br| -- `@wolfgangwalther <https://"
 "github.com/wolfgangwalther>`_"
 msgstr ""
+"修复在 Docker 中使用 ``app.settings.xxx`` 配置选项，现在起将会被用作 "
+"``PGRST_APP_SETTINGS_xxx``。 |br| — `@wolfgangwalther <https://github.com/"
+"wolfgangwalther>`_"
 
 #: ../../releases/v8.0.0.rst:133
 msgid ""
@@ -848,18 +908,24 @@ msgid ""
 "properly close unix domain socket on exit. |br| -- `@monacoremo <https://"
 "github.com/monacoremo>`_"
 msgstr ""
+"修复在非 UNIX 主机上试图用 UNIX 套接字运行时的严重错误，并在退出时正确关闭 "
+"UNIX 域套接字。 |br| — `@monacoremo <https://github.com/monacoremo>`_"
 
 #: ../../releases/v8.0.0.rst:136
 msgid ""
 "Disregard internal junction (in non-exposed schema) when embedding. |br| -- "
 "`@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
+"嵌入时忽略内部连接（在非公开 Schema 中）。 |br| — `@steve-chavez <https://"
+"github.com/steve-chavez>`_"
 
 #: ../../releases/v8.0.0.rst:139
 msgid ""
 "Fix requests for overloaded functions from HTML forms to no longer hang. |"
 "br| -- `@laurenceisla <https://github.com/laurenceisla>`_"
 msgstr ""
+"修复对 HTML 表单模式的重载函数的请求，使其不再挂起。 |br| — `@laurenceisla "
+"<https://github.com/laurenceisla>`_"
 
 #: ../../releases/v8.0.0.rst:145 ../../releases/v9.0.0.rst:84
 msgid ""
@@ -949,7 +1015,7 @@ msgstr ""
 
 #: ../../releases/v9.0.0.rst:18
 msgid "Resource Embedding with Top-level Filtering"
-msgstr "带有顶层筛选的资源嵌套"
+msgstr "带有顶层筛选的资源嵌入"
 
 #: ../../releases/v9.0.0.rst:20
 msgid ""
@@ -960,7 +1026,7 @@ msgid ""
 "thus you can filter the top-level resource rows with any of the available "
 "operators."
 msgstr ""
-"过去，资源嵌套总是通过查询完成的，等效于 ``LEFT JOIN``，这意味着你不能排除任"
+"过去，资源嵌入总是通过查询完成的，等效于 ``LEFT JOIN``，这意味着你不能排除任"
 "何顶层记录行。现在你可以使用 :ref:`embedding_top_level_filter` 执行等效于 "
 "``INNER JOIN`` 的操作，因此你可以用任何可用的操作符来过滤顶层记录行。"
 
@@ -975,7 +1041,7 @@ msgid ""
 "INSERT(with a correctly generated Location header) and make OPTIONS "
 "requests on them. They're also included in the generated OpenAPI."
 msgstr ""
-"全面支持分区表。你可以 :ref:`嵌套分区表 <embedding_partitioned_tables>`、"
+"全面支持分区表。你可以 :ref:`嵌入分区表 <embedding_partitioned_tables>`、"
 "UPSERT、INSERT（当有一个正确生成的 Location 标头时）或发起 OPTIONS 请求。同"
 "时也会被包含进 OpenAPI。"
 
@@ -1034,7 +1100,7 @@ msgid ""
 ":ref:`embed_disamb` now shows an improved error message that includes "
 "relevant hints for clearing out the ambiguous embedding."
 msgstr ""
-":ref:`embed_disamb` 的错误提示信息包含更明确的提示，以便排除有歧义的嵌套。"
+":ref:`embed_disamb` 的错误提示信息包含更明确的提示，以便排除有歧义的嵌入。"
 
 #: ../../releases/v9.0.0.rst:53
 msgid "Added ``curl`` snippets to the :doc:`API <../api>` page."
@@ -1110,7 +1176,7 @@ msgid ""
 msgstr ""
 "`分区表 <https://www.postgresql.org/docs/current/ddl-partitioning.html#DDL-"
 "PARTITIONING-DECLARATIVE>`_ 的分区不再包含在 :ref:`schema_cache` 中，以避免"
-"在分区表上进行资源嵌套时出现错误。"
+"在分区表上进行资源嵌入时出现错误。"
 
 #: ../../releases/v9.0.0.rst:79
 msgid ""

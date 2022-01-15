@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-14 21:49+0800\n"
+"PO-Revision-Date: 2022-01-15 11:23+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -825,7 +825,7 @@ msgstr ""
 
 #: ../../api.rst:791
 msgid "Resource Embedding"
-msgstr "资源嵌套"
+msgstr "资源嵌入"
 
 #: ../../api.rst:793
 msgid ""
@@ -966,7 +966,7 @@ msgstr ""
 
 #: ../../api.rst:1062
 msgid "Embedding Partitioned Tables"
-msgstr "嵌套分区表"
+msgstr "嵌入分区表"
 
 #: ../../api.rst:1064
 msgid ""
@@ -1115,7 +1115,7 @@ msgstr ""
 
 #: ../../api.rst:1255
 msgid "Embedding Disambiguation"
-msgstr "嵌套消歧"
+msgstr "嵌入消除歧义"
 
 #: ../../api.rst:1257
 msgid ""

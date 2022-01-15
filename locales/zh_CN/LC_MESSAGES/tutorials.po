@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 19:43+0800\n"
-"PO-Revision-Date: 2022-01-13 00:55+0800\n"
+"PO-Revision-Date: 2022-01-15 13:50+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -45,7 +45,7 @@ msgid ""
 "the underlying database."
 msgstr ""
 "PostgREST 是一个独立的 Web 服务器，它将你的 PostgreSQL 数据库变成一个 "
-"RESTful API。它提供了基于底层数据库结构自定义的 API。"
+"RESTful API。它提供了基于底层数据库结构的自定义的 API。"
 
 #: ../../tutorials/tut0.rst:14
 msgid ""
@@ -63,7 +63,7 @@ msgid ""
 "By the end of this tutorial you'll have a working database, PostgREST "
 "server, and a simple single-user todo list API."
 msgstr ""
-"在本教程结束时，你将拥有一个可用的数据库、PostgREST 服务器和一个简单的单用户 "
+"在本教程结束时，你将拥有一个可用的数据库、PostgREST 服务器和一个简易的单用户 "
 "todo 列表 API。"
 
 #: ../../tutorials/tut0.rst:19
@@ -314,10 +314,13 @@ msgid ""
 "interesting, but one good place to start would be allowing some users to "
 "change data in addition to reading it."
 msgstr ""
+"在 :ref:`tut0` 中，我们创建了一个只读 API，它只有一个端点，用来罗列 todo。我"
+"们有很多种办法让这个 API 变得更有趣。其中一个较好的开始，就是允许用户不仅能读"
+"取数据，还能修改数据。"
 
 #: ../../tutorials/tut1.rst:11
 msgid "Step 1. Add a Trusted User"
-msgstr ""
+msgstr "第一步、添加受信用户"
 
 #: ../../tutorials/tut1.rst:13
 msgid ""
@@ -326,10 +329,13 @@ msgid ""
 "`todo_user` for users who authenticate with the API. This role will have the "
 "authority to do anything to the todo list."
 msgstr ""
+"前面的教程已在数据库里创建了角色 :code:`web_anon`，并用它来执行匿名的网络请"
+"求。让我们再为使用 API 认证的用户创建一个名为 :code:`todo_user` 的角色，它将"
+"有权力对 todo 列表做任何事情。"
 
 #: ../../tutorials/tut1.rst:28
 msgid "Step 2. Make a Secret"
-msgstr ""
+msgstr "第二步、生成 Secret"
 
 #: ../../tutorials/tut1.rst:30
 msgid ""
@@ -339,6 +345,9 @@ msgid ""
 "with the contents of their tokens. PostgREST will detect counterfeit tokens "
 "and will reject them."
 msgstr ""
+"客户使用 JWT（JSON Web Token）对 API 进行认证，它们是使用只有我们和服务器知道"
+"的密码进行加密签名的 JSON 对象。因为客户端不知道密码，所以不能篡改令牌内容。"
+"PostgREST 会检测伪造的令牌并拒绝它们。"
 
 #: ../../tutorials/tut1.rst:32
 msgid ""
@@ -346,6 +355,8 @@ msgid ""
 "one, or use a tool to generate it. **Your password must be at least 32 "
 "characters long.**"
 msgstr ""
+"让我们创建一个密码并提供给 PostgREST。思考一个长又好记的密码，或者用工具生成"
+"一个。**你的密码必须至少有 32个 字符**。"
 
 #: ../../tutorials/tut1.rst:36
 msgid "Unix tools can generate a nice password for you:"
@@ -356,16 +367,17 @@ msgid ""
 "Open the :code:`tutorial.conf` (created in the previous tutorial) and add a "
 "line with the password:"
 msgstr ""
+"打开 :code:`tutorial.conf` （已在之前的教程中创建），新增一行配置该密码："
 
 #: ../../tutorials/tut1.rst:55
 msgid ""
 "If the PostgREST server is still running from the previous tutorial, restart "
 "it to load the updated configuration file."
-msgstr ""
+msgstr "如果 PostgREST 服务器仍在运行，请重新启动它以加载更新过的配置文件。"
 
 #: ../../tutorials/tut1.rst:58
 msgid "Step 3. Sign a Token"
-msgstr ""
+msgstr "第三步、签发 Token"
 
 #: ../../tutorials/tut1.rst:60
 msgid ""
@@ -374,6 +386,9 @@ msgid ""
 "hand.\" Go to `jwt.io <https://jwt.io/#debugger-io>`_ and fill in the fields "
 "like this:"
 msgstr ""
+"通常情况下，你在数据库或其他服务器中的代码将创建和签发认证令牌。但在本教程"
+"中，我们将“手工”生成一个。访问 `jwt.io <https://jwt.io/#debugger-io>`_ 并照此"
+"填写："
 
 #: ../../tutorials/tut1.rst:65
 msgid "jwt.io interface"
@@ -381,7 +396,7 @@ msgstr ""
 
 #: ../../tutorials/tut1.rst:65
 msgid "How to create a token at https://jwt.io"
-msgstr ""
+msgstr "如何在 https://jwt.io 创建一个令牌"
 
 #: ../../tutorials/tut1.rst:67
 msgid ""
@@ -389,6 +404,8 @@ msgid ""
 "\"secret\".** After you have filled in the password and payload, the encoded "
 "data on the left will update. Copy the encoded token."
 msgstr ""
+"**提示：上面图中 1 的位置是要填写前面生成的密码，而不是“Secret”这个字符串**。"
+"填完密码和载荷（Payload）后，左侧的编码信息会自动更新，请拷贝更新后的令牌。"
 
 #: ../../tutorials/tut1.rst:71
 msgid ""
@@ -399,13 +416,15 @@ msgstr ""
 
 #: ../../tutorials/tut1.rst:74
 msgid "Step 4. Make a Request"
-msgstr ""
+msgstr "第四步、发起请求"
 
 #: ../../tutorials/tut1.rst:76
 msgid ""
 "Back in the terminal, let's use :code:`curl` to add a todo. The request will "
 "include an HTTP header containing the authentication token."
 msgstr ""
+"回到终端，让我们使用 :code:`curl` 来添加一个 todo。该请求将附带一个包含身份验"
+"证令牌的 HTTP 标头。"
 
 #: ../../tutorials/tut1.rst:87
 msgid ""
@@ -419,7 +438,7 @@ msgstr ""
 
 #: ../../tutorials/tut1.rst:126
 msgid "Step 5. Add Expiration"
-msgstr ""
+msgstr "第五步、控制超时"
 
 #: ../../tutorials/tut1.rst:128
 msgid ""
@@ -497,7 +516,7 @@ msgstr ""
 
 #: ../../tutorials/tut1.rst:181
 msgid "Bonus Topic: Immediate Revocation"
-msgstr ""
+msgstr "附加话题：立即撤销（令牌）"
 
 #: ../../tutorials/tut1.rst:183
 msgid ""

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-15 20:34+0800\n"
+"PO-Revision-Date: 2022-01-15 21:30+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -29,12 +29,17 @@ msgid ""
 "level deep routes. For instance the full contents of a table `people` is "
 "returned at"
 msgstr ""
+"公开暴露的 Schema 中的所有视图和表，以及当前请求的活动数据库角色可访问到的（视图"
+"和表），都可用于查询。它们被暴露在一级路由中。例如，以下请求将返回表 `people` 的"
+"全部内容"
 
 #: ../../api.rst:19
 msgid ""
 "There are no deeply/nested/routes. Each route provides OPTIONS, GET, HEAD, "
 "POST, PATCH, and DELETE verbs depending entirely on database permissions."
 msgstr ""
+"不存在深度 / 嵌套的路由。每个路由都提供完全依赖于数据库权限的 OPTIONS、GET、"
+"HEAD、POST、PATCH 和 DELETE 动作（Verbs）。"
 
 #: ../../api.rst:23
 msgid ""
@@ -44,6 +49,9 @@ msgid ""
 "to-many and many-to-many relationships. This is covered in the section about :"
 "ref:`resource_embedding`."
 msgstr ""
+"为何不提供嵌套路由？许多 API 允许嵌套检索相关信息，如 :code:`/films/1/"
+"director`。我们提供了一种更灵活的机制（受 GraphQL 启发）来嵌入相关信息。它可以处"
+"理一对多和多对多的关系，将在 :ref:`resource_embedding` 一节中介绍。"
 
 #: ../../api.rst:28
 msgid "Horizontal Filtering (Rows)"
@@ -53,7 +61,7 @@ msgstr "水平筛选（行）"
 msgid ""
 "You can filter result rows by adding conditions on columns. For instance, to "
 "return people aged under 13 years old:"
-msgstr ""
+msgstr "你可以通过在列上添加条件来过滤结果行。例如，要返回年龄在 13 岁以下的人："
 
 #: ../../api.rst:42
 msgid ""
@@ -61,6 +69,8 @@ msgid ""
 "parameters. For instance, to return people who are 18 or older **and** are "
 "students:"
 msgstr ""
+"你可以通过添加更多的查询字符串参数来计算列上的多个条件。例如，要返回 18 岁及以上"
+"**并且**是学生的人："
 
 #: ../../api.rst:57
 msgid "Operators"
@@ -68,209 +78,211 @@ msgstr "操作符"
 
 #: ../../api.rst:59
 msgid "These operators are available:"
-msgstr ""
+msgstr "有以下操作符可用："
 
 #: ../../api.rst:62
 msgid "Abbreviation"
-msgstr ""
+msgstr "缩写"
 
 #: ../../api.rst:62
 msgid "In PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL 操作符"
 
 #: ../../api.rst:62
 msgid "Meaning"
-msgstr ""
+msgstr "含义"
 
 #: ../../api.rst:64
 msgid "eq"
-msgstr ""
+msgstr "eq"
 
 #: ../../api.rst:64
 msgid ":code:`=`"
-msgstr ""
+msgstr ":code:`=`"
 
 #: ../../api.rst:64
 msgid "equals"
-msgstr ""
+msgstr "等于"
 
 #: ../../api.rst:65
 msgid "gt"
-msgstr ""
+msgstr "gt"
 
 #: ../../api.rst:65
 msgid ":code:`>`"
-msgstr ""
+msgstr ":code:`>`"
 
 #: ../../api.rst:65
 msgid "greater than"
-msgstr ""
+msgstr "大于"
 
 #: ../../api.rst:66
 msgid "gte"
-msgstr ""
+msgstr "gte"
 
 #: ../../api.rst:66
 msgid ":code:`>=`"
-msgstr ""
+msgstr ":code:`>=`"
 
 #: ../../api.rst:66
 msgid "greater than or equal"
-msgstr ""
+msgstr "大于等于"
 
 #: ../../api.rst:67
 msgid "lt"
-msgstr ""
+msgstr "lt"
 
 #: ../../api.rst:67
 msgid ":code:`<`"
-msgstr ""
+msgstr ":code:`<`"
 
 #: ../../api.rst:67
 msgid "less than"
-msgstr ""
+msgstr "小于"
 
 #: ../../api.rst:68
 msgid "lte"
-msgstr ""
+msgstr "let"
 
 #: ../../api.rst:68
 msgid ":code:`<=`"
-msgstr ""
+msgstr ":code:`<=`"
 
 #: ../../api.rst:68
 msgid "less than or equal"
-msgstr ""
+msgstr "小于等于"
 
 #: ../../api.rst:69
 msgid "neq"
-msgstr ""
+msgstr "neq"
 
 #: ../../api.rst:69
 msgid ":code:`<>` or :code:`!=`"
-msgstr ""
+msgstr ":code:`<>` 或 :code:`!=`"
 
 #: ../../api.rst:69
 msgid "not equal"
-msgstr ""
+msgstr "不等于"
 
 #: ../../api.rst:70
 msgid "like"
-msgstr ""
+msgstr "like"
 
 #: ../../api.rst:70
 msgid ":code:`LIKE`"
-msgstr ""
+msgstr ":code:`LIKE`"
 
 #: ../../api.rst:70
 msgid "LIKE operator (use * in place of %)"
-msgstr ""
+msgstr "LIKE 操作符（* 代替 %）"
 
 #: ../../api.rst:71
 msgid "ilike"
-msgstr ""
+msgstr "ilike"
 
 #: ../../api.rst:71
 msgid ":code:`ILIKE`"
-msgstr ""
+msgstr ":code:`ILIKE`"
 
 #: ../../api.rst:71
 msgid "ILIKE operator (use * in place of %)"
-msgstr ""
+msgstr "ILIKE 操作符（* 替代 %）"
 
 #: ../../api.rst:72
 msgid "in"
-msgstr ""
+msgstr "in"
 
 #: ../../api.rst:72
 msgid ":code:`IN`"
-msgstr ""
+msgstr ":code:`IN`"
 
 #: ../../api.rst:72
 msgid ""
 "one of a list of values, e.g. :code:`?a=in.(1,2,3)` – also supports commas in "
 "quoted strings like :code:`?a=in.(\"hi,there\",\"yes,you\")`"
 msgstr ""
+"系列值中的一个，如 :code:`?a=in.(1,2,3)`。也支持引号字符串中的逗号，如 :code:`?"
+"a=in.(“hi,there”,”yes,you”)`"
 
 #: ../../api.rst:75
 msgid "is"
-msgstr ""
+msgstr "is"
 
 #: ../../api.rst:75
 msgid ":code:`IS`"
-msgstr ""
+msgstr ":code:`IS`"
 
 #: ../../api.rst:75
 msgid "checking for exact equality (null,true,false,unknown)"
-msgstr ""
+msgstr "检查是否完全相等（null / true / false / unknown）"
 
 #: ../../api.rst:76
 msgid "fts"
-msgstr ""
+msgstr "fts"
 
 #: ../../api.rst:76 ../../api.rst:77 ../../api.rst:78 ../../api.rst:79
 msgid ":code:`@@`"
-msgstr ""
+msgstr ":code:`@@`"
 
 #: ../../api.rst:76
 msgid ":ref:`fts` using to_tsquery"
-msgstr ""
+msgstr ":ref:`fts` using to_tsquery"
 
 #: ../../api.rst:77
 msgid "plfts"
-msgstr ""
+msgstr "plfts"
 
 #: ../../api.rst:77
 msgid ":ref:`fts` using plainto_tsquery"
-msgstr ""
+msgstr ":ref:`fts` using plainto_tsquery"
 
 #: ../../api.rst:78
 msgid "phfts"
-msgstr ""
+msgstr "phfts"
 
 #: ../../api.rst:78
 msgid ":ref:`fts` using phraseto_tsquery"
-msgstr ""
+msgstr ":ref:`fts` using phraseto_tsquery"
 
 #: ../../api.rst:79
 msgid "wfts"
-msgstr ""
+msgstr "wfts"
 
 #: ../../api.rst:79
 msgid ":ref:`fts` using websearch_to_tsquery"
-msgstr ""
+msgstr ":ref:`fts` using websearch_to_tsquery"
 
 #: ../../api.rst:80
 msgid "cs"
-msgstr ""
+msgstr "cs"
 
 #: ../../api.rst:80
 msgid ":code:`@>`"
-msgstr ""
+msgstr ":code:`@>`"
 
 #: ../../api.rst:80
 msgid "contains e.g. :code:`?tags=cs.{example, new}`"
-msgstr ""
+msgstr "包含，如 :code:`?tags=cs.{example, new}`"
 
 #: ../../api.rst:81
 msgid "cd"
-msgstr ""
+msgstr "cd"
 
 #: ../../api.rst:81
 msgid ":code:`<@`"
-msgstr ""
+msgstr ":code:`<@`"
 
 #: ../../api.rst:81
 msgid "contained in e.g. :code:`?values=cd.{1,2,3}`"
-msgstr ""
+msgstr "包含于，如 :code:`?values=cd.{1,2,3}`"
 
 #: ../../api.rst:82
 msgid "ov"
-msgstr ""
+msgstr "ov"
 
 #: ../../api.rst:82
 msgid ":code:`&&`"
-msgstr ""
+msgstr ":code:`&&`"
 
 #: ../../api.rst:82
 msgid ""
@@ -278,102 +290,104 @@ msgid ""
 "[2017-01-01,2017-06-30]` – also supports array types, use curly braces instead "
 "of square brackets e.g. :code: `?arr=ov.{1,3}`"
 msgstr ""
+"重叠（有共同点），如 :code:`?period=ov.[2017-01-01,2017-06-30]`。也支持数组类"
+"型，使用大括号而不是方括号，如 :code: `?arr=ov.{1,3}`"
 
 #: ../../api.rst:85
 msgid "sl"
-msgstr ""
+msgstr "sl"
 
 #: ../../api.rst:85
 msgid ":code:`<<`"
-msgstr ""
+msgstr ":code:`<<`"
 
 #: ../../api.rst:85
 msgid "strictly left of, e.g. :code:`?range=sl.(1,10)`"
-msgstr ""
+msgstr "严格意义上的左边，如 :code:`?range=sl.(1,10)`"
 
 #: ../../api.rst:86
 msgid "sr"
-msgstr ""
+msgstr "sr"
 
 #: ../../api.rst:86
 msgid ":code:`>>`"
-msgstr ""
+msgstr ":code:`>>`"
 
 #: ../../api.rst:86
 msgid "strictly right of"
-msgstr ""
+msgstr "严格意义上的右边"
 
 #: ../../api.rst:87
 msgid "nxr"
-msgstr ""
+msgstr "nxr"
 
 #: ../../api.rst:87
 msgid ":code:`&<`"
-msgstr ""
+msgstr ":code:`&<`"
 
 #: ../../api.rst:87
 msgid "does not extend to the right of, e.g. :code:`?range=nxr.(1,10)`"
-msgstr ""
+msgstr "不延伸到右边，如 :code:`?range=nxr. (1,10)`"
 
 #: ../../api.rst:88
 msgid "nxl"
-msgstr ""
+msgstr "nxl"
 
 #: ../../api.rst:88
 msgid ":code:`&>`"
-msgstr ""
+msgstr ":code:`&>`"
 
 #: ../../api.rst:88
 msgid "does not extend to the left of"
-msgstr ""
+msgstr "不延伸到左边"
 
 #: ../../api.rst:89
 msgid "adj"
-msgstr ""
+msgstr "adj"
 
 #: ../../api.rst:89
 msgid ":code:`-|-`"
-msgstr ""
+msgstr ":code:`-|-`"
 
 #: ../../api.rst:89
 msgid "is adjacent to, e.g. :code:`?range=adj.(1,10)`"
-msgstr ""
+msgstr "相邻的，如 :code:`?range=adj.(1,10)`"
 
 #: ../../api.rst:90
 msgid "not"
-msgstr ""
+msgstr "not"
 
 #: ../../api.rst:90
 msgid ":code:`NOT`"
-msgstr ""
+msgstr ":code:`NOT`"
 
 #: ../../api.rst:90
 msgid "negates another operator, see :ref:`logical_operators`"
-msgstr ""
+msgstr "对另一个操作符取反，参见 :ref:`logical_operators`"
 
 #: ../../api.rst:91
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #: ../../api.rst:91
 msgid ":code:`OR`"
-msgstr ""
+msgstr ":code:`OR`"
 
 #: ../../api.rst:91
 msgid "logical :code:`OR`, see :ref:`logical_operators`"
-msgstr ""
+msgstr "逻辑的 :code:`OR`，参见 :ref:`logical_operators`"
 
 #: ../../api.rst:92
 msgid "and"
-msgstr ""
+msgstr "and"
 
 #: ../../api.rst:92
 msgid ":code:`AND`"
-msgstr ""
+msgstr ":code:`AND`"
 
 #: ../../api.rst:92
 msgid "logical :code:`AND`, see :ref:`logical_operators`"
-msgstr ""
+msgstr "逻辑的 :code:`AND`，参见 :ref:`logical_operators`"
 
 #: ../../api.rst:95
 msgid ""
@@ -381,10 +395,12 @@ msgid ""
 "database, or use a stored procedure. For instance, here's a view to show "
 "\"today's stories\" including possibly older pinned stories:"
 msgstr ""
+"对于更复杂的筛选组合，你必须在数据库中创建一个新的视图，或使用一个存储过程。例"
+"如，这里有一个显示“今天的故事”的视图，其中可能包括过去的被置顶的故事。"
 
 #: ../../api.rst:106
 msgid "The view will provide a new endpoint:"
-msgstr ""
+msgstr "该视图将提供一个新的端点："
 
 #: ../../api.rst:121
 msgid "Logical operators"

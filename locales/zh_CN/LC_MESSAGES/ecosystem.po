@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-11 09:43+0800\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2022-01-15 23:47+0800\n"
+"Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -29,6 +29,10 @@ msgid ""
 "and deploy an Nginx + PostgREST(using a managed PostgreSQL database) + Vue.js "
 "webapp in an Ubuntu server droplet."
 msgstr ""
+"`用PostgREST 和 Vue.js 构建一个联系人列表应用 <https://www.youtube.com/watch?"
+"v=iHtsALtD5-U>`_ - 在这个视频系列中，DigitalOcean 展示了如何在 Ubuntu 服务器上开"
+"发和部署一个 Nginx + PostgREST（使用托管的 PostgreSQL 数据库）+ Vue.js 的 Web 应"
+"用。"
 
 #: ../../ecosystem.rst:9
 msgid ""
@@ -304,51 +308,65 @@ msgid ""
 "`aiodata <https://github.com/Exahilosys/aiodata>`_ - Python, event-based proxy "
 "and caching client."
 msgstr ""
+"`aiodata <https://github.com/Exahilosys/aiodata>`_ - 基于事件的代理和缓存客户端"
+"（Python）"
 
 #: ../../ecosystem.rst:87
 msgid ""
 "`pg-safeupdate <https://github.com/eradman/pg-safeupdate>`_ - prevent full-"
 "table updates or deletes"
 msgstr ""
+"`pg-safeupdate <https://github.com/eradman/pg-safeupdate>`_ - 防止全表更新或删除"
 
 #: ../../ecosystem.rst:88
 msgid ""
 "`postgrest-auth (criles25) <https://github.com/criles25/postgrest-auth>`_ - "
 "email based auth/signup"
 msgstr ""
+"`postgrest-auth (criles25) <https://github.com/criles25/postgrest-auth>`_ - 基于"
+"电子邮件的认证 / 注册"
 
 #: ../../ecosystem.rst:89
 msgid ""
 "`postgrest-auth (svmotn) <https://github.com/svmnotn/postgrest-auth>`_ - OAuth2-"
 "inspired external auth server"
 msgstr ""
+"`postgrest-auth (svmotn) <https://github.com/svmnotn/postgrest-auth>`_ - OAuth2 "
+"类似的外部认证服务器"
 
 #: ../../ecosystem.rst:90
 msgid ""
 "`postgrest-node <https://github.com/seveibar/postgrest-node>`_ - Run a "
 "PostgREST server in Node.js via npm module"
 msgstr ""
+"`postgrest-node <https://github.com/seveibar/postgrest-node>`_ - 将 PostgREST 服"
+"务器运行在 Node.js 中（npm 模块）"
 
 #: ../../ecosystem.rst:91
 msgid ""
 "`postgrest-oauth <https://github.com/nblumoe/postgrest-oauth>`_ - OAuth2 WAI "
 "middleware"
 msgstr ""
+"`postgrest-oauth <https://github.com/nblumoe/postgrest-oauth>`_ - OAuth2 WAI 中"
+"间件"
 
 #: ../../ecosystem.rst:92
 msgid ""
 "`postgrest-oauth/api <https://github.com/postgrest-oauth/api>`_ - OAuth2 server"
 msgstr ""
+"`postgrest-oauth/api <https://github.com/postgrest-oauth/api>`_ - OAuth2 服务器"
 
 #: ../../ecosystem.rst:93
 msgid ""
 "`PostgREST-writeAPI <https://github.com/ppKrauss/PostgREST-writeAPI>`_ - "
 "generate Nginx rewrite rules to fit an OpenAPI spec"
 msgstr ""
+"`PostgREST-writeAPI <https://github.com/ppKrauss/PostgREST-writeAPI>`_ - 生成符"
+"合 OpenAPI 规范的 Nginx 伪静态规则"
 
 #: ../../ecosystem.rst:94
 msgid "`spas <https://github.com/srid/spas>`_ - allow file uploads and basic auth"
-msgstr ""
+msgstr "`spas <https://github.com/srid/spas>`_ - 支持文件上传和基本认证"
 
 #: ../../ecosystem.rst:99
 msgid "Client-Side Libraries"
@@ -359,34 +377,44 @@ msgid ""
 "`aor-postgrest-client <https://github.com/tomberek/aor-postgrest-client>`_ - "
 "JS, admin-on-rest"
 msgstr ""
+"`aor-postgrest-client <https://github.com/tomberek/aor-postgrest-client>`_ - "
+"JS, admin-on-rest"
 
 #: ../../ecosystem.rst:102
 msgid "`elm-postgrest <https://github.com/john-kelly/elm-postgrest>`_ - Elm"
-msgstr ""
+msgstr "`elm-postgrest <https://github.com/john-kelly/elm-postgrest>`_ - Elm"
 
 #: ../../ecosystem.rst:103
 msgid ""
 "`general-angular <https://github.com/PierreRochard/general-angular>`_ - "
 "TypeScript, generate UI from API description"
 msgstr ""
+"`general-angular <https://github.com/PierreRochard/general-angular>`_ - "
+"TypeScript，根据 API 描述生成 UI"
 
 #: ../../ecosystem.rst:104
 msgid ""
 "`jarvus-postgrest-apikit <https://github.com/JarvusInnovations/jarvus-postgrest-"
 "apikit>`_ - JS, Sencha framework"
 msgstr ""
+"`jarvus-postgrest-apikit <https://github.com/JarvusInnovations/jarvus-postgrest-"
+"apikit>`_ - JS，Sencha 框架"
 
 #: ../../ecosystem.rst:105
 msgid ""
 "`mithril-postgrest <https://github.com/catarse/mithril-postgrest>`_ - JS, "
 "Mithril"
 msgstr ""
+"`mithril-postgrest <https://github.com/catarse/mithril-postgrest>`_ - JS, "
+"Mithril"
 
 #: ../../ecosystem.rst:106
 msgid ""
 "`ng-postgrest <https://github.com/team142/ng-postgrest>`_ - Angular app for "
 "browsing, editing data exposed over PostgREST."
 msgstr ""
+"`ng-postgrest <https://github.com/team142/ng-postgrest>`_ - Angular 应用，用于透"
+"过 PostgREST 浏览、编辑数据"
 
 #: ../../ecosystem.rst:107
 msgid "`postgrest-client <https://github.com/calebmer/postgrest-client>`_ - JS"
@@ -443,6 +471,8 @@ msgid ""
 "`postgrest-sharp-client <https://github.com/thejettdurham/postgrest-sharp-"
 "client>`_ (needs maintainer) - C#, RestSharp"
 msgstr ""
+"`postgrest-sharp-client <https://github.com/thejettdurham/postgrest-sharp-"
+"client>`_ （需要维护人员） - C#, RestSharp"
 
 #: ../../ecosystem.rst:118
 msgid ""
@@ -454,6 +484,8 @@ msgid ""
 "`postgrest-url <https://github.com/hugomrdias/postgrest-url>`_ - JS, just for "
 "generating query URLs"
 msgstr ""
+"`postgrest-url <https://github.com/hugomrdias/postgrest-url>`_ - JS，生成查询 "
+"URL"
 
 #: ../../ecosystem.rst:120
 msgid ""
@@ -479,6 +511,8 @@ msgid ""
 "`redux-postgrest <https://github.com/andytango/redux-postgrest>`_ - TypeScript/"
 "JS, client integrated with (React) Redux."
 msgstr ""
+"`redux-postgrest <https://github.com/andytango/redux-postgrest>`_ - "
+"TypeScript / JS，客户端与（React）Redux 集成"
 
 #: ../../ecosystem.rst:125
 msgid "`vue-postgrest <https://github.com/technowledgy/vue-postgrest>`_ - Vue.js"

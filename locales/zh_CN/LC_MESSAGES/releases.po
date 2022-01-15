@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-15 18:14+0800\n"
+"PO-Revision-Date: 2022-01-15 20:01+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -107,8 +107,8 @@ msgid ""
 "<https://github.com/PostgREST/postgrest#user-content-supporting-"
 "development>`_."
 msgstr ""
-"如果你也想出现在上面的名单中，请考虑 `支持 PostgREST 开发 <https://github."
-"com/PostgREST/postgrest#user-content-supporting-development>`_。"
+"如果你也想加入他们，请考虑 `支持 PostgREST 开发 <https://github.com/"
+"PostgREST/postgrest#user-content-supporting-development>`_。"
 
 #: ../../releases/v6.0.2.rst:6
 msgid "v6.0.2"
@@ -475,17 +475,17 @@ msgstr "默认 UNIX 套接字文件的模式由 755 变更为 660。"
 #: ../../releases/v7.0.0.rst:93 ../../releases/v7.0.1.rst:56
 #: ../../releases/v8.0.0.rst:174 ../../releases/v9.0.0.rst:113
 msgid "`Jan Sommer <https://github.com/nerfpops>`_"
-msgstr ""
+msgstr "`Jan Sommer <https://github.com/nerfpops>`_"
 
 #: ../../releases/v7.0.0.rst:102 ../../releases/v7.0.1.rst:65
 #: ../../releases/v8.0.0.rst:184 ../../releases/v9.0.0.rst:123
 msgid "Daniel Rafaj"
-msgstr ""
+msgstr "Daniel Rafaj"
 
 #: ../../releases/v7.0.0.rst:103 ../../releases/v7.0.1.rst:66
 #: ../../releases/v8.0.0.rst:185 ../../releases/v9.0.0.rst:124
 msgid "David Fenko"
-msgstr ""
+msgstr "David Fenko"
 
 #: ../../releases/v7.0.1.rst:6
 msgid "v7.0.1"
@@ -559,6 +559,8 @@ msgid ""
 "<https://github.com/PostgREST/postgrest#user-content-supporting-"
 "development>`_."
 msgstr ""
+"如果你也想加入他们，请考虑 `支持 PostgREST 开发 <https://github.com/"
+"PostgREST/postgrest#user-content-supporting-development>`_。"
 
 #: ../../releases/v8.0.0.rst:6
 msgid "v8.0.0"
@@ -938,11 +940,11 @@ msgstr ""
 
 #: ../../releases/v8.0.0.rst:175 ../../releases/v9.0.0.rst:114
 msgid "`Franz Gusenbauer <https://www.igutech.at/>`_"
-msgstr ""
+msgstr "`Franz Gusenbauer <https://www.igutech.at/>`_"
 
 #: ../../releases/v8.0.0.rst:186 ../../releases/v9.0.0.rst:125
 msgid "Remo Rechkemmer"
-msgstr ""
+msgstr "Remo Rechkemmer"
 
 #: ../../releases/v8.0.0.rst:187 ../../releases/v9.0.0.rst:126
 msgid "Severin Ibarluzea"
@@ -950,7 +952,7 @@ msgstr "Severin Ibarluzea"
 
 #: ../../releases/v8.0.0.rst:188 ../../releases/v9.0.0.rst:127
 msgid "Tom Saleeba"
-msgstr ""
+msgstr "Tom Saleeba"
 
 #: ../../releases/v8.0.0.rst:189 ../../releases/v9.0.0.rst:128
 msgid "Pawel Tyll"

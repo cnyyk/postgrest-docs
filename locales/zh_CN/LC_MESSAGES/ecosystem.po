@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-15 23:47+0800\n"
+"PO-Revision-Date: 2022-01-16 10:12+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -40,6 +40,9 @@ msgid ""
 "Auth0 <https://samkhawase.com/blog/postgrest/>`_ - A step-by-step tutorial to "
 "show how to dockerize and integrate Auth0 to PostgREST service."
 msgstr ""
+"`PostgREST + Auth0:：在几分钟内创建 REST API 并使用 Auth0 添加社交登录 <https://"
+"samkhawase.com/blog/postgrest/>`_ - 一步一步教你，如何 Docker 方式集成 Auth0 到 "
+"PostgREST 服务。"
 
 #: ../../ecosystem.rst:11
 msgid ""
@@ -48,6 +51,9 @@ msgid ""
 "OPS shows how to perform PostGIS calculations through PostgREST :ref:`s_procs` "
 "interface."
 msgstr ""
+"`PostgREST + PostGIS API 5分钟教程 <https://gis-ops.com/postgrest-postgis-api-"
+"tutorial-geospatial-api-in-5-minutes/>`_ - 在本教程中，GIS - OPS 展示了如何通过 "
+"PostgREST :ref:`s_procs` 接口进行 PostGIS 计算。"
 
 #: ../../ecosystem.rst:14
 msgid ""
@@ -55,6 +61,9 @@ msgid ""
 "keycloak <https://www.mathieupassenaud.fr/codeless_backend/>`_ - A step-by-step "
 "tutorial for using PostgREST with KeyCloak(hosted on a managed service)."
 msgstr ""
+"`基于 Postgres、PostgREST 和 Keycloak OAuth2 认证的“无代码”后端 <https://www."
+"mathieupassenaud.fr/codeless_backend/>`_ - 使用 PostgREST 与 KeyCloak（托管模"
+"式）的分步教程。"
 
 #: ../../ecosystem.rst:20
 msgid "Templates"
@@ -65,6 +74,8 @@ msgid ""
 "`compose-postgrest <https://github.com/mattddowney/compose-postgrest>`_ - "
 "docker-compose setup with Nginx and HTML example"
 msgstr ""
+"`compose-postgrest <https://github.com/mattddowney/compose-postgrest>`_ - "
+"docker-compose 设置 Nginx 和 HTML 的示例"
 
 #: ../../ecosystem.rst:23
 msgid ""
@@ -73,6 +84,10 @@ msgid ""
 "post <https://www.webgma.co.il/Articles/rapid-prototyping-with-postgrest-and-"
 "svelte/en/>`_"
 msgstr ""
+"`svelte-postgrest-template <https://github.com/guyromm/svelte-postgrest-"
+"template>`_ - Svelte / SvelteKit，PostgREST，EveryLayout 和社交登录 - `博客文章 "
+"<https://www.webgma.co.il/Articles/rapid-prototyping-with-postgrest-and-svelte/"
+"en/>`_"
 
 #: ../../ecosystem.rst:28
 msgid "Example Apps"
@@ -82,7 +97,7 @@ msgstr "应用实例"
 msgid ""
 "`chronicle <https://github.com/srid/chronicle>`_ - tracking a tree of personal "
 "memories"
-msgstr ""
+msgstr "`chronicle <https://github.com/srid/chronicle>`_ - 个人记忆的树状记录"
 
 #: ../../ecosystem.rst:31
 msgid ""
@@ -90,45 +105,57 @@ msgid ""
 "backoffice>`_ - data administration portal for the official French Labor Code "
 "and Agreements"
 msgstr ""
+"`code-du-travail-backoffice <https://github.com/SocialGouv/code-du-travail-"
+"backoffice>`_ - 法国官方劳动法和协议的数据管理门户网站"
 
 #: ../../ecosystem.rst:32
 msgid ""
 "`delibrium-postgrest <https://gitlab.com/delibrium/delibrium-postgrest/>`_ - "
 "example school API and front-end in Vue.js"
 msgstr ""
+"`delibrium-postgrest <https://gitlab.com/delibrium/delibrium-postgrest/>`_ - 校"
+"园 API 和 Vue.js 前端示例"
 
 #: ../../ecosystem.rst:33
 msgid ""
 "`elm-workshop <https://github.com/diogob/elm-workshop>`_ - building a simple "
 "database query UI"
 msgstr ""
+"`elm-workshop <https://github.com/diogob/elm-workshop>`_ - 构建简单的数据库查询 "
+"UI"
 
 #: ../../ecosystem.rst:34
 msgid ""
 "`ember-postgrest-dynamic-ui <https://github.com/benoror/ember-postgrest-dynamic-"
 "ui>`_ - generating Ember forms to edit data"
 msgstr ""
+"`ember-postgrest-dynamic-ui <https://github.com/benoror/ember-postgrest-dynamic-"
+"ui>`_ - 生成 Ember 表单用于编辑数据"
 
 #: ../../ecosystem.rst:35
 msgid ""
 "`ETH-transactions-storage <https://github.com/Adamant-im/ETH-transactions-"
 "storage>`_ - indexer for Ethereum to get transaction list by ETH address"
 msgstr ""
+"`ETH-transactions-storage <https://github.com/Adamant-im/ETH-transactions-"
+"storage>`_ - 按 ETH 地址获取交易列表的以太坊索引"
 
 #: ../../ecosystem.rst:36
 msgid ""
 "`ext-postgrest-crud <https://github.com/timwis/ext-postgrest-crud>`_ - browser-"
 "based spreadsheet"
 msgstr ""
+"`ext-postgrest-crud <https://github.com/timwis/ext-postgrest-crud>`_ - 基于浏览"
+"器的电子表格"
 
 #: ../../ecosystem.rst:37
 msgid ""
 "`general <https://github.com/PierreRochard/general>`_ - example auth back-end"
-msgstr ""
+msgstr "`general <https://github.com/PierreRochard/general>`_ - 后端认证示例"
 
 #: ../../ecosystem.rst:38
 msgid "`goodfilm <https://github.com/tyrchen/goodfilm>`_ - example film API"
-msgstr ""
+msgstr "`goodfilm <https://github.com/tyrchen/goodfilm>`_ - 电影 API 示例"
 
 #: ../../ecosystem.rst:39
 msgid ""
@@ -136,30 +163,40 @@ msgid ""
 "alpha/files/grest>`_ - example queries and functions that the Cardano Community "
 "uses for their Guild Operators' Repository"
 msgstr ""
+"`guild-operators <https://github.com/cardano-community/guild-operators/tree/"
+"alpha/files/grest>`_ - Cardano 社区用于其公会运营者资料库的查询和函数示例"
 
 #: ../../ecosystem.rst:40
 msgid ""
 "`handsontable-postgrest <https://github.com/timwis/handsontable-postgrest>`_ - "
 "an excel-like database table editor"
 msgstr ""
+"`handsontable-postgrest <https://github.com/timwis/handsontable-postgrest>`_ - "
+"Excel 风格的数据库表编辑器"
 
 #: ../../ecosystem.rst:41
 msgid ""
 "`heritage-near-me <https://github.com/CodeforAustralia/heritage-near-me>`_ - "
 "Elm and PostgREST with PostGIS"
 msgstr ""
+"`heritage-near-me <https://github.com/CodeforAustralia/heritage-near-me>`_ - "
+"Elm 和 带有 PostGIS 的 PostgREST"
 
 #: ../../ecosystem.rst:42
 msgid ""
 "`ng-admin-postgrest <https://github.com/marmelab/ng-admin-postgrest>`_ - "
 "automatic database admin panel"
 msgstr ""
+"`ng-admin-postgrest <https://github.com/marmelab/ng-admin-postgrest>`_ - 自动化"
+"的数据库管理面板"
 
 #: ../../ecosystem.rst:43
 msgid ""
 "`pgrst-dev-setup <https://github.com/Qu4tro/pgrst-dev-setup>`_ - docker-compose "
 "and tmuxp setup for experimentation."
 msgstr ""
+"`pgrst-dev-setup <https://github.com/Qu4tro/pgrst-dev-setup>`_ - docker-compose "
+"和 tmuxp 设置实验"
 
 #: ../../ecosystem.rst:44
 msgid ""
@@ -167,60 +204,79 @@ msgid ""
 "postgrest-cloudflared-example>`_ - docker-compose setup exposing PostgREST "
 "using cloudfared"
 msgstr ""
+"`postgres-postgrest-cloudflared-example <https://github.com/cloudflare/postgres-"
+"postgrest-cloudflared-example>`_ - 用 cloudflared 和 docker-compose 设置 "
+"PostgREST"
 
 #: ../../ecosystem.rst:45
 msgid ""
 "`postgrest-demo <https://github.com/SMRxT/postgrest-demo>`_ - multi-tenant "
 "logging system"
 msgstr ""
+"`postgrest-demo <https://github.com/SMRxT/postgrest-demo>`_ - 多租户日志系统"
 
 #: ../../ecosystem.rst:46
 msgid ""
 "`postgrest-example <https://github.com/begriffs/postgrest-example>`_ - sqitch "
 "versioning for API"
 msgstr ""
+"`postgrest-example <https://github.com/begriffs/postgrest-example>`_ - API 的 "
+"sqitch 版本管理"
 
 #: ../../ecosystem.rst:47
 msgid ""
 "`postgrest-sessions-example <https://github.com/monacoremo/postgrest-sessions-"
 "example>`_ - example for cookie-based sessions"
 msgstr ""
+"`postgrest-sessions-example <https://github.com/monacoremo/postgrest-sessions-"
+"example>`_ - 基于 Cookie 的会话示例"
 
 #: ../../ecosystem.rst:48
 msgid ""
 "`postgrest-translation-proxy <https://github.com/NikolayS/postgrest-translation-"
 "proxy>`_ - calling to external translation service"
 msgstr ""
+"`postgrest-translation-proxy <https://github.com/NikolayS/postgrest-translation-"
+"proxy>`_ - 调用外部翻译服务"
 
 #: ../../ecosystem.rst:49
 msgid ""
 "`postgrest-ui <https://github.com/tatut/postgrest-ui>`_ - ClojureScript UI "
 "components for PostgREST"
 msgstr ""
+"`postgrest-ui <https://github.com/tatut/postgrest-ui>`_ - 用于 PostgREST 的 "
+"ClojureScript UI 组件"
 
 #: ../../ecosystem.rst:50
 msgid ""
 "`postgrest-vercel <https://github.com/seveibar/postgrest-vercel>`_ - run "
 "PostgREST on Vercel (Serverless/AWS Lambda)"
 msgstr ""
+"`postgrest-vercel <https://github.com/seveibar/postgrest-vercel>`_ - 在 "
+"Vercel（Serverless / AWS Lambda）上运行 PostgREST"
 
 #: ../../ecosystem.rst:51
 msgid ""
 "`PostgrestSkeleton <https://github.com/Recmo/PostgrestSkeleton>`_ - Docker "
 "Compose, PostgREST, Nginx and Auth0"
 msgstr ""
+"`PostgrestSkeleton <https://github.com/Recmo/PostgrestSkeleton>`_ - Docker "
+"Compose、PostgREST、 Nginx 和 Auth0"
 
 #: ../../ecosystem.rst:52
 msgid ""
 "`PostGUI <https://github.com/priyank-purohit/PostGUI>`_ - React Material UI "
 "admin panel"
 msgstr ""
+"`PostGUI <https://github.com/priyank-purohit/PostGUI>`_ - React Material UI 管理"
+"面板"
 
 #: ../../ecosystem.rst:53
 msgid ""
 "`prospector <https://github.com/sfcta/prospector>`_ - data warehouse and "
 "visualization platform"
 msgstr ""
+"`prospector <https://github.com/sfcta/prospector>`_ - 数据仓库和可视化平台"
 
 #: ../../ecosystem.rst:58
 msgid "DevOps"
@@ -231,6 +287,8 @@ msgid ""
 "`cloudgov-demo-postgrest <https://github.com/GSA/cloudgov-demo-postgrest>`_ - "
 "demo for a federally-compliant REST API on cloud.gov"
 msgstr ""
+"`cloudgov-demo-postgrest <https://github.com/GSA/cloudgov-demo-postgrest>`_ - "
+"cloud.gov 上的复合联邦标准的  REST API 演示"
 
 #: ../../ecosystem.rst:61
 msgid ""
@@ -238,12 +296,16 @@ msgid ""
 "postgrest>`_ - helm chart to deploy PostgREST to a Kubernetes cluster via a "
 "Deployment and Service"
 msgstr ""
+"`cloudstark/helm-charts <https://github.com/cloudstark/helm-charts/tree/master/"
+"postgrest>`_ - 通过部署和服务将 PostgREST 发布到 Kubernetes 集群的 Helm Chart"
 
 #: ../../ecosystem.rst:62
 msgid ""
 "`jbkarle/postgrest <https://github.com/jbkarle/postgrest>`_ - helm chart with a "
 "demo database for development and test purposes"
 msgstr ""
+"`jbkarle/postgrest <https://github.com/jbkarle/postgrest>`_ - 开发和测试用的带有"
+"演示数据库的 Helm Chart"
 
 #: ../../ecosystem.rst:67
 msgid "External Notification"
@@ -255,49 +317,62 @@ msgid ""
 "for further processing. This allows stored procedures to initiate actions "
 "outside the database such as sending emails."
 msgstr ""
+"以下是 PostgreSQL 的纽带，可将 LISTEN / NOTIFY 传播到外部队列以便进一步处理。这"
+"可以让存储过程启动数据库之外的动作，如发送电子邮件等。"
 
 #: ../../ecosystem.rst:71
 msgid "`pg-bridge <https://github.com/matthewmueller/pg-bridge>`_ - Amazon SNS"
-msgstr ""
+msgstr "`pg-bridge <https://github.com/matthewmueller/pg-bridge>`_ - Amazon SNS"
 
 #: ../../ecosystem.rst:72
 msgid ""
 "`pg-kinesis-bridge <https://github.com/daurnimator/pg-kinesis-bridge>`_ - "
 "Amazon Kinesis"
 msgstr ""
+"`pg-kinesis-bridge <https://github.com/daurnimator/pg-kinesis-bridge>`_ - "
+"Amazon Kinesis"
 
 #: ../../ecosystem.rst:73
 msgid ""
 "`pg-notify-webhook <https://github.com/vbalasu/pg-notify-webhook>`_ - trigger "
 "webhooks from PostgreSQL's LISTEN/NOTIFY"
 msgstr ""
+"`pg-notify-webhook <https://github.com/vbalasu/pg-notify-webhook>`_ - 利用 "
+"PostgreSQL 的 LISTEN / NOTIFY 实现 Webhooks 触发器"
 
 #: ../../ecosystem.rst:74
 msgid ""
 "`pgsql-listen-exchange <https://github.com/gmr/pgsql-listen-exchange>`_ - "
 "RabbitMQ"
 msgstr ""
+"`pgsql-listen-exchange <https://github.com/gmr/pgsql-listen-exchange>`_ - "
+"RabbitMQ"
 
 #: ../../ecosystem.rst:75
 msgid ""
 "`postgres-websockets <https://github.com/diogob/postgres-websockets>`_ - expose "
 "web sockets for PostgreSQL's LISTEN/NOTIFY"
 msgstr ""
+"`postgres-websockets <https://github.com/diogob/postgres-websockets>`_ - 给 "
+"PostgreSQL 的 LISTEN / NOTIFY 暴露 Websockets"
 
 #: ../../ecosystem.rst:76
 msgid ""
 "`postgresql-to-amqp <https://github.com/FGRibreau/postgresql-to-amqp>`_ - AMQP"
 msgstr ""
+"`postgresql-to-amqp <https://github.com/FGRibreau/postgresql-to-amqp>`_ - AMQP"
 
 #: ../../ecosystem.rst:77
 msgid ""
 "`postgresql2websocket <https://github.com/frafra/postgresql2websocket>`_ - "
 "Websockets"
 msgstr ""
+"`postgresql2websocket <https://github.com/frafra/postgresql2websocket>`_ - "
+"Websockets"
 
 #: ../../ecosystem.rst:78
 msgid "`skeeter <https://github.com/SpiderOak/skeeter>`_ - ZeroMQ"
-msgstr ""
+msgstr "`skeeter <https://github.com/SpiderOak/skeeter>`_ - ZeroMQ"
 
 #: ../../ecosystem.rst:84
 msgid "Extensions"
@@ -378,7 +453,7 @@ msgid ""
 "JS, admin-on-rest"
 msgstr ""
 "`aor-postgrest-client <https://github.com/tomberek/aor-postgrest-client>`_ - "
-"JS, admin-on-rest"
+"JS，admin-on-rest"
 
 #: ../../ecosystem.rst:102
 msgid "`elm-postgrest <https://github.com/john-kelly/elm-postgrest>`_ - Elm"
@@ -405,7 +480,7 @@ msgid ""
 "`mithril-postgrest <https://github.com/catarse/mithril-postgrest>`_ - JS, "
 "Mithril"
 msgstr ""
-"`mithril-postgrest <https://github.com/catarse/mithril-postgrest>`_ - JS, "
+"`mithril-postgrest <https://github.com/catarse/mithril-postgrest>`_ - JS，"
 "Mithril"
 
 #: ../../ecosystem.rst:106
@@ -418,53 +493,63 @@ msgstr ""
 
 #: ../../ecosystem.rst:107
 msgid "`postgrest-client <https://github.com/calebmer/postgrest-client>`_ - JS"
-msgstr ""
+msgstr "`postgrest-client <https://github.com/calebmer/postgrest-client>`_ - JS"
 
 #: ../../ecosystem.rst:108
 msgid ""
 "`postgrest-csharp <https://github.com/supabase-community/postgrest-csharp>`_ - "
 "C#"
 msgstr ""
+"`postgrest-csharp <https://github.com/supabase-community/postgrest-csharp>`_ - "
+"C#"
 
 #: ../../ecosystem.rst:109
 msgid ""
 "`postgrest-dart <https://github.com/supabase-community/postgrest-dart>`_ - Dart"
 msgstr ""
+"`postgrest-dart <https://github.com/supabase-community/postgrest-dart>`_ - Dart"
 
 #: ../../ecosystem.rst:110
 msgid "`postgrest-ex <https://github.com/J0/postgrest-ex>`_ - Elixir"
-msgstr ""
+msgstr "`postgrest-ex <https://github.com/J0/postgrest-ex>`_ - Elixir"
 
 #: ../../ecosystem.rst:111
 msgid "`postgrest-go <https://github.com/supabase-community/postgrest-go>`_ - Go"
-msgstr ""
+msgstr "`postgrest-go <https://github.com/supabase-community/postgrest-go>`_ - Go"
 
 #: ../../ecosystem.rst:112
 msgid ""
 "`postgrest-js <https://github.com/supabase/postgrest-js>`_ - TypeScript/"
 "JavaScript"
 msgstr ""
+"`postgrest-js <https://github.com/supabase/postgrest-js>`_ - TypeScript / "
+"JavaScript"
 
 #: ../../ecosystem.rst:113
 msgid ""
 "`postgrest-kt <https://github.com/supabase-community/postgrest-kt>`_ - Kotlin"
 msgstr ""
+"`postgrest-kt <https://github.com/supabase-community/postgrest-kt>`_ - Kotlin"
 
 #: ../../ecosystem.rst:114
 msgid ""
 "`postgrest-py <https://github.com/supabase-community/postgrest-py>`_ - Python"
 msgstr ""
+"`postgrest-py <https://github.com/supabase-community/postgrest-py>`_ - Python"
 
 #: ../../ecosystem.rst:115
 msgid ""
 "`postgrest-request <https://github.com/lewisjared/postgrest-request>`_ - JS, "
 "SuperAgent"
 msgstr ""
+"`postgrest-request <https://github.com/lewisjared/postgrest-request>`_ - JS，"
+"SuperAgent"
 
 #: ../../ecosystem.rst:116
 msgid ""
 "`postgrest-rs <https://github.com/supabase-community/postgrest-rs>`_ - Rust"
 msgstr ""
+"`postgrest-rs <https://github.com/supabase-community/postgrest-rs>`_ - Rust"
 
 #: ../../ecosystem.rst:117
 msgid ""
@@ -472,12 +557,13 @@ msgid ""
 "client>`_ (needs maintainer) - C#, RestSharp"
 msgstr ""
 "`postgrest-sharp-client <https://github.com/thejettdurham/postgrest-sharp-"
-"client>`_ （需要维护人员） - C#, RestSharp"
+"client>`_ （需要维护人员） - C#，RestSharp"
 
 #: ../../ecosystem.rst:118
 msgid ""
 "`postgrest-swift <https://github.com/supabase-community/postgrest-kt>`_ - Swift"
 msgstr ""
+"`postgrest-swift <https://github.com/supabase-community/postgrest-kt>`_ - Swift"
 
 #: ../../ecosystem.rst:119
 msgid ""
@@ -492,19 +578,22 @@ msgid ""
 "`postgrest_python_requests_client <https://github.com/davidthewatson/"
 "postgrest_python_requests_client>`_ - Python"
 msgstr ""
+"`postgrest_python_requests_client <https://github.com/davidthewatson/"
+"postgrest_python_requests_client>`_ - Python"
 
 #: ../../ecosystem.rst:121
 msgid ""
 "`postgrester <https://github.com/ivangabriele/postgrester>`_ - JS + Typescript"
 msgstr ""
+"`postgrester <https://github.com/ivangabriele/postgrester>`_ - JS + Typescript"
 
 #: ../../ecosystem.rst:122
 msgid "`postgrestR <https://github.com/clesiemo3/postgrestR>`_ - R"
-msgstr ""
+msgstr "`postgrestR <https://github.com/clesiemo3/postgrestR>`_ - R"
 
 #: ../../ecosystem.rst:123
 msgid "`py-postgrest <https://github.com/Kong/py-postgrest>`_ - Python"
-msgstr ""
+msgstr "`py-postgrest <https://github.com/Kong/py-postgrest>`_ - Python"
 
 #: ../../ecosystem.rst:124
 msgid ""
@@ -516,4 +605,4 @@ msgstr ""
 
 #: ../../ecosystem.rst:125
 msgid "`vue-postgrest <https://github.com/technowledgy/vue-postgrest>`_ - Vue.js"
-msgstr ""
+msgstr "`vue-postgrest <https://github.com/technowledgy/vue-postgrest>`_ - Vue.js"

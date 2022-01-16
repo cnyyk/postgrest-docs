@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-15 18:17+0800\n"
+"PO-Revision-Date: 2022-01-16 11:01+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -26,12 +26,12 @@ msgstr "将类型转换为自定义 JSON 对象"
 #: ../../how-tos/embedding-table-from-another-schema.rst
 #: ../../how-tos/providing-images-for-img.rst
 msgid "author"
-msgstr ""
+msgstr "作者"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:4
 #: ../../how-tos/embedding-table-from-another-schema.rst:4
 msgid "`steve-chavez <https://github.com/steve-chavez>`_"
-msgstr ""
+msgstr "`steve-chavez <https://github.com/steve-chavez>`_"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:6
 msgid ""
@@ -140,7 +140,7 @@ msgstr "图像转 ``<img>``"
 
 #: ../../how-tos/providing-images-for-img.rst:6
 msgid "`pkel <https://github.com/pkel>`_"
-msgstr ""
+msgstr "`pkel <https://github.com/pkel>`_"
 
 #: ../../how-tos/providing-images-for-img.rst:8
 msgid ""
@@ -148,12 +148,14 @@ msgid ""
 "to HTML :code:`<img>` tags without client side JavaScript. The resulting HTML "
 "might look like this:"
 msgstr ""
+"在本示例中，你将学习如何创建一个端点，无需客户端 JavaScript 就能提供 HTML :"
+"code:`<img>` 标签和图像。由此产生的 HTML 可能是这样的："
 
 #: ../../how-tos/providing-images-for-img.rst:15
 msgid ""
 "In fact, the presented technique is suitable for providing not only images, "
 "but arbitrary files."
-msgstr ""
+msgstr "事实上，该方法不仅适用于生成图像，还适用于生成任意类型文件。"
 
 #: ../../how-tos/providing-images-for-img.rst:17
 msgid ""
@@ -161,10 +163,12 @@ msgid ""
 "Afterwards we present are more detailed solution that fixes a few "
 "shortcomings of the first approach."
 msgstr ""
+"我们将从一个突出基本概念的最小示例开始。之后，我们将介绍更详细的解决方案，该解"
+"决方案修复了第一种方法的一些缺点。"
 
 #: ../../how-tos/providing-images-for-img.rst:21
 msgid "Minimal Example"
-msgstr ""
+msgstr "最小示例"
 
 #: ../../how-tos/providing-images-for-img.rst:23
 msgid ""
@@ -173,10 +177,13 @@ msgid ""
 "reverse proxy in front of the API to set this header for all requests to :"
 "code:`/files/`. We will show how to achieve this using Nginx."
 msgstr ""
+"PostgREST 对设置了 :code:`Accept: application/octet-stream` 消息头的请求返回二"
+"进制数据。一般做法是，在 API 前面配置反向代理，为所有请求设置这个头，即 :code:"
+"`/files/`。我们将展示如何使用 Nginx 来实现这一点。"
 
 #: ../../how-tos/providing-images-for-img.rst:27
 msgid "First, we need a public table for storing the files."
-msgstr ""
+msgstr "首先，我们需要创建一个可被公开访问的表来存储文件。"
 
 #: ../../how-tos/providing-images-for-img.rst:36
 msgid ""
@@ -187,6 +194,10 @@ msgid ""
 "code:`src` of an :code:`<img>` tag will not work. That's because browsers do "
 "not send the required header."
 msgstr ""
+"假设这个表包含 id 为 42 的两只可爱小猫的图片。我们可用带有 :code:`Accept: "
+"application/octet-stream` 消息头的请求 :code:`/files?select=blob&id=eq.42`，"
+"从 PostgREST API 中取出二进制格式的图像。不幸的是，将该请求 URL 放到 :code:"
+"`src` 标签上是行不通的，这是因为浏览器并不发送所需的消息头。"
 
 #: ../../how-tos/providing-images-for-img.rst:41
 msgid ""
@@ -195,6 +206,10 @@ msgid ""
 "a new location :code:`/files/` that redirects requests to our endpoint with "
 "the :code:`Accept` header set to :code:`application/octet-stream`."
 msgstr ""
+"幸运的是，我们可以配置 :ref:`Nginx 反向代理 <admin>` 来解决这个问题。假设 "
+"PostgREST 运行在 3000 端口。我们将提供一个新的位置 :code:`/files/`，它会带着值"
+"为 :code:`application/octet-stream` 的 :code:`Accept` 消息头将请求重定向到前述"
+"端点。"
 
 #: ../../how-tos/providing-images-for-img.rst:66
 msgid ""
@@ -203,38 +218,47 @@ msgid ""
 "jpeg` with any other filename or simply omit it. Putting the URL into the :"
 "code:`src` of an :code:`<img>` tag should now work as expected."
 msgstr ""
+"通过这个设置，我们可以访问 :code:`localhost/files/42/cats.jpeg` 去获取猫的图"
+"像，而不需要设置任何消息头。事实上，你可以用任何其他文件名替换 URL 结尾的 :"
+"code:`cats.jpeg` 或者直接省略它。然后将这个 URL 放入 :code:`<img>` 标签的 :"
+"code:`src`，现在应该可以正常工作啦。"
 
 #: ../../how-tos/providing-images-for-img.rst:71
 msgid "Improved Version"
-msgstr ""
+msgstr "改良版本"
 
 #: ../../how-tos/providing-images-for-img.rst:73
 msgid "The basic solution has some shortcomings:"
-msgstr ""
+msgstr "前面这个基础的解决方案尚有一些不足之处："
 
 #: ../../how-tos/providing-images-for-img.rst:75
 msgid ""
 "The response :code:`Content-Type` header is set to :code:`application/octet-"
 "stream`. This might confuse clients and users."
 msgstr ""
+"响应的 :code:`Content-Type` 消息头被设置为 :code:`application/octet-stream`。"
+"这可能让客户端和用户发懵。"
 
 #: ../../how-tos/providing-images-for-img.rst:77
 msgid ""
 "Download requests (e.g. Right Click -> Save Image As) to :code:`files/42` "
 "will propose :code:`42` as filename. This might confuse users."
 msgstr ""
+"下载（如：右键 -> 图片另存为） :code:`files/42` 时默认文件名是 :code:`42`。这"
+"也可能会让用户迷糊。"
 
 #: ../../how-tos/providing-images-for-img.rst:79
 msgid ""
 "Requests to the binary endpoint are not cached. This will cause unnecessary "
 "load on the database."
-msgstr ""
+msgstr "对二进制端点的请求不会被缓存，会给数据库增加不必要的负担。"
 
 #: ../../how-tos/providing-images-for-img.rst:82
 msgid ""
 "The following improved version addresses these problems. First, we store the "
 "media types and names of our files in the database."
 msgstr ""
+"下面的改进版解决了这些问题。首先，我们将文件的媒体类型和名称存储到数据库中。"
 
 #: ../../how-tos/providing-images-for-img.rst:94
 msgid ""
@@ -243,6 +267,8 @@ msgid ""
 "production, you probably want to configure additional caches, e.g. on the "
 "reverse proxy."
 msgstr ""
+"接下来，我们设置一个配置了内容类型和文件名的 RPC 端点，也顺带配置了基本的客户"
+"端缓存。对于生产环境，你可能还需要配置额外的缓存，例如在反向代理上。"
 
 #: ../../how-tos/providing-images-for-img.rst:123
 msgid ""
@@ -250,3 +276,5 @@ msgid ""
 "Consequently, we have to replace our previous rewrite rule in the Nginx "
 "recipe with the following."
 msgstr ""
+"有了这个，我们就可以从 :code:`/rpc/file?id=42` 获取猫的图片。因此，我们须将 "
+"Nginx 配置中以前的重写规则替换为以下内容。"

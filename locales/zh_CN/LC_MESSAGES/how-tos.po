@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-16 11:01+0800\n"
+"PO-Revision-Date: 2022-01-17 20:15+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -40,16 +40,21 @@ msgid ""
 "array. For example, let's see the case of `range types <https://www."
 "postgresql.org/docs/current/rangetypes.html>`_."
 msgstr ""
+"在使用 PostgREST 时，你可能会注意到某些 PostgreSQL 类型会转换成 JSON 字符串，"
+"而你原本期望的是 JSON 对象或数组。让我们以 `范围类型 <https://www.postgresql."
+"org/docs/current/rangetypes.html>`_ 为例，来看看这种情况。"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:22
 msgid ""
 "Here we have a column named **during** as a ``tsrange`` type, we would like "
 "to get it as JSON through PostgREST."
 msgstr ""
+"这里我们有一个 ``tsrange`` 类型的列 **during**，我们想通过 PostgREST 获得它的 "
+"JSON 格式。"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:28
 msgid "Result:"
-msgstr ""
+msgstr "结果："
 
 #: ../../how-tos/casting-type-to-custom-json.rst:39
 msgid ""
@@ -59,28 +64,32 @@ msgid ""
 "object by `creating a CAST <https://www.postgresql.org/docs/current/sql-"
 "createcast.html>`_ ."
 msgstr ""
+"**during** 的值可能不是你想要的格式。我们得到了一个 JSON 字符串，因为默认情况"
+"下，PostgreSQL 将其 ``text`` 形态转换为 JSON。我们可以通过 `创建类型转换"
+"（CREATE CAST） <https://www.postgresql.org/docs/current/sql-createcast."
+"html>`_ 来将这个形态改变为一个自定义的 JSON 对象。"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:42
 msgid ""
 "To do this, first we'll define the function that will do the conversion from "
 "``tsrange`` to ``json``."
-msgstr ""
+msgstr "要做到这一点，首先我们要定义一个函数将 ``tsrange`` 转换为 ``json``。"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:55
 msgid "Using this function we'll create the CAST."
-msgstr ""
+msgstr "我们使用该函数来创建类型转换（CREATE CAST）。"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:61
 msgid "And we'll do the request and :ref:`cast the column <casting_columns>`."
-msgstr ""
+msgstr "我们将进行请求，并 :ref:`转换列类型 <casting_columns>`。"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:67
 msgid "The result now is:"
-msgstr ""
+msgstr "现在的结果是："
 
 #: ../../how-tos/casting-type-to-custom-json.rst:83
 msgid "You can use the same idea for creating custom casts for different types."
-msgstr ""
+msgstr "你可以使用相同的想法为类型创建自定义转换。"
 
 #: ../../how-tos/casting-type-to-custom-json.rst:87
 msgid ""
@@ -88,6 +97,9 @@ msgid ""
 "`create a custom type <https://www.postgresql.org/docs/current/sql-createtype."
 "html>`_ for your own ``tsrange`` and add its own cast."
 msgstr ""
+"如果你不想修改内置类型的转换，可能的选项是为你自己的 ``tsrange`` 类型和它的转"
+"换 `创建自定义类型 <https://www.postgresql.org/docs/current/sql-createtype."
+"html>`_。"
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:2
 msgid "Embedding a table from another schema"
@@ -98,41 +110,49 @@ msgid ""
 "Suppose you have a **people** table in the ``public`` schema and this schema "
 "is exposed through PostgREST's :ref:`db-schemas`."
 msgstr ""
+"假设你在 ``public`` Schema 中有一个 **people** 表，这个 Schema 是通过 "
+"PostgREST 的 :ref:`db-schemas` 暴露的。"
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:15
 msgid ""
 "And you want to :ref:`embed <resource_embedding>` the **people** table with a "
 "**details** table that's in another schema named ``private``."
 msgstr ""
+"然后你想在 **people** 表 :ref:`嵌入 <resource_embedding>` 与另一个 `private` "
+"Schema 里的 **details** 表。"
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:35
 msgid ""
 "To solve this, you can create a view of **details** in the ``public`` schema. "
 "We'll call it **public_details**."
 msgstr ""
+"要解决此问题，你可以在 ``public`` Schema 里创建一个 **details** 视图。我们就叫"
+"它 **public_details** 吧。"
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:47
 msgid ""
 "Since PostgREST supports :ref:`embedding_views`, you can embed **people** "
 "with **public_details**."
 msgstr ""
+"由于 PostgREST 支持 :ref:`embedding_views`，你可以将 **public_details** 嵌入 "
+"**people**。"
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:49
 msgid "Let's insert some data to test this:"
-msgstr ""
+msgstr "让我们插入一些数据来测试一下："
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:66
 msgid ""
 "Make sure PostgREST's schema cache is up-to-date. See :ref:`schema_reloading`."
-msgstr ""
+msgstr "请确保 PostgREST 的 Schema 缓存是最新的。参见 :ref:`schema_reloading`。"
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:68
 msgid "Now, make the following request:"
-msgstr ""
+msgstr "现在，发出以下请求："
 
 #: ../../how-tos/embedding-table-from-another-schema.rst:74
 msgid "The result should be:"
-msgstr ""
+msgstr "结果应该是："
 
 #: ../../how-tos/providing-images-for-img.rst:4
 msgid "Providing images for ``<img>``"

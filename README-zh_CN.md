@@ -7,27 +7,25 @@ PostgREST 文档使用 reStructuredText 格式，可查看 [速查表](https://g
 
 ## Install Dependencies / 安装依赖
 ```bash
-brew unlink python@3.9 && brew link python@3.10;
+brew unlink python@3.9 && brew link python@3.10
 
 python3 --version
 # Python 3.10.1
-pip3 --version;
+pip3 --version
 # pip 21.3.1 from /usr/local/lib/python3.10/site-packages/pip (python 3.10)
 
-brew install sphinx-doc;
+brew install sphinx-doc
 # FOR ZSH USER
 echo 'export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"' >> ~/.zshrc;
 # FOR BASH USER
 echo 'export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"' >> ~/.bash_profile;
-sphinx-build --version;
+sphinx-build --version
 # sphinx-build 4.3.2
 
 # Could not import extension sphinx_tabs.tabs (exception: No module named 'sphinx_tabs')
-pip3 install sphinx-tabs;
-pip3 install sphinx_copybutton;
-pip3 install sphinx-rtd-theme;
+pip3 install sphinx-tabs sphinx_copybutton sphinx-rtd-theme
 
-sphinx-build -b html . _build;
+sphinx-build -b html . _build
 # Running Sphinx v4.3.2
 # build succeeded.
 # The HTML pages are in _build.

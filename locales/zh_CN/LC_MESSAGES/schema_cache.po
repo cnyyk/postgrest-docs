@@ -7,99 +7,99 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 19:43+0800\n"
+"POT-Creation-Date: 2022-03-13 08:59+0800\n"
 "PO-Revision-Date: 2022-01-17 21:18+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
-"Language-Team: \n"
 "Language: zh_CN\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-"X-Generator: Poedit 3.0.1\n"
 
-#: ../../schema_cache.rst:4
+#: ../../docs/schema_cache.rst:4
 msgid "Schema Cache"
 msgstr "Schema 缓存"
 
-#: ../../schema_cache.rst:6
+#: ../../docs/schema_cache.rst:6
 msgid ""
 "Certain PostgREST features require metadata from the database schema. "
 "Getting this metadata requires executing expensive queries, so in order "
 "to avoid repeating this work, PostgREST uses a schema cache."
 msgstr ""
 
-#: ../../schema_cache.rst:10
+#: ../../docs/schema_cache.rst:10
 msgid "Feature"
 msgstr "功能"
 
-#: ../../schema_cache.rst:10
+#: ../../docs/schema_cache.rst:10
 msgid "Required Metadata"
 msgstr ""
 
-#: ../../schema_cache.rst:12
+#: ../../docs/schema_cache.rst:12
 msgid ":ref:`resource_embedding`"
 msgstr ""
 
-#: ../../schema_cache.rst:12
+#: ../../docs/schema_cache.rst:12
 msgid "Foreign key constraints"
 msgstr ""
 
-#: ../../schema_cache.rst:14
+#: ../../docs/schema_cache.rst:14
 msgid ":ref:`Stored Functions <s_procs>`"
 msgstr ""
 
-#: ../../schema_cache.rst:14
+#: ../../docs/schema_cache.rst:14
 msgid ""
 "Function signature (parameters, return type, volatility and `overloading "
 "<https://www.postgresql.org/docs/current/xfunc-overload.html>`_)"
 msgstr ""
 
-#: ../../schema_cache.rst:17
+#: ../../docs/schema_cache.rst:17
 msgid ":ref:`Upserts <upsert>`"
 msgstr ""
 
-#: ../../schema_cache.rst:17
+#: ../../docs/schema_cache.rst:17
 msgid "Primary keys"
 msgstr ""
 
-#: ../../schema_cache.rst:19
+#: ../../docs/schema_cache.rst:19
 msgid ":ref:`Insertions <insert_update>`"
 msgstr ""
 
-#: ../../schema_cache.rst:19
+#: ../../docs/schema_cache.rst:19
 msgid "Primary keys (optional: only if the Location header is requested)"
 msgstr ""
 
-#: ../../schema_cache.rst:21
+#: ../../docs/schema_cache.rst:21
 msgid ":ref:`OPTIONS requests <options_requests>`"
 msgstr ""
 
-#: ../../schema_cache.rst:21
+#: ../../docs/schema_cache.rst:21
 msgid "View INSTEAD OF TRIGGERS and primary keys"
 msgstr ""
 
-#: ../../schema_cache.rst:23
+#: ../../docs/schema_cache.rst:23
 msgid ":ref:`open-api`"
 msgstr ""
 
-#: ../../schema_cache.rst:23
+#: ../../docs/schema_cache.rst:23
 msgid "Table columns, primary keys and foreign keys"
 msgstr ""
 
-#: ../../schema_cache.rst:25
+#: ../../docs/schema_cache.rst:25
 msgid "View columns and INSTEAD OF TRIGGERS"
 msgstr ""
 
-#: ../../schema_cache.rst:27
+#: ../../docs/schema_cache.rst:27
 msgid "Function signature"
 msgstr ""
 
-#: ../../schema_cache.rst:31
+#: ../../docs/schema_cache.rst:31
 msgid "The Stale Schema Cache"
 msgstr "失效的 Schema 缓存"
 
-#: ../../schema_cache.rst:33
+#: ../../docs/schema_cache.rst:33
 msgid ""
 "When you make changes on the metadata mentioned above, the schema cache "
 "will turn stale on a running PostgREST. Future requests that use the "
@@ -108,109 +108,121 @@ msgid ""
 "expected result."
 msgstr ""
 
-#: ../../schema_cache.rst:35
+#: ../../docs/schema_cache.rst:35
 msgid ""
 "For instance, let's see what would happen if you have a stale schema "
 "cache for foreign key relationships and function signatures."
 msgstr ""
 
-#: ../../schema_cache.rst:40
+#: ../../docs/schema_cache.rst:40
 msgid "Stale Foreign Key Relationships"
 msgstr "失效的外键关系"
 
-#: ../../schema_cache.rst:42
+#: ../../docs/schema_cache.rst:42
 msgid ""
 "Suppose you add a ``cities`` table to your database and define a foreign "
 "key that references an existing ``countries`` table. Then, you make a "
 "request to get the ``cities`` and their belonging ``countries``."
 msgstr ""
 
-#: ../../schema_cache.rst:54
+#: ../../docs/schema_cache.rst:54
 msgid "The result will be an error:"
 msgstr ""
 
-#: ../../schema_cache.rst:63
+#: ../../docs/schema_cache.rst:63
 msgid ""
 "As you can see, PostgREST couldn't find the newly created foreign key in "
-"the schema cache. See :ref:`schema_reloading` and :ref:"
-"`auto_schema_reloading` to solve this issue."
+"the schema cache. See :ref:`schema_reloading` and "
+":ref:`auto_schema_reloading` to solve this issue."
 msgstr ""
 
-#: ../../schema_cache.rst:68
+#: ../../docs/schema_cache.rst:68
 msgid "Stale Function Signature"
 msgstr "失效的函数签名"
 
-#: ../../schema_cache.rst:70
+#: ../../docs/schema_cache.rst:70
 msgid ""
 "The same issue will occur on newly created functions on a running "
 "PostgREST."
 msgstr ""
 
-#: ../../schema_cache.rst:96
+#: ../../docs/schema_cache.rst:96
 msgid ""
 "Here, PostgREST tries to find the function on the stale schema to no "
 "avail. See :ref:`schema_reloading` and :ref:`auto_schema_reloading` to "
 "solve this issue."
 msgstr ""
 
-#: ../../schema_cache.rst:101
+#: ../../docs/schema_cache.rst:101
 msgid "Schema Cache Reloading"
 msgstr "Schema 缓存重新加载"
 
-#: ../../schema_cache.rst:103
+#: ../../docs/schema_cache.rst:103
 msgid ""
 "To reload the cache without restarting the PostgREST server, send a "
 "SIGUSR1 signal to the server process."
 msgstr ""
 
-#: ../../schema_cache.rst:110
+#: ../../docs/schema_cache.rst:110
 msgid "For docker you can do:"
 msgstr ""
 
-#: ../../schema_cache.rst:119
+#: ../../docs/schema_cache.rst:119
 msgid ""
 "There's no downtime when reloading the schema cache. The reloading will "
 "happen on a background thread while requests keep being served."
 msgstr ""
 
-#: ../../schema_cache.rst:124
+#: ../../docs/schema_cache.rst:124
 msgid "Reloading with NOTIFY"
 msgstr "使用 NOTIFY 重新加载"
 
-#: ../../schema_cache.rst:126
+#: ../../docs/schema_cache.rst:126
 msgid ""
-"There are environments where you can't send the SIGUSR1 Unix Signal "
-"(like on managed containers in cloud services or on Windows systems). "
-"For this reason, PostgREST also allows you to reload its schema cache "
-"through PostgreSQL `NOTIFY <https://www.postgresql.org/docs/current/sql-"
+"There are environments where you can't send the SIGUSR1 Unix Signal (like"
+" on managed containers in cloud services or on Windows systems). For this"
+" reason, PostgREST also allows you to reload its schema cache through "
+"PostgreSQL `NOTIFY <https://www.postgresql.org/docs/current/sql-"
 "notify.html>`_ as follows:"
 msgstr ""
 
-#: ../../schema_cache.rst:132
+#: ../../docs/schema_cache.rst:132
 msgid ""
 "The ``\"pgrst\"`` notification channel is enabled by default. For "
 "configuring the channel, see :ref:`db-channel` and :ref:`db-channel-"
 "enabled`."
 msgstr ""
 
-#: ../../schema_cache.rst:137
+#: ../../docs/schema_cache.rst:137
 msgid "Automatic Schema Cache Reloading"
 msgstr "Schema 缓存自动重新加载"
 
-#: ../../schema_cache.rst:139
+#: ../../docs/schema_cache.rst:139
 msgid ""
 "You can do automatic schema cache reloading in a pure SQL way and forget "
-"about stale schema cache errors with an `event trigger <https://www."
-"postgresql.org/docs/current/event-trigger-definition.html>`_ and "
-"``NOTIFY``."
+"about stale schema cache errors with an `event trigger "
+"<https://www.postgresql.org/docs/current/event-trigger-definition.html>`_"
+" and ``NOTIFY``."
 msgstr ""
 
-#: ../../schema_cache.rst:157
+#: ../../docs/schema_cache.rst:157
 msgid ""
 "Now, whenever the ``pgrst_watch`` trigger is fired in the database, "
 "PostgREST will automatically reload the schema cache."
 msgstr ""
 
-#: ../../schema_cache.rst:159
+#: ../../docs/schema_cache.rst:159
 msgid "To disable auto reloading, drop the trigger:"
 msgstr ""
+
+#: ../../docs/schema_cache.rst:166
+msgid "Finer-Grained Event Trigger"
+msgstr ""
+
+#: ../../docs/schema_cache.rst:168
+msgid ""
+"You can refine the previous event trigger and only react to the events "
+"relevant to the schema cache. This also prevents unnecessary reloading "
+"when creating temporary tables(``CREATE TEMP TABLE``) inside functions."
+msgstr ""
+

@@ -7,347 +7,346 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 20:06+0800\n"
-"PO-Revision-Date: 2022-01-15 11:23+0800\n"
+"POT-Creation-Date: 2022-03-13 08:59+0800\n"
+"PO-Revision-Date: 2022-03-13 09:54+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: YCH <chnyyk@gmail.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.9.1\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: ../../index.rst:95
+#: ../../docs/index.rst:95
 msgid "v9.0.0"
 msgstr "v9.0.0"
 
-#: ../../index.rst:95 ../../index.rst:226
+#: ../../docs/index.rst:95 ../../docs/index.rst:227
 msgid "Release Notes"
 msgstr "发布日志"
 
-#: ../../index.rst:109 ../../index.rst:113
+#: ../../docs/index.rst:109 ../../docs/index.rst:113
 msgid "Tutorials"
 msgstr "教程"
 
-#: ../../index.rst:130
+#: ../../docs/index.rst:130
 msgid "API"
 msgstr "API"
 
-#: ../../index.rst:136
+#: ../../docs/index.rst:136
 msgid "Configuration"
 msgstr "配置"
 
-#: ../../index.rst:142
+#: ../../docs/index.rst:142
 msgid "Schema Cache"
 msgstr "Schema 缓存"
 
-#: ../../index.rst:157
+#: ../../docs/index.rst:157
 msgid "Authentication"
 msgstr "认证"
 
-#: ../../index.rst:163
+#: ../../docs/index.rst:163
 msgid "Schema Structure"
 msgstr "Schema 结构"
 
-#: ../../index.rst:169
+#: ../../docs/index.rst:169
 msgid "Administration"
 msgstr "管理"
 
-#: ../../index.rst:175
+#: ../../docs/index.rst:175
 msgid "Installation"
 msgstr "安装"
 
-#: ../../index.rst:189 ../../index.rst:193
+#: ../../docs/index.rst:189 ../../docs/index.rst:193
 msgid "How-to guides"
 msgstr "操作指南"
 
-#: ../../index.rst:206 ../../index.rst:210
+#: ../../docs/index.rst:207 ../../docs/index.rst:211
 msgid "Ecosystem"
 msgstr "生态"
 
-#: ../../index.rst:4
+#: ../../docs/index.rst:4
 msgid "PostgREST Documentation"
 msgstr "PostgREST 文档"
 
-#: ../../index.rst:30
+#: ../../docs/index.rst:30
 msgid ""
 "PostgREST is a standalone web server that turns your PostgreSQL database "
-"directly into a RESTful API. The structural constraints and permissions "
-"in the database determine the API endpoints and operations."
+"directly into a RESTful API. The structural constraints and permissions in "
+"the database determine the API endpoints and operations."
 msgstr ""
-"PostgREST 是一个独立的 Web 服务器，它将你的 PostgreSQL 数据库直接变成一"
-"个 RESTful API，各种端点和操作由数据库中的约束和权限决定。"
+"PostgREST 是一个独立的 Web 服务器，它将你的 PostgreSQL 数据库直接变成一个 "
+"RESTful API，各种端点和操作由数据库中的约束和权限决定。"
 
-#: ../../index.rst:33
+#: ../../docs/index.rst:33
 msgid "Sponsors"
 msgstr "赞助名单"
 
-#: ../../index.rst:71
+#: ../../docs/index.rst:71
 msgid "Motivation"
 msgstr "动机"
 
-#: ../../index.rst:73
+#: ../../docs/index.rst:73
 msgid ""
 "Using PostgREST is an alternative to manual CRUD programming. Custom API "
-"servers suffer problems. Writing business logic often duplicates, "
-"ignores or hobbles database structure. Object-relational mapping is a "
-"leaky abstraction leading to slow imperative code. The PostgREST "
-"philosophy establishes a single declarative source of truth: the data "
-"itself."
+"servers suffer problems. Writing business logic often duplicates, ignores or "
+"hobbles database structure. Object-relational mapping is a leaky abstraction "
+"leading to slow imperative code. The PostgREST philosophy establishes a "
+"single declarative source of truth: the data itself."
 msgstr ""
-"PostgREST 是手动 CRUD 编程的一个替代方案。自定义 API 服务器会遇到各种问"
-"题。业务逻辑经常重复编写，数据库结构被忽略或破坏。对象关系映射（ORM）是抽"
-"象泄漏的（Leaky Abstraction），会产生效率低下的代码。PostgREST 哲学建立了"
-"一个单一的声明式数据源：数据本身。"
+"PostgREST 是手动 CRUD 编程的一个替代方案。自定义 API 服务器会遇到各种问题。业"
+"务逻辑经常重复编写，数据库结构被忽略或破坏。对象关系映射（ORM）是抽象泄漏的"
+"（Leaky Abstraction），会产生效率低下的代码。PostgREST 哲学建立了一个单一的声"
+"明式数据源：数据本身。"
 
-#: ../../index.rst:76
+#: ../../docs/index.rst:76
 msgid "Declarative Programming"
 msgstr "声明式编程"
 
-#: ../../index.rst:78
+#: ../../docs/index.rst:78
 msgid ""
-"It's easier to ask PostgreSQL to join data for you and let its query "
-"planner figure out the details than to loop through rows yourself. It's "
-"easier to assign permissions to db objects than to add guards in "
-"controllers. (This is especially true for cascading permissions in data "
-"dependencies.) It's easier to set constraints than to litter code with "
-"sanity checks."
+"It's easier to ask PostgreSQL to join data for you and let its query planner "
+"figure out the details than to loop through rows yourself. It's easier to "
+"assign permissions to db objects than to add guards in controllers. (This is "
+"especially true for cascading permissions in data dependencies.) It's easier "
+"to set constraints than to litter code with sanity checks."
 msgstr ""
-"让 PostgreSQL 为你连接数据并充分利用其查询规划器找出各种细节，比你自己循"
-"环数据行要更容易。给数据库对象分配权限比在控制器（其他语言框架的 "
-"Controller）中添加保护措施更容易（尤其是数据依赖中的级联权限）。设置约束"
-"也比用拼凑的代码进行安全检查更容易。"
+"让 PostgreSQL 为你连接数据并充分利用其查询规划器找出各种细节，比你自己循环数"
+"据行要更容易。给数据库对象分配权限比在控制器（其他语言框架的 Controller）中添"
+"加保护措施更容易（尤其是数据依赖中的级联权限）。设置约束也比用拼凑的代码进行"
+"安全检查更容易。"
 
-#: ../../index.rst:81
+#: ../../docs/index.rst:81
 msgid "Leak-proof Abstraction"
 msgstr "防漏抽象"
 
-#: ../../index.rst:83
+#: ../../docs/index.rst:83
 msgid ""
 "There is no ORM involved. Creating new views happens in SQL with known "
 "performance implications. A database administrator can now create an API "
 "from scratch with no custom programming."
 msgstr ""
-"无需 ORM 参与，在 SQL 层面创建新的性能影响明确的视图。无需开发人员参与，"
-"数据库管理员（DBA）现在也可以从头开始创建 API 了。"
+"无需 ORM 参与，在 SQL 层面创建新的性能影响明确的视图。无需开发人员参与，数据"
+"库管理员（DBA）现在也可以从头开始创建 API 了。"
 
-#: ../../index.rst:86
+#: ../../docs/index.rst:86
 msgid "One Thing Well"
 msgstr "做好一件事"
 
-#: ../../index.rst:88
+#: ../../docs/index.rst:88
 msgid ""
-"PostgREST has a focused scope. It works well with other tools like "
-"Nginx. This forces you to cleanly separate the data-centric CRUD "
-"operations from other concerns. Use a collection of sharp tools rather "
-"than building a big ball of mud."
+"PostgREST has a focused scope. It works well with other tools like Nginx. "
+"This forces you to cleanly separate the data-centric CRUD operations from "
+"other concerns. Use a collection of sharp tools rather than building a big "
+"ball of mud."
 msgstr ""
-"PostgREST 有其专注的范围。它与 Nginx 等其他工具配合得很好。这可以迫使你将"
-"以数据为中心的 CRUD 操作与其他问题彻底分离。整合使用利器，而非构建一个大"
-"泥球。"
+"PostgREST 有其专注的范围。它与 Nginx 等其他工具配合得很好。这可以迫使你将以数"
+"据为中心的 CRUD 操作与其他问题彻底分离。整合使用利器，而非构建一个大泥球。"
 
-#: ../../index.rst:91
+#: ../../docs/index.rst:91
 msgid "Getting Support"
 msgstr "获取支持"
 
-#: ../../index.rst:93
+#: ../../docs/index.rst:93
 msgid ""
 "The project has a friendly and growing community. Join our `chat room "
-"<https://gitter.im/begriffs/postgrest>`_ for discussion and help. You "
-"can also report or search for bugs/features on the Github `issues "
-"<https://github.com/PostgREST/postgrest/issues>`_ page."
+"<https://gitter.im/begriffs/postgrest>`_ for discussion and help. You can "
+"also report or search for bugs/features on the Github `issues <https://"
+"github.com/PostgREST/postgrest/issues>`_ page."
 msgstr ""
 "该项目有一个友好且不断成长的社区。加入我们的 `聊天室 <https://gitter.im/"
 "begriffs/postgrest>`_ 进行讨论和互相帮助，也可以在 Github 的 `Issues "
-"<https://github.com/PostgREST/postgrest/issues>`_ 页面报告或搜寻 Bug 与功"
-"能特性。"
+"<https://github.com/PostgREST/postgrest/issues>`_ 页面报告或搜寻 Bug 与功能特"
+"性。"
 
-#: ../../index.rst:111
+#: ../../docs/index.rst:111
 msgid "Are you new to PostgREST? This is the place to start!"
 msgstr "你是才开始了解 PostgREST 吗？那就从这里开始吧！"
 
-#: ../../index.rst:120
+#: ../../docs/index.rst:120
 msgid ":doc:`tutorials/tut0`"
 msgstr ":doc:`tutorials/tut0`"
 
-#: ../../index.rst:121
+#: ../../docs/index.rst:121
 msgid ":doc:`tutorials/tut1`"
 msgstr ":doc:`tutorials/tut1`"
 
-#: ../../index.rst:123
+#: ../../docs/index.rst:123
 msgid ""
 "Also have a look at :doc:`Installation <install>` and :ref:"
 "`community_tutorials`."
-msgstr ""
-"另外也可以看看 :doc:`安装 <install>` 和 :ref:`community_tutorials`."
+msgstr "另外也可以看看 :doc:`安装 <install>` 和 :ref:`community_tutorials`."
 
-#: ../../index.rst:126
+#: ../../docs/index.rst:126
 msgid "Reference guides"
 msgstr "参考指南"
 
-#: ../../index.rst:128
+#: ../../docs/index.rst:128
 msgid "Technical references for PostgREST's functionality."
 msgstr "PostgREST 功能的技术参考。"
 
-#: ../../index.rst:148
+#: ../../docs/index.rst:148
 msgid ":doc:`API <api>`"
 msgstr ":doc:`API <api>`"
 
-#: ../../index.rst:149
+#: ../../docs/index.rst:149
 msgid ":doc:`configuration`"
 msgstr ":doc:`configuration`"
 
-#: ../../index.rst:150
+#: ../../docs/index.rst:150
 msgid ":doc:`Schema Cache <schema_cache>`"
 msgstr ":doc:`模式缓存 <schema_cache>`"
 
-#: ../../index.rst:153
+#: ../../docs/index.rst:153
 msgid "Topic guides"
 msgstr "主题指南"
 
-#: ../../index.rst:155
+#: ../../docs/index.rst:155
 msgid "Explanations of some key concepts in PostgREST."
 msgstr "PostgREST 中一些关键概念的解释。"
 
-#: ../../index.rst:181
+#: ../../docs/index.rst:181
 msgid ":doc:`Authentication <auth>`"
 msgstr ":doc:`认证 <auth>`"
 
-#: ../../index.rst:182
+#: ../../docs/index.rst:182
 msgid ":doc:`Schema Structure <schema_structure>`"
 msgstr ":doc:`Schema 结构 <schema_structure>`"
 
-#: ../../index.rst:183
+#: ../../docs/index.rst:183
 msgid ":doc:`Administration <admin>`"
 msgstr ":doc:`管理 <admin>`"
 
-#: ../../index.rst:184
+#: ../../docs/index.rst:184
 msgid ":doc:`Installation <install>`"
 msgstr ":doc:`安装 <install>`"
 
-#: ../../index.rst:191
+#: ../../docs/index.rst:191
 msgid "These are recipes that'll help you address specific use-cases."
 msgstr "下面是一些能帮你搞定特定用例的套路。"
 
-#: ../../index.rst:200
+#: ../../docs/index.rst:200
 msgid ":doc:`how-tos/casting-type-to-custom-json`"
 msgstr ":doc:`how-tos/casting-type-to-custom-json`"
 
-#: ../../index.rst:201
+#: ../../docs/index.rst:201
 msgid ":doc:`how-tos/embedding-table-from-another-schema`"
 msgstr ":doc:`how-tos/embedding-table-from-another-schema`"
 
-#: ../../index.rst:202
+#: ../../docs/index.rst:202
 msgid ":doc:`how-tos/providing-images-for-img`"
 msgstr ":doc:`how-tos/providing-images-for-img`"
 
-#: ../../index.rst:203
+#: ../../docs/index.rst:203
 msgid ""
 "`How PostgreSQL triggers work when called with a PostgREST PATCH HTTP "
-"request <https://blog.fgribreau.com/2020/11/how-postgresql-triggers-"
-"works-when.html>`_"
+"request <https://blog.fgribreau.com/2020/11/how-postgresql-triggers-works-"
+"when.html>`_"
 msgstr ""
 "`PostgreSQL 触发器如何处理 PostgREST PATCH 请求 <https://blog.fgribreau."
 "com/2020/11/how-postgresql-triggers-works-when.html>`_"
 
-#: ../../index.rst:208
-msgid ""
-"PostgREST has a growing ecosystem of examples, libraries, and "
-"experiments. Here is a selection."
-msgstr ""
-"PostgREST 有一个不断增长的例子、库和实验的生态系统。这是开发应用的一个候"
-"选方案。"
+#: ../../docs/index.rst:204
+msgid ":doc:`how-tos/working-with-postgresql-data-types`"
+msgstr ":doc:`how-tos/working-with-postgresql-data-types`"
 
-#: ../../index.rst:216
+#: ../../docs/index.rst:209
+msgid ""
+"PostgREST has a growing ecosystem of examples, libraries, and experiments. "
+"Here is a selection."
+msgstr ""
+"PostgREST 有一个不断增长的例子、库和实验的生态系统。这是开发应用的一个候选方"
+"案。"
+
+#: ../../docs/index.rst:217
 msgid ":ref:`community_tutorials`"
 msgstr ":ref:`community_tutorials`"
 
-#: ../../index.rst:217
+#: ../../docs/index.rst:218
 msgid ":ref:`templates`"
 msgstr ":ref:`templates`"
 
-#: ../../index.rst:218
+#: ../../docs/index.rst:219
 msgid ":ref:`eco_example_apps`"
 msgstr ":ref:`eco_example_apps`"
 
-#: ../../index.rst:219
+#: ../../docs/index.rst:220
 msgid ":ref:`devops`"
 msgstr ":ref:`devops`"
 
-#: ../../index.rst:220
+#: ../../docs/index.rst:221
 msgid ":ref:`eco_external_notification`"
 msgstr ":ref:`eco_external_notification`"
 
-#: ../../index.rst:221
+#: ../../docs/index.rst:222
 msgid ":ref:`eco_extensions`"
 msgstr ":ref:`eco_extensions`"
 
-#: ../../index.rst:222
+#: ../../docs/index.rst:223
 msgid ":ref:`clientside_libraries`"
 msgstr ":ref:`clientside_libraries`"
 
-#: ../../index.rst:228
+#: ../../docs/index.rst:229
 msgid ""
 "Here we'll include the most relevant changes so you can migrate to newer "
 "versions easily. You can see the full changelog of each release in the "
-"`PostgREST repository <https://github.com/PostgREST/postgrest/"
-"releases>`_."
+"`PostgREST repository <https://github.com/PostgREST/postgrest/releases>`_."
 msgstr ""
-"下面列出了一些重要变更，以便你可以轻松的迁移到新版本。你还可以在 "
-"`PostgREST 仓库 <https://github.com/PostgREST/postgrest/releases>`_ 中看"
-"到每个版本的完整变更记录。"
+"下面列出了一些重要变更，以便你可以轻松的迁移到新版本。你还可以在 `PostgREST "
+"仓库 <https://github.com/PostgREST/postgrest/releases>`_ 中看到每个版本的完整"
+"变更记录。"
 
-#: ../../index.rst:231
+#: ../../docs/index.rst:232
 msgid ":doc:`releases/v9.0.0`"
 msgstr ":doc:`releases/v9.0.0`"
 
-#: ../../index.rst:232
+#: ../../docs/index.rst:233
 msgid ":doc:`releases/v8.0.0`"
 msgstr ":doc:`releases/v8.0.0`"
 
-#: ../../index.rst:233
+#: ../../docs/index.rst:234
 msgid ":doc:`releases/v7.0.0`"
 msgstr ":doc:`releases/v7.0.0`"
 
-#: ../../index.rst:234
+#: ../../docs/index.rst:235
 msgid ":doc:`releases/v6.0.2`"
 msgstr ":doc:`releases/v6.0.2`"
 
-#: ../../index.rst:235
+#: ../../docs/index.rst:236
 msgid ":doc:`releases/v5.2.0`"
 msgstr ":doc:`releases/v5.2.0`"
 
-#: ../../index.rst:238
+#: ../../docs/index.rst:239
 msgid "In Production"
 msgstr "生产应用"
 
-#: ../../index.rst:240
+#: ../../docs/index.rst:241
 msgid "Here are some companies that use PostgREST in production."
 msgstr "下面是一些在生产环境中使用 PostgREST 的公司。"
 
-#: ../../index.rst:242
+#: ../../docs/index.rst:243
 msgid "`Catarse <https://www.catarse.me>`_"
 msgstr "`Catarse <https://www.catarse.me>`_"
 
-#: ../../index.rst:243
+#: ../../docs/index.rst:244
 msgid "`Datrium <https://www.datrium.com>`_"
 msgstr "`Datrium <https://www.datrium.com>`_"
 
-#: ../../index.rst:244
+#: ../../docs/index.rst:245
 msgid "`Drip Depot <https://www.dripdepot.com>`_"
 msgstr "`Drip Depot <https://www.dripdepot.com>`_"
 
-#: ../../index.rst:245
+#: ../../docs/index.rst:246
 msgid "`Image-charts <https://www.image-charts.com>`_"
 msgstr "`Image-charts <https://www.image-charts.com>`_"
 
-#: ../../index.rst:246
+#: ../../docs/index.rst:247
 msgid "`Moat <https://www.moat.com>`_"
 msgstr "`Moat <https://www.moat.com>`_"
 
-#: ../../index.rst:247
+#: ../../docs/index.rst:248
 msgid ""
 "`MotionDynamic - Fast highly dynamic video generation at scale <https://"
 "motiondynamic.tech>`_"
@@ -355,113 +354,110 @@ msgstr ""
 "`MotionDynamic - Fast highly dynamic video generation at scale <https://"
 "motiondynamic.tech>`_"
 
-#: ../../index.rst:248
+#: ../../docs/index.rst:249
 msgid "`Netwo <https://www.netwo.io>`_"
 msgstr "`Netwo <https://www.netwo.io>`_"
 
-#: ../../index.rst:249
+#: ../../docs/index.rst:250
 msgid ""
-"`Nimbus <https://www.nimbusforwork.com>`_ - See how Nimbus uses "
-"PostgREST in `Paul Copplestone's blog post <https://paul.copplest.one/"
-"blog/nimbus-tech-2019-04.html>`_."
+"`Nimbus <https://www.nimbusforwork.com>`_ - See how Nimbus uses PostgREST in "
+"`Paul Copplestone's blog post <https://paul.copplest.one/blog/nimbus-"
+"tech-2019-04.html>`_."
 msgstr ""
-"`Nimbus <https://www.nimbusforwork.com>`_ - 请查看 `Paul Copplestone’s 的"
-"博客文章 <https://paul.copplest.one/blog/nimbus-tech-2019-04.html>`_，以"
-"便了解 Nimbus 如何使用 PostgREST。"
+"`Nimbus <https://www.nimbusforwork.com>`_ - 请查看 `Paul Copplestone’s 的博客"
+"文章 <https://paul.copplest.one/blog/nimbus-tech-2019-04.html>`_，以便了解 "
+"Nimbus 如何使用 PostgREST。"
 
-#: ../../index.rst:251
+#: ../../docs/index.rst:252
 msgid "`OpenBooking <https://www.openbooking.ch>`_"
 msgstr "`OpenBooking <https://www.openbooking.ch>`_"
 
-#: ../../index.rst:252
+#: ../../docs/index.rst:253
 msgid "`Redsmin <https://www.redsmin.com>`_"
 msgstr "`Redsmin <https://www.redsmin.com>`_"
 
-#: ../../index.rst:253
+#: ../../docs/index.rst:254
 msgid "`Sompani <https://www.sompani.com>`_"
 msgstr "`Sompani <https://www.sompani.com>`_"
 
-#: ../../index.rst:254
+#: ../../docs/index.rst:255
 msgid "`Supabase <https://supabase.com>`_"
 msgstr "`Supabase <https://supabase.com>`_"
 
-#: ../../index.rst:260
+#: ../../docs/index.rst:261
 msgid "Testimonials"
 msgstr "用户评价"
 
-#: ../../index.rst:262
+#: ../../docs/index.rst:263
 msgid "\"It's so fast to develop, it feels like cheating!\""
 msgstr "“开发起来太快了, 感觉就像在作弊！”"
 
-#: ../../index.rst:300
+#: ../../docs/index.rst:301
 msgid "François-Guillaume Ribreau"
 msgstr "François-Guillaume Ribreau"
 
-#: ../../index.rst:266
+#: ../../docs/index.rst:267
 msgid ""
 "\"I just have to say that, the CPU/Memory usage compared to our Node.js/"
-"Waterline ORM based API is ridiculous.  It's hard to even push it over "
-"60/70 MB while our current API constantly hits 1GB running on 6 "
-"instances (dynos).\""
+"Waterline ORM based API is ridiculous.  It's hard to even push it over 60/70 "
+"MB while our current API constantly hits 1GB running on 6 instances (dynos)."
+"\""
 msgstr ""
-"“我不得不说，与我们基于 Node.js / Waterline ORM 的 API 相比，CPU / 内存的"
-"使用量实在是太不可思议了。在我们的 6 个实例（dynos）上，前者动辄 1G 内存"
-"占用，而后者甚至很少超过 60/70M 内存。”"
+"“我不得不说，与我们基于 Node.js / Waterline ORM 的 API 相比，CPU / 内存的使用"
+"量实在是太不可思议了。在我们的 6 个实例（dynos）上，前者动辄 1G 内存占用，而"
+"后者甚至很少超过 60/70M 内存。”"
 
-#: ../../index.rst:303
+#: ../../docs/index.rst:304
 msgid "Louis Brauer"
 msgstr "Louis Brauer"
 
-#: ../../index.rst:273
+#: ../../docs/index.rst:274
 msgid ""
-"\"I really enjoyed the fact that all of a sudden I was writing "
-"microservices in SQL DDL (and v8 JavaScript functions). I dodged so much "
-"boilerplate. The next thing I knew, we pulled out a full rewrite of a "
-"Spring+MySQL legacy app in 6 months. Literally 10x faster, and code was "
-"super concise. The old one took 3 years and a team of 4 people to "
-"develop.\""
+"\"I really enjoyed the fact that all of a sudden I was writing microservices "
+"in SQL DDL (and v8 JavaScript functions). I dodged so much boilerplate. The "
+"next thing I knew, we pulled out a full rewrite of a Spring+MySQL legacy app "
+"in 6 months. Literally 10x faster, and code was super concise. The old one "
+"took 3 years and a team of 4 people to develop.\""
 msgstr ""
-"“我确实很享受这个现实：突然之间我可以用 SQL DDL（和 V8 JavaScript 函数）"
-"来写微服务了。我避开了许多的样板，然后我们花了 6 个月时间完全重写了 "
-"Spring + MySQL 的传统应用，速度快了 10 倍，而代码却超级简洁。这套应用之前"
-"可是一个 4 人团队花了 3 年时间才开发完成的。”"
+"“我确实很享受这个现实：突然之间我可以用 SQL DDL（和 V8 JavaScript 函数）来写"
+"微服务了。我避开了许多的样板，然后我们花了 6 个月时间完全重写了 Spring + "
+"MySQL 的传统应用，速度快了 10 倍，而代码却超级简洁。这套应用之前可是一个 4 人"
+"团队花了 3 年时间才开发完成的。”"
 
-#: ../../index.rst:282
+#: ../../docs/index.rst:283
 msgid ""
-"\"I like the fact that PostgREST does one thing, and one thing well. "
-"While PostgREST takes care of bridging the gap between our HTTP server "
-"and PostgreSQL database, we can focus on the development of our API in a "
-"single language: SQL. This puts the database in the center of our "
-"architecture, and pushed us to improve our skills in SQL programming and "
-"database design.\""
+"\"I like the fact that PostgREST does one thing, and one thing well. While "
+"PostgREST takes care of bridging the gap between our HTTP server and "
+"PostgreSQL database, we can focus on the development of our API in a single "
+"language: SQL. This puts the database in the center of our architecture, and "
+"pushed us to improve our skills in SQL programming and database design.\""
 msgstr ""
-"“我欣赏 PostgREST 只做一件事、做好一件事。当 PostgREST 无缝衔接了 HTTP 服"
-"务器和 PostgreSQL 数据库，我们便可以专注于用 SQL 一种语言去开发我们的"
-"API。这使得数据库成为了我们的架构中心点，并促使我们不断提升 SQL 编程和数"
-"据库设计的能力。”"
+"“我欣赏 PostgREST 只做一件事、做好一件事。当 PostgREST 无缝衔接了 HTTP 服务器"
+"和 PostgreSQL 数据库，我们便可以专注于用 SQL 一种语言去开发我们的API。这使得"
+"数据库成为了我们的架构中心点，并促使我们不断提升 SQL 编程和数据库设计的能"
+"力。”"
 
-#: ../../index.rst:291
+#: ../../docs/index.rst:292
 msgid ""
 "\"PostgREST is performant, stable, and transparent. It allows us to "
 "bootstrap projects really fast, and to focus on our data and application "
-"instead of building out the ORM layer. In our k8s cluster, we run a few "
-"pods per schema we want exposed, and we scale up/down depending on "
-"demand. Couldn't be happier.\""
+"instead of building out the ORM layer. In our k8s cluster, we run a few pods "
+"per schema we want exposed, and we scale up/down depending on demand. "
+"Couldn't be happier.\""
 msgstr ""
-"“PostgREST 高性能、稳定和透明，它使我们能够快速启动项目，并专注于我们的数"
-"据和应用，而不是去构建 ORM 层。在我们的 k8s 集群中，我们为每一个我们想要"
-"暴露的 Schema 运行几个 pod，并且根据需求扩大/缩小规模。这真是太令人高兴"
-"了。”"
+"“PostgREST 高性能、稳定和透明，它使我们能够快速启动项目，并专注于我们的数据和"
+"应用，而不是去构建 ORM 层。在我们的 k8s 集群中，我们为每一个我们想要暴露的 "
+"Schema 运行几个 pod，并且根据需求扩大/缩小规模。这真是太令人高兴了。”"
 
-#: ../../index.rst:300
+#: ../../docs/index.rst:301
 msgid "Contributing"
 msgstr "参与贡献"
 
-#: ../../index.rst:302
+#: ../../docs/index.rst:303
 msgid ""
 "Please see the `Contributing guidelines <https://github.com/PostgREST/"
 "postgrest/blob/main/.github/CONTRIBUTING.md>`_ in the main PostgREST "
 "repository."
 msgstr ""
-"请参阅 PostgREST 仓库中的 `贡献指南 <https://github.com/PostgREST/"
-"postgrest/blob/main/.github/CONTRIBUTING.md>`_。"
+"请参阅 PostgREST 仓库中的 `贡献指南 <https://github.com/PostgREST/postgrest/"
+"blob/main/.github/CONTRIBUTING.md>`_。"

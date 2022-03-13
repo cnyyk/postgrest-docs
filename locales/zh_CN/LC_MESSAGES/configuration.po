@@ -7,966 +7,1127 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 20:06+0800\n"
+"POT-Creation-Date: 2022-03-13 08:59+0800\n"
 "PO-Revision-Date: 2022-01-14 22:28+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
-"Language-Team: \n"
 "Language: zh_CN\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-"X-Generator: Poedit 3.0.1\n"
 
-#: ../../configuration.rst:4
+#: ../../docs/configuration.rst:4
 msgid "Configuration"
 msgstr "配置"
 
-#: ../../configuration.rst:6
+#: ../../docs/configuration.rst:6
 msgid ""
-"PostgREST reads a configuration file to determine information about the "
-"database and how to serve client requests. There is no predefined location "
-"for this file, you must specify the file path as the one and only argument to "
-"the server:"
+"Without configuration, PostgREST won't be able to serve requests. At the "
+"minimum it needs either :ref:`a role to serve anonymous requests with "
+"<db-anon-role>` - or :ref:`a secret to use for JWT authentication <jwt-"
+"secret>`. Config parameters can be provided via :ref:`file_config`, via "
+":ref:`env_variables_config` or through :ref:`in_db_config`."
 msgstr ""
 
-#: ../../configuration.rst:14
+#: ../../docs/configuration.rst:8
 msgid ""
-"Configuration can be reloaded without restarting the server. See :ref:"
-"`config_reloading`."
+"To connect to a database it uses a `libpq connection string "
+"<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
+"CONNSTRING>`_. The connection string can be set in the configuration file"
+" or via environment variable or can be read from an external file. See "
+":ref:`db-uri` for details. Any parameter that is not set in the "
+"connection string is read from `libpq environment variables "
+"<https://www.postgresql.org/docs/current/libpq-envars.html>`_. The "
+"default connection string is ``postgresql://``, which reads **all** "
+"parameters from the environment."
 msgstr ""
 
-#: ../../configuration.rst:16
+#: ../../docs/configuration.rst:10
 msgid ""
-"The configuration file must contain a set of key value pairs. At minimum you "
-"must include these keys:"
+"The user with whom PostgREST connects to the database is also known as "
+"the authenticator role. For more information about the anonymous vs "
+"authenticator roles see :ref:`roles`."
 msgstr ""
 
-#: ../../configuration.rst:33
-msgid ""
-"The user specified in the db-uri is also known as the authenticator role. For "
-"more information about the anonymous vs authenticator roles see the :ref:"
-"`roles`."
+#: ../../docs/configuration.rst:12
+msgid "Config parameters are read in the following order:"
 msgstr ""
 
-#: ../../configuration.rst:38
+#: ../../docs/configuration.rst:14
+msgid "From the config file."
+msgstr ""
+
+#: ../../docs/configuration.rst:15
+msgid "From environment variables, overriding values from the config file."
+msgstr ""
+
+#: ../../docs/configuration.rst:16
+msgid ""
+"From the database, overriding values from both the config file and "
+"environment variables."
+msgstr ""
+
+#: ../../docs/configuration.rst:21
+msgid "Config File"
+msgstr ""
+
+#: ../../docs/configuration.rst:23
+msgid ""
+"PostgREST can read a config file. There is no predefined location for "
+"this file, you must specify the file path as the one and only argument to"
+" the server:"
+msgstr ""
+
+#: ../../docs/configuration.rst:31
+msgid ""
+"Configuration can be reloaded without restarting the server. See "
+":ref:`config_reloading`."
+msgstr ""
+
+#: ../../docs/configuration.rst:33
+msgid "The configuration file must contain a set of key value pairs:"
+msgstr ""
+
+#: ../../docs/configuration.rst:55
+msgid ""
+"You can run ``postgrest --example`` to display all possible configuration"
+" parameters and how to use them in a configuration file."
+msgstr ""
+
+#: ../../docs/configuration.rst:60
 msgid "Environment Variables"
 msgstr "环境变量"
 
-#: ../../configuration.rst:40
+#: ../../docs/configuration.rst:62
 msgid ""
-"You can also set these :ref:`configuration parameters <config_full_list>` "
-"using environment variables. They are capitalized, have a ``PGRST_`` prefix, "
-"and use underscores. For example: ``PGRST_DB_URI`` corresponds to ``db-uri`` "
-"and ``PGRST_APP_SETTINGS_*`` to ``app.settings.*``."
+"You can also set these :ref:`configuration parameters <config_full_list>`"
+" using environment variables. They are capitalized, have a ``PGRST_`` "
+"prefix, and use underscores. For example: ``PGRST_DB_URI`` corresponds to"
+" ``db-uri`` and ``PGRST_APP_SETTINGS_*`` to ``app.settings.*``."
 msgstr ""
 
-#: ../../configuration.rst:45
-msgid "Configuration Reloading"
-msgstr "配置重新加载"
-
-#: ../../configuration.rst:47
-msgid ""
-"To reload the configuration without restarting the PostgREST server, send a "
-"SIGUSR2 signal to the server process."
-msgstr ""
-
-#: ../../configuration.rst:53
-msgid ""
-"This method does not reload :ref:`env_variables_config` and it will not work "
-"for reloading a Docker container configuration. In these cases, you need to "
-"restart the PostgREST server or use the :ref:`in_db_config` as an alternative."
-msgstr ""
-
-#: ../../configuration.rst:57
-msgid ""
-"The following settings will not be reread when reloading the configuration. "
-"You will need to restart PostgREST in that case."
-msgstr ""
-
-#: ../../configuration.rst:59
-msgid ":ref:`db-uri`"
-msgstr ""
-
-#: ../../configuration.rst:60
-msgid ":ref:`db-pool`"
-msgstr ""
-
-#: ../../configuration.rst:61
-msgid ":ref:`db-pool-timeout`"
-msgstr ""
-
-#: ../../configuration.rst:62
-msgid ":ref:`server-host`"
-msgstr ""
-
-#: ../../configuration.rst:63
-msgid ":ref:`server-port`"
-msgstr ""
-
-#: ../../configuration.rst:64
-msgid ":ref:`server-unix-socket`"
-msgstr ""
-
-#: ../../configuration.rst:65
-msgid ":ref:`server-unix-socket-mode`"
-msgstr ""
-
-#: ../../configuration.rst:70
+#: ../../docs/configuration.rst:67
 msgid "In-Database Configuration"
 msgstr "库内配置"
 
-#: ../../configuration.rst:72
+#: ../../docs/configuration.rst:69
 msgid ""
-"By adding settings to the **authenticator** role (see :ref:`roles`), you can "
-"make the database the single source of truth for PostgREST's configuration. "
-"This is enabled by :ref:`db-config`."
+"By adding settings to the **authenticator** role (see :ref:`roles`), you "
+"can make the database the single source of truth for PostgREST's "
+"configuration. This is enabled by :ref:`db-config`."
 msgstr ""
 
-#: ../../configuration.rst:75
+#: ../../docs/configuration.rst:72
 msgid ""
-"For example, you can configure :ref:`db-schemas` and :ref:`jwt-secret` like "
-"this:"
+"For example, you can configure :ref:`db-schemas` and :ref:`jwt-secret` "
+"like this:"
 msgstr ""
 
-#: ../../configuration.rst:82
+#: ../../docs/configuration.rst:79
 msgid ""
-"You can use both database-specific settings with `IN DATABASE` and cluster-"
-"wide settings without it. Database-specific settings will override cluster-"
-"wide settings if both are used for the same parameter."
+"You can use both database-specific settings with `IN DATABASE` and "
+"cluster-wide settings without it. Database-specific settings will "
+"override cluster-wide settings if both are used for the same parameter."
 msgstr ""
 
-#: ../../configuration.rst:84
+#: ../../docs/configuration.rst:81
 msgid ""
-"Note that underscores(``_``) need to be used instead of dashes(``-``) for the "
-"in-database config parameters."
+"Note that underscores(``_``) need to be used instead of dashes(``-``) for"
+" the in-database config parameters."
 msgstr ""
 
-#: ../../configuration.rst:88
+#: ../../docs/configuration.rst:85
 msgid ""
-"For altering a role in this way, you need a SUPERUSER. You might not be able "
-"to use this configuration mode on cloud-hosted databases."
+"For altering a role in this way, you need a SUPERUSER. You might not be "
+"able to use this configuration mode on cloud-hosted databases."
 msgstr ""
 
-#: ../../configuration.rst:90
+#: ../../docs/configuration.rst:87
 msgid ""
-"When using both the configuration file and the in-database configuration, the "
-"latter takes precedence."
+"When using both the configuration file and the in-database configuration,"
+" the latter takes precedence."
 msgstr ""
 
-#: ../../configuration.rst:94
+#: ../../docs/configuration.rst:91
 msgid ""
-"If direct connections to the database are allowed, then it's not safe to use "
-"the in-db configuration for storing the :ref:`jwt-secret`. The settings of "
-"every role are PUBLIC - they can be viewed by any user that queries the "
-"``pg_catalog.pg_db_role_setting`` table. In this case you should keep the :"
-"ref:`jwt-secret` in the configuration file or as environment variables."
+"If direct connections to the database are allowed, then it's not safe to "
+"use the in-db configuration for storing the :ref:`jwt-secret`. The "
+"settings of every role are PUBLIC - they can be viewed by any user that "
+"queries the ``pg_catalog.pg_db_role_setting`` table. In this case you "
+"should keep the :ref:`jwt-secret` in the configuration file or as "
+"environment variables."
 msgstr ""
 
-#: ../../configuration.rst:101
-msgid "In-database configuration reloading"
-msgstr ""
+#: ../../docs/configuration.rst:98
+msgid "Configuration Reloading"
+msgstr "配置重新加载"
 
-#: ../../configuration.rst:103
+#: ../../docs/configuration.rst:100
 msgid ""
-"To reload the in-database configuration from within the database, you can use "
-"a NOTIFY command."
+"It's possible to reload PostgREST's configuration without restarting the "
+"server. You can do this :ref:`via signal <config_reloading_signal>` or "
+":ref:`via notification <config_reloading_notify>`."
 msgstr ""
 
-#: ../../configuration.rst:109
+#: ../../docs/configuration.rst:102
 msgid ""
-"The ``\"pgrst\"`` notification channel is enabled by default. For configuring "
-"the channel, see :ref:`db-channel` and :ref:`db-channel-enabled`."
+"It's not possible to change :ref:`env_variables_config` for a running "
+"process and reloading a Docker container configuration will not work. In "
+"these cases, you need to restart the PostgREST server or use "
+":ref:`in_db_config` as an alternative."
 msgstr ""
 
-#: ../../configuration.rst:114
+#: ../../docs/configuration.rst:106
+msgid ""
+"The following settings will not be reloaded. You will need to restart "
+"PostgREST to change those."
+msgstr ""
+
+#: ../../docs/configuration.rst:108
+msgid ":ref:`admin-server-port`"
+msgstr ""
+
+#: ../../docs/configuration.rst:109
+msgid ":ref:`db-uri`"
+msgstr ""
+
+#: ../../docs/configuration.rst:110
+msgid ":ref:`db-pool`"
+msgstr ""
+
+#: ../../docs/configuration.rst:111
+msgid ":ref:`db-pool-timeout`"
+msgstr ""
+
+#: ../../docs/configuration.rst:112
+msgid ":ref:`server-host`"
+msgstr ""
+
+#: ../../docs/configuration.rst:113
+msgid ":ref:`server-port`"
+msgstr ""
+
+#: ../../docs/configuration.rst:114
+msgid ":ref:`server-unix-socket`"
+msgstr ""
+
+#: ../../docs/configuration.rst:115
+msgid ":ref:`server-unix-socket-mode`"
+msgstr ""
+
+#: ../../docs/configuration.rst:120
+msgid "Reload with signal"
+msgstr ""
+
+#: ../../docs/configuration.rst:122
+msgid ""
+"To reload the configuration via signal, send a SIGUSR2 signal to the "
+"server process."
+msgstr ""
+
+#: ../../docs/configuration.rst:131
+msgid "Reload with NOTIFY"
+msgstr ""
+
+#: ../../docs/configuration.rst:133
+msgid ""
+"To reload the configuration from within the database, you can use a "
+"NOTIFY command."
+msgstr ""
+
+#: ../../docs/configuration.rst:139
+msgid ""
+"The ``\"pgrst\"`` notification channel is enabled by default. For "
+"configuring the channel, see :ref:`db-channel` and :ref:`db-channel-"
+"enabled`."
+msgstr ""
+
+#: ../../docs/configuration.rst:144
 msgid "List of parameters"
 msgstr "参数列表"
 
-#: ../../configuration.rst:117
+#: ../../docs/configuration.rst:147
 msgid "Name"
 msgstr ""
 
-#: ../../configuration.rst:117
+#: ../../docs/configuration.rst:147
 msgid "Type"
 msgstr ""
 
-#: ../../configuration.rst:117
+#: ../../docs/configuration.rst:147
 msgid "Default"
 msgstr ""
 
-#: ../../configuration.rst:117
-msgid "Required"
-msgstr ""
-
-#: ../../configuration.rst:117
+#: ../../docs/configuration.rst:147
 msgid "Reloadable"
 msgstr ""
 
-#: ../../configuration.rst:119 ../../configuration.rst:151
-msgid "app.settings.*"
+#: ../../docs/configuration.rst:149 ../../docs/configuration.rst:182
+msgid "admin-server-port"
 msgstr ""
 
-#: ../../configuration.rst:119 ../../configuration.rst:120
-#: ../../configuration.rst:121 ../../configuration.rst:124
-#: ../../configuration.rst:128 ../../configuration.rst:130
-#: ../../configuration.rst:131 ../../configuration.rst:132
-#: ../../configuration.rst:134 ../../configuration.rst:135
-#: ../../configuration.rst:136 ../../configuration.rst:138
-#: ../../configuration.rst:139 ../../configuration.rst:140
-#: ../../configuration.rst:141 ../../configuration.rst:142
-#: ../../configuration.rst:144 ../../configuration.rst:145
-msgid "String"
-msgstr ""
-
-#: ../../configuration.rst:119 ../../configuration.rst:120
-#: ../../configuration.rst:121 ../../configuration.rst:122
-#: ../../configuration.rst:123 ../../configuration.rst:124
-#: ../../configuration.rst:125 ../../configuration.rst:128
-#: ../../configuration.rst:129 ../../configuration.rst:130
-#: ../../configuration.rst:131 ../../configuration.rst:132
-#: ../../configuration.rst:133 ../../configuration.rst:134
-#: ../../configuration.rst:135 ../../configuration.rst:136
-#: ../../configuration.rst:137 ../../configuration.rst:138
-#: ../../configuration.rst:139 ../../configuration.rst:140
-#: ../../configuration.rst:141
-msgid "Y"
-msgstr ""
-
-#: ../../configuration.rst:120 ../../configuration.rst:163
-msgid "db-anon-role"
-msgstr ""
-
-#: ../../configuration.rst:121 ../../configuration.rst:175
-msgid "db-channel"
-msgstr ""
-
-#: ../../configuration.rst:121
-msgid "pgrst"
-msgstr ""
-
-#: ../../configuration.rst:122 ../../configuration.rst:187
-msgid "db-channel-enabled"
-msgstr ""
-
-#: ../../configuration.rst:122 ../../configuration.rst:123
-#: ../../configuration.rst:129 ../../configuration.rst:133
-#: ../../configuration.rst:137
-msgid "Boolean"
-msgstr ""
-
-#: ../../configuration.rst:122 ../../configuration.rst:123
-#: ../../configuration.rst:129 ../../configuration.rst:133
-msgid "True"
-msgstr ""
-
-#: ../../configuration.rst:123 ../../configuration.rst:201
-msgid "db-config"
-msgstr ""
-
-#: ../../configuration.rst:124 ../../configuration.rst:213
-msgid "db-extra-search-path"
-msgstr ""
-
-#: ../../configuration.rst:124
-msgid "public"
-msgstr ""
-
-#: ../../configuration.rst:125 ../../configuration.rst:229
-msgid "db-max-rows"
-msgstr ""
-
-#: ../../configuration.rst:125 ../../configuration.rst:126
-#: ../../configuration.rst:127 ../../configuration.rst:143
+#: ../../docs/configuration.rst:149 ../../docs/configuration.rst:156
+#: ../../docs/configuration.rst:157 ../../docs/configuration.rst:158
+#: ../../docs/configuration.rst:174
 msgid "Int"
 msgstr ""
 
-#: ../../configuration.rst:125
+#: ../../docs/configuration.rst:150 ../../docs/configuration.rst:194
+msgid "app.settings.*"
+msgstr ""
+
+#: ../../docs/configuration.rst:150 ../../docs/configuration.rst:151
+#: ../../docs/configuration.rst:152 ../../docs/configuration.rst:155
+#: ../../docs/configuration.rst:159 ../../docs/configuration.rst:161
+#: ../../docs/configuration.rst:162 ../../docs/configuration.rst:163
+#: ../../docs/configuration.rst:165 ../../docs/configuration.rst:166
+#: ../../docs/configuration.rst:167 ../../docs/configuration.rst:169
+#: ../../docs/configuration.rst:170 ../../docs/configuration.rst:171
+#: ../../docs/configuration.rst:172 ../../docs/configuration.rst:173
+#: ../../docs/configuration.rst:175 ../../docs/configuration.rst:176
+msgid "String"
+msgstr ""
+
+#: ../../docs/configuration.rst:150 ../../docs/configuration.rst:151
+#: ../../docs/configuration.rst:152 ../../docs/configuration.rst:153
+#: ../../docs/configuration.rst:154 ../../docs/configuration.rst:155
+#: ../../docs/configuration.rst:156 ../../docs/configuration.rst:159
+#: ../../docs/configuration.rst:160 ../../docs/configuration.rst:161
+#: ../../docs/configuration.rst:164 ../../docs/configuration.rst:165
+#: ../../docs/configuration.rst:166 ../../docs/configuration.rst:167
+#: ../../docs/configuration.rst:168 ../../docs/configuration.rst:169
+#: ../../docs/configuration.rst:170 ../../docs/configuration.rst:171
+#: ../../docs/configuration.rst:172
+msgid "Y"
+msgstr ""
+
+#: ../../docs/configuration.rst:151 ../../docs/configuration.rst:206
+msgid "db-anon-role"
+msgstr ""
+
+#: ../../docs/configuration.rst:152 ../../docs/configuration.rst:220
+msgid "db-channel"
+msgstr ""
+
+#: ../../docs/configuration.rst:152
+msgid "pgrst"
+msgstr ""
+
+#: ../../docs/configuration.rst:153 ../../docs/configuration.rst:232
+msgid "db-channel-enabled"
+msgstr ""
+
+#: ../../docs/configuration.rst:153 ../../docs/configuration.rst:154
+#: ../../docs/configuration.rst:160 ../../docs/configuration.rst:164
+#: ../../docs/configuration.rst:168
+msgid "Boolean"
+msgstr ""
+
+#: ../../docs/configuration.rst:153 ../../docs/configuration.rst:154
+#: ../../docs/configuration.rst:160 ../../docs/configuration.rst:164
+msgid "True"
+msgstr ""
+
+#: ../../docs/configuration.rst:154 ../../docs/configuration.rst:246
+msgid "db-config"
+msgstr ""
+
+#: ../../docs/configuration.rst:155 ../../docs/configuration.rst:258
+msgid "db-extra-search-path"
+msgstr ""
+
+#: ../../docs/configuration.rst:155 ../../docs/configuration.rst:161
+msgid "public"
+msgstr ""
+
+#: ../../docs/configuration.rst:156 ../../docs/configuration.rst:274
+msgid "db-max-rows"
+msgstr ""
+
+#: ../../docs/configuration.rst:156
 msgid "∞"
 msgstr ""
 
-#: ../../configuration.rst:126 ../../configuration.rst:243
+#: ../../docs/configuration.rst:157 ../../docs/configuration.rst:288
 msgid "db-pool"
 msgstr ""
 
-#: ../../configuration.rst:126 ../../configuration.rst:127
+#: ../../docs/configuration.rst:157 ../../docs/configuration.rst:158
 msgid "10"
 msgstr ""
 
-#: ../../configuration.rst:127 ../../configuration.rst:255
+#: ../../docs/configuration.rst:158 ../../docs/configuration.rst:300
 msgid "db-pool-timeout"
 msgstr ""
 
-#: ../../configuration.rst:128 ../../configuration.rst:268
+#: ../../docs/configuration.rst:159 ../../docs/configuration.rst:313
 msgid "db-pre-request"
 msgstr ""
 
-#: ../../configuration.rst:129 ../../configuration.rst:282
+#: ../../docs/configuration.rst:160 ../../docs/configuration.rst:327
 msgid "db-prepared-statements"
 msgstr ""
 
-#: ../../configuration.rst:130 ../../configuration.rst:298
+#: ../../docs/configuration.rst:161 ../../docs/configuration.rst:343
 msgid "db-schemas"
 msgstr ""
 
-#: ../../configuration.rst:131 ../../configuration.rst:335
+#: ../../docs/configuration.rst:162 ../../docs/configuration.rst:380
 msgid "db-tx-end"
 msgstr ""
 
-#: ../../configuration.rst:131
+#: ../../docs/configuration.rst:162
 msgid "commit"
 msgstr ""
 
-#: ../../configuration.rst:132 ../../configuration.rst:361
+#: ../../docs/configuration.rst:163 ../../docs/configuration.rst:406
 msgid "db-uri"
 msgstr ""
 
-#: ../../configuration.rst:133 ../../configuration.rst:379
+#: ../../docs/configuration.rst:163
+msgid "postgresql://"
+msgstr ""
+
+#: ../../docs/configuration.rst:164 ../../docs/configuration.rst:422
 msgid "db-use-legacy-gucs"
 msgstr ""
 
-#: ../../configuration.rst:134 ../../configuration.rst:393
+#: ../../docs/configuration.rst:165 ../../docs/configuration.rst:436
 msgid "jwt-aud"
 msgstr ""
 
-#: ../../configuration.rst:135 ../../configuration.rst:405
+#: ../../docs/configuration.rst:166 ../../docs/configuration.rst:448
 msgid "jwt-role-claim-key"
 msgstr ""
 
-#: ../../configuration.rst:135
+#: ../../docs/configuration.rst:166
 msgid ".role"
 msgstr ""
 
-#: ../../configuration.rst:136 ../../configuration.rst:429
+#: ../../docs/configuration.rst:167 ../../docs/configuration.rst:472
 msgid "jwt-secret"
 msgstr ""
 
-#: ../../configuration.rst:137 ../../configuration.rst:441
+#: ../../docs/configuration.rst:168 ../../docs/configuration.rst:486
 msgid "jwt-secret-is-base64"
 msgstr ""
 
-#: ../../configuration.rst:137
+#: ../../docs/configuration.rst:168
 msgid "False"
 msgstr ""
 
-#: ../../configuration.rst:138 ../../configuration.rst:453
+#: ../../docs/configuration.rst:169 ../../docs/configuration.rst:498
 msgid "log-level"
 msgstr "日志级别"
 
-#: ../../configuration.rst:138
+#: ../../docs/configuration.rst:169
 msgid "error"
 msgstr ""
 
-#: ../../configuration.rst:139 ../../configuration.rst:482
+#: ../../docs/configuration.rst:170 ../../docs/configuration.rst:527
 msgid "openapi-mode"
 msgstr ""
 
-#: ../../configuration.rst:139
+#: ../../docs/configuration.rst:170
 msgid "follow-privileges"
 msgstr ""
 
-#: ../../configuration.rst:140 ../../configuration.rst:508
+#: ../../docs/configuration.rst:171 ../../docs/configuration.rst:553
 msgid "openapi-server-proxy-uri"
 msgstr ""
 
-#: ../../configuration.rst:141 ../../configuration.rst:536
+#: ../../docs/configuration.rst:172 ../../docs/configuration.rst:581
 msgid "raw-media-types"
 msgstr ""
 
-#: ../../configuration.rst:142 ../../configuration.rst:557
+#: ../../docs/configuration.rst:173 ../../docs/configuration.rst:602
 msgid "server-host"
 msgstr ""
 
-#: ../../configuration.rst:142
+#: ../../docs/configuration.rst:173
 msgid "!4"
 msgstr ""
 
-#: ../../configuration.rst:143 ../../configuration.rst:575
+#: ../../docs/configuration.rst:174 ../../docs/configuration.rst:620
 msgid "server-port"
 msgstr ""
 
-#: ../../configuration.rst:143
+#: ../../docs/configuration.rst:174
 msgid "3000"
 msgstr ""
 
-#: ../../configuration.rst:144 ../../configuration.rst:587
+#: ../../docs/configuration.rst:175 ../../docs/configuration.rst:632
 msgid "server-unix-socket"
 msgstr ""
 
-#: ../../configuration.rst:145 ../../configuration.rst:604
+#: ../../docs/configuration.rst:176 ../../docs/configuration.rst:649
 msgid "server-unix-socket-mode"
 msgstr ""
 
-#: ../../configuration.rst:145
+#: ../../docs/configuration.rst:176
 msgid "660"
 msgstr ""
 
-#: ../../configuration.rst:154 ../../configuration.rst:166
-#: ../../configuration.rst:178 ../../configuration.rst:190
-#: ../../configuration.rst:204 ../../configuration.rst:216
-#: ../../configuration.rst:234 ../../configuration.rst:246
-#: ../../configuration.rst:258 ../../configuration.rst:273
-#: ../../configuration.rst:285 ../../configuration.rst:303
-#: ../../configuration.rst:338 ../../configuration.rst:364
-#: ../../configuration.rst:382 ../../configuration.rst:396
-#: ../../configuration.rst:410 ../../configuration.rst:432
-#: ../../configuration.rst:444 ../../configuration.rst:456
-#: ../../configuration.rst:485 ../../configuration.rst:511
-#: ../../configuration.rst:539 ../../configuration.rst:560
-#: ../../configuration.rst:578 ../../configuration.rst:590
-#: ../../configuration.rst:607
+#: ../../docs/configuration.rst:185 ../../docs/configuration.rst:197
+#: ../../docs/configuration.rst:209 ../../docs/configuration.rst:223
+#: ../../docs/configuration.rst:235 ../../docs/configuration.rst:249
+#: ../../docs/configuration.rst:261 ../../docs/configuration.rst:279
+#: ../../docs/configuration.rst:291 ../../docs/configuration.rst:303
+#: ../../docs/configuration.rst:318 ../../docs/configuration.rst:330
+#: ../../docs/configuration.rst:348 ../../docs/configuration.rst:383
+#: ../../docs/configuration.rst:409 ../../docs/configuration.rst:425
+#: ../../docs/configuration.rst:439 ../../docs/configuration.rst:453
+#: ../../docs/configuration.rst:475 ../../docs/configuration.rst:489
+#: ../../docs/configuration.rst:501 ../../docs/configuration.rst:530
+#: ../../docs/configuration.rst:556 ../../docs/configuration.rst:584
+#: ../../docs/configuration.rst:605 ../../docs/configuration.rst:623
+#: ../../docs/configuration.rst:635 ../../docs/configuration.rst:652
 msgid "**Environment**"
 msgstr ""
 
-#: ../../configuration.rst:154
-msgid "PGRST_APP_SETTINGS_*"
+#: ../../docs/configuration.rst:185
+msgid "PGRST_ADMIN_SERVER_PORT"
 msgstr ""
 
-#: ../../configuration.rst:155 ../../configuration.rst:167
-#: ../../configuration.rst:179 ../../configuration.rst:191
-#: ../../configuration.rst:205 ../../configuration.rst:217
-#: ../../configuration.rst:235 ../../configuration.rst:247
-#: ../../configuration.rst:259 ../../configuration.rst:274
-#: ../../configuration.rst:286 ../../configuration.rst:304
-#: ../../configuration.rst:339 ../../configuration.rst:365
-#: ../../configuration.rst:383 ../../configuration.rst:397
-#: ../../configuration.rst:411 ../../configuration.rst:433
-#: ../../configuration.rst:445 ../../configuration.rst:457
-#: ../../configuration.rst:486 ../../configuration.rst:512
-#: ../../configuration.rst:540 ../../configuration.rst:561
-#: ../../configuration.rst:579 ../../configuration.rst:591
-#: ../../configuration.rst:608
+#: ../../docs/configuration.rst:186 ../../docs/configuration.rst:198
+#: ../../docs/configuration.rst:210 ../../docs/configuration.rst:224
+#: ../../docs/configuration.rst:236 ../../docs/configuration.rst:250
+#: ../../docs/configuration.rst:262 ../../docs/configuration.rst:280
+#: ../../docs/configuration.rst:292 ../../docs/configuration.rst:304
+#: ../../docs/configuration.rst:319 ../../docs/configuration.rst:331
+#: ../../docs/configuration.rst:349 ../../docs/configuration.rst:384
+#: ../../docs/configuration.rst:410 ../../docs/configuration.rst:426
+#: ../../docs/configuration.rst:440 ../../docs/configuration.rst:454
+#: ../../docs/configuration.rst:476 ../../docs/configuration.rst:490
+#: ../../docs/configuration.rst:502 ../../docs/configuration.rst:531
+#: ../../docs/configuration.rst:557 ../../docs/configuration.rst:585
+#: ../../docs/configuration.rst:606 ../../docs/configuration.rst:624
+#: ../../docs/configuration.rst:636 ../../docs/configuration.rst:653
 msgid "**In-Database**"
 msgstr ""
 
-#: ../../configuration.rst:155
-msgid "pgrst.app_settings_*"
-msgstr ""
-
-#: ../../configuration.rst:158
-msgid ""
-"Arbitrary settings that can be used to pass in secret keys directly as "
-"strings, or via OS environment variables. For instance: :code:`app.settings."
-"jwt_secret = \"$(MYAPP_JWT_SECRET)\"` will take :code:`MYAPP_JWT_SECRET` from "
-"the environment and make it available to postgresql functions as :code:"
-"`current_setting('app.settings.jwt_secret')`."
-msgstr ""
-
-#: ../../configuration.rst:166
-msgid "PGRST_DB_ANON_ROLE"
-msgstr ""
-
-#: ../../configuration.rst:167 ../../configuration.rst:179
-#: ../../configuration.rst:191 ../../configuration.rst:205
-#: ../../configuration.rst:247 ../../configuration.rst:259
-#: ../../configuration.rst:365 ../../configuration.rst:457
+#: ../../docs/configuration.rst:186 ../../docs/configuration.rst:210
+#: ../../docs/configuration.rst:224 ../../docs/configuration.rst:236
+#: ../../docs/configuration.rst:250 ../../docs/configuration.rst:292
+#: ../../docs/configuration.rst:304 ../../docs/configuration.rst:410
+#: ../../docs/configuration.rst:502 ../../docs/configuration.rst:606
+#: ../../docs/configuration.rst:624 ../../docs/configuration.rst:636
+#: ../../docs/configuration.rst:653
 msgid "`n/a`"
 msgstr ""
 
-#: ../../configuration.rst:170
-msgid ""
-"The database role to use when executing commands on behalf of unauthenticated "
-"clients. For more information, see :ref:`roles`."
+#: ../../docs/configuration.rst:189
+msgid "Specifies the port for the :ref:`health_check` endpoints."
 msgstr ""
 
-#: ../../configuration.rst:178
+#: ../../docs/configuration.rst:197
+msgid "PGRST_APP_SETTINGS_*"
+msgstr ""
+
+#: ../../docs/configuration.rst:198
+msgid "pgrst.app_settings_*"
+msgstr ""
+
+#: ../../docs/configuration.rst:201
+msgid ""
+"Arbitrary settings that can be used to pass in secret keys directly as "
+"strings, or via OS environment variables. For instance: "
+":code:`app.settings.jwt_secret = \"$(MYAPP_JWT_SECRET)\"` will take "
+":code:`MYAPP_JWT_SECRET` from the environment and make it available to "
+"postgresql functions as "
+":code:`current_setting('app.settings.jwt_secret')`."
+msgstr ""
+
+#: ../../docs/configuration.rst:209
+msgid "PGRST_DB_ANON_ROLE"
+msgstr ""
+
+#: ../../docs/configuration.rst:213
+msgid ""
+"The database role to use when executing commands on behalf of "
+"unauthenticated clients. For more information, see :ref:`roles`."
+msgstr ""
+
+#: ../../docs/configuration.rst:215
+msgid "When unset anonymous access will be blocked."
+msgstr ""
+
+#: ../../docs/configuration.rst:223
 msgid "PGRST_DB_CHANNEL"
 msgstr ""
 
-#: ../../configuration.rst:182
+#: ../../docs/configuration.rst:227
 msgid ""
-"The name of the notification channel that PostgREST uses for :ref:"
-"`schema_reloading` and configuration reloading."
+"The name of the notification channel that PostgREST uses for "
+":ref:`schema_reloading` and configuration reloading."
 msgstr ""
 
-#: ../../configuration.rst:190
+#: ../../docs/configuration.rst:235
 msgid "PGRST_DB_CHANNEL_ENABLED"
 msgstr ""
 
-#: ../../configuration.rst:194
+#: ../../docs/configuration.rst:239
 msgid ""
-"When this is set to :code:`true`, the notification channel specified in :ref:"
-"`db-channel` is enabled."
+"When this is set to :code:`true`, the notification channel specified in "
+":ref:`db-channel` is enabled."
 msgstr ""
 
-#: ../../configuration.rst:196
+#: ../../docs/configuration.rst:241
 msgid ""
-"You should set this to ``false`` when using PostgresSQL behind an external "
-"connection pooler such as PgBouncer working in transaction pooling mode. See :"
-"ref:`this section <external_connection_poolers>` for more information."
+"You should set this to ``false`` when using PostgresSQL behind an "
+"external connection pooler such as PgBouncer working in transaction "
+"pooling mode. See :ref:`this section <external_connection_poolers>` for "
+"more information."
 msgstr ""
 
-#: ../../configuration.rst:204
+#: ../../docs/configuration.rst:249
 msgid "PGRST_DB_CONFIG"
 msgstr ""
 
-#: ../../configuration.rst:208
+#: ../../docs/configuration.rst:253
 msgid "Enables the in-database configuration."
 msgstr ""
 
-#: ../../configuration.rst:216
+#: ../../docs/configuration.rst:261
 msgid "PGRST_DB_EXTRA_SEARCH_PATH"
 msgstr ""
 
-#: ../../configuration.rst:217
+#: ../../docs/configuration.rst:262
 msgid "pgrst.db_extra_search_path"
 msgstr ""
 
-#: ../../configuration.rst:220
+#: ../../docs/configuration.rst:265
 msgid ""
-"Extra schemas to add to the `search_path <https://www.postgresql.org/docs/"
-"current/ddl-schemas.html#DDL-SCHEMAS-PATH>`_ of every request. These schemas "
-"tables, views and stored procedures **don't get API endpoints**, they can "
-"only be referred from the database objects inside your :ref:`db-schemas`."
+"Extra schemas to add to the `search_path "
+"<https://www.postgresql.org/docs/current/ddl-schemas.html#DDL-SCHEMAS-"
+"PATH>`_ of every request. These schemas tables, views and stored "
+"procedures **don't get API endpoints**, they can only be referred from "
+"the database objects inside your :ref:`db-schemas`."
 msgstr ""
 
-#: ../../configuration.rst:222
+#: ../../docs/configuration.rst:267
 msgid ""
-"This parameter was meant to make it easier to use **PostgreSQL extensions** "
-"(like PostGIS) that are outside of the :ref:`db-schemas`."
+"This parameter was meant to make it easier to use **PostgreSQL "
+"extensions** (like PostGIS) that are outside of the :ref:`db-schemas`."
 msgstr ""
 
-#: ../../configuration.rst:224
+#: ../../docs/configuration.rst:269
 msgid ""
-"Multiple schemas can be added in a comma-separated string, e.g. ``public, "
-"extensions``."
+"Multiple schemas can be added in a comma-separated string, e.g. ``public,"
+" extensions``."
 msgstr ""
 
-#: ../../configuration.rst:231
+#: ../../docs/configuration.rst:276
 msgid ""
-"*For backwards compatibility, this config parameter is also available without "
-"prefix as \"max-rows\".*"
+"*For backwards compatibility, this config parameter is also available "
+"without prefix as \"max-rows\".*"
 msgstr ""
 
-#: ../../configuration.rst:234
+#: ../../docs/configuration.rst:279
 msgid "PGRST_DB_MAX_ROWS"
 msgstr ""
 
-#: ../../configuration.rst:235
+#: ../../docs/configuration.rst:280
 msgid "pgrst.db_max_rows"
 msgstr ""
 
-#: ../../configuration.rst:238
+#: ../../docs/configuration.rst:283
 msgid ""
-"A hard limit to the number of rows PostgREST will fetch from a view, table, "
-"or stored procedure. Limits payload size for accidental or malicious requests."
+"A hard limit to the number of rows PostgREST will fetch from a view, "
+"table, or stored procedure. Limits payload size for accidental or "
+"malicious requests."
 msgstr ""
 
-#: ../../configuration.rst:246
+#: ../../docs/configuration.rst:291
 msgid "PGRST_DB_POOL"
 msgstr ""
 
-#: ../../configuration.rst:250
+#: ../../docs/configuration.rst:295
 msgid ""
 "Number of connections to keep open in PostgREST's database pool. Having "
 "enough here for the maximum expected simultaneous client connections can "
-"improve performance. Note it's pointless to set this higher than the :code:"
-"`max_connections` GUC in your database."
+"improve performance. Note it's pointless to set this higher than the "
+":code:`max_connections` GUC in your database."
 msgstr ""
 
-#: ../../configuration.rst:258
+#: ../../docs/configuration.rst:303
 msgid "PGRST_DB_POOL_TIMEOUT"
 msgstr ""
 
-#: ../../configuration.rst:262
+#: ../../docs/configuration.rst:307
 msgid ""
 "Time to live, in seconds, for an idle database pool connection. If the "
-"timeout is reached the connection will be closed. Once a new request arrives "
-"a new connection will be started."
+"timeout is reached the connection will be closed. Once a new request "
+"arrives a new connection will be started."
 msgstr ""
 
-#: ../../configuration.rst:270
+#: ../../docs/configuration.rst:315
 msgid ""
-"*For backwards compatibility, this config parameter is also available without "
-"prefix as \"pre-request\".*"
+"*For backwards compatibility, this config parameter is also available "
+"without prefix as \"pre-request\".*"
 msgstr ""
 
-#: ../../configuration.rst:273
+#: ../../docs/configuration.rst:318
 msgid "PGRST_DB_PRE_REQUEST"
 msgstr ""
 
-#: ../../configuration.rst:274
+#: ../../docs/configuration.rst:319
 msgid "pgrst.db_pre_request"
 msgstr ""
 
-#: ../../configuration.rst:277
+#: ../../docs/configuration.rst:322
 msgid ""
-"A schema-qualified stored procedure name to call right after switching roles "
-"for a client request. This provides an opportunity to modify SQL variables or "
-"raise an exception to prevent the request from completing."
+"A schema-qualified stored procedure name to call right after switching "
+"roles for a client request. This provides an opportunity to modify SQL "
+"variables or raise an exception to prevent the request from completing."
 msgstr ""
 
-#: ../../configuration.rst:285
+#: ../../docs/configuration.rst:330
 msgid "PGRST_DB_PREPARED_STATEMENTS"
 msgstr ""
 
-#: ../../configuration.rst:286
+#: ../../docs/configuration.rst:331
 msgid "pgrst.db_prepared_statements"
 msgstr ""
 
-#: ../../configuration.rst:289
+#: ../../docs/configuration.rst:334
 msgid "Enables or disables prepared statements."
 msgstr ""
 
-#: ../../configuration.rst:291
+#: ../../docs/configuration.rst:336
 msgid ""
-"When disabled, the generated queries will be parameterized (invulnerable to "
-"SQL injection) but they will not be prepared (cached in the database "
-"session). Not using prepared statements will noticeably decrease performance, "
-"so it's recommended to always have this setting enabled."
+"When disabled, the generated queries will be parameterized (invulnerable "
+"to SQL injection) but they will not be prepared (cached in the database "
+"session). Not using prepared statements will noticeably decrease "
+"performance, so it's recommended to always have this setting enabled."
 msgstr ""
 
-#: ../../configuration.rst:293
+#: ../../docs/configuration.rst:338
 msgid ""
 "You should only set this to ``false`` when using PostgresSQL behind an "
-"external connection pooler such as PgBouncer working in transaction pooling "
-"mode. See :ref:`this section <external_connection_poolers>` for more "
-"information."
+"external connection pooler such as PgBouncer working in transaction "
+"pooling mode. See :ref:`this section <external_connection_poolers>` for "
+"more information."
 msgstr ""
 
-#: ../../configuration.rst:300
+#: ../../docs/configuration.rst:345
 msgid ""
 "*For backwards compatibility, this config parameter is also available in "
 "singular as \"db-schema\".*"
 msgstr ""
 
-#: ../../configuration.rst:303
+#: ../../docs/configuration.rst:348
 msgid "PGRST_DB_SCHEMAS"
 msgstr ""
 
-#: ../../configuration.rst:304
+#: ../../docs/configuration.rst:349
 msgid "pgrst.db_schemas"
 msgstr ""
 
-#: ../../configuration.rst:307
+#: ../../docs/configuration.rst:352
 msgid ""
 "The database schema to expose to REST clients. Tables, views and stored "
 "procedures in this schema will get API endpoints."
 msgstr ""
 
-#: ../../configuration.rst:313
+#: ../../docs/configuration.rst:358
 msgid ""
-"This schema gets added to the `search_path <https://www.postgresql.org/docs/"
-"current/ddl-schemas.html#DDL-SCHEMAS-PATH>`_ of every request."
+"This schema gets added to the `search_path "
+"<https://www.postgresql.org/docs/current/ddl-schemas.html#DDL-SCHEMAS-"
+"PATH>`_ of every request."
 msgstr ""
 
-#: ../../configuration.rst:316
+#: ../../docs/configuration.rst:361
 msgid "List of schemas"
 msgstr ""
 
-#: ../../configuration.rst:318
+#: ../../docs/configuration.rst:363
 msgid ""
-"You can also specify a list of schemas that can be used for **schema-based "
-"multitenancy** and **api versioning** by :ref:`multiple-schemas`. Example:"
+"You can also specify a list of schemas that can be used for **schema-"
+"based multitenancy** and **api versioning** by :ref:`multiple-schemas`. "
+"Example:"
 msgstr ""
 
-#: ../../configuration.rst:324
+#: ../../docs/configuration.rst:369
 msgid ""
-"If you don't :ref:`Switch Schemas <multiple-schemas>`, the first schema in "
-"the list(``tenant1`` in this case) is chosen as the default schema."
+"If you don't :ref:`Switch Schemas <multiple-schemas>`, the first schema "
+"in the list(``tenant1`` in this case) is chosen as the default schema."
 msgstr ""
 
-#: ../../configuration.rst:326
+#: ../../docs/configuration.rst:371
 msgid ""
-"*Only the chosen schema* gets added to the `search_path <https://www."
-"postgresql.org/docs/current/ddl-schemas.html#DDL-SCHEMAS-PATH>`_ of every "
-"request."
+"*Only the chosen schema* gets added to the `search_path "
+"<https://www.postgresql.org/docs/current/ddl-schemas.html#DDL-SCHEMAS-"
+"PATH>`_ of every request."
 msgstr ""
 
-#: ../../configuration.rst:330
+#: ../../docs/configuration.rst:375
 msgid "Never expose private schemas in this way. See :ref:`schema_isolation`."
 msgstr ""
 
-#: ../../configuration.rst:338
+#: ../../docs/configuration.rst:383
 msgid "PGRST_DB_TX_END"
 msgstr ""
 
-#: ../../configuration.rst:339
+#: ../../docs/configuration.rst:384
 msgid "pgrst.db_tx_end"
 msgstr ""
 
-#: ../../configuration.rst:342
+#: ../../docs/configuration.rst:387
 msgid "Specifies how to terminate the database transactions."
 msgstr ""
 
-#: ../../configuration.rst:364
+#: ../../docs/configuration.rst:409
 msgid "PGRST_DB_URI"
 msgstr ""
 
-#: ../../configuration.rst:368
+#: ../../docs/configuration.rst:413
 msgid ""
-"The standard connection PostgreSQL `URI format <https://www.postgresql.org/"
-"docs/current/libpq-connect.html#LIBPQ-CONNSTRING>`_. Symbols and unusual "
-"characters in the password or other fields should be percent encoded to avoid "
-"a parse error. If enforcing an SSL connection to the database is required you "
-"can use `sslmode <https://www.postgresql.org/docs/current/libpq-ssl."
-"html#LIBPQ-SSL-SSLMODE-STATEMENTS>`_ in the URI, for example ``postgres://"
-"user:pass@host:5432/dbname?sslmode=require``."
+"The standard connection PostgreSQL `URI format "
+"<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
+"CONNSTRING>`_. Symbols and unusual characters in the password or other "
+"fields should be percent encoded to avoid a parse error. If enforcing an "
+"SSL connection to the database is required you can use `sslmode "
+"<https://www.postgresql.org/docs/current/libpq-ssl.html#LIBPQ-SSL-"
+"SSLMODE-STATEMENTS>`_ in the URI, for example "
+"``postgres://user:pass@host:5432/dbname?sslmode=require``."
 msgstr ""
 
-#: ../../configuration.rst:370
+#: ../../docs/configuration.rst:415
 msgid ""
-"When running PostgREST on the same machine as PostgreSQL, it is also possible "
-"to connect to the database using a `Unix socket <https://en.wikipedia.org/"
-"wiki/Unix_domain_socket>`_ and the `Peer Authentication method <https://www."
-"postgresql.org/docs/current/auth-peer.html>`_ as an alternative to TCP/IP "
-"communication and authentication with a password, this also grants higher "
-"performance.  To do this you can omit the host and the password, e.g. "
-"``postgres://user@/dbname``, see the `libpq connection string <https://www."
-"postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING>`_ "
-"documentation for more details."
+"When running PostgREST on the same machine as PostgreSQL, it is also "
+"possible to connect to the database using a `Unix socket "
+"<https://en.wikipedia.org/wiki/Unix_domain_socket>`_ and the `Peer "
+"Authentication method <https://www.postgresql.org/docs/current/auth-"
+"peer.html>`_ as an alternative to TCP/IP communication and authentication"
+" with a password, this also grants higher performance.  To do this you "
+"can omit the host and the password, e.g. ``postgres://user@/dbname``, see"
+" the `libpq connection string <https://www.postgresql.org/docs/current"
+"/libpq-connect.html#LIBPQ-CONNSTRING>`_ documentation for more details."
 msgstr ""
 
-#: ../../configuration.rst:372
+#: ../../docs/configuration.rst:417
 msgid ""
-"On older systems like Centos 6, with older versions of libpq, a different db-"
-"uri syntax has to be used. In this case the URI is a string of space "
-"separated key-value pairs (key=value), so the example above would be :code:`"
-"\"host=host user=user port=5432 dbname=dbname password=pass\"`."
+"Choosing a value for this parameter beginning with the at sign such as "
+"``@filename`` (e.g. ``@./configs/my-config``) loads the connection string"
+" out of an external file."
 msgstr ""
 
-#: ../../configuration.rst:374
+#: ../../docs/configuration.rst:425
+msgid "PGRST_DB_USE_LEGACY_GUCS"
+msgstr ""
+
+#: ../../docs/configuration.rst:426
+msgid "pgrst.db_use_legacy_gucs"
+msgstr ""
+
+#: ../../docs/configuration.rst:429
+msgid ""
+"Determine if GUC request settings for headers, cookies and jwt claims use"
+" the `legacy names <https://postgrest.org/en/v8.0/api.html#accessing-"
+"request-headers-cookies-and-jwt-claims>`_ (string with dashes, invalid "
+"starting from PostgreSQL v14) with text values instead of the :ref:`new "
+"names <guc_req_headers_cookies_claims>` (string without dashes, valid on "
+"all PostgreSQL versions) with json values."
+msgstr ""
+
+#: ../../docs/configuration.rst:431
+msgid "On PostgreSQL versions 14 and above, this parameter is ignored."
+msgstr ""
+
+#: ../../docs/configuration.rst:439
+msgid "PGRST_JWT_AUD"
+msgstr ""
+
+#: ../../docs/configuration.rst:440
+msgid "pgrst.jwt_aud"
+msgstr ""
+
+#: ../../docs/configuration.rst:443
+msgid ""
+"Specifies the `JWT audience claim "
+"<https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.3>`_. If this "
+"claim is present in the client provided JWT then you must set this to the"
+" same value as in the JWT, otherwise verifying the JWT will fail."
+msgstr ""
+
+#: ../../docs/configuration.rst:450
+msgid ""
+"*For backwards compatibility, this config parameter is also available "
+"without prefix as \"role-claim-key\".*"
+msgstr ""
+
+#: ../../docs/configuration.rst:453
+msgid "PGRST_JWT_ROLE_CLAIM_KEY"
+msgstr ""
+
+#: ../../docs/configuration.rst:454
+msgid "pgrst.jwt_role_claim_key"
+msgstr ""
+
+#: ../../docs/configuration.rst:457
+msgid ""
+"A JSPath DSL that specifies the location of the :code:`role` key in the "
+"JWT claims. This can be used to consume a JWT provided by a third party "
+"service like Auth0, Okta or Keycloak. Usage examples:"
+msgstr ""
+
+#: ../../docs/configuration.rst:475
+msgid "PGRST_JWT_SECRET"
+msgstr ""
+
+#: ../../docs/configuration.rst:476
+msgid "pgrst.jwt_secret"
+msgstr ""
+
+#: ../../docs/configuration.rst:479
+msgid ""
+"The secret or `JSON Web Key (JWK) (or set) "
+"<https://datatracker.ietf.org/doc/html/rfc7517>`_ used to decode JWT "
+"tokens clients provide for authentication. For security the key must be "
+"**at least 32 characters long**. If this parameter is not specified then "
+"PostgREST refuses authentication requests. Choosing a value for this "
+"parameter beginning with the at sign such as :code:`@filename` loads the "
+"secret out of an external file. This is useful for automating "
+"deployments. Note that any binary secrets must be base64 encoded. Both "
+"symmetric and asymmetric cryptography are supported. For more info see "
+":ref:`asym_keys`."
+msgstr ""
+
+#: ../../docs/configuration.rst:481
 msgid ""
 "Choosing a value for this parameter beginning with the at sign such as "
 "``@filename`` (e.g. ``@./configs/my-config``) loads the secret out of an "
 "external file."
 msgstr ""
 
-#: ../../configuration.rst:382
-msgid "PGRST_DB_USE_LEGACY_GUCS"
-msgstr ""
-
-#: ../../configuration.rst:383
-msgid "pgrst.db_use_legacy_gucs"
-msgstr ""
-
-#: ../../configuration.rst:386
-msgid ""
-"Determine if GUC request settings for headers, cookies and jwt claims use the "
-"`legacy names <https://postgrest.org/en/v8.0/api.html#accessing-request-"
-"headers-cookies-and-jwt-claims>`_ (string with dashes, invalid starting from "
-"PostgreSQL v14) with text values instead of the :ref:`new names "
-"<guc_req_headers_cookies_claims>` (string without dashes, valid on all "
-"PostgreSQL versions) with json values."
-msgstr ""
-
-#: ../../configuration.rst:388
-msgid "On PostgreSQL versions 14 and above, this parameter is ignored."
-msgstr ""
-
-#: ../../configuration.rst:396
-msgid "PGRST_JWT_AUD"
-msgstr ""
-
-#: ../../configuration.rst:397
-msgid "pgrst.jwt_aud"
-msgstr ""
-
-#: ../../configuration.rst:400
-msgid ""
-"Specifies the `JWT audience claim <https://datatracker.ietf.org/doc/html/"
-"rfc7519#section-4.1.3>`_. If this claim is present in the client provided JWT "
-"then you must set this to the same value as in the JWT, otherwise verifying "
-"the JWT will fail."
-msgstr ""
-
-#: ../../configuration.rst:407
-msgid ""
-"*For backwards compatibility, this config parameter is also available without "
-"prefix as \"role-claim-key\".*"
-msgstr ""
-
-#: ../../configuration.rst:410
-msgid "PGRST_JWT_ROLE_CLAIM_KEY"
-msgstr ""
-
-#: ../../configuration.rst:411
-msgid "pgrst.jwt_role_claim_key"
-msgstr ""
-
-#: ../../configuration.rst:414
-msgid ""
-"A JSPath DSL that specifies the location of the :code:`role` key in the JWT "
-"claims. This can be used to consume a JWT provided by a third party service "
-"like Auth0, Okta or Keycloak. Usage examples:"
-msgstr ""
-
-#: ../../configuration.rst:432
-msgid "PGRST_JWT_SECRET"
-msgstr ""
-
-#: ../../configuration.rst:433
-msgid "pgrst.jwt_secret"
-msgstr ""
-
-#: ../../configuration.rst:436
-msgid ""
-"The secret or `JSON Web Key (JWK) (or set) <https://datatracker.ietf.org/doc/"
-"html/rfc7517>`_ used to decode JWT tokens clients provide for authentication. "
-"For security the key must be **at least 32 characters long**. If this "
-"parameter is not specified then PostgREST refuses authentication requests. "
-"Choosing a value for this parameter beginning with the at sign such as :code:"
-"`@filename` loads the secret out of an external file. This is useful for "
-"automating deployments. Note that any binary secrets must be base64 encoded. "
-"Both symmetric and asymmetric cryptography are supported. For more info see :"
-"ref:`asym_keys`."
-msgstr ""
-
-#: ../../configuration.rst:444
+#: ../../docs/configuration.rst:489
 msgid "PGRST_JWT_SECRET_IS_BASE64"
 msgstr ""
 
-#: ../../configuration.rst:445
+#: ../../docs/configuration.rst:490
 msgid "pgrst.jwt_secret_is_base64"
 msgstr ""
 
-#: ../../configuration.rst:448
+#: ../../docs/configuration.rst:493
 msgid ""
-"When this is set to :code:`true`, the value derived from :code:`jwt-secret` "
-"will be treated as a base64 encoded secret."
+"When this is set to :code:`true`, the value derived from :code:`jwt-"
+"secret` will be treated as a base64 encoded secret."
 msgstr ""
 
-#: ../../configuration.rst:456
+#: ../../docs/configuration.rst:501
 msgid "PGRST_LOG_LEVEL"
 msgstr ""
 
-#: ../../configuration.rst:460
+#: ../../docs/configuration.rst:505
 msgid "Specifies the level of information to be logged while running PostgREST."
 msgstr ""
 
-#: ../../configuration.rst:477
+#: ../../docs/configuration.rst:522
 msgid ""
-"Because currently there's no buffering for logging, the levels with minimal "
-"logging(``crit/error``) will increase throughput."
+"Because currently there's no buffering for logging, the levels with "
+"minimal logging(``crit/error``) will increase throughput."
 msgstr ""
 
-#: ../../configuration.rst:485
+#: ../../docs/configuration.rst:530
 msgid "PGRST_OPENAPI_MODE"
 msgstr ""
 
-#: ../../configuration.rst:486
+#: ../../docs/configuration.rst:531
 msgid "pgrst.openapi_mode"
 msgstr ""
 
-#: ../../configuration.rst:489
+#: ../../docs/configuration.rst:534
 msgid "Specifies how the OpenAPI output should be displayed."
 msgstr ""
 
-#: ../../configuration.rst:511
+#: ../../docs/configuration.rst:556
 msgid "PGRST_OPENAPI_SERVER_PROXY_URI"
 msgstr ""
 
-#: ../../configuration.rst:512
+#: ../../docs/configuration.rst:557
 msgid "pgrst.openapi_server_proxy_uri"
 msgstr ""
 
-#: ../../configuration.rst:515
+#: ../../docs/configuration.rst:560
 msgid ""
-"Overrides the base URL used within the OpenAPI self-documentation hosted at "
-"the API root path. Use a complete URI syntax :code:`scheme:[//[user:"
-"password@]host[:port]][/]path[?query][#fragment]`. Ex. :code:`https://"
-"postgrest.com`"
+"Overrides the base URL used within the OpenAPI self-documentation hosted "
+"at the API root path. Use a complete URI syntax "
+":code:`scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]`."
+" Ex. :code:`https://postgrest.com`"
 msgstr ""
 
-#: ../../configuration.rst:539
+#: ../../docs/configuration.rst:584
 msgid "PGRST_RAW_MEDIA_TYPES"
 msgstr ""
 
-#: ../../configuration.rst:540
+#: ../../docs/configuration.rst:585
 msgid "pgrst.raw_media_types"
 msgstr ""
 
-#: ../../configuration.rst:543
+#: ../../docs/configuration.rst:588
 msgid ""
-"This serves to extend the `Media Types <https://en.wikipedia.org/wiki/"
-"Media_type>`_ that PostgREST currently accepts through an ``Accept`` header."
+"This serves to extend the `Media Types "
+"<https://en.wikipedia.org/wiki/Media_type>`_ that PostgREST currently "
+"accepts through an ``Accept`` header."
 msgstr ""
 
-#: ../../configuration.rst:545
+#: ../../docs/configuration.rst:590
 msgid ""
-"These media types can be requested by following the same rules as the ones "
-"defined in :ref:`binary_output`."
+"These media types can be requested by following the same rules as the "
+"ones defined in :ref:`binary_output`."
 msgstr ""
 
-#: ../../configuration.rst:547
+#: ../../docs/configuration.rst:592
 msgid ""
-"As an example, the below config would allow you to request an **image** and a "
-"**XML** file by doing a request with ``Accept: image/png`` or ``Accept: text/"
-"xml``, respectively."
+"As an example, the below config would allow you to request an **image** "
+"and a **XML** file by doing a request with ``Accept: image/png`` or "
+"``Accept: text/xml``, respectively."
 msgstr ""
 
-#: ../../configuration.rst:560
+#: ../../docs/configuration.rst:605
 msgid "PGRST_SERVER_HOST"
 msgstr ""
 
-#: ../../configuration.rst:561
-msgid "pgrst.server_host"
-msgstr ""
-
-#: ../../configuration.rst:564
+#: ../../docs/configuration.rst:609
 msgid ""
 "Where to bind the PostgREST web server. In addition to the usual address "
-"options, PostgREST interprets these reserved addresses with special meanings:"
+"options, PostgREST interprets these reserved addresses with special "
+"meanings:"
 msgstr ""
 
-#: ../../configuration.rst:566
+#: ../../docs/configuration.rst:611
 msgid ":code:`*` - any IPv4 or IPv6 hostname"
 msgstr ""
 
-#: ../../configuration.rst:567
+#: ../../docs/configuration.rst:612
 msgid ":code:`*4` - any IPv4 or IPv6 hostname, IPv4 preferred"
 msgstr ""
 
-#: ../../configuration.rst:568
+#: ../../docs/configuration.rst:613
 msgid ":code:`!4` - any IPv4 hostname"
 msgstr ""
 
-#: ../../configuration.rst:569
+#: ../../docs/configuration.rst:614
 msgid ":code:`*6` - any IPv4 or IPv6 hostname, IPv6 preferred"
 msgstr ""
 
-#: ../../configuration.rst:570
+#: ../../docs/configuration.rst:615
 msgid ":code:`!6` - any IPv6 hostname"
 msgstr ""
 
-#: ../../configuration.rst:578
+#: ../../docs/configuration.rst:623
 msgid "PGRST_SERVER_PORT"
 msgstr ""
 
-#: ../../configuration.rst:579
-msgid "pgrst.server_port"
-msgstr ""
-
-#: ../../configuration.rst:582
+#: ../../docs/configuration.rst:627
 msgid "The TCP port to bind the web server."
 msgstr ""
 
-#: ../../configuration.rst:590
+#: ../../docs/configuration.rst:635
 msgid "PGRST_SERVER_UNIX_SOCKET"
 msgstr ""
 
-#: ../../configuration.rst:591
-msgid "pgrst.server_unix_socket"
-msgstr ""
-
-#: ../../configuration.rst:594
+#: ../../docs/configuration.rst:639
 msgid ""
 "`Unix domain socket <https://en.wikipedia.org/wiki/Unix_domain_socket>`_ "
-"where to bind the PostgREST web server. If specified, this takes precedence "
-"over :ref:`server-port`. Example:"
+"where to bind the PostgREST web server. If specified, this takes "
+"precedence over :ref:`server-port`. Example:"
 msgstr ""
 
-#: ../../configuration.rst:607
+#: ../../docs/configuration.rst:652
 msgid "PGRST_SERVER_UNIX_SOCKET_MODE"
 msgstr ""
 
-#: ../../configuration.rst:608
-msgid "pgrst.server_unix_socket_mode"
+#: ../../docs/configuration.rst:656
+msgid ""
+"`Unix file mode <https://en.wikipedia.org/wiki/File_system_permissions>`_"
+" to be set for the socket specified in :ref:`server-unix-socket` Needs to"
+" be a valid octal between 600 and 777."
 msgstr ""
 
-#: ../../configuration.rst:611
-msgid ""
-"`Unix file mode <https://en.wikipedia.org/wiki/File_system_permissions>`_ to "
-"be set for the socket specified in :ref:`server-unix-socket` Needs to be a "
-"valid octal between 600 and 777."
-msgstr ""
+#~ msgid ""
+#~ "PostgREST reads a configuration file to"
+#~ " determine information about the database"
+#~ " and how to serve client requests."
+#~ " There is no predefined location for"
+#~ " this file, you must specify the "
+#~ "file path as the one and only "
+#~ "argument to the server:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The configuration file must contain a"
+#~ " set of key value pairs. At "
+#~ "minimum you must include these keys:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The user specified in the db-uri"
+#~ " is also known as the authenticator"
+#~ " role. For more information about the"
+#~ " anonymous vs authenticator roles see "
+#~ "the :ref:`roles`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To reload the configuration without "
+#~ "restarting the PostgREST server, send a"
+#~ " SIGUSR2 signal to the server "
+#~ "process."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This method does not reload "
+#~ ":ref:`env_variables_config` and it will not"
+#~ " work for reloading a Docker "
+#~ "container configuration. In these cases, "
+#~ "you need to restart the PostgREST "
+#~ "server or use the :ref:`in_db_config` as"
+#~ " an alternative."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following settings will not be "
+#~ "reread when reloading the configuration. "
+#~ "You will need to restart PostgREST "
+#~ "in that case."
+#~ msgstr ""
+
+#~ msgid "In-database configuration reloading"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To reload the in-database configuration"
+#~ " from within the database, you can"
+#~ " use a NOTIFY command."
+#~ msgstr ""
+
+#~ msgid "Required"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On older systems like Centos 6, "
+#~ "with older versions of libpq, a "
+#~ "different db-uri syntax has to be"
+#~ " used. In this case the URI is"
+#~ " a string of space separated key-"
+#~ "value pairs (key=value), so the example"
+#~ " above would be :code:`\"host=host "
+#~ "user=user port=5432 dbname=dbname password=pass\"`."
+#~ msgstr ""
+
+#~ msgid "pgrst.server_host"
+#~ msgstr ""
+
+#~ msgid "pgrst.server_port"
+#~ msgstr ""
+
+#~ msgid "pgrst.server_unix_socket"
+#~ msgstr ""
+
+#~ msgid "pgrst.server_unix_socket_mode"
+#~ msgstr ""
+

@@ -7,517 +7,513 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 20:06+0800\n"
+"POT-Creation-Date: 2022-03-13 08:59+0800\n"
 "PO-Revision-Date: 2022-01-15 20:01+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
-"Language-Team: \n"
 "Language: zh_CN\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-"X-Generator: Poedit 3.0.1\n"
 
-#: ../../releases/v5.2.0.rst:2
+#: ../../docs/releases/v5.2.0.rst:2
 msgid "v5.2.0"
 msgstr "v5.2.0"
 
-#: ../../releases/v5.2.0.rst:4
+#: ../../docs/releases/v5.2.0.rst:4
 msgid ""
-"Explicit qualification introduced in ``v5.0`` is no longer necessary, this "
-"section will not be included from this version onwards.  A :ref:`db-extra-"
-"search-path` configuration parameter was introduced to avoid the need to "
-"explictly qualify database objects. If you install PostgreSQL extensions on "
-"the ``public`` schema, they'll work normally from now on."
+"Explicit qualification introduced in ``v5.0`` is no longer necessary, "
+"this section will not be included from this version onwards.  A :ref:`db-"
+"extra-search-path` configuration parameter was introduced to avoid the "
+"need to explictly qualify database objects. If you install PostgreSQL "
+"extensions on the ``public`` schema, they'll work normally from now on."
 msgstr ""
-"``v5.0`` 引入的显式限定不再需要，从这个版本开始将不包括这个部分。同时引入了"
-"一个 :ref:`db-extra-search-path` 配置参数，以避免显式限定数据库对象。从现在"
-"开始，所有在 ``public`` Schema 上安装 PostgreSQL 扩展都可以正常工作了。"
+"``v5.0`` 引入的显式限定不再需要，从这个版本开始将不包括这个部分。同时引入了一个 :ref:`db-extra-search-path` "
+"配置参数，以避免显式限定数据库对象。从现在开始，所有在 ``public`` Schema 上安装 PostgreSQL 扩展都可以正常工作了。"
 
-#: ../../releases/v5.2.0.rst:6
+#: ../../docs/releases/v5.2.0.rst:6
 msgid "Now you can filter :ref:`tabs-cols-w-spaces`."
 msgstr "现在可以使用 :ref:`tabs-cols-w-spaces` 进行筛选了。"
 
-#: ../../releases/v5.2.0.rst:8
+#: ../../docs/releases/v5.2.0.rst:8
 msgid "Included the ability to quote columns that have :ref:`reserved-chars`."
 msgstr "支持引用列包含 :ref:`reserved-chars` 了。"
 
-#: ../../releases/v5.2.0.rst:10
+#: ../../docs/releases/v5.2.0.rst:10
 msgid ""
-"Thanks to `Zhou Feng <https://github.com/zhoufeng1989>`_, now is possible "
-"to reference an external file in :ref:`db-uri`."
+"Thanks to `Zhou Feng <https://github.com/zhoufeng1989>`_, now is possible"
+" to reference an external file in :ref:`db-uri`."
 msgstr ""
-"感谢 `Zhou Feng <https://github.com/zhoufeng1989>`_，现在可以在 :ref:`db-"
-"uri` 中引用外部文件了。"
+"感谢 `Zhou Feng <https://github.com/zhoufeng1989>`_，现在可以在 :ref:`db-uri` "
+"中引用外部文件了。"
 
-#: ../../releases/v5.2.0.rst:12
+#: ../../docs/releases/v5.2.0.rst:12
 msgid ""
 "Thanks to `Russell Davies <https://github.com/russelldavies>`_, Json Web "
 "Key Sets are now accepted by :ref:`jwt-secret`."
 msgstr ""
-"感谢 `Russell Davies <https://github.com/russelldavies>`_，:ref:`jwt-"
-"secret` 现在接受 JWKS（JSON Web Key Sets）了。"
+"感谢 `Russell Davies <https://github.com/russelldavies>`_，:ref:`jwt-secret`"
+" 现在接受 JWKS（JSON Web Key Sets）了。"
 
-#: ../../releases/v5.2.0.rst:15 ../../releases/v6.0.2.rst:52
-#: ../../releases/v7.0.0.rst:75 ../../releases/v7.0.1.rst:38
-#: ../../releases/v8.0.0.rst:143 ../../releases/v9.0.0.rst:82
+#: ../../docs/releases/v5.2.0.rst:15 ../../docs/releases/v6.0.2.rst:52
+#: ../../docs/releases/v7.0.0.rst:75 ../../docs/releases/v7.0.1.rst:38
+#: ../../docs/releases/v8.0.0.rst:143 ../../docs/releases/v9.0.0.rst:82
 msgid "Thanks"
 msgstr "感谢"
 
-#: ../../releases/v5.2.0.rst:17 ../../releases/v7.0.0.rst:77
-#: ../../releases/v7.0.1.rst:40
+#: ../../docs/releases/v5.2.0.rst:17 ../../docs/releases/v7.0.0.rst:77
+#: ../../docs/releases/v7.0.1.rst:40
 msgid "This release was made possible thanks to:"
 msgstr "该版本的发布要感谢："
 
-#: ../../releases/v5.2.0.rst:19 ../../releases/v6.0.2.rst:68
-#: ../../releases/v7.0.0.rst:91 ../../releases/v7.0.1.rst:54
-#: ../../releases/v8.0.0.rst:176 ../../releases/v9.0.0.rst:115
+#: ../../docs/releases/v5.2.0.rst:19 ../../docs/releases/v6.0.2.rst:68
+#: ../../docs/releases/v7.0.0.rst:91 ../../docs/releases/v7.0.1.rst:54
+#: ../../docs/releases/v8.0.0.rst:176 ../../docs/releases/v9.0.0.rst:115
 msgid "`Daniel Babiak <https://github.com/dbabiak>`_"
 msgstr "`Daniel Babiak <https://github.com/dbabiak>`_"
 
-#: ../../releases/v5.2.0.rst:20
+#: ../../docs/releases/v5.2.0.rst:20
 msgid "`Michel Pelletier <https://github.com/michelp>`_"
 msgstr "`Michel Pelletier <https://github.com/michelp>`_"
 
-#: ../../releases/v5.2.0.rst:21 ../../releases/v6.0.2.rst:70
-#: ../../releases/v7.0.0.rst:94 ../../releases/v7.0.1.rst:57
-#: ../../releases/v8.0.0.rst:177 ../../releases/v9.0.0.rst:116
+#: ../../docs/releases/v5.2.0.rst:21 ../../docs/releases/v6.0.2.rst:70
+#: ../../docs/releases/v7.0.0.rst:94 ../../docs/releases/v7.0.1.rst:57
+#: ../../docs/releases/v8.0.0.rst:177 ../../docs/releases/v9.0.0.rst:116
 msgid "Tsingson Qin"
 msgstr "Tsingson Qin"
 
-#: ../../releases/v5.2.0.rst:22 ../../releases/v6.0.2.rst:72
-#: ../../releases/v7.0.0.rst:96 ../../releases/v7.0.1.rst:59
-#: ../../releases/v8.0.0.rst:179 ../../releases/v9.0.0.rst:118
+#: ../../docs/releases/v5.2.0.rst:22 ../../docs/releases/v6.0.2.rst:72
+#: ../../docs/releases/v7.0.0.rst:96 ../../docs/releases/v7.0.1.rst:59
+#: ../../docs/releases/v8.0.0.rst:179 ../../docs/releases/v9.0.0.rst:118
 msgid "Jay Hannah"
 msgstr "Jay Hannah"
 
-#: ../../releases/v5.2.0.rst:23
+#: ../../docs/releases/v5.2.0.rst:23
 msgid "Victor Adossi"
 msgstr "Victor Adossi"
 
-#: ../../releases/v5.2.0.rst:24
+#: ../../docs/releases/v5.2.0.rst:24
 msgid "Petr Beles"
 msgstr "Petr Beles"
 
-#: ../../releases/v5.2.0.rst:26 ../../releases/v6.0.2.rst:79
-#: ../../releases/v7.0.0.rst:106 ../../releases/v8.0.0.rst:191
-#: ../../releases/v9.0.0.rst:130
+#: ../../docs/releases/v5.2.0.rst:26 ../../docs/releases/v6.0.2.rst:79
+#: ../../docs/releases/v7.0.0.rst:106 ../../docs/releases/v8.0.0.rst:191
+#: ../../docs/releases/v9.0.0.rst:130
 msgid ""
-"If you like to join them please consider `supporting PostgREST development "
-"<https://github.com/PostgREST/postgrest#user-content-supporting-"
-"development>`_."
+"If you like to join them please consider `supporting PostgREST "
+"development <https://github.com/PostgREST/postgrest#user-content-"
+"supporting-development>`_."
 msgstr ""
-"如果你也想加入他们，请考虑 `支持 PostgREST 开发 <https://github.com/"
-"PostgREST/postgrest#user-content-supporting-development>`_。"
+"如果你也想加入他们，请考虑 `支持 PostgREST 开发 <https://github.com/PostgREST/postgrest"
+"#user-content-supporting-development>`_。"
 
-#: ../../releases/v6.0.2.rst:6
+#: ../../docs/releases/v6.0.2.rst:6
 msgid "v6.0.2"
 msgstr "v6.0.2"
 
-#: ../../releases/v6.0.2.rst:8
+#: ../../docs/releases/v6.0.2.rst:8
 msgid ""
-"Full changelog is available at `PostgREST releases page <https://github.com/"
-"PostgREST/postgrest/releases>`_."
+"Full changelog is available at `PostgREST releases page "
+"<https://github.com/PostgREST/postgrest/releases>`_."
 msgstr ""
-"完整变更日志位于 `PostgREST 发布页面 <https://github.com/PostgREST/"
-"postgrest/releases>`_。"
+"完整变更日志位于 `PostgREST 发布页面 "
+"<https://github.com/PostgREST/postgrest/releases>`_。"
 
-#: ../../releases/v6.0.2.rst:11 ../../releases/v7.0.0.rst:11
-#: ../../releases/v8.0.0.rst:11
+#: ../../docs/releases/v6.0.2.rst:11 ../../docs/releases/v7.0.0.rst:11
+#: ../../docs/releases/v8.0.0.rst:11
 msgid "Added"
 msgstr "新增"
 
-#: ../../releases/v6.0.2.rst:13
+#: ../../docs/releases/v6.0.2.rst:13
 msgid ""
-"Ignoring payload keys for insert/update can be now done with the ``?"
-"columns`` query parameter. See :ref:`specify_columns`. |br| -- `@steve-"
-"chavez <https://github.com/steve-chavez>`_"
+"Ignoring payload keys for insert/update can be now done with the "
+"``?columns`` query parameter. See :ref:`specify_columns`. |br| -- "
+"`@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"可用 ``?columns`` 查询参数指定 INSERT / UPDATE 的作用字段。参见 :ref:"
-"`specify_columns`。 |br| — `@steve-chavez <https://github.com/steve-"
-"chavez>`_"
+"可用 ``?columns`` 查询参数指定 INSERT / UPDATE 的作用字段。参见 :ref:`specify_columns`。 "
+"|br| — `@steve-chavez <https://github.com/steve-chavez>`_"
 
-#: ../../releases/v6.0.2.rst:16
+#: ../../docs/releases/v6.0.2.rst:16
 msgid ""
 "`websearch_to_tsquery <https://www.postgresql.org/docs/current/functions-"
 "textsearch.html#id-1.5.8.19.7.2.2.7.1.1.1>`_ can now be used through the "
-"``wfts`` operator. See :ref:`fts`. |br| -- `@herulume <https://github.com/"
-"herulume>`_"
+"``wfts`` operator. See :ref:`fts`. |br| -- `@herulume "
+"<https://github.com/herulume>`_"
 msgstr ""
 "`websearch_to_tsquery <https://www.postgresql.org/docs/current/functions-"
-"textsearch.html#id-1.5.8.19.7.2.2.7.1.1.1>`_ 可被 ``wfts`` 操作符使用。参"
-"见 :ref:`fts`。 |br| — `@herulume <https://github.com/herulume>`_"
+"textsearch.html#id-1.5.8.19.7.2.2.7.1.1.1>`_ 可被 ``wfts`` 操作符使用。参见 "
+":ref:`fts`。 |br| — `@herulume <https://github.com/herulume>`_"
 
-#: ../../releases/v6.0.2.rst:20
+#: ../../docs/releases/v6.0.2.rst:20
 msgid ""
-"Resource Embedding on materialized views is now possible. See :ref:"
-"`embedding_views`. |br| -- `@vitorbaptista <https://github.com/"
-"vitorbaptista>`_"
+"Resource Embedding on materialized views is now possible. See "
+":ref:`embedding_views`. |br| -- `@vitorbaptista "
+"<https://github.com/vitorbaptista>`_"
 msgstr ""
 "资源嵌入支持物化视图。参见 :ref:`embedding_views`。 |br| — `@vitorbaptista "
 "<https://github.com/vitorbaptista>`_"
 
-#: ../../releases/v6.0.2.rst:23
+#: ../../docs/releases/v6.0.2.rst:23
 msgid ""
-"Bulk calling an RPC is now allowed. See :ref:`bulk_call`. |br| -- `@steve-"
-"chavez <https://github.com/steve-chavez>`_"
-msgstr ""
-"允许批量调用 RPC。参见 :ref:`bulk_call`。 |br| — `@steve-chavez <https://"
-"github.com/steve-chavez>`_"
-
-#: ../../releases/v6.0.2.rst:26
-msgid ""
-"It's now possible to request a ``text/plain`` output. See :ref:"
-"`plain_text_output`. |br| -- `@steve-chavez <https://github.com/steve-"
-"chavez>`_"
-msgstr ""
-"新增支持 ``text/plain`` 请求的输出。参见 :ref:`plain_text_output`。 |br| — "
+"Bulk calling an RPC is now allowed. See :ref:`bulk_call`. |br| -- "
 "`@steve-chavez <https://github.com/steve-chavez>`_"
-
-#: ../../releases/v6.0.2.rst:29
-msgid ""
-"Config option for specifying PostgREST database pool timeout. See :ref:`db-"
-"pool-timeout`. |br| -- `@Qu4tro <https://github.com/Qu4tro>`_"
 msgstr ""
-"配置选项：支持设置 PostgREST 数据库连接池超时时间。参见 :ref:`db-pool-"
-"timeout`。 |br| — `@Qu4tro <https://github.com/Qu4tro>`_"
+"允许批量调用 RPC。参见 :ref:`bulk_call`。 |br| — `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 
-#: ../../releases/v6.0.2.rst:32
+#: ../../docs/releases/v6.0.2.rst:26
 msgid ""
-"Config option for binding the PostgREST web server to an unix socket. See :"
-"ref:`server-unix-socket`. |br| -- `@Dansvidania <https://github.com/"
-"Dansvidania>`_"
+"It's now possible to request a ``text/plain`` output. See "
+":ref:`plain_text_output`. |br| -- `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 msgstr ""
-"配置选项：支持绑定 PostgREST Web 服务器到 UNIX 套接字。 参见 :ref:`server-"
-"unix-socket`。 |br| — `@Dansvidania <https://github.com/Dansvidania>`_"
+"新增支持 ``text/plain`` 请求的输出。参见 :ref:`plain_text_output`。 |br| — `@steve-"
+"chavez <https://github.com/steve-chavez>`_"
 
-#: ../../releases/v6.0.2.rst:35
+#: ../../docs/releases/v6.0.2.rst:29
 msgid ""
-"Config option for extending the supported media types. See :ref:`raw-media-"
-"types`. |br| -- `@Dansvidania <https://github.com/Dansvidania>`_"
+"Config option for specifying PostgREST database pool timeout. See :ref"
+":`db-pool-timeout`. |br| -- `@Qu4tro <https://github.com/Qu4tro>`_"
 msgstr ""
-"配置选项：新增更多媒体类型的支持。参见 :ref:`raw-media-types`。 |br| — "
-"`@Dansvidania <https://github.com/Dansvidania>`_"
+"配置选项：支持设置 PostgREST 数据库连接池超时时间。参见 :ref:`db-pool-timeout`。 |br| — `@Qu4tro"
+" <https://github.com/Qu4tro>`_"
 
-#: ../../releases/v6.0.2.rst:38
+#: ../../docs/releases/v6.0.2.rst:32
 msgid ""
-"We now offer an statically linked binary for Linux. Look for **postgrest-"
-"<version>-linux-x64-static.tar.xz** on the `releases page <https://github."
-"com/PostgREST/postgrest/releases>`_. |br| -- `@clojurians-org <https://"
-"github.com/clojurians-org>`_"
+"Config option for binding the PostgREST web server to an unix socket. See"
+" :ref:`server-unix-socket`. |br| -- `@Dansvidania "
+"<https://github.com/Dansvidania>`_"
 msgstr ""
-"新增 Linux 静态链接可执行文件，可在`发布页面 <https://github.com/PostgREST/"
-"postgrest/releases>`_ 查找 **postgrest-<version>-linux-x64-static.tar."
-"xz**。 |br| — `@clojurians-org <https://github.com/clojurians-org>`_"
+"配置选项：支持绑定 PostgREST Web 服务器到 UNIX 套接字。 参见 :ref:`server-unix-socket`。 |br|"
+" — `@Dansvidania <https://github.com/Dansvidania>`_"
 
-#: ../../releases/v6.0.2.rst:42
+#: ../../docs/releases/v6.0.2.rst:35
+msgid ""
+"Config option for extending the supported media types. See :ref:`raw-"
+"media-types`. |br| -- `@Dansvidania <https://github.com/Dansvidania>`_"
+msgstr ""
+"配置选项：新增更多媒体类型的支持。参见 :ref:`raw-media-types`。 |br| — `@Dansvidania "
+"<https://github.com/Dansvidania>`_"
+
+#: ../../docs/releases/v6.0.2.rst:38
+msgid ""
+"We now offer an statically linked binary for Linux. Look for "
+"**postgrest-<version>-linux-x64-static.tar.xz** on the `releases page "
+"<https://github.com/PostgREST/postgrest/releases>`_. |br| -- "
+"`@clojurians-org <https://github.com/clojurians-org>`_"
+msgstr ""
+"新增 Linux 静态链接可执行文件，可在`发布页面 "
+"<https://github.com/PostgREST/postgrest/releases>`_ 查找 "
+"**postgrest-<version>-linux-x64-static.tar.xz**。 |br| — `@clojurians-org "
+"<https://github.com/clojurians-org>`_"
+
+#: ../../docs/releases/v6.0.2.rst:42
 msgid "A :ref:`how_tos` section was added to the documentation."
 msgstr "文档新增 :ref:`how_tos` 内容。"
 
-#: ../../releases/v6.0.2.rst:45 ../../releases/v7.0.0.rst:64
-#: ../../releases/v7.0.1.rst:33 ../../releases/v8.0.0.rst:67
+#: ../../docs/releases/v6.0.2.rst:45 ../../docs/releases/v7.0.0.rst:64
+#: ../../docs/releases/v7.0.1.rst:33 ../../docs/releases/v8.0.0.rst:67
 msgid "Changed"
 msgstr "变更"
 
-#: ../../releases/v6.0.2.rst:47
+#: ../../docs/releases/v6.0.2.rst:47
 msgid ""
-"``SIGHUP`` support was removed. You should use ``SIGUSR1`` instead. See :"
-"ref:`schema_reloading`."
-msgstr ""
-"移除对 ``SIGHUP`` 的支持，请使用 ``SIGUSR1`` 替代。参见 :ref:"
-"`schema_reloading`。"
+"``SIGHUP`` support was removed. You should use ``SIGUSR1`` instead. See "
+":ref:`schema_reloading`."
+msgstr "移除对 ``SIGHUP`` 的支持，请使用 ``SIGUSR1`` 替代。参见 :ref:`schema_reloading`。"
 
-#: ../../releases/v6.0.2.rst:49
+#: ../../docs/releases/v6.0.2.rst:49
 msgid ""
-"server-host default of ``127.0.0.1`` was changed to ``!4``. See :ref:"
-"`server-host`."
-msgstr ""
-"server-host 默认值由 ``127.0.0.1`` 变更为 ``!4``。参见 :ref:`server-host`。"
+"server-host default of ``127.0.0.1`` was changed to ``!4``. See :ref"
+":`server-host`."
+msgstr "server-host 默认值由 ``127.0.0.1`` 变更为 ``!4``。参见 :ref:`server-host`。"
 
-#: ../../releases/v6.0.2.rst:54
+#: ../../docs/releases/v6.0.2.rst:54
 msgid "This release is sponsored by:"
 msgstr "该版本由以下机构 / 个人赞助："
 
-#: ../../releases/v6.0.2.rst:69 ../../releases/v7.0.0.rst:92
-#: ../../releases/v7.0.1.rst:55 ../../releases/v8.0.0.rst:173
-#: ../../releases/v9.0.0.rst:112
+#: ../../docs/releases/v6.0.2.rst:69 ../../docs/releases/v7.0.0.rst:92
+#: ../../docs/releases/v7.0.1.rst:55 ../../docs/releases/v8.0.0.rst:173
+#: ../../docs/releases/v9.0.0.rst:112
 msgid "Evans Fernandes"
 msgstr "Evans Fernandes"
 
-#: ../../releases/v6.0.2.rst:71 ../../releases/v7.0.0.rst:95
-#: ../../releases/v7.0.1.rst:58 ../../releases/v8.0.0.rst:178
-#: ../../releases/v9.0.0.rst:117
+#: ../../docs/releases/v6.0.2.rst:71 ../../docs/releases/v7.0.0.rst:95
+#: ../../docs/releases/v7.0.1.rst:58 ../../docs/releases/v8.0.0.rst:178
+#: ../../docs/releases/v9.0.0.rst:117
 msgid "Michel Pelletier"
 msgstr "Michel Pelletier"
 
-#: ../../releases/v6.0.2.rst:73 ../../releases/v7.0.0.rst:97
-#: ../../releases/v7.0.1.rst:60 ../../releases/v8.0.0.rst:180
-#: ../../releases/v9.0.0.rst:119
+#: ../../docs/releases/v6.0.2.rst:73 ../../docs/releases/v7.0.0.rst:97
+#: ../../docs/releases/v7.0.1.rst:60 ../../docs/releases/v8.0.0.rst:180
+#: ../../docs/releases/v9.0.0.rst:119
 msgid "Robert Stolarz"
 msgstr "Robert Stolarz"
 
-#: ../../releases/v6.0.2.rst:74 ../../releases/v7.0.0.rst:98
-#: ../../releases/v7.0.1.rst:61
+#: ../../docs/releases/v6.0.2.rst:74 ../../docs/releases/v7.0.0.rst:98
+#: ../../docs/releases/v7.0.1.rst:61
 msgid "Kofi Gumbs"
 msgstr "Kofi Gumbs"
 
-#: ../../releases/v6.0.2.rst:75 ../../releases/v7.0.0.rst:99
-#: ../../releases/v7.0.1.rst:62 ../../releases/v8.0.0.rst:181
-#: ../../releases/v9.0.0.rst:120
+#: ../../docs/releases/v6.0.2.rst:75 ../../docs/releases/v7.0.0.rst:99
+#: ../../docs/releases/v7.0.1.rst:62 ../../docs/releases/v8.0.0.rst:181
+#: ../../docs/releases/v9.0.0.rst:120
 msgid "Nicholas DiBiase"
 msgstr "Nicholas DiBiase"
 
-#: ../../releases/v6.0.2.rst:76 ../../releases/v7.0.0.rst:100
-#: ../../releases/v7.0.1.rst:63 ../../releases/v8.0.0.rst:182
-#: ../../releases/v9.0.0.rst:121
+#: ../../docs/releases/v6.0.2.rst:76 ../../docs/releases/v7.0.0.rst:100
+#: ../../docs/releases/v7.0.1.rst:63 ../../docs/releases/v8.0.0.rst:182
+#: ../../docs/releases/v9.0.0.rst:121
 msgid "Christopher Reid"
 msgstr "Christopher Reid"
 
-#: ../../releases/v6.0.2.rst:77 ../../releases/v7.0.0.rst:101
-#: ../../releases/v7.0.1.rst:64 ../../releases/v8.0.0.rst:183
-#: ../../releases/v9.0.0.rst:122
+#: ../../docs/releases/v6.0.2.rst:77 ../../docs/releases/v7.0.0.rst:101
+#: ../../docs/releases/v7.0.1.rst:64 ../../docs/releases/v8.0.0.rst:183
+#: ../../docs/releases/v9.0.0.rst:122
 msgid "Nathan Bouscal"
 msgstr "Nathan Bouscal"
 
-#: ../../releases/v7.0.0.rst:6
+#: ../../docs/releases/v7.0.0.rst:6
 msgid "v7.0.0"
 msgstr "v7.0.0"
 
-#: ../../releases/v7.0.0.rst:8
+#: ../../docs/releases/v7.0.0.rst:8
 msgid ""
 "You can download this release at the `PostgREST v7.0.0 release page "
 "<https://github.com/PostgREST/postgrest/releases/tag/v7.0.0>`_."
 msgstr ""
-"你可在 `PostgREST v7.0.0 发布页面 <https://github.com/PostgREST/postgrest/"
-"releases/tag/v7.0.0>`_ 下载该版本。"
+"你可在 `PostgREST v7.0.0 发布页面 "
+"<https://github.com/PostgREST/postgrest/releases/tag/v7.0.0>`_ 下载该版本。"
 
-#: ../../releases/v7.0.0.rst:13
+#: ../../docs/releases/v7.0.0.rst:13
 msgid ""
-"Support for :ref:`Switching to a schema <multiple-schemas>` defined in :ref:"
-"`db-schemas`. |br| -- `@steve-chavez <https://github.com/steve-chavez>`_, "
-"`@mahmoudkassem <https://github.com/mahmoudkassem>`_"
+"Support for :ref:`Switching to a schema <multiple-schemas>` defined in "
+":ref:`db-schemas`. |br| -- `@steve-chavez <https://github.com/steve-"
+"chavez>`_, `@mahmoudkassem <https://github.com/mahmoudkassem>`_"
 msgstr ""
-"支持在 :ref:`db-schemas` 的范围内 :ref:`切换 Schema <multiple-schemas>`。 |"
-"br| — `@steve-chavez <https://github.com/steve-chavez>`_, `@mahmoudkassem "
+"支持在 :ref:`db-schemas` 的范围内 :ref:`切换 Schema <multiple-schemas>`。 |br| — "
+"`@steve-chavez <https://github.com/steve-chavez>`_, `@mahmoudkassem "
 "<https://github.com/mahmoudkassem>`_"
 
-#: ../../releases/v7.0.0.rst:16
+#: ../../docs/releases/v7.0.0.rst:16
 msgid ""
 "Support for :ref:`planned_count` and :ref:`estimated_count`. |br| -- "
-"`@steve-chavez <https://github.com/steve-chavez>`_, `@LorenzHenk <https://"
-"github.com/LorenzHenk>`_"
+"`@steve-chavez <https://github.com/steve-chavez>`_, `@LorenzHenk "
+"<https://github.com/LorenzHenk>`_"
 msgstr ""
 "支持 :ref:`planned_count` 和 :ref:`estimated_count`。 |br| — `@steve-chavez "
-"<https://github.com/steve-chavez>`_, `@LorenzHenk <https://github.com/"
-"LorenzHenk>`_"
+"<https://github.com/steve-chavez>`_, `@LorenzHenk "
+"<https://github.com/LorenzHenk>`_"
 
-#: ../../releases/v7.0.0.rst:19
+#: ../../docs/releases/v7.0.0.rst:19
 msgid ""
-"Support for the :ref:`on_conflict <on_conflict>` query parameter to UPSERT "
-"based on a unique constraint. |br| -- `@ykst <https://github.com/ykst>`_"
+"Support for the :ref:`on_conflict <on_conflict>` query parameter to "
+"UPSERT based on a unique constraint. |br| -- `@ykst "
+"<https://github.com/ykst>`_"
 msgstr ""
-"支持 :ref:`on_conflict <on_conflict>` 查询参数，用于基于唯一约束的 UPSERT 操"
-"作。 |br| — `@ykst <https://github.com/ykst>`_"
+"支持 :ref:`on_conflict <on_conflict>` 查询参数，用于基于唯一约束的 UPSERT 操作。 |br| — "
+"`@ykst <https://github.com/ykst>`_"
 
-#: ../../releases/v7.0.0.rst:22
+#: ../../docs/releases/v7.0.0.rst:22
 msgid ""
-"Support for :ref:`Resource Embedding Disambiguation <embed_disamb>`. |br| "
-"-- `@steve-chavez <https://github.com/steve-chavez>`_"
+"Support for :ref:`Resource Embedding Disambiguation <embed_disamb>`. |br|"
+" -- `@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
 "支持 :ref:`资源嵌入消除歧义 <embed_disamb>`。 |br| — `@steve-chavez "
 "<https://github.com/steve-chavez>`_"
 
-#: ../../releases/v7.0.0.rst:25
+#: ../../docs/releases/v7.0.0.rst:25
 msgid ""
 "Support for user defined socket permission via :ref:`server-unix-socket-"
-"mode` config option |br| -- `@Dansvidania <https://github.com/Dansvidania>`_"
+"mode` config option |br| -- `@Dansvidania "
+"<https://github.com/Dansvidania>`_"
 msgstr ""
-"支持用户通过 :ref:`server-unix-socket-mode` 配置选项自定义套接字权限。 |br| "
-"— `@Dansvidania <https://github.com/Dansvidania>`_"
+"支持用户通过 :ref:`server-unix-socket-mode` 配置选项自定义套接字权限。 |br| — `@Dansvidania "
+"<https://github.com/Dansvidania>`_"
 
-#: ../../releases/v7.0.0.rst:28
+#: ../../docs/releases/v7.0.0.rst:28
 msgid ""
 "HTTP logic improvements -- `@steve-chavez <https://github.com/steve-"
 "chavez>`_"
 msgstr "改进 HTTP 逻辑 — `@steve-chavez <https://github.com/steve-chavez>`_"
 
-#: ../../releases/v7.0.0.rst:30
+#: ../../docs/releases/v7.0.0.rst:30
 msgid "Support for HTTP HEAD requests."
 msgstr "支持 HTTP HEAD 请求。"
 
-#: ../../releases/v7.0.0.rst:31
+#: ../../docs/releases/v7.0.0.rst:31
 msgid "GUCs for :ref:`guc_req_path_method`."
 msgstr ":ref:`guc_req_path_method` 的 GUC。"
 
-#: ../../releases/v7.0.0.rst:32
+#: ../../docs/releases/v7.0.0.rst:32
 msgid "Support for :ref:`pre_req_headers`."
 msgstr "支持 :ref:`pre_req_headers`。"
 
-#: ../../releases/v7.0.0.rst:33
+#: ../../docs/releases/v7.0.0.rst:33
 msgid ""
-"Allow overriding provided headers(Content-Type, Location, etc) by :ref:"
-"`guc_resp_hdrs`"
-msgstr ""
-"允许所提供的消息头（Content-Type、Location 等）被 :ref:`guc_resp_hdrs` 替"
-"换。"
+"Allow overriding provided headers(Content-Type, Location, etc) by "
+":ref:`guc_resp_hdrs`"
+msgstr "允许所提供的消息头（Content-Type、Location 等）被 :ref:`guc_resp_hdrs` 替换。"
 
-#: ../../releases/v7.0.0.rst:34
+#: ../../docs/releases/v7.0.0.rst:34
 msgid ""
-"Access to the ``Authorization`` header value through ``request.header."
-"authorization``"
+"Access to the ``Authorization`` header value through "
+"``request.header.authorization``"
 msgstr "使用 ``request.header.authorization`` 读取 ``Authorization`` 消息头。"
 
-#: ../../releases/v7.0.0.rst:36 ../../releases/v7.0.1.rst:28
-#: ../../releases/v8.0.0.rst:61 ../../releases/v9.0.0.rst:51
+#: ../../docs/releases/v7.0.0.rst:36 ../../docs/releases/v7.0.1.rst:28
+#: ../../docs/releases/v8.0.0.rst:61 ../../docs/releases/v9.0.0.rst:51
 msgid "Documentation improvements"
 msgstr "文档改进"
 
-#: ../../releases/v7.0.0.rst:38
-msgid "Explanation for :ref:`Schema Structure <schema_isolation>`."
-msgstr ""
-":ref:`Schema 隔离 <schema_isolation>` 的解释说明。TODO REPORT，原文档错误"
+#: ../../docs/releases/v7.0.0.rst:38
+#, fuzzy
+msgid "Explanation for :doc:`Schema Structure <../schema_structure>`."
+msgstr ":ref:`Schema 隔离 <schema_isolation>` 的解释说明。TODO REPORT，原文档错误"
 
-#: ../../releases/v7.0.0.rst:39
+#: ../../docs/releases/v7.0.0.rst:39
 msgid "Reference for :ref:`s_proc_embed`."
 msgstr ":ref:`s_proc_embed` 的参考资料。"
 
-#: ../../releases/v7.0.0.rst:40
+#: ../../docs/releases/v7.0.0.rst:40
 msgid "Reference for :ref:`mutation_embed`."
 msgstr ":ref:`mutation_embed` 的参考资料。"
 
-#: ../../releases/v7.0.0.rst:41
+#: ../../docs/releases/v7.0.0.rst:41
 msgid "Reference for filters on :ref:`json_columns`."
 msgstr ":ref:`json_columns` 筛选的参考资料。"
 
-#: ../../releases/v7.0.0.rst:42
+#: ../../docs/releases/v7.0.0.rst:42
 msgid "How-to for :ref:`providing_img`."
 msgstr ":ref:`providing_img` 操作指南。"
 
-#: ../../releases/v7.0.0.rst:43
+#: ../../docs/releases/v7.0.0.rst:43
 msgid "Added :ref:`community_tutorials` section."
 msgstr "新增 :ref:`community_tutorials` 小节。"
 
-#: ../../releases/v7.0.0.rst:46 ../../releases/v7.0.1.rst:11
-#: ../../releases/v8.0.0.rst:95
+#: ../../docs/releases/v7.0.0.rst:46 ../../docs/releases/v7.0.1.rst:11
+#: ../../docs/releases/v8.0.0.rst:95
 msgid "Fixed"
 msgstr "已修复"
 
-#: ../../releases/v7.0.0.rst:48
+#: ../../docs/releases/v7.0.0.rst:48
 msgid ""
-"Allow embedding a view when its source table foreign key is UNIQUE |br| -- "
-"`@bwbroersma <https://github.com/bwbroersma>`_"
+"Allow embedding a view when its source table foreign key is UNIQUE |br| "
+"-- `@bwbroersma <https://github.com/bwbroersma>`_"
 msgstr ""
-"允许源表外键是唯一索引（UNIQUE）的视图被嵌入。 |br| — `@bwbroersma <https://"
-"github.com/bwbroersma>`_"
+"允许源表外键是唯一索引（UNIQUE）的视图被嵌入。 |br| — `@bwbroersma "
+"<https://github.com/bwbroersma>`_"
 
-#: ../../releases/v7.0.0.rst:51
+#: ../../docs/releases/v7.0.0.rst:51
 msgid ""
-"``Accept: application/vnd.pgrst.object+json`` behavior is now enforced for "
-"POST/PATCH/DELETE regardless of ``Prefer: return=minimal`` |br| -- `@dwagin "
-"<https://github.com/dwagin>`_"
+"``Accept: application/vnd.pgrst.object+json`` behavior is now enforced "
+"for POST/PATCH/DELETE regardless of ``Prefer: return=minimal`` |br| -- "
+"`@dwagin <https://github.com/dwagin>`_"
 msgstr ""
-"无关 ``Prefer: return=minimal``，``Accept: application/vnd.pgrst.object"
-"+json`` 行为现在对 POST / PATCH / DELETE 强制执行， |br| — `@dwagin "
-"<https://github.com/dwagin>`_"
+"无关 ``Prefer: return=minimal``，``Accept: "
+"application/vnd.pgrst.object+json`` 行为现在对 POST / PATCH / DELETE 强制执行， "
+"|br| — `@dwagin <https://github.com/dwagin>`_"
 
-#: ../../releases/v7.0.0.rst:54
+#: ../../docs/releases/v7.0.0.rst:54
 msgid ""
-"Fix self join resource embedding on PATCH |br| -- `@herulume <https://"
-"github.com/herulume>`_, `@steve-chavez <https://github.com/steve-chavez>`_"
+"Fix self join resource embedding on PATCH |br| -- `@herulume "
+"<https://github.com/herulume>`_, `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 msgstr ""
-"修复 PATCH 操作时 SELF JOIN 的资源嵌入问题。 |br| — `@herulume <https://"
-"github.com/herulume>`_, `@steve-chavez <https://github.com/steve-chavez>`_"
+"修复 PATCH 操作时 SELF JOIN 的资源嵌入问题。 |br| — `@herulume "
+"<https://github.com/herulume>`_, `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 
-#: ../../releases/v7.0.0.rst:57
+#: ../../docs/releases/v7.0.0.rst:57
 msgid ""
 "Allow PATCH/DELETE without ``Prefer: return=minimal`` on tables with no "
-"SELECT privileges |br| -- `@steve-chavez <https://github.com/steve-chavez>`_"
-msgstr ""
-"允许不带 ``Prefer: return=minimal`` 消息头也能在没有选择（SELECT）权限的表上"
-"执行 PATCH / DELETE 操作。 |br| — `@steve-chavez <https://github.com/steve-"
+"SELECT privileges |br| -- `@steve-chavez <https://github.com/steve-"
 "chavez>`_"
+msgstr ""
+"允许不带 ``Prefer: return=minimal`` 消息头也能在没有选择（SELECT）权限的表上执行 PATCH / DELETE "
+"操作。 |br| — `@steve-chavez <https://github.com/steve-chavez>`_"
 
-#: ../../releases/v7.0.0.rst:60
+#: ../../docs/releases/v7.0.0.rst:60
 msgid ""
 "Fix many to many resource embedding for RPC/PATCH |br| -- `@steve-chavez "
 "<https://github.com/steve-chavez>`_"
 msgstr ""
-"修复 RPC/PATCH 的多对多（M:N）资源嵌入问题。|br| — `@steve-chavez <https://"
-"github.com/steve-chavez>`_"
+"修复 RPC/PATCH 的多对多（M:N）资源嵌入问题。|br| — `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 
-#: ../../releases/v7.0.0.rst:66
+#: ../../docs/releases/v7.0.0.rst:66
 msgid ""
-":ref:`bulk_call` should now be done by specifying a ``Prefer: "
-"params=multiple-objects`` header. This fixes a performance regression when "
+":ref:`bulk_call` should now be done by specifying a ``Prefer: params"
+"=multiple-objects`` header. This fixes a performance regression when "
 "calling stored procedures."
 msgstr ""
-"必须指定 ``Prefer: params=multiple-objects`` 消息头才可以执行 :ref:"
-"`bulk_call`，从而避免调用存储过程引起的性能下降。"
+"必须指定 ``Prefer: params=multiple-objects`` 消息头才可以执行 "
+":ref:`bulk_call`，从而避免调用存储过程引起的性能下降。"
 
-#: ../../releases/v7.0.0.rst:68
+#: ../../docs/releases/v7.0.0.rst:68
 msgid ""
-"Resource Embedding now outputs an error when multiple relationships between "
-"two tables are found, see :ref:`embed_disamb`."
-msgstr ""
-"当两个表之间有多个关系时，资源嵌入将会提示错误。参见 :ref:`embed_disamb`。"
+"Resource Embedding now outputs an error when multiple relationships "
+"between two tables are found, see :ref:`embed_disamb`."
+msgstr "当两个表之间有多个关系时，资源嵌入将会提示错误。参见 :ref:`embed_disamb`。"
 
-#: ../../releases/v7.0.0.rst:70
+#: ../../docs/releases/v7.0.0.rst:70
 msgid ""
-"``server-proxy-uri`` config option has been renamed to :ref:`openapi-server-"
-"proxy-uri`."
-msgstr ""
-"配置选项 ``server-proxy-uri`` 重命名为 :ref:`openapi-server-proxy-uri`。"
+"``server-proxy-uri`` config option has been renamed to :ref:`openapi-"
+"server-proxy-uri`."
+msgstr "配置选项 ``server-proxy-uri`` 重命名为 :ref:`openapi-server-proxy-uri`。"
 
-#: ../../releases/v7.0.0.rst:72
+#: ../../docs/releases/v7.0.0.rst:72
 msgid "Default Unix Socket file mode from 755 to 660"
 msgstr "默认 UNIX 套接字文件的模式由 755 变更为 660。"
 
-#: ../../releases/v7.0.0.rst:93 ../../releases/v7.0.1.rst:56
-#: ../../releases/v8.0.0.rst:174 ../../releases/v9.0.0.rst:113
+#: ../../docs/releases/v7.0.0.rst:93 ../../docs/releases/v7.0.1.rst:56
+#: ../../docs/releases/v8.0.0.rst:174 ../../docs/releases/v9.0.0.rst:113
 msgid "`Jan Sommer <https://github.com/nerfpops>`_"
 msgstr "`Jan Sommer <https://github.com/nerfpops>`_"
 
-#: ../../releases/v7.0.0.rst:102 ../../releases/v7.0.1.rst:65
-#: ../../releases/v8.0.0.rst:184 ../../releases/v9.0.0.rst:123
+#: ../../docs/releases/v7.0.0.rst:102 ../../docs/releases/v7.0.1.rst:65
+#: ../../docs/releases/v8.0.0.rst:184 ../../docs/releases/v9.0.0.rst:123
 msgid "Daniel Rafaj"
 msgstr "Daniel Rafaj"
 
-#: ../../releases/v7.0.0.rst:103 ../../releases/v7.0.1.rst:66
-#: ../../releases/v8.0.0.rst:185 ../../releases/v9.0.0.rst:124
+#: ../../docs/releases/v7.0.0.rst:103 ../../docs/releases/v7.0.1.rst:66
+#: ../../docs/releases/v8.0.0.rst:185 ../../docs/releases/v9.0.0.rst:124
 msgid "David Fenko"
 msgstr "David Fenko"
 
-#: ../../releases/v7.0.1.rst:6
+#: ../../docs/releases/v7.0.1.rst:6
 msgid "v7.0.1"
 msgstr "v7.0.1"
 
-#: ../../releases/v7.0.1.rst:8
+#: ../../docs/releases/v7.0.1.rst:8
 msgid ""
-"You can see the full changelog at `PostgREST v7.0.1 release page <https://"
-"github.com/PostgREST/postgrest/releases/tag/v7.0.1>`_."
+"You can see the full changelog at `PostgREST v7.0.1 release page "
+"<https://github.com/PostgREST/postgrest/releases/tag/v7.0.1>`_."
 msgstr ""
-"请在 `PostgREST v7.0.1 发布页面 <https://github.com/PostgREST/postgrest/"
-"releases/tag/v7.0.1>`_ 查看完整的变更日志。"
+"请在 `PostgREST v7.0.1 发布页面 "
+"<https://github.com/PostgREST/postgrest/releases/tag/v7.0.1>`_ 查看完整的变更日志。"
 
-#: ../../releases/v7.0.1.rst:13
+#: ../../docs/releases/v7.0.1.rst:13
 msgid ""
-"Fix overloaded computed columns on RPC |br| -- `@wolfgangwalther <https://"
-"github.com/wolfgangwalther>`_"
+"Fix overloaded computed columns on RPC |br| -- `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 msgstr ""
-"修复 RPC 上的重载计算列。 |br| — `@wolfgangwalther <https://github.com/"
-"wolfgangwalther>`_"
+"修复 RPC 上的重载计算列。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v7.0.1.rst:16
+#: ../../docs/releases/v7.0.1.rst:16
 msgid ""
 "Fix POST, PATCH, DELETE with ``?select=`` and ``Prefer: return=minimal`` "
-"and PATCH with empty body |br| -- `@wolfgangwalther <https://github.com/"
-"wolfgangwalther>`_"
+"and PATCH with empty body |br| -- `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 msgstr ""
 "修复带有 ``?select=`` 和 ``Prefer: return=minimal`` 消息头的 POST、PATCH 和 "
-"DELETE，及请求数据为空的 PATCH 操作。 |br| — `@wolfgangwalther <https://"
-"github.com/wolfgangwalther>`_"
+"DELETE，及请求数据为空的 PATCH 操作。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v7.0.1.rst:19
+#: ../../docs/releases/v7.0.1.rst:19
 msgid ""
 "Fix missing ``openapi-server-proxy-uri`` config option |br| -- `@steve-"
 "chavez <https://github.com/steve-chavez>`_"
@@ -525,7 +521,7 @@ msgstr ""
 "修复缺失的 ``openapi-server-proxy-uri`` 配置项。 |br| — `@steve-chavez "
 "<https://github.com/steve-chavez>`_"
 
-#: ../../releases/v7.0.1.rst:22
+#: ../../docs/releases/v7.0.1.rst:22
 msgid ""
 "Fix ``Content-Profile`` not working for POST RPC |br| -- `@steve-chavez "
 "<https://github.com/steve-chavez>`_"
@@ -533,65 +529,63 @@ msgstr ""
 "修复 POST RPC 时 ``Content-Profile`` 不生效。 |br| — `@steve-chavez "
 "<https://github.com/steve-chavez>`_"
 
-#: ../../releases/v7.0.1.rst:25
+#: ../../docs/releases/v7.0.1.rst:25
 msgid ""
 "Fix PUT restriction for including all columns in payload |br| -- `@steve-"
 "chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"修复请求数据包含所有列时的 PUT 限制。 |br| — `@steve-chavez <https://github."
-"com/steve-chavez>`_"
+"修复请求数据包含所有列时的 PUT 限制。 |br| — `@steve-chavez <https://github.com/steve-"
+"chavez>`_"
 
-#: ../../releases/v7.0.1.rst:30
+#: ../../docs/releases/v7.0.1.rst:30
 msgid "Added package managers to :ref:`install`."
 msgstr ":ref:`install` 页面增加包管理器。"
 
-#: ../../releases/v7.0.1.rst:35
+#: ../../docs/releases/v7.0.1.rst:35
 msgid ""
 "From this version onwards, the release page will include a single Linux "
 "static executable that can be run on any Linux distribution."
-msgstr ""
-"从这个版本开始，发布页面将包含一个可以在任何 Linux 发行版上运行的单一 Linux "
-"静态可执行文件。"
+msgstr "从这个版本开始，发布页面将包含一个可以在任何 Linux 发行版上运行的单一 Linux 静态可执行文件。"
 
-#: ../../releases/v7.0.1.rst:69
+#: ../../docs/releases/v7.0.1.rst:69
 msgid ""
 "If you'd like to join them, consider `supporting PostgREST development "
 "<https://github.com/PostgREST/postgrest#user-content-supporting-"
 "development>`_."
 msgstr ""
-"如果你也想加入他们，请考虑 `支持 PostgREST 开发 <https://github.com/"
-"PostgREST/postgrest#user-content-supporting-development>`_。"
+"如果你也想加入他们，请考虑 `支持 PostgREST 开发 <https://github.com/PostgREST/postgrest"
+"#user-content-supporting-development>`_。"
 
-#: ../../releases/v8.0.0.rst:6
+#: ../../docs/releases/v8.0.0.rst:6
 msgid "v8.0.0"
 msgstr "v8.0.0"
 
-#: ../../releases/v8.0.0.rst:8
+#: ../../docs/releases/v8.0.0.rst:8
 msgid ""
 "You can download this release at the `PostgREST v8.0.0 release page "
 "<https://github.com/PostgREST/postgrest/releases/tag/v8.0.0>`_."
 msgstr ""
-"你可在 `PostgREST v8.0.0 发布页面 <https://github.com/PostgREST/postgrest/"
-"releases/tag/v8.0.0>`_ 下载该版本。"
+"你可在 `PostgREST v8.0.0 发布页面 "
+"<https://github.com/PostgREST/postgrest/releases/tag/v8.0.0>`_ 下载该版本。"
 
-#: ../../releases/v8.0.0.rst:13
+#: ../../docs/releases/v8.0.0.rst:13
 msgid ""
 "Allow HTTP status override through the :ref:`response.status "
 "<guc_resp_status>` GUC. |br| -- `@steve-chavez <https://github.com/steve-"
 "chavez>`_"
 msgstr ""
-"允许 HTTP 状态码被 :ref:`response.status <guc_resp_status>` GUC 覆盖。 |br| "
-"— `@steve-chavez <https://github.com/steve-chavez>`"
+"允许 HTTP 状态码被 :ref:`response.status <guc_resp_status>` GUC 覆盖。 |br| — "
+"`@steve-chavez <https://github.com/steve-chavez>`"
 
-#: ../../releases/v8.0.0.rst:16
+#: ../../docs/releases/v8.0.0.rst:16
 msgid ""
-"Allow :ref:`s_procs_variadic`. |br| -- `@wolfgangwalther <https://github."
-"com/wolfgangwalther>`_"
+"Allow :ref:`s_procs_variadic`. |br| -- `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 msgstr ""
-"允许 :ref:`s_procs_variadic`。 |br| — `@wolfgangwalther <https://github.com/"
-"wolfgangwalther>`_"
+"允许 :ref:`s_procs_variadic`。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:19
+#: ../../docs/releases/v8.0.0.rst:19
 msgid ""
 "Allow :ref:`embedding_view_chains` recursively to any depth. |br| -- "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
@@ -599,252 +593,250 @@ msgstr ""
 "允许 :ref:`embedding_view_chains` 递归到任意深度。 |br| — `@wolfgangwalther "
 "<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:22
+#: ../../docs/releases/v8.0.0.rst:22
 msgid ""
-"No downtime when reloading the schema cache. See :ref:`schema_reloading`. |"
-"br| -- `@steve-chavez <https://github.com/steve-chavez>`_"
+"No downtime when reloading the schema cache. See :ref:`schema_reloading`."
+" |br| -- `@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"重新加载 Schema 缓存时不再需要停机。参见 :ref:`schema_reloading`。 |br| — "
-"`@steve-chavez <https://github.com/steve-chavez>`_"
+"重新加载 Schema 缓存时不再需要停机。参见 :ref:`schema_reloading`。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:25
+#: ../../docs/releases/v8.0.0.rst:25
 msgid ""
 "Allow schema cache reloading using PostgreSQL :ref:`NOTIFY "
-"<schema_reloading_notify>` command. This enables :ref:"
-"`auto_schema_reloading`. |br| -- `@steve-chavez <https://github.com/steve-"
-"chavez>`_"
+"<schema_reloading_notify>` command. This enables "
+":ref:`auto_schema_reloading`. |br| -- `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 msgstr ""
-"允许使用 PostgreSQL :ref:`NOTIFY <schema_reloading_notify>` 命令重新加载 "
-"Schema 缓存，这将会启用 :ref:`auto_schema_reloading`。 |br| — `@steve-"
-"chavez <https://github.com/steve-chavez>`_"
+"允许使用 PostgreSQL :ref:`NOTIFY <schema_reloading_notify>` 命令重新加载 Schema "
+"缓存，这将会启用 :ref:`auto_schema_reloading`。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:28
+#: ../../docs/releases/v8.0.0.rst:28
 msgid ""
-"Allow sending the header ``Prefer: headers-only`` to get a response with a "
-"``Location`` header. See :ref:`insert_update`. |br| -- `@laurenceisla "
+"Allow sending the header ``Prefer: headers-only`` to get a response with "
+"a ``Location`` header. See :ref:`insert_update`. |br| -- `@laurenceisla "
 "<https://github.com/laurenceisla>`_"
 msgstr ""
-"允许发送消息头 ``Prefer: headers-only`` 去获取带有 ``Location`` 消息头的响"
-"应。参见 :ref:`insert_update`。 |br| — `@laurenceisla <https://github.com/"
-"laurenceisla>`_"
+"允许发送消息头 ``Prefer: headers-only`` 去获取带有 ``Location`` 消息头的响应。参见 "
+":ref:`insert_update`。 |br| — `@laurenceisla "
+"<https://github.com/laurenceisla>`_"
 
-#: ../../releases/v8.0.0.rst:31
+#: ../../docs/releases/v8.0.0.rst:31
 msgid ""
-"Allow :ref:`external_connection_poolers` such as PgBouncer in transaction "
-"pooling mode. |br| -- `@laurenceisla <https://github.com/laurenceisla>`_"
+"Allow :ref:`external_connection_poolers` such as PgBouncer in transaction"
+" pooling mode. |br| -- `@laurenceisla <https://github.com/laurenceisla>`_"
 msgstr ""
-"允许 :ref:`external_connection_poolers`，如事务池模式下的 PgBouncer 。 |br| "
-"— `@laurenceisla <https://github.com/laurenceisla>`_"
+"允许 :ref:`external_connection_poolers`，如事务池模式下的 PgBouncer 。 |br| — "
+"`@laurenceisla <https://github.com/laurenceisla>`_"
 
-#: ../../releases/v8.0.0.rst:34
+#: ../../docs/releases/v8.0.0.rst:34
 msgid ""
-"Allow :ref:`config_reloading` by sending a SIGUSR2 signal. |br| -- `@steve-"
-"chavez <https://github.com/steve-chavez>`_"
+"Allow :ref:`config_reloading` by sending a SIGUSR2 signal. |br| -- "
+"`@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"允许通过发送 SIGUSR2 信号触发 :ref:`config_reloading`。 |br| — `@steve-"
-"chavez <https://github.com/steve-chavez>`_"
+"允许通过发送 SIGUSR2 信号触发 :ref:`config_reloading`。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:37
+#: ../../docs/releases/v8.0.0.rst:37
 msgid ""
-"Allow ``Bearer`` with and without capitalization as authentication schema. "
-"See :ref:`client_auth`. |br| -- `@wolfgangwalther <https://github.com/"
-"wolfgangwalther>`_"
+"Allow ``Bearer`` with and without capitalization as authentication "
+"schema. See :ref:`client_auth`. |br| -- `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 msgstr ""
 "允许 ``Bearer`` 授权模式带或不带大写字母。参见 :ref:`client_auth`。 |br| — "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:40
+#: ../../docs/releases/v8.0.0.rst:40
+#, fuzzy
 msgid ""
 ":ref:`in_db_config` that can be :ref:`reloaded with NOTIFY "
-"<in_db_config_reloading>`. |br| -- `@steve-chavez <https://github.com/steve-"
+"<config_reloading_notify>`. |br| -- `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
+msgstr ""
+":ref:`in_db_config` 可被 :ref:`NOTIFY 重新加载 <in_db_config_reloading>`。 |br| "
+"— `@steve-chavez <https://github.com/steve-chavez>`_"
+
+#: ../../docs/releases/v8.0.0.rst:43
+msgid ""
+"Allow OPTIONS to generate HTTP methods based on views triggers. See "
+":ref:`OPTIONS requests <options_requests>`. |br| -- `@laurenceisla "
+"<https://github.com/laurenceisla>`_"
+msgstr ""
+"允许 OPTIONS 根据视图触发器生成 HTTP 方法。参见 :ref:`OPTIONS 请求 <options_requests>`。 "
+"|br| — `@laurenceisla <https://github.com/laurenceisla>`_"
+
+#: ../../docs/releases/v8.0.0.rst:46
+msgid ""
+"Show timestamps for server diagnostic information. See "
+":ref:`pgrst_logging`. |br| -- `@steve-chavez <https://github.com/steve-"
 "chavez>`_"
 msgstr ""
-":ref:`in_db_config` 可被 :ref:`NOTIFY 重新加载 <in_db_config_reloading>`。 |"
-"br| — `@steve-chavez <https://github.com/steve-chavez>`_"
+"显示服务端诊断信息的时间戳。参见 :ref:`pgrst_logging`。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:43
+#: ../../docs/releases/v8.0.0.rst:49
 msgid ""
-"Allow OPTIONS to generate HTTP methods based on views triggers. See :ref:"
-"`OPTIONS requests <options_requests>`. |br| -- `@laurenceisla <https://"
-"github.com/laurenceisla>`_"
+"Config options for showing a full OpenAPI output regardless of the JWT "
+"role privileges and for disabling it altogether. See :ref:`openapi-mode`."
+" |br| -- `@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"允许 OPTIONS 根据视图触发器生成 HTTP 方法。参见 :ref:`OPTIONS 请求 "
-"<options_requests>`。 |br| — `@laurenceisla <https://github.com/"
-"laurenceisla>`_"
+"配置选项：用于完全输出或完全禁用 OpenAPI，而不管 JWT 角色的权限。参见 :ref:`openapi-mode`。 |br| — "
+"`@steve-chavez <https://github.com/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:46
-msgid ""
-"Show timestamps for server diagnostic information. See :ref:"
-"`pgrst_logging`. |br| -- `@steve-chavez <https://github.com/steve-chavez>`_"
-msgstr ""
-"显示服务端诊断信息的时间戳。参见 :ref:`pgrst_logging`。 |br| — `@steve-"
-"chavez <https://github.com/steve-chavez>`_"
-
-#: ../../releases/v8.0.0.rst:49
-msgid ""
-"Config options for showing a full OpenAPI output regardless of the JWT role "
-"privileges and for disabling it altogether. See :ref:`openapi-mode`. |br| "
-"-- `@steve-chavez <https://github.com/steve-chavez>`_"
-msgstr ""
-"配置选项：用于完全输出或完全禁用 OpenAPI，而不管 JWT 角色的权限。参见 :ref:"
-"`openapi-mode`。 |br| — `@steve-chavez <https://github.com/steve-chavez>`_"
-
-#: ../../releases/v8.0.0.rst:52
+#: ../../docs/releases/v8.0.0.rst:52
 msgid ""
 "Config option for logging level. See :ref:`log-level`. |br| -- `@steve-"
 "chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"配置选项：日志级别。参见 :ref:`log-level`. |br| — `@steve-chavez <https://"
-"github.com/steve-chavez>`_"
+"配置选项：日志级别。参见 :ref:`log-level`. |br| — `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:55
+#: ../../docs/releases/v8.0.0.rst:55
 msgid ""
-"Config option for enabling or disabling prepared statements. See :ref:`db-"
-"prepared-statements`. |br| -- `@steve-chavez <https://github.com/steve-"
-"chavez>`_"
+"Config option for enabling or disabling prepared statements. See :ref"
+":`db-prepared-statements`. |br| -- `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 msgstr ""
-"配置选项：启用或禁用预处理语句（Prepared Statement）。参见 :ref:`db-"
-"prepared-statements`。 |br| — `@steve-chavez <https://github.com/steve-"
-"chavez>`_"
+"配置选项：启用或禁用预处理语句（Prepared Statement）。参见 :ref:`db-prepared-statements`。 "
+"|br| — `@steve-chavez <https://github.com/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:58
+#: ../../docs/releases/v8.0.0.rst:58
 msgid ""
 "Config option for specifying how to terminate the transactions (allowing "
 "rollbacks, useful for testing). See :ref:`db-tx-end`. |br| -- "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
-"配置选项：指定如何终止事务（允许回滚，方便测试）。 参见 :ref:`db-tx-end`。 |"
-"br| — `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
+"配置选项：指定如何终止事务（允许回滚，方便测试）。 参见 :ref:`db-tx-end`。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:63
-msgid "Added the :ref:`schema_cache` page."
+#: ../../docs/releases/v8.0.0.rst:63
+#, fuzzy
+msgid "Added the :doc:`../schema_cache` page."
 msgstr "新增 :ref:`schema_cache` 页面。"
 
-#: ../../releases/v8.0.0.rst:64
+#: ../../docs/releases/v8.0.0.rst:64
+#, fuzzy
 msgid ""
-"Moved the :ref:`schema_reloading` reference from :ref:`admin` to :ref:"
-"`schema_cache`"
-msgstr ""
-":ref:`schema_reloading` 文档位置从 :ref:`admin` 移动到了 :ref:"
-"`schema_cache`。"
+"Moved the :ref:`schema_reloading` reference from :doc:`../admin` to "
+":doc:`../schema_cache`"
+msgstr ":ref:`schema_reloading` 文档位置从 :ref:`admin` 移动到了 :ref:`schema_cache`。"
 
-#: ../../releases/v8.0.0.rst:69
+#: ../../docs/releases/v8.0.0.rst:69
 msgid ""
 "Docker images are now optimized to be built from the scratch image. This "
-"reduces the compressed image size from over 30 MB to about 4 MB. For more "
-"details, see `Docker image built with Nix <https://github.com/PostgREST/"
-"postgrest/tree/main/nix/tools/docker#user-content-docker-image-built-with-"
-"nix>`_. |br| -- `@monacoremo <https://github.com/monacoremo>`_"
+"reduces the compressed image size from over 30 MB to about 4 MB. For more"
+" details, see `Docker image built with Nix "
+"<https://github.com/PostgREST/postgrest/tree/main/nix/tools/docker#user-"
+"content-docker-image-built-with-nix>`_. |br| -- `@monacoremo "
+"<https://github.com/monacoremo>`_"
 msgstr ""
-"从头构建 Docker 镜像，经此优化，压缩后的镜像大小从 30M+ 减小到 4M 左右。更多"
-"信息请查看 `使用 Nix 构建 Docker 镜像 <https://github.com/PostgREST/"
-"postgrest/tree/main/nix/tools/docker#user-content-docker-image-built-with-"
-"nix>`_。 |br| — `@monacoremo <https://github.com/monacoremo>`_"
+"从头构建 Docker 镜像，经此优化，压缩后的镜像大小从 30M+ 减小到 4M 左右。更多信息请查看 `使用 Nix 构建 Docker 镜像"
+" <https://github.com/PostgREST/postgrest/tree/main/nix/tools/docker#user-"
+"content-docker-image-built-with-nix>`_。 |br| — `@monacoremo "
+"<https://github.com/monacoremo>`_"
 
-#: ../../releases/v8.0.0.rst:73
+#: ../../docs/releases/v8.0.0.rst:73
 msgid ""
 "The Docker image no longer has an internal ``/etc/postgrest.conf`` file, "
 "you must use :ref:`env_variables_config` to configure it. |br| -- "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
-"Docker 镜像不再内置 ``/etc/postgrest.conf`` 文件，你必须通过 :ref:"
-"`env_variables_config` 配置它。 |br| — `@wolfgangwalther <https://github."
-"com/wolfgangwalther>`_"
+"Docker 镜像不再内置 ``/etc/postgrest.conf`` 文件，你必须通过 "
+":ref:`env_variables_config` 配置它。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:76
+#: ../../docs/releases/v8.0.0.rst:76
 msgid ""
-"The ``pg_listen`` `utility <https://github.com/begriffs/pg_listen>`_ is no "
-"longer needed to automatically reload the schema cache and it's replaced "
-"entirely by database notifications. See :ref:`auto_schema_reloading`. |br| "
-"-- `@steve-chavez <https://github.com/steve-chavez>`_"
+"The ``pg_listen`` `utility <https://github.com/begriffs/pg_listen>`_ is "
+"no longer needed to automatically reload the schema cache and it's "
+"replaced entirely by database notifications. See "
+":ref:`auto_schema_reloading`. |br| -- `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 msgstr ""
-"不再需要使用 ``pg_listen`` `工具 <https://github.com/begriffs/pg_listen>`_ "
-"自动重新加载 Schema 缓存，已完全使用数据库通知（NOTIFY）替代。参见 :ref:"
-"`auto_schema_reloading`。 |br| — `@steve-chavez <https://github.com/steve-"
-"chavez>`_"
+"不再需要使用 ``pg_listen`` `工具 <https://github.com/begriffs/pg_listen>`_ 自动重新加载"
+" Schema 缓存，已完全使用数据库通知（NOTIFY）替代。参见 :ref:`auto_schema_reloading`。 |br| — "
+"`@steve-chavez <https://github.com/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:80
+#: ../../docs/releases/v8.0.0.rst:80
 msgid ""
-"POST requests for insertions no longer include a ``Location`` header in the "
-"response by default and behave the same way as having a ``Prefer: "
+"POST requests for insertions no longer include a ``Location`` header in "
+"the response by default and behave the same way as having a ``Prefer: "
 "return=minimal`` header in the request. This prevents permissions errors "
 "when having a write-only table. See :ref:`insert_update`. |br| -- "
 "`@laurenceisla <https://github.com/laurenceisla>`_"
 msgstr ""
-"POST 请求进行插入操作时不再默认返回 ``Location`` 消息头，如果仍然需要，需在"
-"请求时包含 ``Prefer: return=minimal`` 消息头。这可以避免只写表（Write "
-"Onyly）的权限错误。参见 :ref:`insert_update`。 |br| — `@laurenceisla "
+"POST 请求进行插入操作时不再默认返回 ``Location`` 消息头，如果仍然需要，需在请求时包含 ``Prefer: "
+"return=minimal`` 消息头。这可以避免只写表（Write Onyly）的权限错误。参见 :ref:`insert_update`。 "
+"|br| — `@laurenceisla <https://github.com/laurenceisla>`_"
+
+#: ../../docs/releases/v8.0.0.rst:84
+msgid ""
+"Modified the default logging level from ``info`` to ``error``. See :ref"
+":`log-level`. |br| -- `@steve-chavez <https://github.com/steve-chavez>`_"
+msgstr ""
+"默认日志级别由 ``error`` 改为 ``info``。参见 :ref:`log-level`。 |br| — `@steve-chavez "
+"<https://github.com/steve-chavez>`_"
+
+#: ../../docs/releases/v8.0.0.rst:87
+msgid ""
+"Changed the error message for a not found RPC on a stale schema (see "
+":ref:`stale_function_signature`) and for the unsupported case of "
+"overloaded functions with the same argument names but different types. "
+"|br| -- `@laurenceisla <https://github.com/laurenceisla>`_"
+msgstr ""
+"更改了未在失效 Schema 上找到 RPC 时的错误信息（参见 "
+":ref:`stale_function_signature`），及不支持参数名称相同但类型不同的函数重载时的错误信息。 |br| — "
+"`@laurenceisla <https://github.com/laurenceisla>`_"
+
+#: ../../docs/releases/v8.0.0.rst:91
+msgid ""
+"Changed the error message for the no relationship found error. See "
+":ref:`stale_fk_relationships`. |br| -- `@laurenceisla "
+"<https://github.com/laurenceisla>`_"
+msgstr ""
+"更改了未找到关系时的错误信息。参见 :ref:`stale_fk_relationships`。 |br| — `@laurenceisla "
 "<https://github.com/laurenceisla>`_"
 
-#: ../../releases/v8.0.0.rst:84
-msgid ""
-"Modified the default logging level from ``info`` to ``error``. See :ref:"
-"`log-level`. |br| -- `@steve-chavez <https://github.com/steve-chavez>`_"
-msgstr ""
-"默认日志级别由 ``error`` 改为 ``info``。参见 :ref:`log-level`。 |br| — "
-"`@steve-chavez <https://github.com/steve-chavez>`_"
-
-#: ../../releases/v8.0.0.rst:87
-msgid ""
-"Changed the error message for a not found RPC on a stale schema (see :ref:"
-"`stale_function_signature`) and for the unsupported case of overloaded "
-"functions with the same argument names but different types. |br| -- "
-"`@laurenceisla <https://github.com/laurenceisla>`_"
-msgstr ""
-"更改了未在失效 Schema 上找到 RPC 时的错误信息（参见 :ref:"
-"`stale_function_signature`），及不支持参数名称相同但类型不同的函数重载时的错"
-"误信息。 |br| — `@laurenceisla <https://github.com/laurenceisla>`_"
-
-#: ../../releases/v8.0.0.rst:91
-msgid ""
-"Changed the error message for the no relationship found error. See :ref:"
-"`stale_fk_relationships`. |br| -- `@laurenceisla <https://github.com/"
-"laurenceisla>`_"
-msgstr ""
-"更改了未找到关系时的错误信息。参见 :ref:`stale_fk_relationships`。 |br| — "
-"`@laurenceisla <https://github.com/laurenceisla>`_"
-
-#: ../../releases/v8.0.0.rst:97
+#: ../../docs/releases/v8.0.0.rst:97
 msgid ""
 "Fix showing UNKNOWN on ``postgrest --help`` invocation. |br| -- "
 "`@monacoremo <https://github.com/monacoremo>`_"
 msgstr ""
-"修复调用 ``postgrest —help`` 时显示 UNKNOWN。 |br| — `@monacoremo <https://"
-"github.com/monacoremo>`_"
+"修复调用 ``postgrest —help`` 时显示 UNKNOWN。 |br| — `@monacoremo "
+"<https://github.com/monacoremo>`_"
 
-#: ../../releases/v8.0.0.rst:100
+#: ../../docs/releases/v8.0.0.rst:100
 msgid ""
-"Removed single column restriction to allow composite foreign keys in join "
-"tables. |br| -- `@goteguru <https://github.com/goteguru>`_"
-msgstr ""
-"移除单列的限制，以便允许连接表时使用复合外键。 |br| — `@goteguru <https://"
-"github.com/goteguru>`_"
+"Removed single column restriction to allow composite foreign keys in join"
+" tables. |br| -- `@goteguru <https://github.com/goteguru>`_"
+msgstr "移除单列的限制，以便允许连接表时使用复合外键。 |br| — `@goteguru <https://github.com/goteguru>`_"
 
-#: ../../releases/v8.0.0.rst:103
+#: ../../docs/releases/v8.0.0.rst:103
 msgid ""
-"Fix expired JWTs starting an empty transaction on the db. |br| -- `@steve-"
-"chavez <https://github.com/steve-chavez>`_"
+"Fix expired JWTs starting an empty transaction on the db. |br| -- "
+"`@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"修复失效 JWT 开启数据库空事务。 |br| — `@steve-chavez <https://github.com/"
-"steve-chavez>`_"
+"修复失效 JWT 开启数据库空事务。 |br| — `@steve-chavez <https://github.com/steve-"
+"chavez>`_"
 
-#: ../../releases/v8.0.0.rst:106
+#: ../../docs/releases/v8.0.0.rst:106
 msgid ""
-"Fix location header for POST request with ``select=`` without PK. |br| -- "
-"`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
+"Fix location header for POST request with ``select=`` without PK. |br| --"
+" `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
-"修复带有 ``select=`` 但没有主键的 POST 请求的 Location 消息头。 |br| — "
-"`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
+"修复带有 ``select=`` 但没有主键的 POST 请求的 Location 消息头。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:109
+#: ../../docs/releases/v8.0.0.rst:109
 msgid ""
 "Fix error messages on connection failure for localized PostgreSQL on "
 "Windows. |br| -- `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
-"修复 Windows 上本地 PostgreSQL 连接失败时的错误信息。 |br| — "
-"`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
+"修复 Windows 上本地 PostgreSQL 连接失败时的错误信息。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:112
+#: ../../docs/releases/v8.0.0.rst:112
 msgid ""
 "Fix ``application/octet-stream`` appending ``charset=utf-8``. |br| -- "
 "`@steve-chavez <https://github.com/steve-chavez>`_"
@@ -852,31 +844,32 @@ msgstr ""
 "修复 ``application/octet-stream`` 附加 ``charset=utf-8``。 |br| — `@steve-"
 "chavez <https://github.com/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:115
+#: ../../docs/releases/v8.0.0.rst:115
 msgid ""
 "Fix overloading of functions with unnamed arguments. |br| -- "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
-"修复带有未命名参数的函数的重载。 |br| — `@wolfgangwalther <https://github."
-"com/wolfgangwalther>`_"
+"修复带有未命名参数的函数的重载。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:118
+#: ../../docs/releases/v8.0.0.rst:118
 msgid ""
-"Return ``405 Method not Allowed`` for GET of volatile RPC instead of 500. |"
-"br| -- `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
+"Return ``405 Method not Allowed`` for GET of volatile RPC instead of 500."
+" |br| -- `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 msgstr ""
 "GET 调用不稳定的 RPC 时返回 ``405 Method not Allowed`` 而不是 500。 |br| — "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:121
+#: ../../docs/releases/v8.0.0.rst:121
 msgid ""
-"Fix RPC return type handling and embedding for domains with composite base "
-"type. |br| -- `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
+"Fix RPC return type handling and embedding for domains with composite "
+"base type. |br| -- `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 msgstr ""
 "修复 RPC 返回类型的处理和复合基类型域的嵌入。 |br| — `@wolfgangwalther "
 "<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:124
+#: ../../docs/releases/v8.0.0.rst:124
 msgid ""
 "Fix embedding through views that have COALESCE with subselect. |br| -- "
 "`@wolfgangwalther <https://github.com/wolfgangwalther>`_"
@@ -884,264 +877,254 @@ msgstr ""
 "修复通过有 COALESCE 与子选择的视图的嵌入。 |br| — `@wolfgangwalther "
 "<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:127
+#: ../../docs/releases/v8.0.0.rst:127
 msgid ""
-"Fix parsing of boolean config values for Docker environment variables, now "
-"it accepts double quoted truth values ``(\"true\", \"false\")`` and numbers "
-"``(\"1\", \"0\")``. |br| -- `@wolfgangwalther <https://github.com/"
-"wolfgangwalther>`_"
+"Fix parsing of boolean config values for Docker environment variables, "
+"now it accepts double quoted truth values ``(\"true\", \"false\")`` and "
+"numbers ``(\"1\", \"0\")``. |br| -- `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 msgstr ""
-"修复 Docker 环境变量的逻辑值的解析，支持带双引号的真假值 ``(“true”, "
-"“false”)`` 及数字 ``(“1”, “0”)``。 |br| — `@wolfgangwalther <https://github."
-"com/wolfgangwalther>`_"
+"修复 Docker 环境变量的逻辑值的解析，支持带双引号的真假值 ``(“true”, “false”)`` 及数字 ``(“1”, "
+"“0”)``。 |br| — `@wolfgangwalther <https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:130
+#: ../../docs/releases/v8.0.0.rst:130
 msgid ""
 "Fix using ``app.settings.xxx`` config options in Docker, now they can be "
-"used as ``PGRST_APP_SETTINGS_xxx``. |br| -- `@wolfgangwalther <https://"
-"github.com/wolfgangwalther>`_"
+"used as ``PGRST_APP_SETTINGS_xxx``. |br| -- `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 msgstr ""
 "修复在 Docker 中使用 ``app.settings.xxx`` 配置选项，现在起将会被用作 "
-"``PGRST_APP_SETTINGS_xxx``。 |br| — `@wolfgangwalther <https://github.com/"
-"wolfgangwalther>`_"
+"``PGRST_APP_SETTINGS_xxx``。 |br| — `@wolfgangwalther "
+"<https://github.com/wolfgangwalther>`_"
 
-#: ../../releases/v8.0.0.rst:133
+#: ../../docs/releases/v8.0.0.rst:133
 msgid ""
 "Fix panic when attempting to run with unix socket on non-unix host and "
-"properly close unix domain socket on exit. |br| -- `@monacoremo <https://"
-"github.com/monacoremo>`_"
+"properly close unix domain socket on exit. |br| -- `@monacoremo "
+"<https://github.com/monacoremo>`_"
 msgstr ""
-"修复在非 UNIX 主机上试图用 UNIX 套接字运行时的严重错误，并在退出时正确关闭 "
-"UNIX 域套接字。 |br| — `@monacoremo <https://github.com/monacoremo>`_"
+"修复在非 UNIX 主机上试图用 UNIX 套接字运行时的严重错误，并在退出时正确关闭 UNIX 域套接字。 |br| — "
+"`@monacoremo <https://github.com/monacoremo>`_"
 
-#: ../../releases/v8.0.0.rst:136
+#: ../../docs/releases/v8.0.0.rst:136
 msgid ""
-"Disregard internal junction (in non-exposed schema) when embedding. |br| -- "
-"`@steve-chavez <https://github.com/steve-chavez>`_"
+"Disregard internal junction (in non-exposed schema) when embedding. |br| "
+"-- `@steve-chavez <https://github.com/steve-chavez>`_"
 msgstr ""
-"嵌入时忽略内部连接（在非公开 Schema 中）。 |br| — `@steve-chavez <https://"
-"github.com/steve-chavez>`_"
+"嵌入时忽略内部连接（在非公开 Schema 中）。 |br| — `@steve-chavez <https://github.com"
+"/steve-chavez>`_"
 
-#: ../../releases/v8.0.0.rst:139
+#: ../../docs/releases/v8.0.0.rst:139
 msgid ""
-"Fix requests for overloaded functions from HTML forms to no longer hang. |"
-"br| -- `@laurenceisla <https://github.com/laurenceisla>`_"
+"Fix requests for overloaded functions from HTML forms to no longer hang. "
+"|br| -- `@laurenceisla <https://github.com/laurenceisla>`_"
 msgstr ""
 "修复对 HTML 表单模式的重载函数的请求，使其不再挂起。 |br| — `@laurenceisla "
 "<https://github.com/laurenceisla>`_"
 
-#: ../../releases/v8.0.0.rst:145 ../../releases/v9.0.0.rst:84
+#: ../../docs/releases/v8.0.0.rst:145 ../../docs/releases/v9.0.0.rst:84
 msgid ""
-"Big thanks from the `PostgREST team <https://github.com/orgs/PostgREST/"
-"people>`_ to our sponsors!"
-msgstr ""
-"`PostgREST 团队 <https://github.com/orgs/PostgREST/people>`_ 非常感谢我们的"
-"赞助商们！"
+"Big thanks from the `PostgREST team "
+"<https://github.com/orgs/PostgREST/people>`_ to our sponsors!"
+msgstr "`PostgREST 团队 <https://github.com/orgs/PostgREST/people>`_ 非常感谢我们的赞助商们！"
 
-#: ../../releases/v8.0.0.rst:175 ../../releases/v9.0.0.rst:114
+#: ../../docs/releases/v8.0.0.rst:175 ../../docs/releases/v9.0.0.rst:114
 msgid "`Franz Gusenbauer <https://www.igutech.at/>`_"
 msgstr "`Franz Gusenbauer <https://www.igutech.at/>`_"
 
-#: ../../releases/v8.0.0.rst:186 ../../releases/v9.0.0.rst:125
+#: ../../docs/releases/v8.0.0.rst:186 ../../docs/releases/v9.0.0.rst:125
 msgid "Remo Rechkemmer"
 msgstr "Remo Rechkemmer"
 
-#: ../../releases/v8.0.0.rst:187 ../../releases/v9.0.0.rst:126
+#: ../../docs/releases/v8.0.0.rst:187 ../../docs/releases/v9.0.0.rst:126
 msgid "Severin Ibarluzea"
 msgstr "Severin Ibarluzea"
 
-#: ../../releases/v8.0.0.rst:188 ../../releases/v9.0.0.rst:127
+#: ../../docs/releases/v8.0.0.rst:188 ../../docs/releases/v9.0.0.rst:127
 msgid "Tom Saleeba"
 msgstr "Tom Saleeba"
 
-#: ../../releases/v8.0.0.rst:189 ../../releases/v9.0.0.rst:128
+#: ../../docs/releases/v8.0.0.rst:189 ../../docs/releases/v9.0.0.rst:128
 msgid "Pawel Tyll"
 msgstr "Pawel Tyll"
 
-#: ../../releases/v9.0.0.rst:3
+#: ../../docs/releases/v9.0.0.rst:3
 msgid "PostgREST 9.0.0"
 msgstr "PostgREST 9.0.0"
 
-#: ../../releases/v9.0.0.rst:5
+#: ../../docs/releases/v9.0.0.rst:5
 msgid ""
 "This major version is released with PostgreSQL 14 compatibility and is "
-"accompanied with new features and bug fixes. You can look at the detailed "
-"changelog and download the pre-compiled binaries on the `GitHub release "
+"accompanied with new features and bug fixes. You can look at the detailed"
+" changelog and download the pre-compiled binaries on the `GitHub release "
 "page <https://github.com/PostgREST/postgrest/releases/tag/v9.0.0>`_."
 msgstr ""
-"该主要版本发布包含了对 PostgreSQL 14 的兼容、部分新功能及 Bug 修复。你可以"
-"在 `GitHub 发布页面 <https://github.com/PostgREST/postgrest/releases/tag/"
-"v9.0.0>`_ 查看详细的更新日志，或下载已编译好的可执行文件。"
+"该主要版本发布包含了对 PostgreSQL 14 的兼容、部分新功能及 Bug 修复。你可以在 `GitHub 发布页面 "
+"<https://github.com/PostgREST/postgrest/releases/tag/v9.0.0>`_ "
+"查看详细的更新日志，或下载已编译好的可执行文件。"
 
-#: ../../releases/v9.0.0.rst:8
+#: ../../docs/releases/v9.0.0.rst:8
 msgid "Features"
 msgstr "功能"
 
-#: ../../releases/v9.0.0.rst:11
+#: ../../docs/releases/v9.0.0.rst:11
 msgid "PostgreSQL 14 compatibility"
 msgstr "PostgreSQL 14 兼容性"
 
-#: ../../releases/v9.0.0.rst:13
+#: ../../docs/releases/v9.0.0.rst:13
 msgid ""
-"PostgreSQL 14 Beta 1 tightened its GUC naming scheme making it impossible "
-"to use multiple dots (``.``) and dashes (``-``) on custom GUC parameters, "
-"this caused our `old HTTP Context <https://postgrest.org/en/v8.0/api."
-"html#accessing-request-headers-cookies-and-jwt-claims>`_ to fail across all "
-"requests. Thankfully, `@robertsosinski <https://github.com/"
-"robertsosinski>`_ got the PostgreSQL team to reconsider allowing multiple "
-"dots in the GUC name, allowing us to avoid a major breaking change. You can "
-"see the full discussion `here <https://www.postgresql.org/message-"
+"PostgreSQL 14 Beta 1 tightened its GUC naming scheme making it impossible"
+" to use multiple dots (``.``) and dashes (``-``) on custom GUC "
+"parameters, this caused our `old HTTP Context "
+"<https://postgrest.org/en/v8.0/api.html#accessing-request-headers-"
+"cookies-and-jwt-claims>`_ to fail across all requests. Thankfully, "
+"`@robertsosinski <https://github.com/robertsosinski>`_ got the PostgreSQL"
+" team to reconsider allowing multiple dots in the GUC name, allowing us "
+"to avoid a major breaking change. You can see the full discussion `here "
+"<https://www.postgresql.org/message-"
 "id/17045-6a4a9f0d1513f72b%40postgresql.org>`_."
 msgstr ""
-"PostgreSQL 14 Beta 1 收紧了它的 GUC 命名方式，不再允许在自定义的 GUC 参数上"
-"使用多个点（``.``）和短横线（``-``），这导致了我们的 `老的 HTTP 上下文 "
-"<https://postgrest.org/en/v8.0/api.html#accessing-request-headers-cookies-"
-"and-jwt-claims>`_ 在所有请求中失败。值得庆幸的是，`@robertsosinski <https://"
-"github.com/robertsosinski>`_ 让 PostgreSQL 团队重新考虑允许 GUC 名称中使用多"
-"个点，让我们避免了一次重大的破坏性改变。你可以在 `这里 <https://www."
-"postgresql.org/message-id/17045-6a4a9f0d1513f72b%40postgresql.org>`_ 看到完"
-"整的讨论。"
+"PostgreSQL 14 Beta 1 收紧了它的 GUC 命名方式，不再允许在自定义的 GUC "
+"参数上使用多个点（``.``）和短横线（``-``），这导致了我们的 `老的 HTTP 上下文 "
+"<https://postgrest.org/en/v8.0/api.html#accessing-request-headers-"
+"cookies-and-jwt-claims>`_ 在所有请求中失败。值得庆幸的是，`@robertsosinski "
+"<https://github.com/robertsosinski>`_ 让 PostgreSQL 团队重新考虑允许 GUC "
+"名称中使用多个点，让我们避免了一次重大的破坏性改变。你可以在 `这里 <https://www.postgresql.org/message-"
+"id/17045-6a4a9f0d1513f72b%40postgresql.org>`_ 看到完整的讨论。"
 
-#: ../../releases/v9.0.0.rst:15
+#: ../../docs/releases/v9.0.0.rst:15
 msgid ""
-"Still, dashes cannot be used on PostgreSQL 14 custom GUC parameters, so we "
-"changed our HTTP Context :ref:`to namespace using a mix of dots and JSON "
-"<guc_req_headers_cookies_claims>`. On older PostgreSQL versions we still "
-"use the :ref:`guc_legacy_names`. If you wish to use the new JSON GUCs on "
-"these versions, set the :ref:`db-use-legacy-gucs` config option to false."
+"Still, dashes cannot be used on PostgreSQL 14 custom GUC parameters, so "
+"we changed our HTTP Context :ref:`to namespace using a mix of dots and "
+"JSON <guc_req_headers_cookies_claims>`. On older PostgreSQL versions we "
+"still use the :ref:`guc_legacy_names`. If you wish to use the new JSON "
+"GUCs on these versions, set the :ref:`db-use-legacy-gucs` config option "
+"to false."
 msgstr ""
-"尽管如此，短横线（``-``）仍不能在 PostgreSQL 14 的自定义 GUC 参数上使用，所"
-"以我们把 HTTP 上下文改为 :ref:`使用点和 JSON 的混合命名空间"
-"<guc_req_headers_cookies_claims>`。在以前的 PostgreSQL 版本中，我们仍然可以"
-"使用 :ref:`guc_legacy_names`。如果你想在这些版本上使用新的 JSON GUC，请将 :"
-"ref:`db-use-legacy-gucs` 设置为 false。"
+"尽管如此，短横线（``-``）仍不能在 PostgreSQL 14 的自定义 GUC 参数上使用，所以我们把 HTTP 上下文改为 "
+":ref:`使用点和 JSON 的混合命名空间<guc_req_headers_cookies_claims>`。在以前的 PostgreSQL "
+"版本中，我们仍然可以使用 :ref:`guc_legacy_names`。如果你想在这些版本上使用新的 JSON GUC，请将 :ref:`db-"
+"use-legacy-gucs` 设置为 false。"
 
-#: ../../releases/v9.0.0.rst:18
+#: ../../docs/releases/v9.0.0.rst:18
 msgid "Resource Embedding with Top-level Filtering"
 msgstr "带有顶层筛选的资源嵌入"
 
-#: ../../releases/v9.0.0.rst:20
+#: ../../docs/releases/v9.0.0.rst:20
 msgid ""
-"Historically, Resource Embedding was always done with a query that included "
-"the equivalent of a ``LEFT JOIN``, which meant you could not exclude any of "
-"the top-level resource rows. You can now use :ref:"
-"`embedding_top_level_filter` to do the equivalent of an ``INNER JOIN``, "
-"thus you can filter the top-level resource rows with any of the available "
-"operators."
+"Historically, Resource Embedding was always done with a query that "
+"included the equivalent of a ``LEFT JOIN``, which meant you could not "
+"exclude any of the top-level resource rows. You can now use "
+":ref:`embedding_top_level_filter` to do the equivalent of an ``INNER "
+"JOIN``, thus you can filter the top-level resource rows with any of the "
+"available operators."
 msgstr ""
-"过去，资源嵌入总是通过查询完成的，等效于 ``LEFT JOIN``，这意味着你不能排除任"
-"何顶层记录行。现在你可以使用 :ref:`embedding_top_level_filter` 执行等效于 "
-"``INNER JOIN`` 的操作，因此你可以用任何可用的操作符来过滤顶层记录行。"
+"过去，资源嵌入总是通过查询完成的，等效于 ``LEFT JOIN``，这意味着你不能排除任何顶层记录行。现在你可以使用 "
+":ref:`embedding_top_level_filter` 执行等效于 ``INNER JOIN`` "
+"的操作，因此你可以用任何可用的操作符来过滤顶层记录行。"
 
-#: ../../releases/v9.0.0.rst:24
+#: ../../docs/releases/v9.0.0.rst:24
 msgid "Partitioned Tables"
 msgstr "分区表"
 
-#: ../../releases/v9.0.0.rst:26
+#: ../../docs/releases/v9.0.0.rst:26
 msgid ""
-"Partitioned tables now integrate with all the feature set. You can :ref:"
-"`embed partitioned tables <embedding_partitioned_tables>`, UPSERT, "
+"Partitioned tables now integrate with all the feature set. You can "
+":ref:`embed partitioned tables <embedding_partitioned_tables>`, UPSERT, "
 "INSERT(with a correctly generated Location header) and make OPTIONS "
 "requests on them. They're also included in the generated OpenAPI."
 msgstr ""
-"全面支持分区表。你可以 :ref:`嵌入分区表 <embedding_partitioned_tables>`、"
-"UPSERT、INSERT（当有一个正确生成的 Location 消息头时）或发起 OPTIONS 请求。"
-"同时也会被包含进 OpenAPI。"
+"全面支持分区表。你可以 :ref:`嵌入分区表 "
+"<embedding_partitioned_tables>`、UPSERT、INSERT（当有一个正确生成的 Location 消息头时）或发起"
+" OPTIONS 请求。同时也会被包含进 OpenAPI。"
 
-#: ../../releases/v9.0.0.rst:29
+#: ../../docs/releases/v9.0.0.rst:29
 msgid "Functions(RPC)"
 msgstr "函数（RPC）"
 
-#: ../../releases/v9.0.0.rst:31
+#: ../../docs/releases/v9.0.0.rst:31
 msgid ""
 "Functions with a :ref:`single unnamed parameter <s_proc_single_unnamed>` "
 "can now be used to POST raw ``bytea``, ``text`` or ``json/jsonb``."
 msgstr ""
-"带有 :ref:`单个未命名参数 <s_proc_single_unnamed>` 的函数现在可以用来 POST "
-"原始 ``bytea``、``text`` 或 ``json/jsonb``。"
+"带有 :ref:`单个未命名参数 <s_proc_single_unnamed>` 的函数现在可以用来 POST 原始 "
+"``bytea``、``text`` 或 ``json/jsonb``。"
 
-#: ../../releases/v9.0.0.rst:34
+#: ../../docs/releases/v9.0.0.rst:34
 msgid "Horizontal Filtering"
 msgstr "水平筛选"
 
-#: ../../releases/v9.0.0.rst:36
+#: ../../docs/releases/v9.0.0.rst:36
 msgid ""
-"The ``unknown`` value for three-valued logic can now be used on the ``is`` :"
-"ref:`operator <operators>`."
-msgstr ""
-"三值逻辑的 ``unknown`` 现在可以被用于 ``is`` :ref:`操作符 <operators>`。"
+"The ``unknown`` value for three-valued logic can now be used on the "
+"``is`` :ref:`operator <operators>`."
+msgstr "三值逻辑的 ``unknown`` 现在可以被用于 ``is`` :ref:`操作符 <operators>`。"
 
-#: ../../releases/v9.0.0.rst:38
+#: ../../docs/releases/v9.0.0.rst:38
 msgid ""
-"Escaping double quotes(``\"``) in double-quoted surrounded strings is now "
-"possible by using backslashes, e.g. ``?col=in.(\"Double\\\"Quote\")``. "
-"Backslashes can be escaped with a preceding backslash, e.g. ``?col=in."
-"(\"Back\\\\slash\")``. See :ref:`reserved-chars`."
+"Escaping double quotes(``\"``) in double-quoted surrounded strings is now"
+" possible by using backslashes, e.g. ``?col=in.(\"Double\\\"Quote\")``. "
+"Backslashes can be escaped with a preceding backslash, e.g. "
+"``?col=in.(\"Back\\\\slash\")``. See :ref:`reserved-chars`."
 msgstr ""
-"支持使用反斜杠转义双引号中的双引号（``”``），如：``?col=in.(“Double"
-"\\”Quote”)``。支持反斜杠本身被转义，如：``?col=in.(“Back\\\\slash”)``。参"
-"见 :ref:`reserved-chars`。"
+"支持使用反斜杠转义双引号中的双引号（``”``），如：``?col=in.(“Double\\”Quote”)``。支持反斜杠本身被转义，如：``?col=in.(“Back\\\\slash”)``。参见"
+" :ref:`reserved-chars`。"
 
-#: ../../releases/v9.0.0.rst:41
+#: ../../docs/releases/v9.0.0.rst:41
 msgid "Administration"
 msgstr "管理"
 
-#: ../../releases/v9.0.0.rst:43
+#: ../../docs/releases/v9.0.0.rst:43
 msgid ""
-"A ``Retry-After`` header is now added when PostgREST is doing :ref:"
-"`automatic_recovery`."
-msgstr ""
-"当 PostgREST 正在 :ref:`automatic_recovery` 时新增返回 ``Retry-After`` 消息"
-"头。"
+"A ``Retry-After`` header is now added when PostgREST is doing "
+":ref:`automatic_recovery`."
+msgstr "当 PostgREST 正在 :ref:`automatic_recovery` 时新增返回 ``Retry-After`` 消息头。"
 
-#: ../../releases/v9.0.0.rst:46
+#: ../../docs/releases/v9.0.0.rst:46
 msgid "Error messages"
 msgstr "错误消息"
 
-#: ../../releases/v9.0.0.rst:48
+#: ../../docs/releases/v9.0.0.rst:48
 msgid ""
 ":ref:`embed_disamb` now shows an improved error message that includes "
 "relevant hints for clearing out the ambiguous embedding."
-msgstr ""
-":ref:`embed_disamb` 的错误提示信息包含更明确的提示，以便排除有歧义的嵌入。"
+msgstr ":ref:`embed_disamb` 的错误提示信息包含更明确的提示，以便排除有歧义的嵌入。"
 
-#: ../../releases/v9.0.0.rst:53
+#: ../../docs/releases/v9.0.0.rst:53
 msgid "Added ``curl`` snippets to the :doc:`API <../api>` page."
 msgstr "新增 :doc:`API <../api>` 页面的 ``curl`` 代码片段。"
 
-#: ../../releases/v9.0.0.rst:55
+#: ../../docs/releases/v9.0.0.rst:55
 msgid "Added the :ref:`automatic_recovery` section."
 msgstr "新增 :ref:`automatic_recovery` 内容。"
 
-#: ../../releases/v9.0.0.rst:57
+#: ../../docs/releases/v9.0.0.rst:57
 msgid "Added the :ref:`nested_embedding` section."
 msgstr "新增 :ref:`nested_embedding` 内容。"
 
-#: ../../releases/v9.0.0.rst:59
+#: ../../docs/releases/v9.0.0.rst:59
 msgid "Added the :ref:`logical_operators` section."
 msgstr "新增 :ref:`logical_operators` 内容。"
 
-#: ../../releases/v9.0.0.rst:61
+#: ../../docs/releases/v9.0.0.rst:61
 msgid ""
-"Added the :ref:`templates` and :ref:`devops` sections to the :doc:"
-"`Ecosystem </ecosystem>`."
-msgstr ""
-"新增 :doc:`生态 </ecosystem>` 页面的 :ref:`templates` 和 :ref:`devops` 内"
-"容。"
+"Added the :ref:`templates` and :ref:`devops` sections to the "
+":doc:`Ecosystem </ecosystem>`."
+msgstr "新增 :doc:`生态 </ecosystem>` 页面的 :ref:`templates` 和 :ref:`devops` 内容。"
 
-#: ../../releases/v9.0.0.rst:64
+#: ../../docs/releases/v9.0.0.rst:64
 msgid "Bug fixes"
 msgstr "Bug 修复"
 
-#: ../../releases/v9.0.0.rst:66
+#: ../../docs/releases/v9.0.0.rst:66
 msgid ""
 "Correct RPC return type handling for RETURNS TABLE with a single column "
 "(`#1930 <https://github.com/PostgREST/postgrest/issues/1930>`_)."
 msgstr ""
-"RETURNS TABLE 仅返回一列时，正确 RPC 返回类型（`#1930 <https://github.com/"
-"PostgREST/postgrest/issues/1930>`_）。"
+"RETURNS TABLE 仅返回一列时，正确 RPC 返回类型（`#1930 "
+"<https://github.com/PostgREST/postgrest/issues/1930>`_）。"
 
-#: ../../releases/v9.0.0.rst:68
+#: ../../docs/releases/v9.0.0.rst:68
 msgid ""
 "Schema Cache query failing with ``standard_conforming_strings = off`` "
 "(`#1992 <https://github.com/PostgREST/postgrest/issues/1992>`_)."
@@ -1149,47 +1132,49 @@ msgstr ""
 "``standard_conforming_strings = off`` 时 Schema 缓存查询失败（`#1992 "
 "<https://github.com/PostgREST/postgrest/issues/1992>`_）。"
 
-#: ../../releases/v9.0.0.rst:70
+#: ../../docs/releases/v9.0.0.rst:70
 msgid ""
-"OpenAPI missing default values for String types (`#1871 <https://github.com/"
-"PostgREST/postgrest/issues/1871>`_)."
+"OpenAPI missing default values for String types (`#1871 "
+"<https://github.com/PostgREST/postgrest/issues/1871>`_)."
 msgstr ""
-"OpenAPI 缺失字符串类型的默认值（`#1871 <https://github.com/PostgREST/"
-"postgrest/issues/1871>`_）。"
+"OpenAPI 缺失字符串类型的默认值（`#1871 "
+"<https://github.com/PostgREST/postgrest/issues/1871>`_）。"
 
-#: ../../releases/v9.0.0.rst:73
+#: ../../docs/releases/v9.0.0.rst:73
 msgid "Breaking changes"
 msgstr "破坏性改变"
 
-#: ../../releases/v9.0.0.rst:75
+#: ../../docs/releases/v9.0.0.rst:75
 msgid ""
 "Dropped support for PostgreSQL 9.5 as it already reached its end-of-life "
-"according to `PostgreSQL versioning policy <https://www.postgresql.org/"
-"support/versioning/>`_."
+"according to `PostgreSQL versioning policy "
+"<https://www.postgresql.org/support/versioning/>`_."
 msgstr ""
-"不再支持 PostgreSQL 9.5。根据 `PostgreSQL 版本政策 <https://www.postgresql."
-"org/support/versioning/>`_，它已经不再被官方支持。"
+"不再支持 PostgreSQL 9.5。根据 `PostgreSQL 版本政策 "
+"<https://www.postgresql.org/support/versioning/>`_，它已经不再被官方支持。"
 
-#: ../../releases/v9.0.0.rst:77
+#: ../../docs/releases/v9.0.0.rst:77
+#, fuzzy
 msgid ""
-"Partitions of a `partitioned table <https://www.postgresql.org/docs/current/"
-"ddl-partitioning.html#DDL-PARTITIONING-DECLARATIVE>`_ are no longer "
-"included in the :ref:`schema_cache`. This is so errors are not generated "
-"when doing resource embedding on partitioned tables."
+"Partitions of a `partitioned table "
+"<https://www.postgresql.org/docs/current/ddl-partitioning.html#DDL-"
+"PARTITIONING-DECLARATIVE>`_ are no longer included in the "
+":doc:`../schema_cache`. This is so errors are not generated when doing "
+"resource embedding on partitioned tables."
 msgstr ""
 "`分区表 <https://www.postgresql.org/docs/current/ddl-partitioning.html#DDL-"
-"PARTITIONING-DECLARATIVE>`_ 的分区不再包含在 :ref:`schema_cache` 中，以避免"
-"在分区表上进行资源嵌入时出现错误。"
+"PARTITIONING-DECLARATIVE>`_ 的分区不再包含在 :ref:`schema_cache` "
+"中，以避免在分区表上进行资源嵌入时出现错误。"
 
-#: ../../releases/v9.0.0.rst:79
+#: ../../docs/releases/v9.0.0.rst:79
 msgid ""
 "Dropped support for doing :ref:`hint_disamb` using dots instead of "
-"exclamation marks, e.g. doing ``select=*,projects.client_id(*)`` instead of "
-"``select=*,projects!client_id(*)``). Using dots was undocumented and "
-"deprecated back in `v6.0.2 <https://github.com/PostgREST/postgrest/releases/"
-"tag/v6.0.2>`_."
+"exclamation marks, e.g. doing ``select=*,projects.client_id(*)`` instead "
+"of ``select=*,projects!client_id(*)``). Using dots was undocumented and "
+"deprecated back in `v6.0.2 "
+"<https://github.com/PostgREST/postgrest/releases/tag/v6.0.2>`_."
 msgstr ""
-"不再支持使用点而不是感叹号进行 :ref:`hint_disamb`，如使用 ``select=*,"
-"projects.client_id(*)`` 而不是 ``select=*,projects!client_id(*)``。使用圆点"
-"并无文档记录且早已废弃于 `v6.0.2 <https://github.com/PostgREST/postgrest/"
-"releases/tag/v6.0.2>`_。"
+"不再支持使用点而不是感叹号进行 :ref:`hint_disamb`，如使用 ``select=*,projects.client_id(*)``"
+" 而不是 ``select=*,projects!client_id(*)``。使用圆点并无文档记录且早已废弃于 `v6.0.2 "
+"<https://github.com/PostgREST/postgrest/releases/tag/v6.0.2>`_。"
+

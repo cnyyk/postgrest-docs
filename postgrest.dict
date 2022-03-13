@@ -11,6 +11,7 @@ authenticator
 backoff
 balancer
 Beles
+booleans
 Bouscal
 buildpack
 Cardano
@@ -51,6 +52,7 @@ Haskell
 Heroku
 HMAC
 Homebrew
+HTTP
 HTTPS
 HV
 Ibarluzea

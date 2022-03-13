@@ -86,7 +86,7 @@ The PostgREST server reads a configuration file as its only argument:
   postgrest /path/to/postgrest.conf
 
   # You can also generate a sample config file with
-  # postgrest 2> postgrest.conf
+  # postgrest -e > postgrest.conf
   # You'll need to edit this file and remove the usage parts for postgrest to read it
 
 For a complete reference of the configuration file, see :ref:`configuration`.
@@ -129,10 +129,8 @@ The first way to run PostgREST in Docker is to connect it to an existing native 
 .. code-block:: bash
 
   # Run the server
-  docker run --rm --net=host -p 3000:3000 \
-    -e PGRST_DB_URI="postgres://postgres@localhost/postgres" \
-    -e PGRST_DB_SCHEMA="public" \
-    -e PGRST_DB_ANON_ROLE="postgres" \
+  docker run --rm --net=host \
+    -e PGRST_DB_URI="postgres://app_user:password@localhost/postgres" \
     postgrest/postgrest
 
 The database connection string above is just an example. Adjust the role and password as necessary. You may need to edit PostgreSQL's :code:`pg_hba.conf` to grant the user local login access.
@@ -157,6 +155,15 @@ The database connection string above is just an example. Adjust the role and pas
 
     host    all             all             10.0.0.10/32            trust
 
+  The docker command will then look like this:
+
+  .. code-block:: bash
+
+    # Run the server
+    docker run --rm -p 3000:3000 \
+      -e PGRST_DB_URI="postgres://app_user:password@10.0.0.10/postgres" \
+      postgrest/postgrest
+
 .. _pg-in-docker:
 
 Containerized PostgREST *and* db with docker-compose
@@ -176,8 +183,6 @@ To avoid having to install the database at all, you can run both it and the serv
         - "3000:3000"
       environment:
         PGRST_DB_URI: postgres://app_user:password@db:5432/app_db
-        PGRST_DB_SCHEMA: public
-        PGRST_DB_ANON_ROLE: app_user #In production this role should not be the same as the one used for the connection
         PGRST_OPENAPI_SERVER_PROXY_URI: http://127.0.0.1:3000
       depends_on:
         - db

@@ -63,7 +63,7 @@ You can use row-level security to flexibly restrict visibility and access for th
 
   ALTER TABLE chat ENABLE ROW LEVEL SECURITY;
 
-We want to enforce a policy that ensures a user can see only those messages sent by him or intended for him. Also we want to prevent a user from forging the message_from column with another person's name.
+We want to enforce a policy that ensures a user can see only those messages sent by them or intended for them. Also we want to prevent a user from forging the message_from column with another person's name.
 
 PostgreSQL allows us to set this policy with row-level security:
 
@@ -93,9 +93,18 @@ Alternately database roles can represent groups instead of (or in addition to) i
 
 SQL code can access claims through GUC variables set by PostgREST per request. For instance to get the email claim, call this function:
 
+For PostgreSQL server version >= 14
+
 .. code:: sql
 
   current_setting('request.jwt.claims', true)::json->>'email';
+  
+
+For PostgreSQL server version < 14
+
+.. code:: sql
+
+  current_setting('request.jwt.claim.email', true);
 
 This allows JWT generation services to include extra information and your database code to react to it. For instance the RLS example could be modified to use this current_setting rather than current_user. The second 'true' argument tells current_setting to return NULL if the setting is missing from the current configuration.
 

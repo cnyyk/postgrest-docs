@@ -269,10 +269,17 @@ Casting the columns is possible by suffixing them with the double colon ``::`` p
 
 .. _json_columns:
 
-JSON Columns
-~~~~~~~~~~~~
+Array / Composite / JSON Columns
+--------------------------------
 
 You can specify a path for a ``json`` or ``jsonb`` column using the arrow operators(``->`` or ``->>``) as per the `PostgreSQL docs <https://www.postgresql.org/docs/current/functions-json.html>`_.
+
+.. code-block:: postgres
+
+  CREATE TABLE people (
+    id int,
+    json_data json
+  );
 
 .. tabs::
 
@@ -348,10 +355,54 @@ Note that ``->>`` is used to compare ``blood_type`` as ``text``. To compare with
     { "id": 15, "age": 35 }
   ]
 
+The arrow operators are also used for array and composite type columns.
+
+.. code-block:: postgres
+
+  CREATE TYPE coordinates (
+    lat decimal(8,6),
+    long decimal(9,6)
+  );
+
+  CREATE TABLE countries (
+    id int,
+    location coordinates,
+    languages text[]
+  );
+
+.. tabs::
+
+  .. code-tab:: http
+
+    GET /countries?select=id,location->>lat,location->>long,primary_language:languages->0&location->lat=gte.19 HTTP/1.1
+
+  .. code-tab:: bash Curl
+
+    curl "http://localhost:3000/countries?select=id,location->>lat,location->>long,primary_language:languages->0&location->lat=gte.19"
+
+.. code-block:: json
+
+  [
+    {
+      "id": 5,
+      "lat": "19.741755",
+      "long": "-155.844437",
+      "primary_language": "en"
+    }
+  ]
+
+.. important::
+
+  When using the ``->`` and ``->>`` operators, PostgREST uses a query like ``to_jsonb(<col>)->'field'``. To make filtering and ordering on those nested fields use an index, the index needs to be created on the same expression, including the ``to_jsonb(...)`` call:
+
+  .. code-block:: postgres
+ 
+    CREATE INDEX ON mytable ((to_jsonb(data) -> 'identification' ->> 'registration_number'));
+
 .. _computed_cols:
 
-Computed Columns
-~~~~~~~~~~~~~~~~
+Computed / Virtual Columns
+--------------------------
 
 Filters may be applied to computed columns(**a.k.a. virtual columns**) as well as actual table/view columns, even though the computed columns will not appear in the output. For example, to search first and last names at once we can create a computed column that will not appear in the output but can be used in a filter:
 
@@ -396,7 +447,7 @@ As mentioned, computed columns do not appear in the output by default. However y
 
 .. important::
 
-  Computed columns must be created under the :ref:`exposed schema <db-schemas>` to be used in this way.
+  Computed columns must be created in the :ref:`exposed schema <db-schemas>` or in a schema in the :ref:`extra search path <db-extra-search-path>` to be used in this way. When placing the computed column in the :ref:`exposed schema <db-schemas>` you can use an **unnamed** argument, as in the example above, to prevent it from being exposed as an :ref:`RPC <s_procs>` under ``/rpc``.
 
 Unicode support
 ---------------
@@ -537,7 +588,7 @@ If you care where nulls are sorted, add ``nullsfirst`` or ``nullslast``:
 
     curl "http://localhost:3000/people?order=age.desc.nullslast"
 
-You can also use :ref:`computed_cols` to order the results, even though the computed columns will not appear in the output.
+You can also use :ref:`computed_cols` to order the results, even though the computed columns will not appear in the output. You can sort by nested fields of :ref:`json_columns` with the JSON operators.
 
 .. _limits:
 
@@ -2509,7 +2560,7 @@ Notice that the variable should be set to an *array* of single-key objects rathe
 
 .. note::
 
-  PostgREST provided headers such as ``Content-Type``, ``Location``, etc. can be overriden this way.
+  PostgREST provided headers such as ``Content-Type``, ``Location``, etc. can be overriden this way. Note that irrespective of overridden ``Content-Type`` response header, the content will still be converted to JSON, unless you also set :ref:`raw-media-types` to something like ``text/html``.
 
 .. _pre_req_headers:
 

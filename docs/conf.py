@@ -68,6 +68,13 @@ release = u'9.0.0'
 # Usually you set "language" from the command line for these cases.
 language = 'zh_CN'
 
+# Directories in which to search for additional message catalogs
+# The default is ['locales'].
+# The -v option for sphinx-build command is useful to check the locale_dirs config works as expected. 
+# It emits debug messages if message catalog directory not found.
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-locale_dirs
+locale_dirs = ['../locales/']
+
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 #today = ''
@@ -193,7 +200,7 @@ html_static_path = ['_static']
 # Sphinx supports the following languages:
 #   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
 #   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr', 'zh'
-#html_search_language = 'en'
+html_search_language = 'zh'
 
 # A dictionary with options for the search language support, empty by default.
 # 'ja' uses this config value.

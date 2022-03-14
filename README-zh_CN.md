@@ -38,16 +38,20 @@ pip3 install -I sphinx-intl sphinx-autobuild
 ## Setup Sphinx-intl / 设置 Sphinx-intl
 https://www.sphinx-doc.org/en/master/usage/advanced/intl.html
 ```bash
-sphinx-build -b html docs _build
+# The -v option for sphinx-build command is useful to check the locale_dirs config works as expected. 
+# It emits debug messages if message catalog directory not found.
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-locale_dirs
+
+sphinx-build -v -b html docs _build
 # Running Sphinx v4.3.2
 # build succeeded.
 # The HTML pages are in _build.
 
-sphinx-build -b gettext docs _build/gettext
-# GENERATE POT FILES
+sphinx-build -v -b gettext docs _build/gettext
+# GENERATE OR UPDATE POT FILES
 
 sphinx-intl update -p _build/gettext -l zh_CN
-# GENERATE ZH_CN PO FILES FROM POT
+# GENERATE OR UPDATE ZH_CN PO FILES FROM POT
 # Update: locales/zh_CN/LC_MESSAGES/tutorials.po +3, -3
 # Update: locales/zh_CN/LC_MESSAGES/api.po +7, -5
 # Update: locales/zh_CN/LC_MESSAGES/admin.po +8, -0
@@ -60,6 +64,10 @@ sphinx-intl update -p _build/gettext -l zh_CN
 # Update: locales/zh_CN/LC_MESSAGES/install.po +1, -0
 # Update: locales/zh_CN/LC_MESSAGES/auth.po +3, -1
 # Update: locales/zh_CN/LC_MESSAGES/schema_cache.po +2, -0
+
+
+# find . -name \*.po -execdir sh -c 'msgfmt "$0" -o `basename $0 .po`.mo' '{}' \;
+# MANUALLY MAKE ALL PO FILES TO MO FILES
 ```
 ## Live Preview / 实时预览
 ```bash
@@ -72,7 +80,7 @@ sphinx-intl update -p _build/gettext -l zh_CN
 
 # FOR zh_CN AUTO REBUILD
 # SHOULD CHANGE conf.py: language = 'zh_CN'
-sphinx-autobuild docs _build
+sphinx-autobuild -v docs _build
 # Running Sphinx v4.4.0
 # loading translations [zh_CN]... done
 # Serving on http://127.0.0.1:8000

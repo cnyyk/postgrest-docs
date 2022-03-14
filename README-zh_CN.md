@@ -80,7 +80,10 @@ sphinx-intl update -p _build/gettext -l zh_CN
 
 # FOR zh_CN AUTO REBUILD
 # SHOULD CHANGE conf.py: language = 'zh_CN'
-sphinx-autobuild -v docs _build
+# SINCE THE rst FILES MOVED TO docs, NEED WATCH locales
+# OR po/mo UPDATED, live-reload NOT WORKS.
+# https://github.com/coding-to-music/coding-to-music.github.io/issues/188 
+sphinx-autobuild -v docs _build --watch locales
 # Running Sphinx v4.4.0
 # loading translations [zh_CN]... done
 # Serving on http://127.0.0.1:8000

@@ -7,7 +7,7 @@ PostgREST 文档使用 reStructuredText 格式，可查看 [速查表](https://g
 
 ## Install Dependencies / 安装依赖
 ```bash
-brew unlink python@3.9 && brew link python@3.10
+# brew unlink python@3.9 && brew link python@3.10
 
 python3 --version
 # Python 3.10.1
@@ -25,24 +25,24 @@ sphinx-build --version
 # Could not import extension sphinx_tabs.tabs (exception: No module named 'sphinx_tabs')
 pip3 install sphinx-tabs sphinx_copybutton sphinx-rtd-theme
 
-sphinx-build -b html docs _build
-# Running Sphinx v4.3.2
-# build succeeded.
-# The HTML pages are in _build.
-
 # TO AVOID COMMAND NOT FOUND ERROR
 pip3 install sphinx-intl sphinx-autobuild
 which sphinx-intl
 # /usr/local/bin/sphinx-intl
 which sphinx-autobuild
 # /usr/local/bin/sphinx-autobuild
-# If notice: sphinx-intl not found
-pip3 install sphinx-intl sphinx-autobuild
+# If NOTICE: sphinx-intl not found
+pip3 install -I sphinx-intl sphinx-autobuild
 ```
 
 ## Setup Sphinx-intl / 设置 Sphinx-intl
 https://www.sphinx-doc.org/en/master/usage/advanced/intl.html
 ```bash
+sphinx-build -b html docs _build
+# Running Sphinx v4.3.2
+# build succeeded.
+# The HTML pages are in _build.
+
 sphinx-build -b gettext docs _build/gettext
 # GENERATE POT FILES
 

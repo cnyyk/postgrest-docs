@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-13 08:59+0800\n"
-"PO-Revision-Date: 2022-01-17 21:18+0800\n"
+"PO-Revision-Date: 2022-03-14 23:44+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
-"Language: zh_CN\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../../docs/schema_cache.rst:4
 msgid "Schema Cache"
@@ -28,6 +29,8 @@ msgid ""
 "Getting this metadata requires executing expensive queries, so in order "
 "to avoid repeating this work, PostgREST uses a schema cache."
 msgstr ""
+"某些 PostgREST 功能依赖数据库 Schema 的元数据。获取元数据需要执行代价高昂"
+"的查询，所以为了避免重复这项工作，PostgREST 使用了 Schema 缓存。"
 
 #: ../../docs/schema_cache.rst:10
 msgid "Feature"
@@ -35,45 +38,49 @@ msgstr "功能"
 
 #: ../../docs/schema_cache.rst:10
 msgid "Required Metadata"
-msgstr ""
+msgstr "所需元数据"
 
 #: ../../docs/schema_cache.rst:12
 msgid ":ref:`resource_embedding`"
-msgstr ""
+msgstr ":ref:`resource_embedding`"
 
 #: ../../docs/schema_cache.rst:12
 msgid "Foreign key constraints"
-msgstr ""
+msgstr "外键约束"
 
 #: ../../docs/schema_cache.rst:14
 msgid ":ref:`Stored Functions <s_procs>`"
-msgstr ""
+msgstr ":ref:`存储过程 <s_procs>`"
 
 #: ../../docs/schema_cache.rst:14
 msgid ""
 "Function signature (parameters, return type, volatility and `overloading "
 "<https://www.postgresql.org/docs/current/xfunc-overload.html>`_)"
 msgstr ""
+"函数签名（参数、返回类型、波动和 `重载 <https://www.postgresql.org/docs/"
+"current/xfunc-overload.html>`_）"
 
 #: ../../docs/schema_cache.rst:17
+#, fuzzy
 msgid ":ref:`Upserts <upsert>`"
-msgstr ""
+msgstr ":ref:`更新插入 <upsert>`"
 
 #: ../../docs/schema_cache.rst:17
 msgid "Primary keys"
-msgstr ""
+msgstr "主键"
 
 #: ../../docs/schema_cache.rst:19
 msgid ":ref:`Insertions <insert_update>`"
-msgstr ""
+msgstr ":ref:`插入 <insert_update>`"
 
 #: ../../docs/schema_cache.rst:19
+#, fuzzy
 msgid "Primary keys (optional: only if the Location header is requested)"
-msgstr ""
+msgstr "主键（可选：only if the Location header is requested）"
 
 #: ../../docs/schema_cache.rst:21
 msgid ":ref:`OPTIONS requests <options_requests>`"
-msgstr ""
+msgstr ":ref:`OPTIONS 请求 <options_requests>`"
 
 #: ../../docs/schema_cache.rst:21
 msgid "View INSTEAD OF TRIGGERS and primary keys"
@@ -81,11 +88,11 @@ msgstr ""
 
 #: ../../docs/schema_cache.rst:23
 msgid ":ref:`open-api`"
-msgstr ""
+msgstr ":ref:`open-api`"
 
 #: ../../docs/schema_cache.rst:23
 msgid "Table columns, primary keys and foreign keys"
-msgstr ""
+msgstr "列、主键和外键"
 
 #: ../../docs/schema_cache.rst:25
 msgid "View columns and INSTEAD OF TRIGGERS"
@@ -93,7 +100,7 @@ msgstr ""
 
 #: ../../docs/schema_cache.rst:27
 msgid "Function signature"
-msgstr ""
+msgstr "函数签名"
 
 #: ../../docs/schema_cache.rst:31
 msgid "The Stale Schema Cache"
@@ -132,8 +139,8 @@ msgstr ""
 #: ../../docs/schema_cache.rst:63
 msgid ""
 "As you can see, PostgREST couldn't find the newly created foreign key in "
-"the schema cache. See :ref:`schema_reloading` and "
-":ref:`auto_schema_reloading` to solve this issue."
+"the schema cache. See :ref:`schema_reloading` and :ref:"
+"`auto_schema_reloading` to solve this issue."
 msgstr ""
 
 #: ../../docs/schema_cache.rst:68
@@ -179,10 +186,10 @@ msgstr "使用 NOTIFY 重新加载"
 
 #: ../../docs/schema_cache.rst:126
 msgid ""
-"There are environments where you can't send the SIGUSR1 Unix Signal (like"
-" on managed containers in cloud services or on Windows systems). For this"
-" reason, PostgREST also allows you to reload its schema cache through "
-"PostgreSQL `NOTIFY <https://www.postgresql.org/docs/current/sql-"
+"There are environments where you can't send the SIGUSR1 Unix Signal "
+"(like on managed containers in cloud services or on Windows systems). "
+"For this reason, PostgREST also allows you to reload its schema cache "
+"through PostgreSQL `NOTIFY <https://www.postgresql.org/docs/current/sql-"
 "notify.html>`_ as follows:"
 msgstr ""
 
@@ -200,9 +207,9 @@ msgstr "Schema 缓存自动重新加载"
 #: ../../docs/schema_cache.rst:139
 msgid ""
 "You can do automatic schema cache reloading in a pure SQL way and forget "
-"about stale schema cache errors with an `event trigger "
-"<https://www.postgresql.org/docs/current/event-trigger-definition.html>`_"
-" and ``NOTIFY``."
+"about stale schema cache errors with an `event trigger <https://www."
+"postgresql.org/docs/current/event-trigger-definition.html>`_ and "
+"``NOTIFY``."
 msgstr ""
 
 #: ../../docs/schema_cache.rst:157
@@ -225,4 +232,3 @@ msgid ""
 "relevant to the schema cache. This also prevents unnecessary reloading "
 "when creating temporary tables(``CREATE TEMP TABLE``) inside functions."
 msgstr ""
-

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-13 08:59+0800\n"
-"PO-Revision-Date: 2022-03-15 21:37+0800\n"
+"PO-Revision-Date: 2022-03-15 23:51+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -497,7 +497,7 @@ msgstr ""
 
 #: ../../docs/api.rst:273
 msgid "Array / Composite / JSON Columns"
-msgstr ""
+msgstr "数组 / 复合类型 / JSON 列"
 
 #: ../../docs/api.rst:275
 msgid ""
@@ -523,7 +523,7 @@ msgstr ""
 
 #: ../../docs/api.rst:358
 msgid "The arrow operators are also used for array and composite type columns."
-msgstr ""
+msgstr "箭头运算符也可用于数组和复合类型的列。"
 
 #: ../../docs/api.rst:396
 msgid ""
@@ -532,11 +532,13 @@ msgid ""
 "fields use an index, the index needs to be created on the same expression, "
 "including the ``to_jsonb(...)`` call:"
 msgstr ""
+"当使用 ``->`` 和 ``->`` 操作符时，PostgREST 使用类似 ``to_jsonb(<col>)-"
+">’field’`` 的查询。为了让这些嵌套字段的过滤和排序能使用索引，需要在同一个表达式"
+"上创建索引，包括 ``to_jsonb(..)`` 的调用："
 
 #: ../../docs/api.rst:405
-#, fuzzy
 msgid "Computed / Virtual Columns"
-msgstr "计算列"
+msgstr "计算 / 虚拟列"
 
 #: ../../docs/api.rst:407
 msgid ""
@@ -546,10 +548,13 @@ msgid ""
 "create a computed column that will not appear in the output but can be used in "
 "a filter:"
 msgstr ""
+"过滤器可以应用于计算列（**又称虚拟列**）以及实际的表/视图列，即使计算列不会出现"
+"在输出中。例如，为了一次性搜索姓和名，我们可以创建一个计算列，它不会出现在输出"
+"中，但可以在过滤器中使用："
 
 #: ../../docs/api.rst:424
 msgid "A full-text search on the computed column:"
-msgstr ""
+msgstr "以下是计算列上的全文检索："
 
 #: ../../docs/api.rst:436
 msgid ""
@@ -557,6 +562,8 @@ msgid ""
 "you can include them by listing them in the vertical filtering :code:`select` "
 "parameter:"
 msgstr ""
+"如前所述，计算列默认不会出现在输出中。但你可以通过在垂直筛选 :code:`select` 中包"
+"含他们："
 
 #: ../../docs/api.rst:450
 msgid ""
@@ -566,6 +573,10 @@ msgid ""
 "schemas>` you can use an **unnamed** argument, as in the example above, to "
 "prevent it from being exposed as an :ref:`RPC <s_procs>` under ``/rpc``."
 msgstr ""
+"计算列必须在 :ref:`公开 Schema <db-schemas>` 或在 :ref:`额外搜索路径 <db-extra-"
+"search-path>` 中创建，才能以这种方式使用。当把计算列放在 :ref:`公开 Schema <db-"
+"schemas>` 中时，你可以使用**未命名**参数，就像上面的例子一样，以防止它作为一个 :"
+"ref:`RPC <s_procs>` 在 `/rpc` 下被公开。"
 
 #: ../../docs/api.rst:453
 msgid "Unicode support"
@@ -576,14 +587,16 @@ msgid ""
 "PostgREST supports unicode in schemas, tables, columns and values. To access a "
 "table with unicode name, use percent encoding."
 msgstr ""
+"PostgREST 支持 Schema、表、列和值中的 Unicode 字符。要访问一个表名包含 Unicode "
+"字符的表，请使用百分号编码（URL 编码）。"
 
 #: ../../docs/api.rst:457
 msgid "To request this:"
-msgstr ""
+msgstr "要请求以下信息："
 
 #: ../../docs/api.rst:463
 msgid "Do this:"
-msgstr ""
+msgstr "需要这样："
 
 #: ../../docs/api.rst:478
 msgid "Table / Columns with spaces"
@@ -593,7 +606,7 @@ msgstr "表名 / 列名包含空格"
 msgid ""
 "You can request table/columns with spaces in them by percent encoding the "
 "spaces with ``%20``:"
-msgstr ""
+msgstr "你可以将空格百分号编码（URL 编码）为 ``%20`` 来访问包含空格的表名/列名："
 
 #: ../../docs/api.rst:495
 msgid "Reserved characters"
@@ -605,14 +618,16 @@ msgid ""
 "you'll have to surround them in percent encoded double quotes ``%22`` for "
 "correct processing."
 msgstr ""
+"如果过滤器包含 PostgREST 的保留字符（``,`` ``.`` ``:`` ``()``），你必须用百分号"
+"编码（URL 编码）的双引号 ``%22`` 包围它们才能被正确处理。"
 
 #: ../../docs/api.rst:499
 msgid "Here ``Hebdon,John`` and ``Williams,Mary`` are values."
-msgstr ""
+msgstr "此处的 ``Hebdon,John`` 和 ``Williams,Mary`` 是值。"
 
 #: ../../docs/api.rst:511
 msgid "Here ``information.cpe`` is a column name."
-msgstr ""
+msgstr "此处的 ``information.cpe`` 是列名。"
 
 #: ../../docs/api.rst:523
 msgid ""
@@ -620,12 +635,16 @@ msgid ""
 "can escape it using a backslash ``\"\\\"\"``. A backslash itself can be used "
 "with a double backslash ``\"\\\\\"``."
 msgstr ""
+"如果由 ``in`` 运算符过滤的值有包含双引号（``”``），你可以用反斜杠 ``”\\””`` 来转"
+"义它。反斜线本身也可以用双反斜线 ``”\\\\”``。"
 
 #: ../../docs/api.rst:525
 msgid ""
 "Here ``Quote:\"`` and ``Backslash:\\`` are percent-encoded values. Note that ``"
 "%5C`` is the percent-encoded backslash."
 msgstr ""
+"此处 ``Quote:”`` 和 ``Backslash:\\`` 是百分号编码（URL 编码）的值。注意 ``%5C`` "
+"是反斜杠等百分号编码（URL 编码）。"
 
 #: ../../docs/api.rst:539
 msgid ""
@@ -633,6 +652,8 @@ msgid ""
 "these cases you should use double quotes :code:`\"\"` directly instead of :code:"
 "`%22`."
 msgstr ""
+"一些 HTTP 库可能会自动对 URL 进行编码（如 :code:`axios`）。在这些情况下，你应该"
+"直接使用双引号 :code:`””` 而不是 :code:`%22`。"
 
 #: ../../docs/api.rst:543
 msgid "Ordering"
@@ -642,15 +663,15 @@ msgstr "排序"
 msgid ""
 "The reserved word :sql:`order` reorders the response rows. It uses a comma-"
 "separated list of columns and directions:"
-msgstr ""
+msgstr "保留字 :sql:`order` 会重排响应的行，用逗号将排序字段和排序方向分隔："
 
 #: ../../docs/api.rst:557
 msgid "If no direction is specified it defaults to ascending order:"
-msgstr ""
+msgstr "如果未指定排序方向则默认升序："
 
 #: ../../docs/api.rst:569
 msgid "If you care where nulls are sorted, add ``nullsfirst`` or ``nullslast``:"
-msgstr ""
+msgstr "如果你关心 null 的排序，可增加 ``nullsfirst`` 或 ``nullslast``："
 
 #: ../../docs/api.rst:591
 msgid ""
@@ -658,6 +679,8 @@ msgid ""
 "computed columns will not appear in the output. You can sort by nested fields "
 "of :ref:`json_columns` with the JSON operators."
 msgstr ""
+"你还可以使用 :ref:`computed_cols` 来对结果进行排序，尽管计算列并不会输出。你可以"
+"用 JSON 运算符按 :ref:`json_columns` 的嵌套字段排序。"
 
 #: ../../docs/api.rst:596
 msgid "Limits and Pagination"
@@ -669,6 +692,8 @@ msgid ""
 "response contains the current range and, if requested, the total number of "
 "results:"
 msgstr ""
+"PostgREST 使用 HTTP 范围消息头来描述结果的大小。每个响应都包含当前的范围，如果请"
+"求需要，还应包含结果总数："
 
 #: ../../docs/api.rst:606
 msgid ""
@@ -676,6 +701,8 @@ msgid ""
 "every response and can help you render pagination controls on the client. This "
 "is an RFC7233-compliant solution that keeps the response JSON cleaner."
 msgstr ""
+"此处 0 ～ 14 范围的条目被返回。这个信息在每个响应中都有，可以帮助用于客户端呈现"
+"分页控件。这是一个符合 RFC7233 标准的解决方案，可使响应的 JSON 更简洁。"
 
 #: ../../docs/api.rst:608
 msgid ""
@@ -683,22 +710,25 @@ msgid ""
 "query parameters. When using headers you specify the range of rows desired. "
 "This request gets the first twenty people."
 msgstr ""
+"有两种方法可以设置数量限定和偏移行：通过请求消息头或查询参数。当使用消息头时，你"
+"要指定所需的行的范围。下面这个请求将返回前 20 个人。"
 
 #: ../../docs/api.rst:624
 msgid ""
 "Note that the server may respond with fewer if unable to meet your request:"
 msgstr ""
+"请注意，如果没有足够的满足条件的数据，服务器返回数量可能少于你请求的数量："
 
 #: ../../docs/api.rst:632
 msgid ""
 "You may also request open-ended ranges for an offset with no limit, e.g. :code:"
 "`Range: 10-`."
-msgstr ""
+msgstr "你也可以请求时仅有偏移没有数量限制，如 :code:`Range: 10-`。"
 
 #: ../../docs/api.rst:634
 msgid ""
 "The other way to request a limit or offset is with query parameters. For example"
-msgstr ""
+msgstr "请求数量限定或偏移的另一种方式是使用查询参数。例如"
 
 #: ../../docs/api.rst:646
 msgid ""
@@ -706,6 +736,8 @@ msgid ""
 "another section. The server always responds with range headers even if you use "
 "query parameters to limit the query."
 msgstr ""
+"这种方法对嵌入式资源也很有用，我们将在另一节介绍。即使你使用查询参数来限定查询，"
+"服务器也总是用范围消息头来响应。"
 
 #: ../../docs/api.rst:651
 msgid "Exact Count"
@@ -805,23 +837,23 @@ msgstr ""
 
 #: ../../docs/api.rst:783
 msgid "``*/*``"
-msgstr ""
+msgstr "``*/*``"
 
 #: ../../docs/api.rst:784
 msgid "``text/csv``"
-msgstr ""
+msgstr "``text/csv``"
 
 #: ../../docs/api.rst:785
 msgid "``application/json``"
-msgstr ""
+msgstr "``application/json``"
 
 #: ../../docs/api.rst:786
 msgid "``application/openapi+json``"
-msgstr ""
+msgstr "``application/openapi+json``"
 
 #: ../../docs/api.rst:787
 msgid "``application/octet-stream``"
-msgstr ""
+msgstr "``application/octet-stream``"
 
 #: ../../docs/api.rst:789
 msgid "The server will default to JSON for API endpoints and OpenAPI on the root."
@@ -2024,7 +2056,7 @@ msgstr ""
 
 #: ../../docs/api.rst:2548
 msgid "Setting Response Headers"
-msgstr ""
+msgstr "设置响应消息头"
 
 #: ../../docs/api.rst:2550
 msgid ""
@@ -2068,7 +2100,7 @@ msgstr ""
 
 #: ../../docs/api.rst:2611
 msgid "Setting Response Status Code"
-msgstr ""
+msgstr "设置响应状态码"
 
 #: ../../docs/api.rst:2613
 msgid ""
@@ -2085,7 +2117,7 @@ msgstr ""
 
 #: ../../docs/api.rst:2647
 msgid "Raise errors with HTTP Status Codes"
-msgstr ""
+msgstr "引发 HTTP 状态码对应的错误"
 
 #: ../../docs/api.rst:2649
 msgid ""
@@ -2093,10 +2125,12 @@ msgid ""
 "exceptions. For instance, here's a saucy function that always responds with an "
 "error:"
 msgstr ""
+"存储过程可以通过引发 SQL 异常来返回非 200 的 HTTP 状态码。例如，这里有一个捣乱的"
+"函数，它总是用一个错误来响应："
 
 #: ../../docs/api.rst:2663
 msgid "Calling the function returns HTTP 400 with the body"
-msgstr ""
+msgstr "调用该函数会返回 HTTP 400，其消息体为"
 
 #: ../../docs/api.rst:2676
 msgid ""
@@ -2104,6 +2138,8 @@ msgid ""
 "all changes. If you don't want this, you can instead use the :ref:`response."
 "status GUC <guc_resp_status>`."
 msgstr ""
+"请记住 ``RAISE EXCEPTION`` 将会中止事务并回滚所有的变更。如果你不希望这样，可以"
+"使用 :ref:`GUC 响应状态 <guc_resp_status>`。"
 
 #: ../../docs/api.rst:2678
 msgid ""
@@ -2112,54 +2148,61 @@ msgid ""
 "For example, :code:`RAISE insufficient_privilege` will respond with HTTP "
 "401/403 as appropriate."
 msgstr ""
+"自定义 HTTP 状态码的一种方法是根据 PostgREST :ref:`错误与状态码映射 "
+"<status_codes>` 抛出特殊的异常。例如 :code:`RAISE insufficient_privilege` 将根据"
+"情况以 HTTP 401/403 响应。"
 
 #: ../../docs/api.rst:2680
 msgid ""
 "For even greater control of the HTTP status code, raise an exception of the "
 "``PTxyz`` type. For instance to respond with HTTP 402, raise 'PT402':"
 msgstr ""
+"为了更好地控制 HTTP 状态码，可抛出 `PTxyz` 类型的异常。如：要响应 HTTP 402，则抛"
+"出 ‘PT402’："
 
 #: ../../docs/api.rst:2689
 msgid "Returns:"
-msgstr ""
+msgstr "返回："
 
 #: ../../docs/api.rst:2701
 msgid "HTTP Status Codes"
-msgstr ""
+msgstr "HTTP 状态码"
 
 #: ../../docs/api.rst:2703
 msgid ""
 "PostgREST translates `PostgreSQL error codes <https://www.postgresql.org/docs/"
 "current/errcodes-appendix.html>`_ into HTTP status as follows:"
 msgstr ""
+"PostgREST 将 `PostgreSQL 错误代码 <https://www.postgresql.org/docs/current/"
+"errcodes-appendix.html>`_ 转换为如下的 HTTP 状态码："
 
 #: ../../docs/api.rst:2706
 msgid "PostgreSQL error code(s)"
-msgstr ""
+msgstr "PostgreSQL 错误代码"
 
 #: ../../docs/api.rst:2706
 msgid "HTTP status"
-msgstr ""
+msgstr "HTTP 状态码"
 
 #: ../../docs/api.rst:2706
 msgid "Error description"
-msgstr ""
+msgstr "错误描述"
 
 #: ../../docs/api.rst:2708
 msgid "08*"
-msgstr ""
+msgstr "08*"
 
 #: ../../docs/api.rst:2708 ../../docs/api.rst:2736
 msgid "503"
-msgstr ""
+msgstr "503"
 
 #: ../../docs/api.rst:2708
 msgid "pg connection err"
-msgstr ""
+msgstr "PG 连接错误"
 
 #: ../../docs/api.rst:2710
 msgid "09*"
-msgstr ""
+msgstr "09*"
 
 #: ../../docs/api.rst:2710 ../../docs/api.rst:2722 ../../docs/api.rst:2726
 #: ../../docs/api.rst:2728 ../../docs/api.rst:2730 ../../docs/api.rst:2732
@@ -2167,247 +2210,247 @@ msgstr ""
 #: ../../docs/api.rst:2744 ../../docs/api.rst:2746 ../../docs/api.rst:2748
 #: ../../docs/api.rst:2752 ../../docs/api.rst:2754
 msgid "500"
-msgstr ""
+msgstr "500"
 
 #: ../../docs/api.rst:2710
 msgid "triggered action exception"
-msgstr ""
+msgstr "触发器动作异常"
 
 #: ../../docs/api.rst:2712
 msgid "0L*"
-msgstr ""
+msgstr "0L*"
 
 #: ../../docs/api.rst:2712 ../../docs/api.rst:2714 ../../docs/api.rst:2724
 msgid "403"
-msgstr ""
+msgstr "403"
 
 #: ../../docs/api.rst:2712
 msgid "invalid grantor"
-msgstr ""
+msgstr "无效的授权者"
 
 #: ../../docs/api.rst:2714
 msgid "0P*"
-msgstr ""
+msgstr "0P*"
 
 #: ../../docs/api.rst:2714
 msgid "invalid role specification"
-msgstr ""
+msgstr "无效的角色规范"
 
 #: ../../docs/api.rst:2716
 msgid "23503"
-msgstr ""
+msgstr "23503"
 
 #: ../../docs/api.rst:2716 ../../docs/api.rst:2718
 msgid "409"
-msgstr ""
+msgstr "409"
 
 #: ../../docs/api.rst:2716
 msgid "foreign key violation"
-msgstr ""
+msgstr "违反外键约束"
 
 #: ../../docs/api.rst:2718
 msgid "23505"
-msgstr ""
+msgstr "23505"
 
 #: ../../docs/api.rst:2718
 msgid "uniqueness violation"
-msgstr ""
+msgstr "违反唯一约束"
 
 #: ../../docs/api.rst:2720
 msgid "25006"
-msgstr ""
+msgstr "25006"
 
 #: ../../docs/api.rst:2720
 msgid "405"
-msgstr ""
+msgstr "405"
 
 #: ../../docs/api.rst:2720
 msgid "read only sql transaction"
-msgstr ""
+msgstr "只读的 SQL 事务"
 
 #: ../../docs/api.rst:2722
 msgid "25*"
-msgstr ""
+msgstr "25*"
 
 #: ../../docs/api.rst:2722
 msgid "invalid transaction state"
-msgstr ""
+msgstr "无效的事务状态"
 
 #: ../../docs/api.rst:2724
 msgid "28*"
-msgstr ""
+msgstr "28*"
 
 #: ../../docs/api.rst:2724
 msgid "invalid auth specification"
-msgstr ""
+msgstr "无效的授权规范"
 
 #: ../../docs/api.rst:2726
 msgid "2D*"
-msgstr ""
+msgstr "2D*"
 
 #: ../../docs/api.rst:2726
 msgid "invalid transaction termination"
-msgstr ""
+msgstr "无效的事务终止"
 
 #: ../../docs/api.rst:2728
 msgid "38*"
-msgstr ""
+msgstr "38*"
 
 #: ../../docs/api.rst:2728
 msgid "external routine exception"
-msgstr ""
+msgstr "外部程序异常"
 
 #: ../../docs/api.rst:2730
 msgid "39*"
-msgstr ""
+msgstr "39*"
 
 #: ../../docs/api.rst:2730
 msgid "external routine invocation"
-msgstr ""
+msgstr "外部程序调用"
 
 #: ../../docs/api.rst:2732
 msgid "3B*"
-msgstr ""
+msgstr "3B*"
 
 #: ../../docs/api.rst:2732
 msgid "savepoint exception"
-msgstr ""
+msgstr "Savepoint 异常"
 
 #: ../../docs/api.rst:2734
 msgid "40*"
-msgstr ""
+msgstr "40*"
 
 #: ../../docs/api.rst:2734
 msgid "transaction rollback"
-msgstr ""
+msgstr "事务回滚"
 
 #: ../../docs/api.rst:2736
 msgid "53*"
-msgstr ""
+msgstr "53*"
 
 #: ../../docs/api.rst:2736
 msgid "insufficient resources"
-msgstr ""
+msgstr "资源不足"
 
 #: ../../docs/api.rst:2738
 msgid "54*"
-msgstr ""
+msgstr "54*"
 
 #: ../../docs/api.rst:2738
 msgid "413"
-msgstr ""
+msgstr "413"
 
 #: ../../docs/api.rst:2738
 msgid "too complex"
-msgstr ""
+msgstr "过于复杂"
 
 #: ../../docs/api.rst:2740
 msgid "55*"
-msgstr ""
+msgstr "55*"
 
 #: ../../docs/api.rst:2740
 msgid "obj not in prerequisite state"
-msgstr ""
+msgstr "对象未处于先决条件状态"
 
 #: ../../docs/api.rst:2742
 msgid "57*"
-msgstr ""
+msgstr "57*"
 
 #: ../../docs/api.rst:2742
 msgid "operator intervention"
-msgstr ""
+msgstr "操作员干预"
 
 #: ../../docs/api.rst:2744
 msgid "58*"
-msgstr ""
+msgstr "58*"
 
 #: ../../docs/api.rst:2744
 msgid "system error"
-msgstr ""
+msgstr "系统错误"
 
 #: ../../docs/api.rst:2746
 msgid "F0*"
-msgstr ""
+msgstr "F0*"
 
 #: ../../docs/api.rst:2746
 msgid "config file error"
-msgstr ""
+msgstr "配置文件错误"
 
 #: ../../docs/api.rst:2748
 msgid "HV*"
-msgstr ""
+msgstr "HV*"
 
 #: ../../docs/api.rst:2748
 msgid "foreign data wrapper error"
-msgstr ""
+msgstr "外部数据包装（FDW）错误"
 
 #: ../../docs/api.rst:2750
 msgid "P0001"
-msgstr ""
+msgstr "P0001"
 
 #: ../../docs/api.rst:2750 ../../docs/api.rst:2763
 msgid "400"
-msgstr ""
+msgstr "400"
 
 #: ../../docs/api.rst:2750
 msgid "default code for \"raise\""
-msgstr ""
+msgstr "raise 的默认代码"
 
 #: ../../docs/api.rst:2752
 msgid "P0*"
-msgstr ""
+msgstr "P0*"
 
 #: ../../docs/api.rst:2752
 msgid "PL/pgSQL error"
-msgstr ""
+msgstr "PL/pgSQL 错误"
 
 #: ../../docs/api.rst:2754
 msgid "XX*"
-msgstr ""
+msgstr "XX*"
 
 #: ../../docs/api.rst:2754
 msgid "internal error"
-msgstr ""
+msgstr "内部错误"
 
 #: ../../docs/api.rst:2756
 msgid "42883"
-msgstr ""
+msgstr "42883"
 
 #: ../../docs/api.rst:2756 ../../docs/api.rst:2758
 msgid "404"
-msgstr ""
+msgstr "404"
 
 #: ../../docs/api.rst:2756
 msgid "undefined function"
-msgstr ""
+msgstr "未定义的函数"
 
 #: ../../docs/api.rst:2758
 msgid "42P01"
-msgstr ""
+msgstr "42P01"
 
 #: ../../docs/api.rst:2758
 msgid "undefined table"
-msgstr ""
+msgstr "未定义的表"
 
 #: ../../docs/api.rst:2760
 msgid "42501"
-msgstr ""
+msgstr "42501"
 
 #: ../../docs/api.rst
 msgid "if authenticated 403,"
-msgstr ""
+msgstr "已认证则 403"
 
 #: ../../docs/api.rst
 msgid "else 401"
-msgstr ""
+msgstr "未认证则 401"
 
 #: ../../docs/api.rst:2760
 msgid "insufficient privileges"
-msgstr ""
+msgstr "权限不足"
 
 #: ../../docs/api.rst:2763
 msgid "other"
-msgstr ""
+msgstr "其他"
 
 #~ msgid "JSON Columns"
 #~ msgstr "JSON 列"

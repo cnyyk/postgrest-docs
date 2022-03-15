@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PostgREST 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-13 08:59+0800\n"
-"PO-Revision-Date: 2022-03-13 09:54+0800\n"
+"PO-Revision-Date: 2022-03-15 21:26+0800\n"
 "Last-Translator: YCH <chnyyk@gmail.com>\n"
 "Language-Team: YCH <chnyyk@gmail.com>\n"
 "Language: zh_CN\n"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../docs/index.rst:33
 msgid "Sponsors"
-msgstr "赞助名单"
+msgstr "赞助者"
 
 #: ../../docs/index.rst:71
 msgid "Motivation"

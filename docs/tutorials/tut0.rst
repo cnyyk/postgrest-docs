@@ -52,9 +52,9 @@ The result will be a file named simply :code:`postgrest` (or :code:`postgrest.ex
 
 .. code-block:: bash
 
-  ./postgrest
+  ./postgrest -h
 
-If everything is working correctly it will print out its version and information about configuration. You can continue to run this binary from where you downloaded it, or copy it to a system directory like :code:`/usr/local/bin` on Linux so that you will be able to run it from any directory.
+If everything is working correctly it will print out its version and the available options. You can continue to run this binary from where you downloaded it, or copy it to a system directory like :code:`/usr/local/bin` on Linux so that you will be able to run it from any directory.
 
 .. note::
 
@@ -165,7 +165,7 @@ PostgREST can use a configuration file to tell it how to connect to the database
   db-schemas = "api"
   db-anon-role = "web_anon"
 
-The configuration file has other :doc:`options <../configuration>`, but this is all we need. 
+The configuration file has other :ref:`options <configuration>`, but this is all we need.
 If you are not using Docker, make sure that your port number is correct and replace `postgres` with the name of the database where you added the todos table.
 
 Now run the server:
@@ -223,7 +223,7 @@ Response is 401 Unauthorized:
     "hint": null,
     "details": null,
     "code": "42501",
-    "message": "permission denied for relation todos"
+    "message": "permission denied for table todos"
   }
 
 There we have it, a basic API on top of the database! In the next tutorials we will see how to extend the example with more sophisticated user access controls, and more tables and queries.

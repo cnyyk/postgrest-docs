@@ -3,8 +3,7 @@
 Schema Cache
 ============
 
-Certain PostgREST features require metadata from the database schema. Getting this metadata requires executing expensive queries, so
-in order to avoid repeating this work, PostgREST uses a schema cache.
+Some PostgREST features need metadata from the database schema. Getting this metadata requires expensive queries. To avoid repeating this work, PostgREST uses a schema cache.
 
 +--------------------------------------------+-------------------------------------------------------------------------------+
 | Feature                                    | Required Metadata                                                             |
@@ -16,7 +15,7 @@ in order to avoid repeating this work, PostgREST uses a schema cache.
 +--------------------------------------------+-------------------------------------------------------------------------------+
 | :ref:`Upserts <upsert>`                    | Primary keys                                                                  |
 +--------------------------------------------+-------------------------------------------------------------------------------+
-| :ref:`Insertions <insert_update>`          | Primary keys (optional: only if the Location header is requested)             |
+| :ref:`Insertions <insert>`                 | Primary keys (optional: only if the Location header is requested)             |
 +--------------------------------------------+-------------------------------------------------------------------------------+
 | :ref:`OPTIONS requests <options_requests>` | View INSTEAD OF TRIGGERS and primary keys                                     |
 +--------------------------------------------+-------------------------------------------------------------------------------+
@@ -27,80 +26,21 @@ in order to avoid repeating this work, PostgREST uses a schema cache.
 |                                            | Function signature                                                            |
 +--------------------------------------------+-------------------------------------------------------------------------------+
 
-The Stale Schema Cache
-----------------------
+.. _stale_schema:
 
-When you make changes on the metadata mentioned above, the schema cache will turn stale on a running PostgREST. Future requests that use the above features will need the :ref:`schema cache to be reloaded <schema_reloading>`; otherwise, you'll get an error instead of the expected result.
+Stale Schema Cache
+------------------
 
-For instance, let's see what would happen if you have a stale schema cache for foreign key relationships and function signatures.
+One operational problem that comes a cache is that it can go stale. This can happen for PostgREST when you make changes to the metadata before mentioned. Requests that depend on the metadata will fail.
 
-.. _stale_fk_relationships:
-
-Stale Foreign Key Relationships
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Suppose you add a ``cities`` table to your database and define a foreign key that references an existing ``countries`` table. Then, you make a request to get the ``cities`` and their belonging ``countries``.
-
-.. tabs::
-
-  .. code-tab:: http
-
-    GET /cities?select=name,country:countries(id,name) HTTP/1.1
-
-  .. code-tab:: bash Curl
-
-    curl "http://localhost:3000/cities?select=name,country:countries(id,name)"
-
-The result will be an error:
-
-.. code-block:: json
-
-  {
-    "hint": "If a new foreign key between these entities was created in the database, try reloading the schema cache.",
-    "message": "Could not find a relationship between cities and countries in the schema cache"
-  }
-
-As you can see, PostgREST couldn't find the newly created foreign key in the schema cache. See :ref:`schema_reloading` and :ref:`auto_schema_reloading` to solve this issue.
-
-.. _stale_function_signature:
-
-Stale Function Signature
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-The same issue will occur on newly created functions on a running PostgREST.
-
-.. code-block:: plpgsql
-
-  CREATE FUNCTION plus_one(num integer)
-  RETURNS integer AS $$
-   SELECT num + 1;
-  $$ LANGUAGE SQL IMMUTABLE;
-
-.. tabs::
-
-  .. code-tab:: http
-
-    GET /rpc/plus_one?num=1 HTTP/1.1
-
-  .. code-tab:: bash Curl
-
-    curl "http://localhost:3000/rpc/plus_one?num=1"
-
-.. code-block:: json
-
-  {
-    "hint": "If a new function was created in the database with this name and arguments, try reloading the schema cache.",
-    "message": "Could not find the api.plus_one(num) function in the schema cache"
-  }
-
-Here, PostgREST tries to find the function on the stale schema to no avail. See :ref:`schema_reloading` and :ref:`auto_schema_reloading` to solve this issue.
+You can solve this by reloading the cache manually or automatically.
 
 .. _schema_reloading:
 
 Schema Cache Reloading
 ----------------------
 
-To reload the cache without restarting the PostgREST server, send a SIGUSR1 signal to the server process.
+To manually reload the cache without restarting the PostgREST server, send a SIGUSR1 signal to the server process.
 
 .. code:: bash
 
@@ -116,32 +56,34 @@ For docker you can do:
   # or in docker-compose
   docker-compose kill -s SIGUSR1 <service>
 
-There's no downtime when reloading the schema cache. The reloading will happen on a background thread while requests keep being served.
+There’s no downtime when reloading the schema cache. The reloading will happen on a background thread while serving requests.
 
 .. _schema_reloading_notify:
 
 Reloading with NOTIFY
 ~~~~~~~~~~~~~~~~~~~~~
 
-There are environments where you can't send the SIGUSR1 Unix Signal (like on managed containers in cloud services or on Windows systems). For this reason, PostgREST also allows you to reload its schema cache through PostgreSQL `NOTIFY <https://www.postgresql.org/docs/current/sql-notify.html>`_ as follows:
+PostgREST also allows you to reload its schema cache through PostgreSQL `NOTIFY <https://www.postgresql.org/docs/current/sql-notify.html>`_.
 
 .. code-block:: postgresql
 
   NOTIFY pgrst, 'reload schema'
 
-The ``"pgrst"`` notification channel is enabled by default. For configuring the channel, see :ref:`db-channel` and :ref:`db-channel-enabled`.
+This is useful in environments where you can’t send the SIGUSR1 Unix Signal. Like on cloud managed containers or on Windows systems.
+
+The ``pgrst`` notification channel is enabled by default. For configuring the channel, see :ref:`db-channel` and :ref:`db-channel-enabled`.
 
 .. _auto_schema_reloading:
 
 Automatic Schema Cache Reloading
 --------------------------------
 
-You can do automatic schema cache reloading in a pure SQL way and forget about stale schema cache errors with an `event trigger <https://www.postgresql.org/docs/current/event-trigger-definition.html>`_ and ``NOTIFY``.
+You can do automatic schema cache reloading in a pure SQL way and forget about stale schema cache errors. For this use an `event trigger <https://www.postgresql.org/docs/current/event-trigger-definition.html>`_ and ``NOTIFY``.
 
 .. code-block:: postgresql
 
   -- Create an event trigger function
-  CREATE OR REPLACE FUNCTION public.pgrst_watch() RETURNS event_trigger
+  CREATE OR REPLACE FUNCTION pgrst_watch() RETURNS event_trigger
     LANGUAGE plpgsql
     AS $$
   BEGIN
@@ -152,11 +94,11 @@ You can do automatic schema cache reloading in a pure SQL way and forget about s
   -- This event trigger will fire after every ddl_command_end event
   CREATE EVENT TRIGGER pgrst_watch
     ON ddl_command_end
-    EXECUTE PROCEDURE public.pgrst_watch();
+    EXECUTE PROCEDURE pgrst_watch();
 
-Now, whenever the ``pgrst_watch`` trigger is fired in the database, PostgREST will automatically reload the schema cache.
+Now, whenever the ``pgrst_watch`` trigger fires, PostgREST will auto-reload the schema cache.
 
-To disable auto reloading, drop the trigger:
+To disable auto reloading, drop the trigger.
 
 .. code-block:: postgresql
 
@@ -165,12 +107,12 @@ To disable auto reloading, drop the trigger:
 Finer-Grained Event Trigger
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can refine the previous event trigger and only react to the events relevant to the schema cache. This also prevents unnecessary
-reloading when creating temporary tables(``CREATE TEMP TABLE``) inside functions.
+You can refine the previous event trigger to only react to the events relevant to the schema cache. This also prevents unnecessary
+reloading when creating temporary tables inside functions.
 
 .. code-block:: postgresql
 
-  -- watch create and alter
+  -- watch CREATE and ALTER
   CREATE OR REPLACE FUNCTION pgrst_ddl_watch() RETURNS event_trigger AS $$
   DECLARE
     cmd record;
@@ -185,7 +127,7 @@ reloading when creating temporary tables(``CREATE TEMP TABLE``) inside functions
       , 'CREATE MATERIALIZED VIEW', 'ALTER MATERIALIZED VIEW'
       , 'CREATE FUNCTION', 'ALTER FUNCTION'
       , 'CREATE TRIGGER'
-      , 'CREATE TYPE'
+      , 'CREATE TYPE', 'ALTER TYPE'
       , 'CREATE RULE'
       , 'COMMENT'
       )
@@ -197,7 +139,7 @@ reloading when creating temporary tables(``CREATE TEMP TABLE``) inside functions
     END LOOP;
   END; $$ LANGUAGE plpgsql;
 
-  -- watch drop
+  -- watch DROP
   CREATE OR REPLACE FUNCTION pgrst_drop_watch() RETURNS event_trigger AS $$
   DECLARE
     obj record;

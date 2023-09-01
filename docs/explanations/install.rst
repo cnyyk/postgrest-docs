@@ -1,7 +1,7 @@
 .. _install:
 
 Installation
-============
+############
 
 The release page has `pre-compiled binaries for Mac OS X, Windows, Linux and FreeBSD <https://github.com/PostgREST/postgrest/releases/latest>`_ .
 The Linux binary is a static executable that can be run on any Linux distribution.
@@ -32,7 +32,7 @@ You can also use your OS package manager.
 
       .. tab:: Arch Linux
 
-        You can install PostgREST from the `community repo <https://archlinux.org/packages/community/x86_64/postgrest>`_.
+        You can install PostgREST from the `community repo <https://archlinux.org/packages/extra/x86_64/postgrest/>`_.
 
         .. code:: bash
 
@@ -48,12 +48,24 @@ You can also use your OS package manager.
 
   .. group-tab:: Windows
 
-    You can install PostgREST using `Chocolatey <https://community.chocolatey.org/packages/postgrest>`_ or `Scoop <https://scoop.sh>`_.
+    You can install PostgREST using `Chocolatey <https://community.chocolatey.org/packages/postgrest>`_ or `Scoop <https://github.com/ScoopInstaller/Scoop>`_.
 
     .. code:: bash
 
       choco install postgrest
       scoop install postgrest
+
+
+.. _pg-dependency:
+
+Supported PostgreSQL versions
+=============================
+
+=============== =================================
+**Supported**   PostgreSQL >= 9.6
+=============== =================================
+
+PostgREST works with all PostgreSQL versions starting from 9.6.
 
 Running PostgREST
 =================
@@ -95,18 +107,11 @@ For a complete reference of the configuration file, see :ref:`configuration`.
 
   If you see a dialog box like this on Windows, it may be that the :code:`pg_config` program is not in your system path.
 
-  .. image:: _static/win-err-dialog.png
+  .. image:: ../_static/win-err-dialog.png
 
   It usually lives in :code:`C:\Program Files\PostgreSQL\<version>\bin`. See this `article <https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/>`_ about how to modify the system path.
 
   To test that the system path is set correctly, run ``pg_config`` from the command line. You should see it output a list of paths.
-
-.. _pg-dependency:
-
-PostgreSQL dependency
----------------------
-
-To use PostgREST you will need an underlying database. We require PostgreSQL 9.6 or greater. You can use something like `Amazon RDS <https://aws.amazon.com/rds/>`_ but installing your own locally is cheaper and more convenient for development. You can also run PostgreSQL in a :ref:`docker container<pg-in-docker>`.
 
 Docker
 ======
@@ -228,7 +233,7 @@ When a pre-built binary does not exist for your system you can build the project
 
 You can build PostgREST from source with `Stack <https://github.com/commercialhaskell/stack>`_. It will install any necessary Haskell dependencies on your system.
 
-* `Install Stack <https://docs.haskellstack.org/en/stable/README/#how-to-install>`_ for your platform
+* `Install Stack <https://docs.haskellstack.org/en/stable/README/#how-to-install-stack>`_ for your platform
 * Install Library Dependencies
 
   =====================  =======================================
@@ -256,17 +261,3 @@ You can build PostgREST from source with `Stack <https://github.com/commercialha
    - `--install-ghc` flag is only needed for the first build and can be omitted in the subsequent builds.
 
 * Check that the server is installed: :code:`postgrest --help`.
-
-Deploying to Heroku
-===================
-
-Assuming you're making modifications locally and then pushing to GitHub, it's easy to deploy to Heroku.
-
-1. Create a new app on Heroku
-2. In Settings add the following buildpack :code:`https://github.com/PostgREST/postgrest-heroku`
-3. Add the require Config Vars in Heroku
-4. Modify your ``postgrest.conf`` file as required to match your Config Vars in Heroku
-5. Create your :code:`Procfile` and add :code:`./env-to-config ./postgrest postgrest.conf`
-6. Push your changes to GitHub
-7. Set Heroku to automatically deploy from Main and then manually deploy the branch for the first build
-

@@ -67,15 +67,15 @@ Sponsors
 
 |
 
-Motivation
-----------
+Database as Single Source of Truth
+----------------------------------
 
 Using PostgREST is an alternative to manual CRUD programming. Custom API servers suffer problems. Writing business logic often duplicates, ignores or hobbles database structure. Object-relational mapping is a leaky abstraction leading to slow imperative code. The PostgREST philosophy establishes a single declarative source of truth: the data itself.
 
 Declarative Programming
 -----------------------
 
-It's easier to ask PostgreSQL to join data for you and let its query planner figure out the details than to loop through rows yourself. It's easier to assign permissions to db objects than to add guards in controllers. (This is especially true for cascading permissions in data dependencies.) It's easier to set constraints than to litter code with sanity checks.
+It's easier to ask PostgreSQL to join data for you and let its query planner figure out the details than to loop through rows yourself. It's easier to assign permissions to database objects than to add guards in controllers. (This is especially true for cascading permissions in data dependencies.) It's easier to set constraints than to litter code with sanity checks.
 
 Leak-proof Abstraction
 ----------------------
@@ -90,20 +90,15 @@ PostgREST has a focused scope. It works well with other tools like Nginx. This f
 Getting Support
 ----------------
 
-The project has a friendly and growing community. Join our `chat room <https://gitter.im/begriffs/postgrest>`_ for discussion and help. You can also report or search for bugs/features on the Github `issues <https://github.com/PostgREST/postgrest/issues>`_ page.
+The project has a friendly and growing community. For discussions, use the Github `discussions page <https://github.com/PostgREST/postgrest/discussions>`_ or join our `chat room <https://gitter.im/begriffs/postgrest>`_. You can also report or search for bugs/features on the Github `issues <https://github.com/PostgREST/postgrest/issues>`_ page.
 
 .. toctree::
    :glob:
    :caption: Release Notes
-   :titlesonly:
-   :hidden:
+   :reversed:
+   :maxdepth: 1
 
-   v9.0.0 <releases/v9.0.0>
-   releases/v8.0.0
-   releases/v7.0.1
-   releases/v7.0.0
-   releases/v6.0.2
-   releases/v5.2.0
+   releases/*
 
 Tutorials
 ---------
@@ -113,95 +108,72 @@ Are you new to PostgREST? This is the place to start!
 .. toctree::
    :glob:
    :caption: Tutorials
-   :hidden:
+   :maxdepth: 1
 
    tutorials/*
 
-- :doc:`tutorials/tut0`
-- :doc:`tutorials/tut1`
+Also have a look at :ref:`install` and :ref:`community_tutorials`.
 
-Also have a look at :doc:`Installation <install>` and :ref:`community_tutorials`.
-
-Reference guides
-----------------
+References
+----------
 
 Technical references for PostgREST's functionality.
 
 .. toctree::
-   :caption: API
-   :hidden:
+   :glob:
+   :caption: References
+   :name: references
+   :maxdepth: 1
 
-   api.rst
+   references/auth.rst
+   references/api.rst
+   references/transactions.rst
+   references/connection_pool.rst
+   references/schema_cache.rst
+   references/errors.rst
+   references/configuration.rst
+   references/*
 
-.. toctree::
-   :caption: Configuration
-   :hidden:
-
-   configuration.rst
-
-.. toctree::
-   :caption: Schema Cache
-   :hidden:
-
-   schema_cache.rst
-
-- :doc:`API <api>`
-- :doc:`configuration`
-- :doc:`Schema Cache <schema_cache>`
-
-Topic guides
+Explanations
 ------------
 
-Explanations of some key concepts in PostgREST.
+Key concepts in PostgREST.
 
 .. toctree::
-   :caption: Authentication
-   :hidden:
+   :glob:
+   :caption: Explanations
+   :name: explanations
+   :maxdepth: 1
 
-   auth.rst
+   explanations/*
 
-.. toctree::
-   :caption: Schema Structure
-   :hidden:
+How-tos
+-------
 
-   schema_structure.rst
-
-.. toctree::
-   :caption: Administration
-   :hidden:
-
-   admin.rst
-
-.. toctree::
-   :caption: Installation
-   :hidden:
-
-   install.rst
-
-- :doc:`Authentication <auth>`
-- :doc:`Schema Structure <schema_structure>`
-- :doc:`Administration <admin>`
-- :doc:`Installation <install>`
-
-.. _how_tos:
-
-How-to guides
--------------
-
-These are recipes that'll help you address specific use-cases.
+Recipes that'll help you address specific use-cases.
 
 .. toctree::
    :glob:
    :caption: How-to guides
-   :hidden:
+   :name: how-tos
+   :maxdepth: 1
 
+   how-tos/sql-user-*
+   how-tos/working-*
    how-tos/*
 
-- :doc:`how-tos/casting-type-to-custom-json`
-- :doc:`how-tos/embedding-table-from-another-schema`
-- :doc:`how-tos/providing-images-for-img`
-- `How PostgreSQL triggers work when called with a PostgREST PATCH HTTP request <https://blog.fgribreau.com/2020/11/how-postgresql-triggers-works-when.html>`_
-- :doc:`how-tos/working-with-postgresql-data-types`
+.. _intgrs:
+
+Integrations
+------------
+
+.. toctree::
+   :glob:
+   :caption: Integrations
+   :name: integrations
+   :maxdepth: 1
+
+   integrations/*
 
 Ecosystem
 ---------
@@ -210,30 +182,10 @@ PostgREST has a growing ecosystem of examples, libraries, and experiments. Here 
 
 .. toctree::
    :caption: Ecosystem
-   :hidden:
+   :name: ecosystem
+   :maxdepth: 1
 
    ecosystem.rst
-
-* :ref:`community_tutorials`
-* :ref:`templates`
-* :ref:`eco_example_apps`
-* :ref:`devops`
-* :ref:`eco_external_notification`
-* :ref:`eco_extensions`
-* :ref:`clientside_libraries`
-
-
-Release Notes
--------------
-
-Here we'll include the most relevant changes so you can migrate to newer versions easily.
-You can see the full changelog of each release in the `PostgREST repository <https://github.com/PostgREST/postgrest/releases>`_.
-
-- :doc:`releases/v9.0.0`
-- :doc:`releases/v8.0.0`
-- :doc:`releases/v7.0.0`
-- :doc:`releases/v6.0.2`
-- :doc:`releases/v5.2.0`
 
 In Production
 -------------
@@ -245,7 +197,6 @@ Here are some companies that use PostgREST in production.
 * `Drip Depot <https://www.dripdepot.com>`_
 * `Image-charts <https://www.image-charts.com>`_
 * `Moat <https://www.moat.com>`_
-* `MotionDynamic - Fast highly dynamic video generation at scale <https://motiondynamic.tech>`_
 * `Netwo <https://www.netwo.io>`_
 * `Nimbus <https://www.nimbusforwork.com>`_
   - See how Nimbus uses PostgREST in `Paul Copplestone's blog post <https://paul.copplest.one/blog/nimbus-tech-2019-04.html>`_.
@@ -254,8 +205,9 @@ Here are some companies that use PostgREST in production.
 * `Sompani <https://www.sompani.com>`_
 * `Supabase <https://supabase.com>`_
 
-.. Certs are failing
+.. Failing links
   * `eGull <http://www.egull.co>`_
+  * `MotionDynamic - Fast highly dynamic video generation at scale <https://motiondynamic.tech>`_
 
 Testimonials
 ------------

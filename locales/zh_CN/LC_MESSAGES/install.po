@@ -29,56 +29,65 @@ msgid ""
 "The Linux binary is a static executable that can be run on any Linux "
 "distribution."
 msgstr ""
+"发布页提供 `Mac OS X，Windows，Linux "
+"和 FreeBSD 的预编译包<https://github.com/PostgREST/postgrest/releases/latest>`_ . "
+"Linux二进制文件是一个静态链接的可执行文件，可以在任何 Linux 发行版上运行。"
 
 #: ../../docs/install.rst:9
 msgid "You can also use your OS package manager."
-msgstr ""
+msgstr "您也可以使用您操作系统的软件包管理器。"
 
 #: ../../docs/install.rst:13
 msgid "Mac OSX"
-msgstr ""
+msgstr "Mac OSX"
 
 #: ../../docs/install.rst:15
 msgid ""
 "You can install PostgREST from the `Homebrew official repo "
 "<https://formulae.brew.sh/formula/postgrest>`_."
 msgstr ""
+"您可以从 `Homebrew 官方软件仓库 "
+"<https://formulae.brew.sh/formula/postgrest>`_ 安装 PostgREST 。"
 
 #: ../../docs/install.rst:21
 msgid "FreeBSD"
-msgstr ""
+msgstr "FreeBSD"
 
 #: ../../docs/install.rst:23
 msgid ""
 "You can install PostgREST from the `official ports "
 "<https://www.freshports.org/www/hs-postgrest>`_."
 msgstr ""
+"您可以从 `官方 ports "
+"<https://www.freshports.org/www/hs-postgrest>`_ 安装 PostgREST 。"
 
 #: ../../docs/install.rst:29
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../docs/install.rst:33
 msgid "Arch Linux"
-msgstr ""
+msgstr "Arch Linux"
 
 #: ../../docs/install.rst:35
 msgid ""
 "You can install PostgREST from the `community repo "
 "<https://archlinux.org/packages/community/x86_64/postgrest>`_."
 msgstr ""
+"您可以从 `社区软件仓库 "
+"<https://archlinux.org/packages/community/x86_64/postgrest>`_ 安装 PostgREST 。"
 
 #: ../../docs/install.rst:41
 msgid "Nix"
-msgstr ""
+msgstr "Nix"
 
 #: ../../docs/install.rst:43
 msgid "You can install PostgREST from nixpkgs."
-msgstr ""
+msgstr "您可以从 nixpkgs 安装 PostgREST 。"
 
 #: ../../docs/install.rst:49
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../docs/install.rst:51
 msgid ""
@@ -86,6 +95,9 @@ msgid ""
 "<https://community.chocolatey.org/packages/postgrest>`_ or `Scoop "
 "<https://scoop.sh>`_."
 msgstr ""
+"您可以使用 `Chocolatey "
+"<https://community.chocolatey.org/packages/postgrest>`_ 或 `Scoop "
+"<https://scoop.sh>`_ 安装 PostgREST 。"
 
 #: ../../docs/install.rst:59
 msgid "Running PostgREST"
@@ -96,28 +108,36 @@ msgid ""
 "If you downloaded PostgREST from the release page, first extract the "
 "compressed file to obtain the executable."
 msgstr ""
+"如果您从 PostgREST 发布页下载的， "
+"您需要从压缩包中解压出可执行文件。"
 
 #: ../../docs/install.rst:70
 msgid ""
 "Now you can run PostgREST with the :code:`--help` flag to see usage "
 "instructions:"
 msgstr ""
+"现在您可以使用 :code:`--help` 参数运行 PostgREST ， "
+"查看使用说明。"
 
 #: ../../docs/install.rst:82
 msgid "The PostgREST server reads a configuration file as its only argument:"
-msgstr ""
+msgstr "PostgREST 服务器读取配置文件只需要一个参数："
 
 #: ../../docs/install.rst:92
 msgid ""
 "For a complete reference of the configuration file, see "
 ":ref:`configuration`."
 msgstr ""
+"完整的配置文件，请参考： "
+":ref:`configuration`。"
 
 #: ../../docs/install.rst:96
 msgid ""
 "If you see a dialog box like this on Windows, it may be that the "
 ":code:`pg_config` program is not in your system path."
 msgstr ""
+"如果您在 Windows 上看到这样的对话框，则可能是您的 "
+":code:`pg_config` 程序不在您的系统 PATH 路径中。"
 
 #: ../../docs/install.rst:100
 msgid ""
@@ -126,16 +146,22 @@ msgid ""
 "<https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-"
 "command-line-access/>`_ about how to modify the system path."
 msgstr ""
+"它通常位于 :code:`C:\\Program "
+"Files\\PostgreSQL\\<version>\\bin` 中。请参考本文 `article "
+"<https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-"
+"command-line-access/>`_ ，了解如何修改系统 PATH 路径。"
 
 #: ../../docs/install.rst:102
 msgid ""
 "To test that the system path is set correctly, run ``pg_config`` from the"
 " command line. You should see it output a list of paths."
 msgstr ""
+"如要测试系统 PATH 设置是否正确，请从命令行中运行 ``pg_config`` 命令，"
+" 您应该看到它输出的一个路径列表。"
 
 #: ../../docs/install.rst:107
 msgid "PostgreSQL dependency"
-msgstr ""
+msgstr "PostgreSQL 依赖"
 
 #: ../../docs/install.rst:109
 msgid ""
@@ -145,36 +171,45 @@ msgid ""
 "cheaper and more convenient for development. You can also run PostgreSQL "
 "in a :ref:`docker container<pg-in-docker>`."
 msgstr ""
+"要使用 PostgREST ，您需要一个底层数据库。"
+"我们需要 PostgreSQL 9.6 或更高版本。您可以使用 `Amazon RDS"
+"<https://aws.amazon.com/rds/>`_ 之类的服务，但本地安装版本更便宜"
+"也更便于开发，您也可以在使用 :ref:`docker 容器<pg-in-docker>` 运行 PostgrSQL 。"
 
 #: ../../docs/install.rst:112
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 #: ../../docs/install.rst:114
 msgid ""
 "You can get the `official PostgREST Docker image "
 "<https://hub.docker.com/r/postgrest/postgrest>`_ with:"
 msgstr ""
+"您可以通过以下方式获得 PostgREST 官方 Docker 镜像 "
+"<https://hub.docker.com/r/postgrest/postgrest>`_ ："
 
 #: ../../docs/install.rst:120
 msgid "To configure the container image, use :ref:`env_variables_config`."
-msgstr ""
+msgstr "如需要配置容器镜像，可以使用 :ref:`env_variables_config` 。"
 
 #: ../../docs/install.rst:122
 msgid ""
 "There are two ways to run the PostgREST container: with an existing "
 "external database, or through docker-compose."
 msgstr ""
+"有两种方法可以运行 PostgREST 容器： 使用现有的外部数据库或"
+"通过 docker-compose 。"
 
 #: ../../docs/install.rst:125
 msgid "Containerized PostgREST with native PostgreSQL"
-msgstr ""
+msgstr "PostgREST 容器使用原 PostgreSQL"
 
 #: ../../docs/install.rst:127
 msgid ""
 "The first way to run PostgREST in Docker is to connect it to an existing "
 "native database on the host."
 msgstr ""
+"在 Docker 中运行 PostgREST 的第一种方法是连接到现有的本地数据库上。"
 
 #: ../../docs/install.rst:136
 msgid ""
@@ -182,6 +217,9 @@ msgid ""
 "and password as necessary. You may need to edit PostgreSQL's "
 ":code:`pg_hba.conf` to grant the user local login access."
 msgstr ""
+"以上数据库连接字符串只是一个例子，您需要替换用户名及密码。 "
+"您可能需要编辑 PostgreSQL 的 "
+":code:`pg_hba.conf` 文件来授权对应用户的本地登录权限。to grant the user local login access."
 
 #: ../../docs/install.rst:140
 msgid ""
@@ -190,6 +228,9 @@ msgid ""
 "IP address from inside the container are unable to resolve and fall back "
 "to resolution by the host."
 msgstr ""
+"Mac 上的 Docker 不支持 :code:`--net=host` 参数。 "
+"所以您需要在本机上创建一个 IP 地址别名。"
+"来自容器内部 IP 的请求无法解析由本机负责解析。"
 
 #: ../../docs/install.rst:146
 msgid ""
@@ -197,20 +238,23 @@ msgid ""
 "string. Also remember to include the IP address in the "
 ":code:`listen_address` within postgresql.conf. For instance:"
 msgstr ""
+"然后，您应该使用 10.0.0.10 替换数据库连接字符串中的主机部分。"
+"并追加 IP 地址到  postgresql.conf 配置文件中的 :code:`listen_address` 中。例如："
 
 #: ../../docs/install.rst:152
 msgid ""
 "You might also need to add a new IPv4 local connection within "
 "pg_hba.conf. For instance:"
 msgstr ""
+"您可能需要在 pg_hba.conf 配置文件中添加一个新的 IPv4 本地认证信息。例如："
 
 #: ../../docs/install.rst:158
 msgid "The docker command will then look like this:"
-msgstr ""
+msgstr "docker 命令将如下："
 
 #: ../../docs/install.rst:170
 msgid "Containerized PostgREST *and* db with docker-compose"
-msgstr ""
+msgstr "使用 docker-compose 运行 PostgREST *和* 数据库"
 
 #: ../../docs/install.rst:172
 msgid ""
@@ -218,6 +262,8 @@ msgid ""
 "the server in containers and link them together with docker-compose. Use "
 "this configuration:"
 msgstr ""
+"为了避免安装数据库的麻烦，您可以在容器里同时运行数据库和 PostgREST 服务器，"
+"并使用 docker-compose 组合在一起，配置信息如下："
 
 #: ../../docs/install.rst:201
 msgid ""
@@ -225,16 +271,20 @@ msgid ""
 "compose up`. You will see the logs of both the database and PostgREST, "
 "and be able to access the latter on port 3000."
 msgstr ""
+"进入保存该文件的目录并运行 :code:`docker-compose up`  。"
+"您将看到 数据库和 PostgREST 的启动日志，并能 3000 端口访问 PostgREST 。"
 
 #: ../../docs/install.rst:203
 msgid ""
 "If you want to have a visual overview of your API in your browser you can"
 " add swagger-ui to your :code:`docker-compose.yml`:"
 msgstr ""
+"如果您想要在浏览器中对 API 进行可视化显示，"
+"可以将 :code:`docker-compose.yml` 中添加 swagger-ui 相关配置："
 
 #: ../../docs/install.rst:216
 msgid "With this you can see the swagger-ui in your browser on port 8080."
-msgstr ""
+msgstr "这样，您就可以在浏览器的 8080 端口上看到 swagger-ui 界面。"
 
 #: ../../docs/install.rst:221
 msgid "Building from Source"
@@ -245,12 +295,14 @@ msgid ""
 "When a pre-built binary does not exist for your system you can build the "
 "project from source."
 msgstr ""
+"当您的操作系统不存在预编译的二进制包时，您可以使用源代码构建。"
 
 #: ../../docs/install.rst:227
 msgid ""
 "We discourage building and using PostgREST on **Alpine Linux** because of"
 " a reported GHC memory leak on that platform."
 msgstr ""
+"我们不推荐在 **Alpine Linux** 上构建和使用 PostgREST ，因为在该平台上有存在 GHC 内存泄漏报告。"
 
 #: ../../docs/install.rst:229
 msgid ""
@@ -258,76 +310,83 @@ msgid ""
 "<https://github.com/commercialhaskell/stack>`_. It will install any "
 "necessary Haskell dependencies on your system."
 msgstr ""
+"您可以使用 `Stack "
+"<https://github.com/commercialhaskell/stack>`_ 从源代码构建 PostgREST 。"
+"它将为您在您的系统上安装所有必要的 Haskell 依赖库。"
 
 #: ../../docs/install.rst:231
 msgid ""
 "`Install Stack <https://docs.haskellstack.org/en/stable/README/#how-to-"
 "install>`_ for your platform"
 msgstr ""
+"`安装 Stack <https://docs.haskellstack.org/en/stable/README/#how-to-"
+"install>`_ 到您的系统"
 
 #: ../../docs/install.rst:232
 msgid "Install Library Dependencies"
-msgstr ""
+msgstr "安装依赖库"
 
 #: ../../docs/install.rst:235
 msgid "Operating System"
-msgstr ""
+msgstr "操作系统"
 
 #: ../../docs/install.rst:235
 msgid "Dependencies"
-msgstr ""
+msgstr "依赖库"
 
 #: ../../docs/install.rst:237
 msgid "Ubuntu/Debian"
-msgstr ""
+msgstr "Ubuntu/Debian"
 
 #: ../../docs/install.rst:237
 msgid "libpq-dev, libgmp-dev, zlib1g-dev"
-msgstr ""
+msgstr "libpq-dev, libgmp-dev, zlib1g-dev"
 
 #: ../../docs/install.rst:238
 msgid "CentOS/Fedora/Red Hat"
-msgstr ""
+msgstr "CentOS/Fedora/Red Hat"
 
 #: ../../docs/install.rst:238
 msgid "postgresql-devel, zlib-devel, gmp-devel"
-msgstr ""
+msgstr "postgresql-devel, zlib-devel, gmp-devel"
 
 #: ../../docs/install.rst:239
 msgid "BSD"
-msgstr ""
+msgstr "BSD"
 
 #: ../../docs/install.rst:239
 msgid "postgresql12-client"
-msgstr ""
+msgstr "postgresql12-client"
 
 #: ../../docs/install.rst:240
 msgid "OS X"
-msgstr ""
+msgstr "OS X"
 
 #: ../../docs/install.rst:240
 msgid "libpq, gmp"
-msgstr ""
+msgstr "libpq, gmp"
 
 #: ../../docs/install.rst:243
 msgid "Build and install binary"
-msgstr ""
+msgstr "构建和安装二进制文件"
 
 #: ../../docs/install.rst:255
 msgid ""
 "If building fails and your system has less than 1GB of memory, try adding"
 " a swap file."
 msgstr ""
+"如果构建失败并且系统内存不足 1GB ，请尝试添加 SWAP 文件。"
 
 #: ../../docs/install.rst:256
 msgid ""
 "`--install-ghc` flag is only needed for the first build and can be "
 "omitted in the subsequent builds."
 msgstr ""
+"`--install-ghc` 参数仅第一次编译时需要，之后则可以省略。"
 
 #: ../../docs/install.rst:258
 msgid "Check that the server is installed: :code:`postgrest --help`."
-msgstr ""
+msgstr "检查服务器是否已经安装： :code:`postgrest --help` 。"
 
 #: ../../docs/install.rst:261
 msgid "Deploying to Heroku"
@@ -338,40 +397,44 @@ msgid ""
 "Assuming you're making modifications locally and then pushing to GitHub, "
 "it's easy to deploy to Heroku."
 msgstr ""
+"假设您在本地做修改，并已推送到 GitHub ，那么很容易部署到 Heroku 。"
 
 #: ../../docs/install.rst:265
 msgid "Create a new app on Heroku"
-msgstr ""
+msgstr "创建新的 Heroku 应用"
 
 #: ../../docs/install.rst:266
 msgid ""
 "In Settings add the following buildpack "
 ":code:`https://github.com/PostgREST/postgrest-heroku`"
 msgstr ""
+"在“设置”中添加以下构建包 "
+":code:`https://github.com/PostgREST/postgrest-heroku`"
 
 #: ../../docs/install.rst:267
 msgid "Add the require Config Vars in Heroku"
-msgstr ""
+msgstr "在 Heroku 中添加所需的配置变量"
 
 #: ../../docs/install.rst:268
 msgid ""
 "Modify your ``postgrest.conf`` file as required to match your Config Vars"
 " in Heroku"
 msgstr ""
+"根据需要修改您的 ``postgrest.conf`` 配置文件，以匹配您在 Heroku 中的配置变量。"
 
 #: ../../docs/install.rst:269
 msgid ""
 "Create your :code:`Procfile` and add :code:`./env-to-config ./postgrest "
 "postgrest.conf`"
-msgstr ""
+msgstr "创建您的 code:`Procfile` 和添加 :code:`./env-to-config ./postgrest postgrest.conf`"
 
 #: ../../docs/install.rst:270
 msgid "Push your changes to GitHub"
-msgstr ""
+msgstr "推送您的变更到 Github"
 
 #: ../../docs/install.rst:271
 msgid ""
 "Set Heroku to automatically deploy from Main and then manually deploy the"
 " branch for the first build"
 msgstr ""
-
+"设置 Main 分支称 Heroku 自动部署分支，然后手动部署第一个构建的分支"
